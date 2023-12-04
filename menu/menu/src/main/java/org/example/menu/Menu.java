@@ -1,5 +1,6 @@
 package org.example.menu;
 import org.example.map.MapReader;
+import org.example.menu.MenuValidator;
 import java.util.Scanner;
 
 public class Menu {
@@ -11,8 +12,11 @@ public class Menu {
     public void startGame() {
         System.out.print("Please enter your username: ");
         String username = scanner.nextLine();
-        System.out.println("Welcome, " + username + "!");
+        if(MenuValidator.isValidUsername(username)) {
+            System.out.println("Welcome, " + username + "!");
         displayMenu();
+    } else {
+        System.out.println("Invalid username. It must be between 3 and 12 characters and not contain spaces.")}
     }
     public void displayMenu() {
         int choice;
