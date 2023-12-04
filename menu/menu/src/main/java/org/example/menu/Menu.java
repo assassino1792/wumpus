@@ -12,12 +12,15 @@ public class Menu {
     public void startGame() {
         System.out.print("Please enter your username: ");
         String username = scanner.nextLine();
-        if(MenuValidator.isValidUsername(username)) {
+        if (MenuValidator.isValidUsername(username)) {
             System.out.println("Welcome, " + username + "!");
-        displayMenu();
-    } else {
-        System.out.println("Invalid username. It must be between 3 and 12 characters and not contain spaces.")}
+            displayMenu();
+        } else {
+            System.out.println("Invalid username. It must be between 3 and 12 characters and not contain spaces.")
+        }
     }
+
+
     public void displayMenu() {
         int choice;
 
