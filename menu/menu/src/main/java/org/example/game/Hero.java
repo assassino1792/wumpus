@@ -49,11 +49,11 @@ public class Hero {
         this.playerName = playerName;
     }
 
-    public MapID getBrickId() {
+    public MapID getMapID() {
         return mapID;
     }
 
-    public void setBrickId(MapID mapID) {
+    public void setMapID(MapID mapID) {
         this.mapID = mapID;
     }
 

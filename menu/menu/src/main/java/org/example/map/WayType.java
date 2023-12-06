@@ -1,6 +1,5 @@
 package org.example.map;
 
-
 public enum WayType {
     NORTH('N', 'W', 'E', false, false),
     SOUTH('S', 'E', 'W', false, true),

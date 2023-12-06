@@ -9,49 +9,102 @@ import java.util.List;
 
 public class MapReader {
 
-    public void readMapFromFile() {
+    private List<String> mapLines = new ArrayList<>();
+
+
+    public boolean readMapFromFile() {
+
         String filePath = "/maps/wumpusinput.txt";
-        List<String> mapLines = new ArrayList<>();
+        mapLines.clear();
+        //List<String> mapLines = new ArrayList<>();
         String header = null;
 
         try (InputStream is = getClass().getResourceAsStream(filePath);
              BufferedReader reader = new BufferedReader(new InputStreamReader(is))) {
 
-            // Első sor (fejléc) beolvasása
             header = reader.readLine();
-
             String line;
+
             while ((line = reader.readLine()) != null) {
                 mapLines.add(line);
             }
+
         } catch (IOException e) {
             System.out.println("Error reading the file: " + e.getMessage());
-            return;
+            return false; // Itt adjuk vissza a false értéket
         } catch (NullPointerException e) {
             System.out.println("File not found: " + filePath);
-            return;
+            return false; // Itt is adjuk vissza a false értéket
         }
 
-        if (MapValidator.isValidMapSize(mapLines.size())) {
-            // Fejléc kiírása
-            if (header != null) {
-                System.out.println("  " + header);
-            }
+        int actualWumpusCount = countWumpusOnMap();
+        System.out.println("Talált Wumpusok száma: " + actualWumpusCount); // Kiírjuk a Wumpusok számát
 
-            // Oszlopok fejléce
-            System.out.print("  "); // Kezdő szóközök
-            for (int i = 0; i < mapLines.get(0).length(); i++) {
-                System.out.print((char)('a' + i));
-            }
-            System.out.println();
+        int mapSize = mapLines.size(); // Feltételezve, hogy a pálya négyzet alakú
+        int expectedWumpusCount = MapValidator.WumpusCount(mapSize);
 
-            // A pálya sorainak kiírása
-            for (int i = 0; i < mapLines.size(); i++) {
-                System.out.print((i + 1) + " "); // Sor számozása
-                System.out.println(mapLines.get(i));
+        if (actualWumpusCount != expectedWumpusCount) {
+            System.out.println("Érvénytelen Wumpus szám. Várt: " + expectedWumpusCount + ", Tényleges: " + actualWumpusCount);
+            return false;
+        }
+
+        // Ellenőrizzük a pálya méretét a fejléc alapján
+        if (header != null && header.length() > 0) {
+            char firstNumberChar = header.charAt(0);
+            if (!MapValidator.isValidMapDimensions(mapLines, firstNumberChar)) {
+                System.out.println("Invalid map dimensions. The map size does not match the header.");
+                return false;
             }
-        } else {
+        }
+
+        // Ellenőrizzük a térkép méretét és a falakat a beolvasás után
+        if (!MapValidator.isValidMapSize(mapLines.size())) {
             System.out.println("Invalid map size. The map must be between 6x6 and 20x20.");
+            return false;
         }
+
+        if (!MapValidator.isSurroundedByWalls(mapLines)) {
+            System.out.println("Invalid map. The map must be surrounded by walls.");
+            return false;
+        }
+
+
+        // Ha minden rendben, folytatjuk a feldolgozást
+        if (header != null) {
+            System.out.println("  " + header);
+            MapValidator.checkAndPrintHeaderDetails(header);
+        }
+
+        // Pálya méretének meghatározása
+        int wumpusCount = MapValidator.WumpusCount(mapSize);
+        // Oszlopok fejléce és a pálya sorainak kiírása
+        System.out.print("  ");
+        for (int i = 0; i < mapLines.get(0).length(); i++) {
+            System.out.print((char)('a' + i));
+        }
+        System.out.println();
+
+        for (int i = 0; i < mapLines.size(); i++) {
+            System.out.print((i + 1) + " ");
+            System.out.println(mapLines.get(i));
+        }
+
+        return true; // Sikeres beolvasás és feldolgozás
+
     }
+
+    public int countWumpusOnMap() {
+        int wumpusCount = 0;
+        for (String line : mapLines) {
+            for (char c : line.toCharArray()) {
+                if (c == 'U') {
+                    wumpusCount++;
+                }
+            }
+        }
+        return wumpusCount;
+    }
+
+
+
 }

@@ -11,14 +11,22 @@ public class Menu {
 
 
     public void startGame() {
+
+        MapReader mapReader = new MapReader();
+
+        //mapReader.readMapFromFile();
         System.out.print("Please enter your username: ");
         String username = scanner.nextLine();
+
+
+
         if (MenuValidator.isValidUsername(username)) {
             System.out.println("Welcome, " + username + "!");
             displayMenu();
         } else {
             System.out.println("Invalid username. It must be between 3 and 12 characters and not contain spaces.");
         }
+
     }
 
 
@@ -43,7 +51,13 @@ public class Menu {
                     break;
                 case 2:
                     System.out.println("READ MAP FROM FILE selected.");
-                    mapReader.readMapFromFile();
+                    //mapReader.readMapFromFile();
+                    boolean isMapValid = mapReader.readMapFromFile();
+
+                    if (!isMapValid) {
+                        // Ha a térkép érvénytelen, visszatérünk a displayMenu-be
+                        displayMenu();
+                    }
                     displaySubMenu();
                     break;
                 case 3:
@@ -55,7 +69,11 @@ public class Menu {
                 default:
                     System.out.println("Invalid choice. Please enter 1, 2, or 3.");
             }
+
+
         }
+
+
     }
 
             private void displaySubMenu() {

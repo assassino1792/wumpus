@@ -12,6 +12,7 @@ public class Main {
         Menu menu = new Menu();
         menu.startGame();
         //menu.displayMenu();
+
     }
 }
 
