@@ -11,8 +11,6 @@ public class Main {
         SpringApplication.run(Main.class, args);
         Menu menu = new Menu();
         menu.startGame();
-        //menu.displayMenu();
-
     }
 }
 

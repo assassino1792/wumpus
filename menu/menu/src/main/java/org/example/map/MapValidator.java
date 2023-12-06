@@ -74,7 +74,7 @@ public class MapValidator {
 
     public static int WumpusCount(int mapSize) {
         if (!isValidMapSize(mapSize)) {
-            throw new IllegalArgumentException("A pálya mérete érvénytelen: " + mapSize);
+            throw new IllegalArgumentException("Invalid map size: " + mapSize);
         }
 
         if (mapSize <= 8) {
@@ -85,9 +85,6 @@ public class MapValidator {
             return 3;
         }
     }
-
-
-
 
 }
 

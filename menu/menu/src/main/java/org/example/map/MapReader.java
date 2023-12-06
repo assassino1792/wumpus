@@ -69,7 +69,6 @@ public class MapReader {
         }
 
 
-        // Ha minden rendben, folytatjuk a feldolgozást
         if (header != null) {
             System.out.println("  " + header);
             MapValidator.checkAndPrintHeaderDetails(header);
@@ -104,7 +103,5 @@ public class MapReader {
         }
         return wumpusCount;
     }
-
-
 
 }
