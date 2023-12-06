@@ -38,13 +38,13 @@ public class MapReader {
         }
 
         int actualWumpusCount = countWumpusOnMap();
-        System.out.println("Talált Wumpusok száma: " + actualWumpusCount); // Kiírjuk a Wumpusok számát
+        //System.out.println("Found Wumpus number: " + actualWumpusCount); // Kiírjuk a Wumpusok számát
 
-        int mapSize = mapLines.size(); // Feltételezve, hogy a pálya négyzet alakú
+        int mapSize = mapLines.size();
         int expectedWumpusCount = MapValidator.WumpusCount(mapSize);
 
         if (actualWumpusCount != expectedWumpusCount) {
-            System.out.println("Érvénytelen Wumpus szám. Várt: " + expectedWumpusCount + ", Tényleges: " + actualWumpusCount);
+            System.out.println("Invalid Wumpus number. Expected number: " + expectedWumpusCount + ", Actual number: " + actualWumpusCount);
             return false;
         }
 
