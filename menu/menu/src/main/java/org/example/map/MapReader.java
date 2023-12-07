@@ -33,7 +33,7 @@ public class MapReader {
             System.out.println("Error reading the file: " + e.getMessage());
             return false; // Itt adjuk vissza a false értéket
         } catch (NullPointerException e) {
-            System.out.println("File not found: " + filePath);
+            System.out.println("Error: File not found: " + filePath);
             return false; // Itt is adjuk vissza a false értéket
         }
 
@@ -44,7 +44,7 @@ public class MapReader {
         int expectedWumpusCount = MapValidator.WumpusCount(mapSize);
 
         if (actualWumpusCount != expectedWumpusCount) {
-            System.out.println("Invalid Wumpus number. Expected number: " + expectedWumpusCount + ", Actual number: " + actualWumpusCount);
+            System.out.println("Error: Invalid Wumpus number. Expected number: " + expectedWumpusCount + ", Actual number: " + actualWumpusCount);
             return false;
         }
 
@@ -52,19 +52,19 @@ public class MapReader {
         if (header != null && header.length() > 0) {
             char firstNumberChar = header.charAt(0);
             if (!MapValidator.isValidMapDimensions(mapLines, firstNumberChar)) {
-                System.out.println("Invalid map dimensions. The map size does not match the header.");
+                System.out.println("Error: Invalid map dimensions. The map size does not match the header.");
                 return false;
             }
         }
 
         // Ellenőrizzük a térkép méretét és a falakat a beolvasás után
         if (!MapValidator.isValidMapSize(mapLines.size())) {
-            System.out.println("Invalid map size. The map must be between 6x6 and 20x20.");
+            System.out.println("Error: Invalid map size. The map must be between 6x6 and 20x20.");
             return false;
         }
 
         if (!MapValidator.isSurroundedByWalls(mapLines)) {
-            System.out.println("Invalid map. The map must be surrounded by walls.");
+            System.out.println("Error: Invalid map. The map must be surrounded by walls.");
             return false;
         }
 
@@ -88,6 +88,45 @@ public class MapReader {
             System.out.println(mapLines.get(i));
         }
 
+        if (!MapValidator.hasExactlyOneGold(mapLines)) {
+            System.out.println("Error: The map must contain exactly one gold piece.");
+            return false;
+        }
+
+
+
+        // Hős helyzetének meghatározása
+        if (header != null && header.length() >= 5) {
+            int heroColumn = header.charAt(2) - 'A' + 1; // Column (A=1, B=2, ...)
+            String rowStr = header.substring(4).split(" ")[0]; // Extract row number as string
+            int heroRow;
+            try {
+                heroRow = Integer.parseInt(rowStr); // Convert row string to integer
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid hero row number in header: " + rowStr);
+                return false;
+            }
+
+            System.out.println("Hero's column: " + heroColumn);
+            System.out.println("Hero's row: " + heroRow);
+
+            // Check if the hero's position is valid
+            if (heroRow > 0 && heroRow <= mapLines.size() &&
+                    heroColumn > 0 && heroColumn <= mapLines.get(heroRow - 1).length()) {
+                StringBuilder row = new StringBuilder(mapLines.get(heroRow - 1));
+                row.setCharAt(heroColumn - 1, 'H'); // Indexing starts from 0
+                mapLines.set(heroRow - 1, row.toString());
+            } else {
+                System.out.println("Invalid hero position in header. Row: " + heroRow + ", Column: " + heroColumn);
+                return false;
+            }
+        }
+
+        if (!MapValidator.hasExactlyOneHero(mapLines)) {
+            System.out.println("A pályának pontosan egy hőst kell tartalmaznia.");
+            return false;
+        }
+
         return true; // Sikeres beolvasás és feldolgozás
 
     }
@@ -104,4 +143,7 @@ public class MapReader {
         return wumpusCount;
     }
 
+
+
 }
+

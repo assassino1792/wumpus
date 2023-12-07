@@ -86,5 +86,29 @@ public class MapValidator {
         }
     }
 
+    public static boolean hasExactlyOneGold(List<String> mapLines) {
+        int goldCount = 0;
+        for (String line : mapLines) {
+            for (char c : line.toCharArray()) {
+                if (c == 'G') {
+                    goldCount++;
+                }
+            }
+        }
+        return goldCount == 1;
+    }
+
+    public static boolean hasExactlyOneHero(List<String> mapLines) {
+        int heroCount = 0;
+        for (String line : mapLines) {
+            for (char c : line.toCharArray()) {
+                if (c == 'H') {
+                    heroCount++;
+                }
+            }
+        }
+        return heroCount == 1;
+    }
+
 }
 
