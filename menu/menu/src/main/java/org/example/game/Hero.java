@@ -2,6 +2,7 @@ package org.example.game;
 
 import org.example.map.MapID;
 import org.example.map.WayType;
+import org.example.map.MapValidator;
 
 public class Hero {
 
@@ -71,5 +72,10 @@ public class Hero {
 
     public void setHeroId(Long heroId) {
         this.heroId = heroId;
+    }
+
+    public void initializeHero(int mapSize) {
+        this.arrowCount = MapValidator.WumpusCount(mapSize); // Nyilak száma a Wumpuszok számával egyezik meg
+        this.way = WayType.NORTH; // Kezdeti irány beállítása Északra
     }
 }
