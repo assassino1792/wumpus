@@ -106,8 +106,10 @@ public class Menu {
 
     private void displayGameMenu() {
         int choice;
-
-        MapReader mapReader = new MapReader();
+        if (mapReader == null) {
+            mapReader = new MapReader();
+        }
+       // MapReader mapReader = new MapReader();
         hero = new Hero(); // Inicializáljuk a hőst
 
 
@@ -115,9 +117,6 @@ public class Menu {
         if (isMapValid) {
             int mapSize = mapReader.getMapSize(); // Lekérjük a pálya méretét
             hero.initializeHero(mapSize); // Inicializáljuk a hőst a pálya méretével
-           // displayMenu();
-        } else {
-            System.out.println("Invalid map.");
         }
 
         GamePlay gamePlay = new GamePlay(hero, mapReader); // Létrehozzuk a GamePlay példányt
@@ -133,6 +132,7 @@ public class Menu {
             System.out.println("3. Look West");
             System.out.println("4. Look South");
             System.out.println("5. Move");
+            System.out.println("6. Shoot");
             System.out.println("9. Save");
             System.out.println("10. Suspend");
             System.out.println("11. Give up the game");
@@ -156,6 +156,9 @@ public class Menu {
                     break;
                 case 5:
                     gamePlay.moveHero(); // Mozgatja a hőst
+                    break;
+                case 6:
+                    gamePlay.shootArrow(); // Lövés logika
                     break;
                // TODO SAVE and SUSPEND
                 case 11:
