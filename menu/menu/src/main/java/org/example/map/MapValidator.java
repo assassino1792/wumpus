@@ -1,5 +1,6 @@
 package org.example.map;
-import java.util.*;
+
+import java.util.List;
 
 
 public class MapValidator {

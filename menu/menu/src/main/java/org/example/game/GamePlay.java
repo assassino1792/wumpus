@@ -2,17 +2,22 @@ package org.example.game;
 
 import org.example.map.MapID;
 import org.example.map.WayType;
+import org.example.map.MapReader;
 
 public class GamePlay {
 
     private Hero hero;
     private int mapSize; // A pálya mérete
 
-    public GamePlay(Hero hero, int mapSize) {
+    public GamePlay(Hero hero, MapReader mapReader) {
         this.hero = hero;
-        this.mapSize = mapSize;
+        this.mapSize = mapReader.getMapSize();
         // Kezdeti beállítások, pl. a hős kezdeti pozíciója
-        this.hero.setMapID(new MapID(1, 1)); // Kezdeti pozíció (1,1)
+        //this.hero.setMapID(new MapID(1, 1)); // Kezdeti pozíció (1,1)
+        MapID heroInitialPosition = mapReader.getHeroInitialPosition();
+        if (heroInitialPosition != null) {
+            this.hero.setMapID(heroInitialPosition); // Beállítjuk a hős kezdeti pozícióját
+        }
     }
 
     public void changeHeroDirection(WayType newDirection) {

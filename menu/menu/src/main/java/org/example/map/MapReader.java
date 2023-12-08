@@ -10,6 +10,7 @@ import java.util.List;
 public class MapReader {
 
     private List<String> mapLines = new ArrayList<>();
+    private MapID heroInitialPosition;
 
 
     public boolean readMapFromFile() {
@@ -37,16 +38,17 @@ public class MapReader {
             return false; // Itt is adjuk vissza a false értéket
         }
 
+
+        //Wumpus
         int actualWumpusCount = countWumpusOnMap();
         System.out.println("Found Wumpus number: " + actualWumpusCount); // Kiírjuk a Wumpusok számát
-
         int mapSize = mapLines.size();
         int expectedWumpusCount = MapValidator.WumpusCount(mapSize);
-
         if (actualWumpusCount != expectedWumpusCount) {
             System.out.println("Error: Invalid Wumpus number. Expected number: " + expectedWumpusCount + ", Actual number: " + actualWumpusCount);
             return false;
         }
+
 
         // Ellenőrizzük a pálya méretét a fejléc alapján
         if (header != null && !header.isEmpty()) {
@@ -74,8 +76,9 @@ public class MapReader {
             MapValidator.checkAndPrintHeaderDetails(header);
         }
 
-        // Pálya méretének meghatározása
         int wumpusCount = MapValidator.WumpusCount(mapSize);
+
+
         // Oszlopok fejléce és a pálya sorainak kiírása
         System.out.print(" ");
         if (mapLines.size() < 10) {
@@ -127,17 +130,25 @@ public class MapReader {
                 System.out.println("Invalid hero row number in header: " + rowStr);
                 return false;
             }
+            heroInitialPosition = new MapID(heroColumn, heroRow);
 
             // Kiírjuk a hős oszlopát és sorát
             System.out.println("Hero's column: " + heroColumn);
             System.out.println("Hero's row: " + heroRow);
-
 
         }
 
 
         return true; // Sikeres beolvasás és feldolgozás
 
+    }
+
+    public MapID getHeroInitialPosition() {
+        return heroInitialPosition;
+    }
+
+    public List<String> getMapLines() {
+        return mapLines;
     }
 
     public int countWumpusOnMap() {
@@ -156,25 +167,29 @@ public class MapReader {
     public int getMapSize() {
         return mapLines.size();
     }
-    public void redrawMap() {
-
-            // Oszlopok fejléce
-            System.out.print("   "); // Kezdő szóközök (3 szóköz a jobb formázásért)
-            for (int i = 0; i < mapLines.get(0).length(); i++) {
-                System.out.print((char)('a' + i));
-            }
-            System.out.println();
-
-            // A pálya sorainak kiírása
-            for (int i = 0; i < mapLines.size(); i++) {
-                if (i < 9) {
-                    System.out.print((i + 1) + "  "); // Két szóköz a 9-es sor alattiaknak
-                } else {
-                    System.out.print((i + 1) + " "); // Egy szóköz a 10-es sor felettieknek
-                }
-                System.out.println(mapLines.get(i));
-            }
+    public void redrawMap(MapID heroPosition) {
+        // Oszlopok fejléce
+        System.out.print("   "); // Kezdő szóközök (3 szóköz a jobb formázásért)
+        for (int i = 0; i < mapLines.get(0).length(); i++) {
+            System.out.print((char)('a' + i));
         }
+        System.out.println();
+
+        // A pálya sorainak kiírása
+        for (int i = 0; i < mapLines.size(); i++) {
+            if (i < 9) {
+                System.out.print((i + 1) + "  "); // Két szóköz a 9-es sor alattiaknak
+            } else {
+                System.out.print((i + 1) + " "); // Egy szóköz a 10-es sor felettieknek
+            }
+            System.out.println(mapLines.get(i));
+        }
+
+        // Kiírjuk a hős aktuális pozícióját
+        if (heroPosition != null) {
+            System.out.println("Hero's current position - Column: " + heroPosition.getHorizontal() + ", Row: " + heroPosition.getVertical());
+        }
+    }
 
 }
 

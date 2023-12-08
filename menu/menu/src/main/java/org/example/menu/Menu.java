@@ -120,7 +120,7 @@ public class Menu {
             System.out.println("Invalid map.");
         }
 
-        GamePlay gamePlay = new GamePlay(hero, mapSize); // Létrehozzuk a GamePlay példányt
+        GamePlay gamePlay = new GamePlay(hero, mapReader); // Létrehozzuk a GamePlay példányt
 
         System.out.println("\nThe game has started.");
 
@@ -167,7 +167,7 @@ public class Menu {
                 default:
                     System.out.println("Invalid choice. Please enter a number between 1 and 11.");
             }
-            mapReader.redrawMap(); // Újrarajzolja a térképet minden választás után
+            mapReader.redrawMap(hero.getMapID());
             System.out.println("\nRemaining arrows: " + hero.getArrowCount()); // Kiírjuk a hős maradék nyílak számát
 
         }
