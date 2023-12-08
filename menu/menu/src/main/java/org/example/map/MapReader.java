@@ -38,7 +38,7 @@ public class MapReader {
         }
 
         int actualWumpusCount = countWumpusOnMap();
-        //System.out.println("Found Wumpus number: " + actualWumpusCount); // Kiírjuk a Wumpusok számát
+        System.out.println("Found Wumpus number: " + actualWumpusCount); // Kiírjuk a Wumpusok számát
 
         int mapSize = mapLines.size();
         int expectedWumpusCount = MapValidator.WumpusCount(mapSize);
@@ -49,9 +49,8 @@ public class MapReader {
         }
 
         // Ellenőrizzük a pálya méretét a fejléc alapján
-        if (header != null && header.length() > 0) {
-            char firstNumberChar = header.charAt(0);
-            if (!MapValidator.isValidMapDimensions(mapLines, firstNumberChar)) {
+        if (header != null && !header.isEmpty()) {
+            if (!MapValidator.isValidMapDimensions(mapLines, header)) {
                 System.out.println("Error: Invalid map dimensions. The map size does not match the header.");
                 return false;
             }
@@ -67,6 +66,7 @@ public class MapReader {
             System.out.println("Error: Invalid map. The map must be surrounded by walls.");
             return false;
         }
+     //   System.out.println("Map size: " + getMapSize());
 
 
         if (header != null) {
@@ -77,14 +77,23 @@ public class MapReader {
         // Pálya méretének meghatározása
         int wumpusCount = MapValidator.WumpusCount(mapSize);
         // Oszlopok fejléce és a pálya sorainak kiírása
-        System.out.print("  ");
+        System.out.print(" ");
+        if (mapLines.size() < 10) {
+            System.out.print("  "); // szóköz a 9-es sor alattiaknak
+        } else {
+            System.out.print("  "); // szóköz a 10-es sor felettieknek
+        }
         for (int i = 0; i < mapLines.get(0).length(); i++) {
             System.out.print((char)('a' + i));
         }
         System.out.println();
 
         for (int i = 0; i < mapLines.size(); i++) {
-            System.out.print((i + 1) + " ");
+            if (i < 9) { // A 9-es sor ,soroknál szóköz
+                System.out.print((i + 1) + "  ");
+            } else { // A 10-es sor ,soroknál szóköz
+                System.out.print((i + 1) + " ");
+            }
             System.out.println(mapLines.get(i));
         }
 
@@ -97,7 +106,35 @@ public class MapReader {
 
         // Hős helyzetének meghatározása
         if (header != null && header.length() >= 5) {
-            int heroColumn = header.charAt(2) - 'A' + 1; // Column (A=1, B=2, ...)
+            // Keresd meg az első szám végét
+            int firstNumberEndIndex = 0;
+            while (firstNumberEndIndex < header.length() && Character.isDigit(header.charAt(firstNumberEndIndex))) {
+                firstNumberEndIndex++;
+            }
+
+            // Keresd meg a hős oszlopát
+            int heroColumnIndex = header.indexOf(' ', firstNumberEndIndex) + 1;
+            char heroColumnChar = header.charAt(heroColumnIndex);
+            int heroColumn = heroColumnChar - 'A' + 1;
+
+            // Keresd meg a hős sorát
+            int heroRowIndex = header.indexOf(' ', heroColumnIndex) + 1;
+            String rowStr = header.substring(heroRowIndex).split(" ")[0];
+            int heroRow;
+            try {
+                heroRow = Integer.parseInt(rowStr);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid hero row number in header: " + rowStr);
+                return false;
+            }
+
+            // Kiírjuk a hős oszlopát és sorát
+            System.out.println("Hero's column: " + heroColumn);
+            System.out.println("Hero's row: " + heroRow);
+
+            // ... (a hős helyzetének ellenőrzése és beállítása)
+        }
+       /*     int heroColumn = header.charAt(2) - 'A' + 1; // Column (A=1, B=2, ...)
             String rowStr = header.substring(4).split(" ")[0]; // Extract row number as string
             int heroRow;
             try {
@@ -121,11 +158,12 @@ public class MapReader {
                 return false;
             }
         }
+        */
 
-        if (!MapValidator.hasExactlyOneHero(mapLines)) {
+      /*  if (!MapValidator.hasExactlyOneHero(mapLines)) {
             System.out.println("A pályának pontosan egy hőst kell tartalmaznia.");
             return false;
-        }
+        }*/
 
         return true; // Sikeres beolvasás és feldolgozás
 
@@ -143,7 +181,33 @@ public class MapReader {
         return wumpusCount;
     }
 
+    // Új metódus a pálya méretének lekérdezésére
+    public int getMapSize() {
+        return mapLines.size();
+    }
+    public void redrawMap() {
+        // Oszlopok fejléce
+        System.out.print(" ");
+        if (mapLines.size() < 10) {
+            System.out.print("  "); // szóköz a 9-es sor alattiaknak
+        } else {
+            System.out.print("  "); // szóköz a 10-es sor felettieknek
+        }
+        for (int i = 0; i < mapLines.get(0).length(); i++) {
+            System.out.print((char)('a' + i));
+        }
 
+        // A pálya sorainak kiírása
+        for (int i = 0; i < mapLines.size(); i++) {
+            // A sor számozása
+            if (i < 9) {
+                System.out.print((i + 1) + "  "); // Egy szóköz a 9-es sor alattiaknak
+            } else {
+                System.out.print((i + 1) + " "); // Két szóköz a 10-es sor felettieknek
+            }
+            System.out.println(mapLines.get(i));
+        }
+    }
 
 }
 

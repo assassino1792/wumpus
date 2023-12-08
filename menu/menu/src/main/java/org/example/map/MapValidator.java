@@ -24,17 +24,30 @@ public class MapValidator {
         }
     }
 
-    public static boolean isValidMapDimensions(List<String> mapLines, char firstNumberChar) {
-        if (mapLines == null || mapLines.isEmpty()) {
+    public static boolean isValidMapDimensions(List<String> mapLines, String header) {
+        if (mapLines == null || mapLines.isEmpty() || header == null || header.isEmpty()) {
             return false;
         }
 
-        int expectedSize;
-        if (Character.isDigit(firstNumberChar)) {
-            expectedSize = Character.getNumericValue(firstNumberChar);
-        } else {
-            return false; // Ha a firstNumberChar nem számjegy
+        // Keresd meg az első nem számjegy karakter pozícióját a fejlécben
+        int firstNonDigitIndex = 0;
+        while (firstNonDigitIndex < header.length() && Character.isDigit(header.charAt(firstNonDigitIndex))) {
+            firstNonDigitIndex++;
         }
+
+        // Ha nincs szám a fejlécben, akkor téves a méret
+        if (firstNonDigitIndex == 0) {
+            return false;
+        }
+
+        // Alakítsd át a számjegyeket számmá
+        int expectedSize;
+        try {
+            expectedSize = Integer.parseInt(header.substring(0, firstNonDigitIndex));
+        } catch (NumberFormatException e) {
+            return false; // Ha a számjegyek nem alakíthatók át érvényes számmá
+        }
+
         int rowCount = mapLines.size();
         int colCount = mapLines.get(0).length();
 
@@ -98,7 +111,7 @@ public class MapValidator {
         return goldCount == 1;
     }
 
-    public static boolean hasExactlyOneHero(List<String> mapLines) {
+   /* public static boolean hasExactlyOneHero(List<String> mapLines) {
         int heroCount = 0;
         for (String line : mapLines) {
             for (char c : line.toCharArray()) {
@@ -108,7 +121,7 @@ public class MapValidator {
             }
         }
         return heroCount == 1;
-    }
+    }*/
 
 }
 

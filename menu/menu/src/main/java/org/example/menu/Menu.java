@@ -1,6 +1,9 @@
 package org.example.menu;
 
+import org.example.game.GamePlay;
+import org.example.game.Hero;
 import org.example.map.MapReader;
+import org.example.map.WayType;
 
 import java.util.Scanner;
 
@@ -8,7 +11,8 @@ public class Menu {
 
     private Scanner scanner = new Scanner(System.in);
     private MapReader mapReader = new MapReader();
-
+    private Hero hero;
+    private int mapSize;
 
     public void startGame() {
 
@@ -103,35 +107,74 @@ public class Menu {
     private void displayGameMenu() {
         int choice;
 
+        MapReader mapReader = new MapReader();
+        hero = new Hero(); // Inicializáljuk a hőst
+
+
+        boolean isMapValid = mapReader.readMapFromFile();
+        if (isMapValid) {
+            int mapSize = mapReader.getMapSize(); // Lekérjük a pálya méretét
+            hero.initializeHero(mapSize); // Inicializáljuk a hőst a pálya méretével
+           // displayMenu();
+        } else {
+            System.out.println("Invalid map.");
+        }
+
+        GamePlay gamePlay = new GamePlay(hero, mapSize); // Létrehozzuk a GamePlay példányt
+
         System.out.println("\nThe game has started.");
+
+
         while (true) {
             System.out.println("\nGame Menu:");
-            System.out.println("1. SAVE");
-            System.out.println("2. SUSPEND");
-            System.out.println("3. EXIT GAME");
-            System.out.print("Please enter your choice (1-3): ");
+            System.out.println("\n1. Look North");
+            System.out.println("2. Look East");
+            System.out.println("3. Look West");
+            System.out.println("4. Look South");
+            System.out.println("5. Move Up");
+            System.out.println("6. Move Down");
+            System.out.println("7. Move Left");
+            System.out.println("8. Move Right");
+            System.out.println("9. Save");
+            System.out.println("10. Suspend");
+            System.out.println("11. Give up the game");
+            System.out.print("\nPlease enter your choice (1-11): ");
+
 
             choice = scanner.nextInt();
 
             switch (choice) {
                 case 1:
-                    System.out.println("SAVE selected.");
-                    // Itt lehet hozzáadni a SAVE funkciókat
+                    gamePlay.changeHeroDirection(WayType.NORTH);
                     break;
                 case 2:
-                    System.out.println("SUSPEND selected.");
-                    // Itt lehet hozzáadni a SUSPEND funkciókat
+                    gamePlay.changeHeroDirection(WayType.EAST);
                     break;
                 case 3:
+                    gamePlay.changeHeroDirection(WayType.WEST);
+                    break;
+                case 4:
+                    gamePlay.changeHeroDirection(WayType.SOUTH);
+                    break;
+                case 5:
+                    gamePlay.moveHero(); // Mozgatja a hőst felfelé
+                    break;
+                // ... (a többi mozgásirány és menüpont implementálása)
+                case 11:
                     if (confirmExit()) {
-                        System.out.println("You lost.");
-                        return;
-                    } break;
-                        default:
-                            System.out.println("Invalid choice. Please enter 1, 2, or 3.");
+                        System.out.println("You gave up the game.");
+                        return; // Kilépés a menüből
                     }
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please enter a number between 1 and 11.");
             }
+            mapReader.redrawMap(); // Újrarajzolja a térképet minden választás után
+            System.out.println("\nRemaining arrows: " + hero.getArrowCount()); // Kiírjuk a hős maradék nyílak számát
+
         }
+
+    }
         private boolean confirmExit() {
         System.out.print("Are you sure you want to give up the game? (Y/N): ");
         String response = scanner.next();
