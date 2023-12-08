@@ -41,6 +41,7 @@ public class GamePlay {
         }
 
         hero.setMapID(new MapID(horizontal, vertical));
-        System.out.println("Moved to column: " + horizontal + ", row: " + vertical);
+
+        System.out.println("Hero's new position - Column: " + currentMapID.getHorizontal() + ", Row: " + currentMapID.getVertical());
     }
 }

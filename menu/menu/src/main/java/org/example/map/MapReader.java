@@ -132,38 +132,9 @@ public class MapReader {
             System.out.println("Hero's column: " + heroColumn);
             System.out.println("Hero's row: " + heroRow);
 
-            // ... (a hős helyzetének ellenőrzése és beállítása)
+
         }
-       /*     int heroColumn = header.charAt(2) - 'A' + 1; // Column (A=1, B=2, ...)
-            String rowStr = header.substring(4).split(" ")[0]; // Extract row number as string
-            int heroRow;
-            try {
-                heroRow = Integer.parseInt(rowStr); // Convert row string to integer
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid hero row number in header: " + rowStr);
-                return false;
-            }
 
-            System.out.println("Hero's column: " + heroColumn);
-            System.out.println("Hero's row: " + heroRow);
-
-            // Check if the hero's position is valid
-            if (heroRow > 0 && heroRow <= mapLines.size() &&
-                    heroColumn > 0 && heroColumn <= mapLines.get(heroRow - 1).length()) {
-                StringBuilder row = new StringBuilder(mapLines.get(heroRow - 1));
-                row.setCharAt(heroColumn - 1, 'H'); // Indexing starts from 0
-                mapLines.set(heroRow - 1, row.toString());
-            } else {
-                System.out.println("Invalid hero position in header. Row: " + heroRow + ", Column: " + heroColumn);
-                return false;
-            }
-        }
-        */
-
-      /*  if (!MapValidator.hasExactlyOneHero(mapLines)) {
-            System.out.println("A pályának pontosan egy hőst kell tartalmaznia.");
-            return false;
-        }*/
 
         return true; // Sikeres beolvasás és feldolgozás
 
@@ -186,28 +157,24 @@ public class MapReader {
         return mapLines.size();
     }
     public void redrawMap() {
-        // Oszlopok fejléce
-        System.out.print(" ");
-        if (mapLines.size() < 10) {
-            System.out.print("  "); // szóköz a 9-es sor alattiaknak
-        } else {
-            System.out.print("  "); // szóköz a 10-es sor felettieknek
-        }
-        for (int i = 0; i < mapLines.get(0).length(); i++) {
-            System.out.print((char)('a' + i));
-        }
 
-        // A pálya sorainak kiírása
-        for (int i = 0; i < mapLines.size(); i++) {
-            // A sor számozása
-            if (i < 9) {
-                System.out.print((i + 1) + "  "); // Egy szóköz a 9-es sor alattiaknak
-            } else {
-                System.out.print((i + 1) + " "); // Két szóköz a 10-es sor felettieknek
+            // Oszlopok fejléce
+            System.out.print("   "); // Kezdő szóközök (3 szóköz a jobb formázásért)
+            for (int i = 0; i < mapLines.get(0).length(); i++) {
+                System.out.print((char)('a' + i));
             }
-            System.out.println(mapLines.get(i));
+            System.out.println();
+
+            // A pálya sorainak kiírása
+            for (int i = 0; i < mapLines.size(); i++) {
+                if (i < 9) {
+                    System.out.print((i + 1) + "  "); // Két szóköz a 9-es sor alattiaknak
+                } else {
+                    System.out.print((i + 1) + " "); // Egy szóköz a 10-es sor felettieknek
+                }
+                System.out.println(mapLines.get(i));
+            }
         }
-    }
 
 }
 

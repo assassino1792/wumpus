@@ -127,14 +127,12 @@ public class Menu {
 
         while (true) {
             System.out.println("\nGame Menu:");
-            System.out.println("\n1. Look North");
+
+            System.out.println("1. Look North");
             System.out.println("2. Look East");
             System.out.println("3. Look West");
             System.out.println("4. Look South");
-            System.out.println("5. Move Up");
-            System.out.println("6. Move Down");
-            System.out.println("7. Move Left");
-            System.out.println("8. Move Right");
+            System.out.println("5. Move");
             System.out.println("9. Save");
             System.out.println("10. Suspend");
             System.out.println("11. Give up the game");
@@ -157,9 +155,9 @@ public class Menu {
                     gamePlay.changeHeroDirection(WayType.SOUTH);
                     break;
                 case 5:
-                    gamePlay.moveHero(); // Mozgatja a hőst felfelé
+                    gamePlay.moveHero(); // Mozgatja a hőst
                     break;
-                // ... (a többi mozgásirány és menüpont implementálása)
+               // TODO SAVE and SUSPEND
                 case 11:
                     if (confirmExit()) {
                         System.out.println("You gave up the game.");
