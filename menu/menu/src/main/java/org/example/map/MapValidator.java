@@ -74,7 +74,10 @@ public class MapValidator {
     }
     public static int WumpusCount(int mapSize) {
         if (!isValidMapSize(mapSize)) {
-            throw new IllegalArgumentException("Invalid map size: " + mapSize);
+            System.out.println("Invalid map size: " + mapSize);
+        }
+        if (mapSize < 6) {
+            return 0;
         }
         if (mapSize <= 8) {
             return 1;

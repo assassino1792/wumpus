@@ -1,0 +1,14 @@
+13 D 5 N
+WWWWWWWWWWWWW
+WW__P_______W
+W___WP______W
+W___________W
+WP___P___U__W
+W_______WG__W
+WP___P______W
+W________W__W
+W_____U_____W
+W________W__W
+W_____W_____W
+W__P_______WW
+WWWWWWWWWWWWW
