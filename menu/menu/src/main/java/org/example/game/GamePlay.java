@@ -8,7 +8,6 @@ public class GamePlay {
 
     private Hero hero;
     private int mapSize;
-    // A pálya mérete
     private MapReader mapReader;
     private boolean gameOver = false;
 
@@ -74,7 +73,7 @@ public class GamePlay {
 
         // Ellenőrizzük, hogy a hős visszatért-e a kezdeti pozícióba az arannyal
         if (hero.isHasGold() && newHorizontal == mapReader.getHeroInitialPosition().getHorizontal() && newVertical == mapReader.getHeroInitialPosition().getVertical()) {
-            System.out.println("\nCongratulations! You have successfully returned the gold to the starting position. YOU WIN!\n");
+            System.out.println("\nCongratulations! You have successfully returned the gold to the starting position. YOU WON!\n");
         }
 
         // Ellenőrizzük, hogy a hős új pozíciójában van-e Pit (P)
