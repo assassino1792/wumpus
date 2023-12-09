@@ -45,7 +45,11 @@ public class Menu {
             System.out.println("4. EXIT");
             System.out.print("Please enter your choice (1-3): ");
 
+
             choice = scanner.nextInt();
+
+
+
 
 
             switch (choice) {
@@ -136,10 +140,20 @@ public class Menu {
             System.out.println("9. Save");
             System.out.println("10. Suspend");
             System.out.println("11. Give up the game");
+
+            if (gamePlay.isGameOver()) {
+                System.out.println("\nYou lost! Returning to main menu...\n");
+                return; // Visszatérünk a főmenübe
+            }
+
             System.out.print("\nPlease enter your choice (1-11): ");
 
 
+
             choice = scanner.nextInt();
+
+
+
 
             switch (choice) {
                 case 1:

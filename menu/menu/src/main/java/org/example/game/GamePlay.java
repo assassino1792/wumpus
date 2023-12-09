@@ -10,7 +10,7 @@ public class GamePlay {
     private int mapSize;
     // A pálya mérete
     private MapReader mapReader;
-
+    private boolean gameOver = false;
 
 
 
@@ -61,7 +61,11 @@ public class GamePlay {
 
         char targetChar = mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1);
         if (targetChar == 'U') {
-            System.out.println("You stepped on a Wumpus! GAME OVER.");
+            System.out.println("\nYou stepped on a Wumpus! GAME OVER.\n");
+            gameOver = true;
+            return;
+        }else if (targetChar == 'W') {
+                System.out.println("\nCannot move onto a wall!\n");
             return; // Vagy valamilyen más logika a játék befejezésére
         }else {
                 hero.setMapID(new MapID(horizontal, vertical));
@@ -78,6 +82,9 @@ public class GamePlay {
         hero.setMapID(new MapID(horizontal, vertical));
 
        // System.out.println("Hero's new position - Column: " + currentMapID.getHorizontal() + ", Row: " + currentMapID.getVertical());
+    }
+    public boolean isGameOver() {
+        return gameOver;
     }
     public void shootArrow() {
         if (hero.getArrowCount() > 0) {
@@ -124,6 +131,7 @@ public class GamePlay {
             System.out.println("No more arrows left.");
         }
     }
+
 }
 
 
