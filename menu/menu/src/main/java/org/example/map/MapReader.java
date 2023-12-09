@@ -111,6 +111,17 @@ public class MapReader {
             // Kiírjuk a hős oszlopát és sorát
             System.out.println("Hero's column: " + heroColumn);
             System.out.println("Hero's row: " + heroRow);
+
+            // Ellenőrizzük, hogy a hős kezdeti pozíciójában nem található fal vagy Wumpus
+            char heroInitialChar = mapLines.get(heroRow - 1).charAt(heroColumn - 1);
+            if (heroInitialChar == 'W' || heroInitialChar == 'U') {
+                System.out.println("Error: Hero's initial position cannot be on a wall (W) or a Wumpus (U).");
+                return false;
+            }
+
+            // Beállítjuk a hős kezdeti pozícióját
+            heroInitialPosition = new MapID(heroColumn, heroRow);
+
         }
         return true; // Sikeres beolvasás és feldolgozás
     }
@@ -154,6 +165,8 @@ public class MapReader {
             }
             System.out.println(mapLines.get(i));
         }
+
+
         // Kiírjuk a hős aktuális pozícióját
       //  if (heroPosition != null) {
       //      System.out.println("Hero's current position - Column: " + heroPosition.getHorizontal() + ", Row: " + heroPosition.getVertical());

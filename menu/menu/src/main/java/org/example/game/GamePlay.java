@@ -15,7 +15,7 @@ public class GamePlay {
         this.hero = hero;
         if (mapReader == null) {
             this.mapReader = new MapReader();
-            this.mapReader.readMapFromFile(); // Feltételezve, hogy ez a metódus inicializálja a mapReader-t
+            this.mapReader.readMapFromFile();
         } else {
             this.mapReader = mapReader;
         }

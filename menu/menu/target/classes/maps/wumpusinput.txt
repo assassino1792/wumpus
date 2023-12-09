@@ -1,6 +1,14 @@
-5 D 4 N
-WWWWW
-WW_PW
-W_UWW
-W_G_W
-WWWWW
+13 D 3 N
+WWWWWWWWWWWWW
+WW__P_______W
+W_WWWP______W
+W___________W
+WP___P___U__W
+W_______WG__W
+WP___P______W
+W________W__W
+W_____U_____W
+W________W__W
+W_____W_____W
+W__P_______WW
+WWWWWWWWWWWWW
