@@ -186,9 +186,9 @@ public class MapReader {
         }
 
         // Kiírjuk a hős aktuális pozícióját
-        if (heroPosition != null) {
-            System.out.println("Hero's current position - Column: " + heroPosition.getHorizontal() + ", Row: " + heroPosition.getVertical());
-        }
+      //  if (heroPosition != null) {
+      //      System.out.println("Hero's current position - Column: " + heroPosition.getHorizontal() + ", Row: " + heroPosition.getVertical());
+      //  }
     }
     public void updateMapPosition(int row, int column, char newChar) {
         if (row >= 0 && row < mapLines.size() && column >= 0 && column < mapLines.get(row).length()) {

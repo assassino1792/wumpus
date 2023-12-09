@@ -1,14 +1,14 @@
 13 B 11 N
 WWWWWWWWWWWWW
 WW__P_______W
-W___WG______W
+W___WP______W
 W___________W
 WP_P_P______W
 W___________W
 WP___P______W
 W______U____W
 W___________W
-W___________W
+W___G_______W
 W________U__W
 W__P_______WW
 WWWWWWWWWWWWW

@@ -41,6 +41,9 @@ public class GamePlay {
         int horizontal = currentMapID.getHorizontal();
         int vertical = currentMapID.getVertical();
 
+        int newHorizontal = horizontal;
+        int newVertical = vertical;
+
         switch (hero.getWay()) {
             case NORTH:
                 if (vertical > 1) vertical--;
@@ -56,6 +59,14 @@ public class GamePlay {
                 break;
         }
 
+        char targetChar = mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1);
+        if (targetChar == 'U') {
+            System.out.println("You stepped on a Wumpus! GAME OVER.");
+            return; // Vagy valamilyen más logika a játék befejezésére
+        }else {
+                hero.setMapID(new MapID(horizontal, vertical));
+                System.out.println("Hero's new position - Column: " + horizontal + ", Row: " + vertical);
+            }
         // Ellenőrizzük, hogy a hős új pozíciójában van-e Pit (P)
         if (mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1) == 'P') {
             if (hero.getArrowCount() > 0) {
