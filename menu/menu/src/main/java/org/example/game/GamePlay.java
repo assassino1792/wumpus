@@ -56,9 +56,17 @@ public class GamePlay {
                 break;
         }
 
+        // Ellenőrizzük, hogy a hős új pozíciójában van-e Pit (P)
+        if (mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1) == 'P') {
+            if (hero.getArrowCount() > 0) {
+                hero.setArrowCount(hero.getArrowCount() - 1); // Csökkentjük a nyíl számát
+                System.out.println("You stepped on a Pit! Lost an arrow. Remaining arrows: " + hero.getArrowCount()+"\n");
+            }
+        }
+
         hero.setMapID(new MapID(horizontal, vertical));
 
-        System.out.println("Hero's new position - Column: " + currentMapID.getHorizontal() + ", Row: " + currentMapID.getVertical());
+       // System.out.println("Hero's new position - Column: " + currentMapID.getHorizontal() + ", Row: " + currentMapID.getVertical());
     }
     public void shootArrow() {
         if (hero.getArrowCount() > 0) {
@@ -67,7 +75,8 @@ public class GamePlay {
             int vertical = currentMapID.getVertical();
 
             boolean hitWall = false;
-            while (!hitWall) {
+            boolean hitWumpus = false;
+            while (!hitWall && !hitWumpus) {
                 switch (hero.getWay()) {
                     case NORTH:
                         if (vertical > 1) vertical--;
@@ -83,13 +92,23 @@ public class GamePlay {
                         break;
                 }
 
-                if (mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1) == 'W') {
-                    hitWall = true;
+                char targetChar = mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1);
+                if (targetChar == 'W') {
+                    hitWall = true; // A nyíl falba ütközött
+                } else if (targetChar == 'U') {
+                    hitWumpus = true;
+                    mapReader.updateMapPosition(vertical - 1, horizontal - 1, '_'); // Frissítjük a pályát, eltávolítjuk a Wumpust
                 }
             }
 
-            hero.setArrowCount(hero.getArrowCount() - 1);
-            System.out.println("Shot an arrow towards " + hero.getWay() + ". Remaining arrows: " + hero.getArrowCount());
+            hero.setArrowCount(hero.getArrowCount() - 1); // Csökkentjük a nyílak számát
+            if (hitWumpus) {
+                System.out.println("SCREEEEEEEEEAM! You hit a Wumpus! Remaining arrows: " + hero.getArrowCount());
+            } else if (hitWall) {
+                System.out.println("Arrow hit a wall and got destroyed. Remaining arrows: " + hero.getArrowCount());
+            } else {
+                System.out.println("Shot an arrow towards " + hero.getWay() + ". Remaining arrows: " + hero.getArrowCount());
+            }
         } else {
             System.out.println("No more arrows left.");
         }

@@ -190,6 +190,13 @@ public class MapReader {
             System.out.println("Hero's current position - Column: " + heroPosition.getHorizontal() + ", Row: " + heroPosition.getVertical());
         }
     }
+    public void updateMapPosition(int row, int column, char newChar) {
+        if (row >= 0 && row < mapLines.size() && column >= 0 && column < mapLines.get(row).length()) {
+            StringBuilder updatedLine = new StringBuilder(mapLines.get(row));
+            updatedLine.setCharAt(column, newChar); // Frissítjük a karaktert
+            mapLines.set(row, updatedLine.toString()); // Frissítjük a sor tartalmát
+        }
+    }
 
 }
 
