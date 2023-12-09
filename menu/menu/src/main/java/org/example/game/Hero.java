@@ -11,44 +11,28 @@ public class Hero {
     private WayType way;
     private int arrowCount;
 
-
-    public Hero() {
-    }
-
+    public Hero() {}
     public WayType getWay() {
         return way;
     }
-
     public void setWay(WayType way) {
         this.way = way;
     }
-
     public int getArrowCount() {
         return arrowCount;
     }
-
     public void setArrowCount(int arrowCount) {
         this.arrowCount = arrowCount;
     }
-
-
     public MapID getMapID() {
         return mapID;
     }
-
     public void setMapID(MapID mapID) {
         this.mapID = mapID;
     }
-
     private boolean hasGold = false;
-    public boolean isHasGold() {
-        return hasGold;
-    }
-
-    public void setHasGold(boolean hasGold) {
-        this.hasGold = hasGold;
-    }
-
+    public boolean isHasGold() { return hasGold; }
+    public void setHasGold(boolean hasGold) {this.hasGold = hasGold;}
     public void initializeHero(int mapSize) {
         this.arrowCount = MapValidator.WumpusCount(mapSize); // Nyilak száma a Wumpuszok számával egyezik meg
         this.way = WayType.NORTH; // Kezdeti irány beállítása Északra

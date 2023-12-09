@@ -12,24 +12,18 @@ public class MapReader {
     private List<String> mapLines = new ArrayList<>();
     private MapID heroInitialPosition;
 
-
     public boolean readMapFromFile() {
 
         String filePath = "/maps/wumpusinput.txt";
         mapLines.clear();
-        //List<String> mapLines = new ArrayList<>();
         String header = null;
-
         try (InputStream is = getClass().getResourceAsStream(filePath);
              BufferedReader reader = new BufferedReader(new InputStreamReader(is))) {
-
             header = reader.readLine();
             String line;
-
             while ((line = reader.readLine()) != null) {
                 mapLines.add(line);
             }
-
         } catch (IOException e) {
             System.out.println("Error reading the file: " + e.getMessage());
             return false; // Itt adjuk vissza a false értéket
@@ -37,8 +31,6 @@ public class MapReader {
             System.out.println("Error: File not found: " + filePath);
             return false; // Itt is adjuk vissza a false értéket
         }
-
-
         //Wumpus
         int actualWumpusCount = countWumpusOnMap();
         System.out.println("Found Wumpus number: " + actualWumpusCount); // Kiírjuk a Wumpusok számát
@@ -48,8 +40,6 @@ public class MapReader {
             System.out.println("Error: Invalid Wumpus number. Expected number: " + expectedWumpusCount + ", Actual number: " + actualWumpusCount);
             return false;
         }
-
-
         // Ellenőrizzük a pálya méretét a fejléc alapján
         if (header != null && !header.isEmpty()) {
             if (!MapValidator.isValidMapDimensions(mapLines, header)) {
@@ -57,7 +47,6 @@ public class MapReader {
                 return false;
             }
         }
-
         // Ellenőrizzük a térkép méretét és a falakat a beolvasás után
         if (!MapValidator.isValidMapSize(mapLines.size())) {
             System.out.println("Error: Invalid map size. The map must be between 6x6 and 20x20.");
@@ -68,17 +57,11 @@ public class MapReader {
             System.out.println("Error: Invalid map. The map must be surrounded by walls.");
             return false;
         }
-     //   System.out.println("Map size: " + getMapSize());
-
-
         if (header != null) {
             System.out.println("  " + header);
             MapValidator.checkAndPrintHeaderDetails(header);
         }
-
         int wumpusCount = MapValidator.WumpusCount(mapSize);
-
-
         // Oszlopok fejléce és a pálya sorainak kiírása
         System.out.print(" ");
         if (mapLines.size() < 10) {
@@ -99,14 +82,10 @@ public class MapReader {
             }
             System.out.println(mapLines.get(i));
         }
-
         if (!MapValidator.hasExactlyOneGold(mapLines)) {
             System.out.println("Error: The map must contain exactly one gold piece.");
             return false;
         }
-
-
-
         // Hős helyzetének meghatározása
         if (header != null && header.length() >= 5) {
             // Keresd meg az első szám végét
@@ -114,12 +93,10 @@ public class MapReader {
             while (firstNumberEndIndex < header.length() && Character.isDigit(header.charAt(firstNumberEndIndex))) {
                 firstNumberEndIndex++;
             }
-
             // Keresd meg a hős oszlopát
             int heroColumnIndex = header.indexOf(' ', firstNumberEndIndex) + 1;
             char heroColumnChar = header.charAt(heroColumnIndex);
             int heroColumn = heroColumnChar - 'A' + 1;
-
             // Keresd meg a hős sorát
             int heroRowIndex = header.indexOf(' ', heroColumnIndex) + 1;
             String rowStr = header.substring(heroRowIndex).split(" ")[0];
@@ -131,16 +108,11 @@ public class MapReader {
                 return false;
             }
             heroInitialPosition = new MapID(heroColumn, heroRow);
-
             // Kiírjuk a hős oszlopát és sorát
             System.out.println("Hero's column: " + heroColumn);
             System.out.println("Hero's row: " + heroRow);
-
         }
-
-
         return true; // Sikeres beolvasás és feldolgozás
-
     }
 
     public MapID getHeroInitialPosition() {
@@ -162,7 +134,6 @@ public class MapReader {
         }
         return wumpusCount;
     }
-
     // Új metódus a pálya méretének lekérdezésére
     public int getMapSize() {
         return mapLines.size();
@@ -174,7 +145,6 @@ public class MapReader {
             System.out.print((char)('a' + i));
         }
         System.out.println();
-
         // A pálya sorainak kiírása
         for (int i = 0; i < mapLines.size(); i++) {
             if (i < 9) {
@@ -184,7 +154,6 @@ public class MapReader {
             }
             System.out.println(mapLines.get(i));
         }
-
         // Kiírjuk a hős aktuális pozícióját
       //  if (heroPosition != null) {
       //      System.out.println("Hero's current position - Column: " + heroPosition.getHorizontal() + ", Row: " + heroPosition.getVertical());
@@ -197,6 +166,5 @@ public class MapReader {
             mapLines.set(row, updatedLine.toString()); // Frissítjük a sor tartalmát
         }
     }
-
 }
 

@@ -7,12 +7,10 @@ public class MapID {
 
     public MapID() {
     }
-
     public MapID(int horizontal, int vertical) {
         this.horizontal = horizontal;
         this.vertical = vertical;
     }
-
     public int getHorizontal() {
         return horizontal;
     }

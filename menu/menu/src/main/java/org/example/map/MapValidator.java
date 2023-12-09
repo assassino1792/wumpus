@@ -1,10 +1,7 @@
 package org.example.map;
-
 import java.util.List;
 
-
 public class MapValidator {
-
 
     public static boolean isValidMapSize(int size) {
         return size >= 6 && size <= 20;
@@ -24,23 +21,19 @@ public class MapValidator {
           //  System.out.println("A fejléc túl rövid vagy null.");
         }
     }
-
     public static boolean isValidMapDimensions(List<String> mapLines, String header) {
         if (mapLines == null || mapLines.isEmpty() || header == null || header.isEmpty()) {
             return false;
         }
-
         // Keresd meg az első nem számjegy karakter pozícióját a fejlécben
         int firstNonDigitIndex = 0;
         while (firstNonDigitIndex < header.length() && Character.isDigit(header.charAt(firstNonDigitIndex))) {
             firstNonDigitIndex++;
         }
-
         // Ha nincs szám a fejlécben, akkor téves a méret
         if (firstNonDigitIndex == 0) {
             return false;
         }
-
         // Alakítsd át a számjegyeket számmá
         int expectedSize;
         try {
@@ -48,14 +41,10 @@ public class MapValidator {
         } catch (NumberFormatException e) {
             return false; // Ha a számjegyek nem alakíthatók át érvényes számmá
         }
-
         int rowCount = mapLines.size();
         int colCount = mapLines.get(0).length();
-
         return rowCount == expectedSize && colCount == expectedSize;
     }
-
-
     public static boolean isSurroundedByWalls(List<String> mapLines) {
         if (mapLines == null || mapLines.isEmpty()) {
             return false;
@@ -66,7 +55,6 @@ public class MapValidator {
         if (!isRowFullOfWalls(mapLines.get(0)) || !isRowFullOfWalls(mapLines.get(rowCount - 1))) {
             return false;
         }
-
         // Ellenőrizzük a többi sort
         for (int i = 1; i < rowCount - 1; i++) {
             String row = mapLines.get(i);
@@ -74,7 +62,6 @@ public class MapValidator {
                 return false;
             }
         }
-
         return true;
     }
     private static boolean isRowFullOfWalls(String row) {
@@ -85,12 +72,10 @@ public class MapValidator {
         }
         return true;
     }
-
     public static int WumpusCount(int mapSize) {
         if (!isValidMapSize(mapSize)) {
             throw new IllegalArgumentException("Invalid map size: " + mapSize);
         }
-
         if (mapSize <= 8) {
             return 1;
         } else if (mapSize <= 14) {
@@ -99,7 +84,6 @@ public class MapValidator {
             return 3;
         }
     }
-
     public static boolean hasExactlyOneGold(List<String> mapLines) {
         int goldCount = 0;
         for (String line : mapLines) {
@@ -111,18 +95,5 @@ public class MapValidator {
         }
         return goldCount == 1;
     }
-
-   /* public static boolean hasExactlyOneHero(List<String> mapLines) {
-        int heroCount = 0;
-        for (String line : mapLines) {
-            for (char c : line.toCharArray()) {
-                if (c == 'H') {
-                    heroCount++;
-                }
-            }
-        }
-        return heroCount == 1;
-    }*/
-
 }
 

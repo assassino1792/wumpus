@@ -4,7 +4,6 @@ import org.example.game.GamePlay;
 import org.example.game.Hero;
 import org.example.map.MapReader;
 import org.example.map.WayType;
-
 import java.util.Scanner;
 
 public class Menu {
@@ -17,12 +16,8 @@ public class Menu {
     public void startGame() {
 
         MapReader mapReader = new MapReader();
-
-        //mapReader.readMapFromFile();
         System.out.print("Please enter your username: ");
         String username = scanner.nextLine();
-
-
 
         if (MenuValidator.isValidUsername(username)) {
             System.out.println("Welcome, " + username + "!");
@@ -30,10 +25,7 @@ public class Menu {
         } else {
             System.out.println("Invalid username. It must be between 3 and 12 characters and not contain spaces.");
         }
-
     }
-
-
     public void displayMenu() {
         int choice;
 
@@ -45,12 +37,7 @@ public class Menu {
             System.out.println("4. EXIT");
             System.out.print("Please enter your choice (1-3): ");
 
-
             choice = scanner.nextInt();
-
-
-
-
 
             switch (choice) {
                 case 1:
@@ -61,7 +48,6 @@ public class Menu {
                     System.out.println("READ MAP FROM FILE selected.");
                     //mapReader.readMapFromFile();
                     boolean isMapValid = mapReader.readMapFromFile();
-
                     if (!isMapValid) {
                         // Ha a térkép érvénytelen, visszatérünk a displayMenu-be
                         displayMenu();
@@ -77,13 +63,8 @@ public class Menu {
                 default:
                     System.out.println("Invalid choice. Please enter 1, 2, or 3.");
             }
-
-
         }
-
-
     }
-
             private void displaySubMenu() {
                 int choice;
 
@@ -107,16 +88,12 @@ public class Menu {
                         System.out.println("Invalid choice. Please enter 1, 2, or 3.");
                 }
             }
-
     private void displayGameMenu() {
         int choice;
         if (mapReader == null) {
             mapReader = new MapReader();
         }
-       // MapReader mapReader = new MapReader();
         hero = new Hero(); // Inicializáljuk a hőst
-
-
         boolean isMapValid = mapReader.readMapFromFile();
         if (isMapValid) {
             int mapSize = mapReader.getMapSize(); // Lekérjük a pálya méretét
@@ -124,15 +101,11 @@ public class Menu {
         }
 
         GamePlay gamePlay = new GamePlay(hero, mapReader); // Létrehozzuk a GamePlay példányt
-
         System.out.println("\nThe game has started.");
 
-
         while (true) {
-            System.out.println("\nRemaining arrows: " + hero.getArrowCount()); // Kiírjuk a hős megmaradt nyílak számát
-
-            System.out.println("\nGame Menu:");
-
+            System.out.println("\nRemaining arrows: " + hero.getArrowCount());
+            System.out.println("\nGame Menu:\n");
             System.out.println("1. Look North");
             System.out.println("2. Look East");
             System.out.println("3. Look West");
@@ -145,13 +118,11 @@ public class Menu {
             System.out.println("10. Suspend");
             System.out.println("11. Give up the game");
 
-
             if (gamePlay.hasWon()) {
                 System.out.println("\nCongratulations! You have successfully returned the gold to the starting position. YOU WIN!\n");
                 displayMenu(); // Visszatérés a főmenübe
                 break;
             }
-
             if (gamePlay.isGameOver()) {
                 System.out.println("\nYou lost! Returning to main menu...\n");
                 displayMenu(); // Visszatérünk a főmenübe
@@ -160,12 +131,7 @@ public class Menu {
 
             System.out.print("\nPlease enter your choice (1-11): ");
 
-
-
             choice = scanner.nextInt();
-
-
-
 
             switch (choice) {
                 case 1:
@@ -203,20 +169,12 @@ public class Menu {
                     System.out.println("Invalid choice. Please enter a number between 1 and 11.");
             }
             mapReader.redrawMap(hero.getMapID());
-
-
         }
-
     }
         private boolean confirmExit() {
         System.out.print("Are you sure you want to give up the game? (Y/N): ");
         String response = scanner.next();
         return response.equalsIgnoreCase("Y");
     }
-
-
-
-
-
 }
 
