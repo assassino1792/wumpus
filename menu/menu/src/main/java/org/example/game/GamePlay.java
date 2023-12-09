@@ -71,6 +71,12 @@ public class GamePlay {
                 hero.setMapID(new MapID(horizontal, vertical));
                 System.out.println("Hero's new position - Column: " + horizontal + ", Row: " + vertical);
             }
+
+        // Ellenőrizzük, hogy a hős visszatért-e a kezdeti pozícióba az arannyal
+        if (hero.isHasGold() && newHorizontal == mapReader.getHeroInitialPosition().getHorizontal() && newVertical == mapReader.getHeroInitialPosition().getVertical()) {
+            System.out.println("\nCongratulations! You have successfully returned the gold to the starting position. YOU WIN!\n");
+        }
+
         // Ellenőrizzük, hogy a hős új pozíciójában van-e Pit (P)
         if (mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1) == 'P') {
             if (hero.getArrowCount() > 0) {
@@ -83,6 +89,10 @@ public class GamePlay {
         hero.setMapID(new MapID(horizontal, vertical));
 
        // System.out.println("Hero's new position - Column: " + currentMapID.getHorizontal() + ", Row: " + currentMapID.getVertical());
+    }
+
+    public boolean hasWon() {
+        return hero.isHasGold() && hero.getMapID().equals(mapReader.getHeroInitialPosition());
     }
     public boolean isGameOver() {
         return gameOver;

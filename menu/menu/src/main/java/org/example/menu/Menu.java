@@ -129,6 +129,8 @@ public class Menu {
 
 
         while (true) {
+            System.out.println("\nRemaining arrows: " + hero.getArrowCount()); // Kiírjuk a hős megmaradt nyílak számát
+
             System.out.println("\nGame Menu:");
 
             System.out.println("1. Look North");
@@ -143,9 +145,17 @@ public class Menu {
             System.out.println("10. Suspend");
             System.out.println("11. Give up the game");
 
+
+            if (gamePlay.hasWon()) {
+                System.out.println("\nCongratulations! You have successfully returned the gold to the starting position. YOU WIN!\n");
+                displayMenu(); // Visszatérés a főmenübe
+                break;
+            }
+
             if (gamePlay.isGameOver()) {
                 System.out.println("\nYou lost! Returning to main menu...\n");
-                return; // Visszatérünk a főmenübe
+                displayMenu(); // Visszatérünk a főmenübe
+                break;
             }
 
             System.out.print("\nPlease enter your choice (1-11): ");
@@ -193,7 +203,7 @@ public class Menu {
                     System.out.println("Invalid choice. Please enter a number between 1 and 11.");
             }
             mapReader.redrawMap(hero.getMapID());
-            System.out.println("\nRemaining arrows: " + hero.getArrowCount()); // Kiírjuk a hős megmaradt nyílak számát
+
 
         }
 
