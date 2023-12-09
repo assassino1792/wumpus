@@ -6,14 +6,11 @@ import org.example.map.MapValidator;
 
 public class Hero {
 
-    private Long heroId;
 
-    private String playerName;
     private MapID mapID;
     private WayType way;
     private int arrowCount;
-    private boolean hasGold;
-    private int moveCount;
+
 
     public Hero() {
     }
@@ -34,21 +31,6 @@ public class Hero {
         this.arrowCount = arrowCount;
     }
 
-    public boolean isHasGold() {
-        return hasGold;
-    }
-
-    public void setHasGold(boolean hasGold) {
-        this.hasGold = hasGold;
-    }
-
-    public String getPlayerName() {
-        return playerName;
-    }
-
-    public void setPlayerName(String playerName) {
-        this.playerName = playerName;
-    }
 
     public MapID getMapID() {
         return mapID;
@@ -58,20 +40,13 @@ public class Hero {
         this.mapID = mapID;
     }
 
-    public int getMoveCount() {
-        return moveCount;
+    private boolean hasGold = false;
+    public boolean isHasGold() {
+        return hasGold;
     }
 
-    public void setMoveCount(int moveCount) {
-        this.moveCount = moveCount;
-    }
-
-    public Long getHeroId() {
-        return heroId;
-    }
-
-    public void setHeroId(Long heroId) {
-        this.heroId = heroId;
+    public void setHasGold(boolean hasGold) {
+        this.hasGold = hasGold;
     }
 
     public void initializeHero(int mapSize) {

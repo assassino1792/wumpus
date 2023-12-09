@@ -137,6 +137,8 @@ public class Menu {
             System.out.println("4. Look South");
             System.out.println("5. Move");
             System.out.println("6. Shoot");
+            System.out.println("7. Pick up the gold");
+            System.out.println("8. Drop the gold");
             System.out.println("9. Save");
             System.out.println("10. Suspend");
             System.out.println("11. Give up the game");
@@ -174,6 +176,12 @@ public class Menu {
                 case 6:
                     gamePlay.shootArrow(); // Lövés logika
                     break;
+                case 7:
+                    gamePlay.pickUpGold();
+                    break;
+                case 8:
+                    gamePlay.dropGold();
+                    break;
                // TODO SAVE and SUSPEND
                 case 11:
                     if (confirmExit()) {
@@ -185,7 +193,7 @@ public class Menu {
                     System.out.println("Invalid choice. Please enter a number between 1 and 11.");
             }
             mapReader.redrawMap(hero.getMapID());
-            System.out.println("\nRemaining arrows: " + hero.getArrowCount()); // Kiírjuk a hős maradék nyílak számát
+            System.out.println("\nRemaining arrows: " + hero.getArrowCount()); // Kiírjuk a hős megmaradt nyílak számát
 
         }
 

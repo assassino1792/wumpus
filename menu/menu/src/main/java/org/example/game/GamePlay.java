@@ -1,8 +1,8 @@
 package org.example.game;
 
 import org.example.map.MapID;
-import org.example.map.WayType;
 import org.example.map.MapReader;
+import org.example.map.WayType;
 
 public class GamePlay {
 
@@ -79,6 +79,7 @@ public class GamePlay {
             }
         }
 
+
         hero.setMapID(new MapID(horizontal, vertical));
 
        // System.out.println("Hero's new position - Column: " + currentMapID.getHorizontal() + ", Row: " + currentMapID.getVertical());
@@ -129,6 +130,33 @@ public class GamePlay {
             }
         } else {
             System.out.println("No more arrows left.");
+        }
+    }
+
+    public void pickUpGold() {
+        MapID heroPosition = hero.getMapID();
+        int row = heroPosition.getVertical() - 1;
+        int column = heroPosition.getHorizontal() - 1;
+
+        if (mapReader.getMapLines().get(row).charAt(column) == 'G') {
+            hero.setHasGold(true); // A hős felvette az aranyat
+            mapReader.updateMapPosition(row, column, '_'); // Eltávolítjuk az aranyat a pályáról
+            System.out.println("You picked up the gold!");
+        } else {
+            System.out.println("No gold here to pick up.");
+        }
+    }
+    public void dropGold() {
+        if (hero.isHasGold()) { // Itt használjuk az új getter metódust
+            MapID heroPosition = hero.getMapID();
+            int row = heroPosition.getVertical() - 1;
+            int column = heroPosition.getHorizontal() - 1;
+
+            hero.setHasGold(false); // A hős letette az aranyat
+            mapReader.updateMapPosition(row, column, 'G'); // Helyezzük vissza az aranyat a pályára
+            System.out.println("You dropped the gold!");
+        } else {
+            System.out.println("You don't have any gold to drop.");
         }
     }
 
