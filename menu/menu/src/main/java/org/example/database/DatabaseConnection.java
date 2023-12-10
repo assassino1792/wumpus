@@ -64,7 +64,7 @@ public class DatabaseConnection {
                     "HeroPositionY INT NOT NULL, " +
                     "ArrowCount INT NOT NULL, " +
                     "StepCount INT NOT NULL, " +
-                    "WumpusCount INT NOT NULL, " +
+                    "WumpusKilledCount INT NOT NULL, " +
                     "Timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
             stmt.execute(createGameStateTable);
 

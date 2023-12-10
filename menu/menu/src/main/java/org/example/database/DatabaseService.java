@@ -43,8 +43,8 @@ public class DatabaseService {
         }
     }
 
-    public void saveGameState(String playerName, String mapState, int heroPosX, int heroPosY, int arrowCount, int stepCount, int wumpusCount) {
-        String sql = "INSERT INTO GameState (PlayerName, MapState, HeroPositionX, HeroPositionY, ArrowCount, StepCount, WumpusCount, Timestamp) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    public void saveGameState(String playerName, String mapState, int heroPosX, int heroPosY, int arrowCount, int stepCount, int WumpusKilledCount) {
+        String sql = "INSERT INTO GameState (PlayerName, MapState, HeroPositionX, HeroPositionY, ArrowCount, StepCount, WumpusKilledCount, Timestamp) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = dbConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, playerName);
@@ -53,7 +53,7 @@ public class DatabaseService {
             pstmt.setInt(4, heroPosY);
             pstmt.setInt(5, arrowCount);
             pstmt.setInt(6, stepCount);
-            pstmt.setInt(7, wumpusCount);
+            pstmt.setInt(7, WumpusKilledCount);
             pstmt.setTimestamp(8, new Timestamp(System.currentTimeMillis()));
             pstmt.executeUpdate();
         } catch (SQLException e) {
@@ -74,9 +74,9 @@ public class DatabaseService {
                 int heroPosY = rs.getInt("HeroPositionY");
                 int arrowCount = rs.getInt("ArrowCount");
                 int stepCount = rs.getInt("StepCount");
-                int wumpusCount = rs.getInt("WumpusCount");
+                int WumpusKilledCount = rs.getInt("WumpusKilledCount");
                 // További adatok lekérése, ha szükséges
-                return new GameState(playerName, mapState, heroPosX, heroPosY, arrowCount, stepCount, wumpusCount);
+                return new GameState(playerName, mapState, heroPosX, heroPosY, arrowCount, stepCount, WumpusKilledCount);
             }
         } catch (SQLException e) {
             e.printStackTrace();

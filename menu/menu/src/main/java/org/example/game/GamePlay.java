@@ -10,13 +10,13 @@ public class GamePlay {
     private int mapSize;
     private MapReader mapReader;
     private boolean gameOver = false;
-    private int stepsCount = 0;
-    private int wumpusCount;
+    private int stepsCount=0;
+    private int wumpusKilledCount;
 
     public GamePlay(Hero hero, MapReader mapReader, int initialStepCount, int initialWumpusCount) {
         this.hero = hero;
         this.stepsCount = initialStepCount;
-        this.wumpusCount = initialWumpusCount;
+        this.wumpusKilledCount = initialWumpusCount;
         if (mapReader == null) {
             this.mapReader = new MapReader();
             this.mapReader.readMapFromFile();
@@ -36,8 +36,7 @@ public class GamePlay {
     }
 
     public int getStepCount() {
-        int stepCount=0;
-        return stepCount;
+        return stepsCount;
     }
 
     public void moveHero() {
@@ -138,6 +137,7 @@ public class GamePlay {
             }
             hero.setArrowCount(hero.getArrowCount() - 1); // Csökkentjük a nyílak számát
             if (hitWumpus) {
+                wumpusKilledCount++;
                 System.out.println("SCREEEEEEEEEAM! You hit a Wumpus! Remaining arrows: " + hero.getArrowCount());
             } else if (hitWall) {
                 System.out.println("Arrow hit a wall and got destroyed. Remaining arrows: " + hero.getArrowCount());
@@ -177,7 +177,7 @@ public class GamePlay {
             System.out.println("You don't have any gold to drop.");
         }
     }
-    public int getWumpusCount() {
-        return wumpusCount;
+    public int getWumpusKilledCount() {
+        return wumpusKilledCount;
     }
 }

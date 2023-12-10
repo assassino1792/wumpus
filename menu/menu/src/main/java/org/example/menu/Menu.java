@@ -193,7 +193,7 @@ public class Menu {
                     break;
                 case 9:
                     String mapState = getMapStateAsString();
-                    int wumpusCount = gamePlay.getWumpusCount();
+                    int wumpusCount = gamePlay.getWumpusKilledCount();
                     dbService.saveGameState(username, mapState, hero.getMapID().getHorizontal(), hero.getMapID().getVertical(), hero.getArrowCount(), gamePlay.getStepCount(), wumpusCount);
                     System.out.println("Game saved successfully.");
                     break;
