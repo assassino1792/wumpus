@@ -1,9 +1,12 @@
 package org.example.menu;
 
+import org.example.database.DatabaseConnection;
+import org.example.database.DatabaseService;
 import org.example.game.GamePlay;
 import org.example.game.Hero;
 import org.example.map.MapReader;
 import org.example.map.WayType;
+
 import java.util.Scanner;
 
 public class Menu {
@@ -11,16 +14,23 @@ public class Menu {
     private Scanner scanner = new Scanner(System.in);
     private MapReader mapReader = new MapReader();
     private Hero hero;
-    private int mapSize;
+    private DatabaseService dbService;
+
+    public Menu() {
+        this.mapReader = new MapReader();
+        DatabaseConnection dbConnection = new DatabaseConnection();
+        this.dbService = new DatabaseService(dbConnection);
+    }
 
     public void startGame() {
 
-        MapReader mapReader = new MapReader();
+     //   MapReader mapReader = new MapReader();
         System.out.print("Please enter your username: ");
         String username = scanner.nextLine();
 
         if (MenuValidator.isValidUsername(username)) {
             System.out.println("Welcome, " + username + "!");
+            dbService.insertPlayerName(username); // Itt mentjük el az adatbázisba
             displayMenu();
         } else {
             System.out.println("Invalid username. It must be between 3 and 12 characters and not contain spaces.");
