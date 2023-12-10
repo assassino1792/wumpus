@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MapReader {
@@ -165,12 +166,6 @@ public class MapReader {
             }
             System.out.println(mapLines.get(i));
         }
-
-
-        // Kiírjuk a hős aktuális pozícióját
-      //  if (heroPosition != null) {
-      //      System.out.println("Hero's current position - Column: " + heroPosition.getHorizontal() + ", Row: " + heroPosition.getVertical());
-      //  }
     }
     public void updateMapPosition(int row, int column, char newChar) {
         if (row >= 0 && row < mapLines.size() && column >= 0 && column < mapLines.get(row).length()) {
@@ -178,6 +173,9 @@ public class MapReader {
             updatedLine.setCharAt(column, newChar); // Frissítjük a karaktert
             mapLines.set(row, updatedLine.toString()); // Frissítjük a sor tartalmát
         }
+    }
+    public void setMapLinesFromString(String mapState) {
+        this.mapLines = new ArrayList<>(Arrays.asList(mapState.split("\n")));
     }
 }
 

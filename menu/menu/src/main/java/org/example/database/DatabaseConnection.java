@@ -33,19 +33,54 @@ public class DatabaseConnection {
             // Itt hozhatod létre az adatbázis táblákat, ha szükséges
             // Például: stmt.execute("CREATE TABLE IF NOT EXISTS ExampleTable (id INT PRIMARY KEY, name VARCHAR(255))");
             //stmt.execute("CREATE TABLE IF NOT EXISTS ExampleTable (id INT PRIMARY KEY, name VARCHAR(255))");
-            String sql = "CREATE TABLE IF NOT EXISTS PlayerNames (" +
+          /*  String sql = "CREATE TABLE IF NOT EXISTS PlayerNames (" +
                     "ID INT AUTO_INCREMENT PRIMARY KEY, " +
                     "PlayerName VARCHAR(255) NOT NULL, " +
                     "Timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
             stmt.execute(sql);
+*/
+
+            // PlayerNames tábla létrehozása
+            String createPlayerNamesTable = "CREATE TABLE IF NOT EXISTS PlayerNames (" +
+                    "ID INT AUTO_INCREMENT PRIMARY KEY, " +
+                    "PlayerName VARCHAR(255) NOT NULL, " +
+                    "Timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
+            stmt.execute(createPlayerNamesTable);
+
+            // Leaderboard tábla létrehozása
+            String createLeaderboardTable = "CREATE TABLE IF NOT EXISTS Leaderboard (" +
+                    "ID INT AUTO_INCREMENT PRIMARY KEY, " +
+                    "PlayerName VARCHAR(255) NOT NULL, " +
+                    "Steps INT NOT NULL, " +
+                    "Timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
+            stmt.execute(createLeaderboardTable);
+
+            // GameState tábla létrehozása
+            String createGameStateTable = "CREATE TABLE IF NOT EXISTS GameState (" +
+                    "ID INT AUTO_INCREMENT PRIMARY KEY, " +
+                    "PlayerName VARCHAR(255) NOT NULL, " +
+                    "MapState TEXT NOT NULL, " +
+                    "HeroPositionX INT NOT NULL, " +
+                    "HeroPositionY INT NOT NULL, " +
+                    "ArrowCount INT NOT NULL, " +
+                    "StepCount INT NOT NULL, " +
+                    "WumpusCount INT NOT NULL, " +
+                    "Timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
+            stmt.execute(createGameStateTable);
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("Error initializing the database", e);
         }
     }
 
+
     public Connection getConnection() {
-        return connection;
+        try {
+            return DriverManager.getConnection(URL, USER, PASSWORD);
+        } catch (SQLException e) {
+            logger.error("Error getting database connection", e);
+            return null;
+        }
     }
 
     public void close() {

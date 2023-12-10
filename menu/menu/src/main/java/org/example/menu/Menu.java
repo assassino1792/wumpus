@@ -3,9 +3,12 @@ package org.example.menu;
 import org.example.database.DatabaseConnection;
 import org.example.database.DatabaseService;
 import org.example.game.GamePlay;
+import org.example.game.GameState;
 import org.example.game.Hero;
 import org.example.map.MapReader;
 import org.example.map.WayType;
+import org.example.map.MapID;
+
 
 import java.util.Scanner;
 
@@ -15,6 +18,9 @@ public class Menu {
     private MapReader mapReader = new MapReader();
     private Hero hero;
     private DatabaseService dbService;
+    private String username;
+    private int initialStepCount;
+    private int initialWumpusCount;
 
     public Menu() {
         this.mapReader = new MapReader();
@@ -24,9 +30,9 @@ public class Menu {
 
     public void startGame() {
 
-     //   MapReader mapReader = new MapReader();
+        //   MapReader mapReader = new MapReader();
         System.out.print("Please enter your username: ");
-        String username = scanner.nextLine();
+        this.username = scanner.nextLine();
 
         if (MenuValidator.isValidUsername(username)) {
             System.out.println("Welcome, " + username + "!");
@@ -36,6 +42,7 @@ public class Menu {
             System.out.println("Invalid username. It must be between 3 and 12 characters and not contain spaces.");
         }
     }
+
     public void displayMenu() {
         int choice;
 
@@ -66,6 +73,17 @@ public class Menu {
                     break;
                 case 3:
                     System.out.println("READ FROM DATABASE selected.");
+                    GameState loadedState = dbService.loadGameState(username);
+                    if (loadedState != null) {
+                        mapReader.setMapLinesFromString(loadedState.getMapState());
+                        hero = new Hero();
+                        hero.setMapID(new MapID(loadedState.getHeroPosX(), loadedState.getHeroPosY()));
+                        hero.setArrowCount(loadedState.getarrowCount());
+
+                        displayGameMenu();
+                    } else {
+                        System.out.println("No saved game found for " + username);
+                    }
                     break;
                 case 4:
                     System.out.println("Exiting...");
@@ -75,43 +93,48 @@ public class Menu {
             }
         }
     }
-            private void displaySubMenu() {
-                int choice;
 
-                System.out.println("\nSub Menu:");
-                System.out.println("1. GAME");
-                System.out.println("2. RETURN TO MAIN MENU");
-                System.out.print("Please enter your choice (1-3): ");
+    private void displaySubMenu() {
+        int choice;
 
-                choice = scanner.nextInt();
+        System.out.println("\nSub Menu:");
+        System.out.println("1. GAME");
+        System.out.println("2. RETURN TO MAIN MENU");
+        System.out.print("Please enter your choice (1-3): ");
 
-                switch (choice) {
-                    case 1:
-                        System.out.println("GAME selected.");
-                        mapReader.readMapFromFile();
-                        displayGameMenu();
-                        break;
-                    case 2:
-                        // Visszatérés a főmenübe
-                        break;
-                    default:
-                        System.out.println("Invalid choice. Please enter 1, 2, or 3.");
-                }
-            }
+        choice = scanner.nextInt();
+
+        switch (choice) {
+            case 1:
+                System.out.println("GAME selected.");
+                mapReader.readMapFromFile();
+                displayGameMenu();
+                break;
+            case 2:
+                // Visszatérés a főmenübe
+                break;
+            default:
+                System.out.println("Invalid choice. Please enter 1, 2, or 3.");
+        }
+    }
+
     private void displayGameMenu() {
         int choice;
         if (mapReader == null) {
             mapReader = new MapReader();
         }
-        hero = new Hero(); // Inicializáljuk a hőst
+        if (hero == null) {
+            hero = new Hero(); // Inicializáljuk a hőst
+        }
         boolean isMapValid = mapReader.readMapFromFile();
         if (isMapValid) {
             int mapSize = mapReader.getMapSize(); // Lekérjük a pálya méretét
             hero.initializeHero(mapSize); // Inicializáljuk a hőst a pálya méretével
         }
 
-        GamePlay gamePlay = new GamePlay(hero, mapReader); // Létrehozzuk a GamePlay példányt
-        System.out.println("\nThe game has started.");
+        GamePlay gamePlay = new GamePlay(hero, mapReader, initialStepCount, initialWumpusCount);
+
+        System.out.println("\nThe game has started.\n");
 
         while (true) {
             System.out.println("\nRemaining arrows: " + hero.getArrowCount());
@@ -168,7 +191,13 @@ public class Menu {
                 case 8:
                     gamePlay.dropGold();
                     break;
-               // TODO SAVE and SUSPEND
+                case 9:
+                    String mapState = getMapStateAsString();
+                    int wumpusCount = gamePlay.getWumpusCount();
+                    dbService.saveGameState(username, mapState, hero.getMapID().getHorizontal(), hero.getMapID().getVertical(), hero.getArrowCount(), gamePlay.getStepCount(), wumpusCount);
+                    System.out.println("Game saved successfully.");
+                    break;
+
                 case 11:
                     if (confirmExit()) {
                         System.out.println("You gave up the game.");
@@ -178,10 +207,22 @@ public class Menu {
                 default:
                     System.out.println("Invalid choice. Please enter a number between 1 and 11.");
             }
+
             mapReader.redrawMap(hero.getMapID());
         }
     }
-        private boolean confirmExit() {
+
+    private String getMapStateAsString() {
+        StringBuilder sb = new StringBuilder();
+        for (String line : mapReader.getMapLines()) {
+            sb.append(line).append("\n"); // Minden sor után új sor karaktert teszünk
+        }
+        return sb.toString();
+    }
+
+
+
+    private boolean confirmExit() {
         System.out.print("Are you sure you want to give up the game? (Y/N): ");
         String response = scanner.next();
         return response.equalsIgnoreCase("Y");
