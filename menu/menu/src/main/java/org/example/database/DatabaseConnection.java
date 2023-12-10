@@ -1,5 +1,8 @@
 package org.example.database;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -8,8 +11,9 @@ import java.sql.Statement;
 
 public class DatabaseConnection {
 
+    private static final Logger logger = LoggerFactory.getLogger(DatabaseConnection.class);
     private static final String URL = "jdbc:mysql://localhost:3306/wumpusdb";
-    private static final String USER = "root"; 
+    private static final String USER = "root";
     private static final String PASSWORD = "";
 
     private Connection connection;
@@ -17,9 +21,10 @@ public class DatabaseConnection {
     public DatabaseConnection() {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            logger.info("Database connection established");
             initializeDatabase();
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("Error connecting to the database", e);
         }
     }
 
