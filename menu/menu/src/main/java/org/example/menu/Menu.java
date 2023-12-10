@@ -79,8 +79,11 @@ public class Menu {
                         hero = new Hero();
                         hero.setMapID(new MapID(loadedState.getHeroPosX(), loadedState.getHeroPosY()));
                         hero.setArrowCount(loadedState.getarrowCount());
+                        initialStepCount = loadedState.getStepCount();
+                        initialWumpusCount = loadedState.getWumpusCount();
+                        GamePlay gamePlay = new GamePlay(hero, mapReader, initialStepCount, initialWumpusCount);
+                        continueGame(gamePlay);
 
-                        displayGameMenu();
                     } else {
                         System.out.println("No saved game found for " + username);
                     }
@@ -93,6 +96,91 @@ public class Menu {
             }
         }
     }
+
+    private void continueGame(GamePlay gamePlay) {
+        // Itt csak a játékmenü megjelenítése történik, a játékállapot már be van állítva
+        int choice;
+        System.out.println("\nContinuing the game.\n");
+
+        while (true) {
+
+            System.out.println("\nRemaining arrows: " + hero.getArrowCount());
+            System.out.println("\nGame Menu:\n");
+            System.out.println("1. Look North");
+            System.out.println("2. Look East");
+            System.out.println("3. Look West");
+            System.out.println("4. Look South");
+            System.out.println("5. Move");
+            System.out.println("6. Shoot");
+            System.out.println("7. Pick up the gold");
+            System.out.println("8. Drop the gold");
+            System.out.println("9. Save");
+            System.out.println("10. Suspend");
+            System.out.println("11. Give up the game");
+
+            //   if (gamePlay.hasWon()) {
+            //System.out.println("\nCongratulations! You have successfully returned the gold to the starting position. YOU WIN!\n");
+            //      displayMenu(); // Visszatérés a főmenübe
+            //       break;
+            //  }
+            if (gamePlay.isGameOver()) {
+                System.out.println("\nYou lost! Returning to main menu...\n");
+                displayMenu(); // Visszatérünk a főmenübe
+                break;
+            }
+
+            System.out.print("\nPlease enter your choice (1-11): ");
+
+            choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    gamePlay.changeHeroDirection(WayType.NORTH);
+                    break;
+                case 2:
+                    gamePlay.changeHeroDirection(WayType.EAST);
+                    break;
+                case 3:
+                    gamePlay.changeHeroDirection(WayType.WEST);
+                    break;
+                case 4:
+                    gamePlay.changeHeroDirection(WayType.SOUTH);
+                    break;
+                case 5:
+                    gamePlay.moveHero(); // Mozgatja a hőst
+                    break;
+                case 6:
+                    gamePlay.shootArrow(); // Lövés logika
+                    break;
+                case 7:
+                    gamePlay.pickUpGold();
+                    break;
+                case 8:
+                    gamePlay.dropGold();
+                    break;
+                case 9:
+                    String mapState = getMapStateAsString();
+                    int wumpusCount = gamePlay.getWumpusKilledCount();
+                    dbService.saveGameState(username, mapState, hero.getMapID().getHorizontal(), hero.getMapID().getVertical(), hero.getArrowCount(), gamePlay.getStepCount(), wumpusCount);
+                    System.out.println("Game saved successfully.");
+                    break;
+
+                case 11:
+                    if (confirmExit()) {
+                        System.out.println("You gave up the game.");
+                        return; // Kilépés a menüből
+                    }
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please enter a number between 1 and 11.");
+            }
+
+            mapReader.redrawMap(hero.getMapID());
+
+        }
+    }
+
+
 
     private void displaySubMenu() {
         int choice;
@@ -151,11 +239,11 @@ public class Menu {
             System.out.println("10. Suspend");
             System.out.println("11. Give up the game");
 
-            if (gamePlay.hasWon()) {
-                System.out.println("\nCongratulations! You have successfully returned the gold to the starting position. YOU WIN!\n");
-                displayMenu(); // Visszatérés a főmenübe
-                break;
-            }
+         //   if (gamePlay.hasWon()) {
+                //System.out.println("\nCongratulations! You have successfully returned the gold to the starting position. YOU WIN!\n");
+          //      displayMenu(); // Visszatérés a főmenübe
+         //       break;
+          //  }
             if (gamePlay.isGameOver()) {
                 System.out.println("\nYou lost! Returning to main menu...\n");
                 displayMenu(); // Visszatérünk a főmenübe
