@@ -1,7 +1,7 @@
-13 D 3 N
+13 D 7 N
 WWWWWWWWWWWWW
 WW__P_______W
-W_WWWP______W
+W___WP______W
 W___________W
 WP___P___U__W
 W_______WG__W
