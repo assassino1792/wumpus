@@ -15,9 +15,7 @@ public class Main {
         menu.startGame();
 
         DatabaseConnection dbConnection = new DatabaseConnection();
-       // Connection conn = dbConnection.getConnection();
-        // Itt végezheted el az adatbázis műveleteket a 'conn' objektum használatával
-        dbConnection.close(); // Ne felejtsd el lezárni a kapcsolatot, amikor már nincs rá szükség
+        dbConnection.close();
     }
 
 }

@@ -51,7 +51,8 @@ public class Menu {
             System.out.println("1. MAP EDITOR");
             System.out.println("2. READ MAP FROM FILE");
             System.out.println("3. READ FROM DATABASE");
-            System.out.println("4. EXIT");
+            System.out.println("4. LIST THE LEADERBOARD");
+            System.out.println("5. EXIT");
             System.out.print("Please enter your choice (1-3): ");
 
             choice = scanner.nextInt();
@@ -76,6 +77,7 @@ public class Menu {
                     GameState loadedState = dbService.loadGameState(username);
                     if (loadedState != null) {
                         mapReader.setMapLinesFromString(loadedState.getMapState());
+                        mapReader.readMapFromFile();
                         hero = new Hero();
                         hero.setMapID(new MapID(loadedState.getHeroPosX(), loadedState.getHeroPosY()));
                         hero.setArrowCount(loadedState.getarrowCount());
@@ -89,8 +91,11 @@ public class Menu {
                     }
                     break;
                 case 4:
+                    break;
+
+                case 5:
                     System.out.println("Exiting...");
-                    return; // Kilépés a menüből
+                    return;
                 default:
                     System.out.println("Invalid choice. Please enter 1, 2, or 3.");
             }
@@ -98,7 +103,7 @@ public class Menu {
     }
 
     private void continueGame(GamePlay gamePlay) {
-        // Itt csak a játékmenü megjelenítése történik, a játékállapot már be van állítva
+
         int choice;
         System.out.println("\nContinuing the game.\n");
 
@@ -118,14 +123,15 @@ public class Menu {
             System.out.println("10. Suspend");
             System.out.println("11. Give up the game");
 
-            //   if (gamePlay.hasWon()) {
-            //System.out.println("\nCongratulations! You have successfully returned the gold to the starting position. YOU WIN!\n");
-            //      displayMenu(); // Visszatérés a főmenübe
-            //       break;
-            //  }
+
+            if (gamePlay.isGameWon()) {
+                displayMenu();
+                return;
+            }
+
             if (gamePlay.isGameOver()) {
                 System.out.println("\nYou lost! Returning to main menu...\n");
-                displayMenu(); // Visszatérünk a főmenübe
+                displayMenu();
                 break;
             }
 
@@ -147,10 +153,10 @@ public class Menu {
                     gamePlay.changeHeroDirection(WayType.SOUTH);
                     break;
                 case 5:
-                    gamePlay.moveHero(); // Mozgatja a hőst
+                    gamePlay.moveHero();
                     break;
                 case 6:
-                    gamePlay.shootArrow(); // Lövés logika
+                    gamePlay.shootArrow();
                     break;
                 case 7:
                     gamePlay.pickUpGold();
@@ -239,11 +245,11 @@ public class Menu {
             System.out.println("10. Suspend");
             System.out.println("11. Give up the game");
 
-         //   if (gamePlay.hasWon()) {
-                //System.out.println("\nCongratulations! You have successfully returned the gold to the starting position. YOU WIN!\n");
-          //      displayMenu(); // Visszatérés a főmenübe
-         //       break;
-          //  }
+            if (gamePlay.isGameWon()) {
+                displayMenu();
+                return;
+            }
+
             if (gamePlay.isGameOver()) {
                 System.out.println("\nYou lost! Returning to main menu...\n");
                 displayMenu(); // Visszatérünk a főmenübe

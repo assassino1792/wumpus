@@ -12,6 +12,7 @@ public class GamePlay {
     private boolean gameOver = false;
     private int stepsCount=0;
     private int wumpusKilledCount;
+    private boolean gameWon=false;
 
     public GamePlay(Hero hero, MapReader mapReader, int initialStepCount, int initialWumpusCount) {
         this.hero = hero;
@@ -39,12 +40,25 @@ public class GamePlay {
         return stepsCount;
     }
 
+    public boolean hasWon() {
+
+        if (hero.isHasGold() && hero.getMapID().equals(mapReader.getHeroInitialPosition())) {
+            System.out.println("\nCongratulations! You are clever! You have successfully returned the gold to the starting position in " + stepsCount + " steps. YOU WON!\n");
+            gameWon = true;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isGameWon() {
+        return gameWon;
+    }
+
     public void moveHero() {
         MapID currentMapID = hero.getMapID();
         int horizontal = currentMapID.getHorizontal();
         int vertical = currentMapID.getVertical();
-        int newHorizontal = horizontal;
-        int newVertical = vertical;
+
 
         switch (hero.getWay()) {
             case NORTH:
@@ -69,15 +83,12 @@ public class GamePlay {
             return;
         }else if (targetChar == 'W') {
                 System.out.println("\nCannot move onto a wall!\n");
-            return; // Vagy valamilyen más logika a játék befejezésére
+            return;
         }else {
                 hero.setMapID(new MapID(horizontal, vertical));
                 System.out.println("Hero's new position - Column: " + horizontal + ", Row: " + vertical);
             }
-        // Ellenőrizzük, hogy a hős visszatért-e a kezdeti pozícióba az arannyal
-        if (hero.isHasGold() && newHorizontal == mapReader.getHeroInitialPosition().getHorizontal() && newVertical == mapReader.getHeroInitialPosition().getVertical()) {
-         //   System.out.println("\nCongratulations! You have successfully returned the gold to the starting position. YOU WON!\n");
-        }
+
         // Ellenőrizzük, hogy a hős új pozíciójában van-e Pit (P)
         if (mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1) == 'P') {
             if (hero.getArrowCount() > 0) {
@@ -87,20 +98,21 @@ public class GamePlay {
         }
         hero.setMapID(new MapID(horizontal, vertical));
 
+       //DEBUG
+       // System.out.println("Hero's current position: " + hero.getMapID());
+       // System.out.println("Hero's initial position: " + mapReader.getHeroInitialPosition());
+
+        if (hero.isHasGold() && hero.getMapID().equals(mapReader.getHeroInitialPosition())) {
+            hasWon();
+        }
+
         stepsCount++;
        // System.out.println("Hero's new position - Column: " + currentMapID.getHorizontal() + ", Row: " + currentMapID.getVertical());
     }
 
 
 
-    public boolean hasWon() {
 
-        if (hero.isHasGold() && hero.getMapID().equals(mapReader.getHeroInitialPosition())) {
-            System.out.println("\nCongratulations! You are clever! You have successfully returned the gold to the starting position in " + stepsCount + " steps. YOU WON!\n");
-            return true;
-        }
-        return false;
-    }
     public boolean isGameOver() {
         return gameOver;
     }
