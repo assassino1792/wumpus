@@ -72,7 +72,6 @@ public class Menu {
                     displaySubMenu();
                     break;
                 case 3:
-                    System.out.println("READ FROM DATABASE selected.");
                     GameState loadedState = dbService.loadGameState(username);
                     if (loadedState != null) {
                         mapReader.setMapLinesFromString(loadedState.getMapState());
@@ -83,6 +82,7 @@ public class Menu {
                         initialWumpusCount = loadedState.getWumpusCount();
                         hero.setHasGold(loadedState.isHasGold());
                         GamePlay gamePlay = new GamePlay(hero, mapReader, initialStepCount, initialWumpusCount);
+                        gamePlay.setHeroInitialPosition(new MapID(loadedState.getHeroInitialPosX(), loadedState.getHeroInitialPosY()));
                         continueGame(gamePlay);
 
                     } else {
@@ -166,8 +166,9 @@ public class Menu {
                 case 9:
                     String mapState = getMapStateAsString();
                     int wumpusCount = gamePlay.getWumpusKilledCount();
-                    dbService.saveGameState(username, mapState, hero.getMapID().getHorizontal(), hero.getMapID().getVertical(), hero.getArrowCount(), gamePlay.getStepCount(), wumpusCount, hero.isHasGold());
-                    System.out.println("Game saved successfully.");
+                    int heroInitialPosX = gamePlay.getHeroInitialPosition().getHorizontal();
+                    int heroInitialPosY = gamePlay.getHeroInitialPosition().getVertical();
+                    dbService.saveGameState(username, mapState, hero.getMapID().getHorizontal(), hero.getMapID().getVertical(), heroInitialPosX, heroInitialPosY, hero.getArrowCount(), gamePlay.getStepCount(), wumpusCount, hero.isHasGold());                    System.out.println("Game saved successfully.");
                     break;
 
                 case 11:
@@ -287,7 +288,9 @@ public class Menu {
                 case 9:
                     String mapState = getMapStateAsString();
                     int wumpusCount = gamePlay.getWumpusKilledCount();
-                    dbService.saveGameState(username, mapState, hero.getMapID().getHorizontal(), hero.getMapID().getVertical(), hero.getArrowCount(), gamePlay.getStepCount(), wumpusCount, hero.isHasGold());
+                    int heroInitialPosX = gamePlay.getHeroInitialPosition().getHorizontal();
+                    int heroInitialPosY = gamePlay.getHeroInitialPosition().getVertical();
+                    dbService.saveGameState(username, mapState, hero.getMapID().getHorizontal(), hero.getMapID().getVertical(), heroInitialPosX, heroInitialPosY, hero.getArrowCount(), gamePlay.getStepCount(), wumpusCount, hero.isHasGold());
                     System.out.println("Game saved successfully.");
                     break;
 

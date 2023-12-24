@@ -13,6 +13,10 @@ public class GamePlay {
     private int stepsCount=0;
     private int wumpusKilledCount;
     private boolean gameWon=false;
+    private MapID heroInitialPosition;
+    private int heroInitialPosX;
+    private int heroInitialPosY;
+
 
     public GamePlay(Hero hero, MapReader mapReader, int initialStepCount, int initialWumpusCount) {
         this.hero = hero;
@@ -25,11 +29,16 @@ public class GamePlay {
             this.mapReader = mapReader;
         }
         this.mapSize = mapReader.getMapSize();
+
         // Kezdeti beállítások, pl. a hős kezdeti pozíciója
         MapID heroInitialPosition = mapReader.getHeroInitialPosition();
+        this.heroInitialPosition = mapReader.getHeroInitialPosition();
         if (heroInitialPosition != null) {
             this.hero.setMapID(heroInitialPosition); // Beállítjuk a hős kezdeti pozícióját
         }
+    }
+    public void setHeroInitialPosition(MapID heroInitialPosition) {
+        this.heroInitialPosition = heroInitialPosition;
     }
     public void changeHeroDirection(WayType newDirection) {
         hero.setWay(newDirection);
@@ -41,11 +50,14 @@ public class GamePlay {
     }
 
     public boolean hasWon() {
-
-        if (hero.isHasGold() && hero.getMapID().equals(mapReader.getHeroInitialPosition())) {
-            System.out.println("\nCongratulations! You are clever! You have successfully returned the gold to the starting position in " + stepsCount + " steps. YOU WON!\n");
-            gameWon = true;
-            return true;
+        if (hero.isHasGold()) {
+            MapID currentPos = hero.getMapID();
+            MapID initialPos = this.heroInitialPosition;
+            if (currentPos.getHorizontal() == initialPos.getHorizontal() && currentPos.getVertical() == initialPos.getVertical()) {
+                System.out.println("\nCongratulations! You are clever! You have successfully returned the gold to the starting position in " + stepsCount + " steps. YOU WON!\n");
+                gameWon = true;
+                return true;
+            }
         }
         return false;
     }
@@ -102,7 +114,7 @@ public class GamePlay {
        // System.out.println("Hero's current position: " + hero.getMapID());
        // System.out.println("Hero's initial position: " + mapReader.getHeroInitialPosition());
 
-        if (hero.isHasGold() && hero.getMapID().equals(mapReader.getHeroInitialPosition())) {
+        if (hero.isHasGold() && hero.getMapID().equals(this.heroInitialPosition)) {
             hasWon();
         }
 
@@ -191,6 +203,9 @@ public class GamePlay {
     }
     public int getWumpusKilledCount() {
         return wumpusKilledCount;
+    }
+    public MapID getHeroInitialPosition() {
+        return heroInitialPosition;
     }
 
 

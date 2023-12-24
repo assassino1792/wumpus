@@ -43,22 +43,24 @@ public class DatabaseService {
         }
     }
 
-    public void saveGameState(String playerName, String mapState, int heroPosX, int heroPosY, int arrowCount, int stepCount, int WumpusKilledCount, boolean hasGold) {
-        String sql = "INSERT INTO GameState (PlayerName, MapState, HeroPositionX, HeroPositionY, ArrowCount, StepCount, WumpusKilledCount, hasGold, Timestamp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    public void saveGameState(String playerName, String mapState, int heroPosX, int heroPosY, int heroInitialPosX, int heroInitialPosY, int arrowCount, int stepCount, int WumpusKilledCount, boolean hasGold) {
+        String sql = "INSERT INTO GameState (PlayerName, MapState, HeroPositionX, HeroPositionY, HeroInitialPositionX, HeroInitialPositionY, ArrowCount, StepCount, WumpusKilledCount, hasGold, Timestamp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = dbConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, playerName);
             pstmt.setString(2, mapState);
             pstmt.setInt(3, heroPosX);
             pstmt.setInt(4, heroPosY);
-            pstmt.setInt(5, arrowCount);
-            pstmt.setInt(6, stepCount);
-            pstmt.setInt(7, WumpusKilledCount);
-            pstmt.setBoolean(8, hasGold);
-            pstmt.setTimestamp(9, new Timestamp(System.currentTimeMillis()));
+            pstmt.setInt(5, heroInitialPosX);
+            pstmt.setInt(6, heroInitialPosY);
+            pstmt.setInt(7, arrowCount);
+            pstmt.setInt(8, stepCount);
+            pstmt.setInt(9, WumpusKilledCount);
+            pstmt.setBoolean(10, hasGold);
+            pstmt.setTimestamp(11, new Timestamp(System.currentTimeMillis()));
             pstmt.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace(); // Naplózás helyett egyelőre csak kiírjuk a hibát
+            e.printStackTrace();
         }
     }
 
@@ -73,16 +75,18 @@ public class DatabaseService {
                 String mapState = rs.getString("MapState");
                 int heroPosX = rs.getInt("HeroPositionX");
                 int heroPosY = rs.getInt("HeroPositionY");
+                int heroInitialPosX = rs.getInt("HeroInitialPositionX");
+                int heroInitialPosY = rs.getInt("HeroInitialPositionY");
                 int arrowCount = rs.getInt("ArrowCount");
                 int stepCount = rs.getInt("StepCount");
                 int WumpusKilledCount = rs.getInt("WumpusKilledCount");
                 boolean hasGold = rs.getBoolean("hasGold");
 
-                return new GameState(playerName, mapState, heroPosX, heroPosY, arrowCount, stepCount, WumpusKilledCount,hasGold);
+                return new GameState(playerName, mapState, heroPosX, heroPosY, heroInitialPosX, heroInitialPosY, arrowCount, stepCount, WumpusKilledCount, hasGold);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null; // Ha nincs találat, vagy hiba történt
+        return null;
     }
 }

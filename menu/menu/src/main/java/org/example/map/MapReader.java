@@ -120,6 +120,7 @@ public class MapReader {
                 return false;
             }
 
+
             // Beállítjuk a hős kezdeti pozícióját
             heroInitialPosition = new MapID(heroColumn, heroRow);
 
@@ -127,8 +128,7 @@ public class MapReader {
         return true; // Sikeres beolvasás és feldolgozás
     }
 
-    public MapID getHeroInitialPosition() {
-        return heroInitialPosition;
+    public MapID getHeroInitialPosition() {return heroInitialPosition;
     }
 
     public List<String> getMapLines() {

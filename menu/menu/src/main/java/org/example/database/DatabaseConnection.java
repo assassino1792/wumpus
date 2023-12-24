@@ -62,6 +62,8 @@ public class DatabaseConnection {
                     "MapState TEXT NOT NULL, " +
                     "HeroPositionX INT NOT NULL, " +
                     "HeroPositionY INT NOT NULL, " +
+                    "HeroInitialPositionX INT NOT NULL, " +
+                    "HeroInitialPositionY INT NOT NULL, " +
                     "ArrowCount INT NOT NULL, " +
                     "StepCount INT NOT NULL, " +
                     "WumpusKilledCount INT NOT NULL, " +
