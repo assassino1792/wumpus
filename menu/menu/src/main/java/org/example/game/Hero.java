@@ -11,6 +11,7 @@ public class Hero {
     private WayType way;
     private int arrowCount;
 
+
     public Hero() {}
     public WayType getWay() {
         return way;
@@ -37,4 +38,5 @@ public class Hero {
         this.arrowCount = MapValidator.WumpusCount(mapSize); // Nyilak száma a Wumpuszok számával egyezik meg
         this.way = WayType.NORTH; // Kezdeti irány beállítása Északra
     }
+
 }

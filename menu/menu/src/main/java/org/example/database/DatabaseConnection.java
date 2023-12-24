@@ -65,6 +65,7 @@ public class DatabaseConnection {
                     "ArrowCount INT NOT NULL, " +
                     "StepCount INT NOT NULL, " +
                     "WumpusKilledCount INT NOT NULL, " +
+                    "hasGold BOOLEAN, " +
                     "Timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
             stmt.execute(createGameStateTable);
 

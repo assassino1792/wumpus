@@ -11,6 +11,9 @@ public class MapID {
         this.horizontal = horizontal;
         this.vertical = vertical;
     }
+
+
+
     public int getHorizontal() {
         return horizontal;
     }

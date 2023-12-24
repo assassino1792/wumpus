@@ -22,6 +22,8 @@ public class Menu {
     private int initialStepCount;
     private int initialWumpusCount;
 
+    private boolean hasGold;
+
     public Menu() {
         this.mapReader = new MapReader();
         DatabaseConnection dbConnection = new DatabaseConnection();
@@ -59,15 +61,12 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                    //System.out.println("MAP EDITOR selected.");
                     System.out.println("Currently, map editing is not available. Please use the READ MAP FROM FILE option.");
                     break;
                 case 2:
                     System.out.println("READ MAP FROM FILE selected.");
-                    //mapReader.readMapFromFile();
                     boolean isMapValid = mapReader.readMapFromFile();
                     if (!isMapValid) {
-                        // Ha a térkép érvénytelen, visszatérünk a displayMenu-be
                         displayMenu();
                     }
                     displaySubMenu();
@@ -77,12 +76,12 @@ public class Menu {
                     GameState loadedState = dbService.loadGameState(username);
                     if (loadedState != null) {
                         mapReader.setMapLinesFromString(loadedState.getMapState());
-                        mapReader.readMapFromFile();
                         hero = new Hero();
                         hero.setMapID(new MapID(loadedState.getHeroPosX(), loadedState.getHeroPosY()));
                         hero.setArrowCount(loadedState.getarrowCount());
                         initialStepCount = loadedState.getStepCount();
                         initialWumpusCount = loadedState.getWumpusCount();
+                        hero.setHasGold(loadedState.isHasGold());
                         GamePlay gamePlay = new GamePlay(hero, mapReader, initialStepCount, initialWumpusCount);
                         continueGame(gamePlay);
 
@@ -167,14 +166,14 @@ public class Menu {
                 case 9:
                     String mapState = getMapStateAsString();
                     int wumpusCount = gamePlay.getWumpusKilledCount();
-                    dbService.saveGameState(username, mapState, hero.getMapID().getHorizontal(), hero.getMapID().getVertical(), hero.getArrowCount(), gamePlay.getStepCount(), wumpusCount);
+                    dbService.saveGameState(username, mapState, hero.getMapID().getHorizontal(), hero.getMapID().getVertical(), hero.getArrowCount(), gamePlay.getStepCount(), wumpusCount, hero.isHasGold());
                     System.out.println("Game saved successfully.");
                     break;
 
                 case 11:
                     if (confirmExit()) {
                         System.out.println("You gave up the game.");
-                        return; // Kilépés a menüből
+                        return;
                     }
                     break;
                 default:
@@ -205,7 +204,7 @@ public class Menu {
                 displayGameMenu();
                 break;
             case 2:
-                // Visszatérés a főmenübe
+                displayMenu();
                 break;
             default:
                 System.out.println("Invalid choice. Please enter 1, 2, or 3.");
@@ -252,7 +251,7 @@ public class Menu {
 
             if (gamePlay.isGameOver()) {
                 System.out.println("\nYou lost! Returning to main menu...\n");
-                displayMenu(); // Visszatérünk a főmenübe
+                displayMenu();
                 break;
             }
 
@@ -274,10 +273,10 @@ public class Menu {
                     gamePlay.changeHeroDirection(WayType.SOUTH);
                     break;
                 case 5:
-                    gamePlay.moveHero(); // Mozgatja a hőst
+                    gamePlay.moveHero();
                     break;
                 case 6:
-                    gamePlay.shootArrow(); // Lövés logika
+                    gamePlay.shootArrow();
                     break;
                 case 7:
                     gamePlay.pickUpGold();
@@ -288,14 +287,14 @@ public class Menu {
                 case 9:
                     String mapState = getMapStateAsString();
                     int wumpusCount = gamePlay.getWumpusKilledCount();
-                    dbService.saveGameState(username, mapState, hero.getMapID().getHorizontal(), hero.getMapID().getVertical(), hero.getArrowCount(), gamePlay.getStepCount(), wumpusCount);
+                    dbService.saveGameState(username, mapState, hero.getMapID().getHorizontal(), hero.getMapID().getVertical(), hero.getArrowCount(), gamePlay.getStepCount(), wumpusCount, hero.isHasGold());
                     System.out.println("Game saved successfully.");
                     break;
 
                 case 11:
                     if (confirmExit()) {
                         System.out.println("You gave up the game.");
-                        return; // Kilépés a menüből
+                        return;
                     }
                     break;
                 default:
@@ -309,7 +308,7 @@ public class Menu {
     private String getMapStateAsString() {
         StringBuilder sb = new StringBuilder();
         for (String line : mapReader.getMapLines()) {
-            sb.append(line).append("\n"); // Minden sor után új sor karaktert teszünk
+            sb.append(line).append("\n");
         }
         return sb.toString();
     }

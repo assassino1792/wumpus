@@ -33,7 +33,7 @@ public class DatabaseService {
     public void insertLeaderboardEntry(String playerName, int stepsCount) {
         String sql = "INSERT INTO Leaderboard (PlayerName, StepsCount, CompletionTime) VALUES (?, ?, ?)";
         try (Connection conn = dbConnection.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, playerName);
             pstmt.setInt(2, stepsCount);
             pstmt.setTimestamp(3, new Timestamp(System.currentTimeMillis()));
@@ -43,8 +43,8 @@ public class DatabaseService {
         }
     }
 
-    public void saveGameState(String playerName, String mapState, int heroPosX, int heroPosY, int arrowCount, int stepCount, int WumpusKilledCount) {
-        String sql = "INSERT INTO GameState (PlayerName, MapState, HeroPositionX, HeroPositionY, ArrowCount, StepCount, WumpusKilledCount, Timestamp) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    public void saveGameState(String playerName, String mapState, int heroPosX, int heroPosY, int arrowCount, int stepCount, int WumpusKilledCount, boolean hasGold) {
+        String sql = "INSERT INTO GameState (PlayerName, MapState, HeroPositionX, HeroPositionY, ArrowCount, StepCount, WumpusKilledCount, hasGold, Timestamp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = dbConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, playerName);
@@ -54,7 +54,8 @@ public class DatabaseService {
             pstmt.setInt(5, arrowCount);
             pstmt.setInt(6, stepCount);
             pstmt.setInt(7, WumpusKilledCount);
-            pstmt.setTimestamp(8, new Timestamp(System.currentTimeMillis()));
+            pstmt.setBoolean(8, hasGold);
+            pstmt.setTimestamp(9, new Timestamp(System.currentTimeMillis()));
             pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace(); // Naplózás helyett egyelőre csak kiírjuk a hibát
@@ -75,8 +76,9 @@ public class DatabaseService {
                 int arrowCount = rs.getInt("ArrowCount");
                 int stepCount = rs.getInt("StepCount");
                 int WumpusKilledCount = rs.getInt("WumpusKilledCount");
-                // További adatok lekérése, ha szükséges
-                return new GameState(playerName, mapState, heroPosX, heroPosY, arrowCount, stepCount, WumpusKilledCount);
+                boolean hasGold = rs.getBoolean("hasGold");
+
+                return new GameState(playerName, mapState, heroPosX, heroPosY, arrowCount, stepCount, WumpusKilledCount,hasGold);
             }
         } catch (SQLException e) {
             e.printStackTrace();

@@ -10,9 +10,9 @@ public class GameState {
 
     private int wumpusCount;
 
-    // Konstruktor, getterek és setterek
+    private boolean hasGold;
 
-    public GameState(String playerName, String mapState, int heroPosX, int heroPosY, int arrowCount, int stepCount, int wumpusCount) {
+    public GameState(String playerName, String mapState, int heroPosX, int heroPosY, int arrowCount, int stepCount, int wumpusCount,boolean hasGold) {
         this.playerName = playerName;
         this.mapState = mapState;
         this.heroPosX = heroPosX;
@@ -20,6 +20,7 @@ public class GameState {
         this.arrowCount = arrowCount;
         this.stepCount = stepCount;
         this.wumpusCount = wumpusCount;
+        this.hasGold = hasGold;
     }
     public String getPlayerName() {
         return playerName;
@@ -30,18 +31,18 @@ public class GameState {
     public String getMapState() {
         return mapState;
     }
-    // Getter a hős X pozíciójához
     public int getHeroPosX() {
         return heroPosX;
     }
     public int getHeroPosY() {
         return heroPosY;
     }
-    public int getarrowCount() {
-        return arrowCount;
-    }
+    public int getarrowCount() {return arrowCount;}
     public int getStepCount() {
         return stepCount;
+    }
+    public boolean isHasGold() {return hasGold;}
+    public void setHasGold(boolean hasGold) {this.hasGold = hasGold;
     }
 
 }
