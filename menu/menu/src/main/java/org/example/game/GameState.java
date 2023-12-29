@@ -26,9 +26,7 @@ public class GameState {
         this.heroInitialPosX = heroInitialPosX;
         this.heroInitialPosY = heroInitialPosY;
     }
-    public String getPlayerName() {
-        return playerName;
-    }
+   // public String getPlayerName() {return playerName;}
     public int getWumpusCount() {
         return wumpusCount;
     }
@@ -49,11 +47,11 @@ public class GameState {
     public void setHasGold(boolean hasGold) {this.hasGold = hasGold;}
     public int getHeroInitialPosX() {return heroInitialPosX;}
 
-    public void setHeroInitialPosX(int heroInitialPosX) {this.heroInitialPosX = heroInitialPosX;}
+   // public void setHeroInitialPosX(int heroInitialPosX) {this.heroInitialPosX = heroInitialPosX;}
 
     public int getHeroInitialPosY() {return heroInitialPosY;}
 
-    public void setHeroInitialPosY(int heroInitialPosY) {this.heroInitialPosY = heroInitialPosY;}
+   // public void setHeroInitialPosY(int heroInitialPosY) {this.heroInitialPosY = heroInitialPosY;}
 
 }
 

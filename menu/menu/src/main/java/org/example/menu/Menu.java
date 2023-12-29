@@ -9,7 +9,8 @@ import org.example.game.LeaderboardEntry;
 import org.example.map.MapID;
 import org.example.map.MapReader;
 import org.example.map.WayType;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.util.List;
 import java.util.Scanner;
 
@@ -23,7 +24,8 @@ public class Menu {
     private int initialStepCount;
     private int initialWumpusCount;
 
-    private boolean hasGold;
+  //  private boolean hasGold;
+    private static final Logger logger = LoggerFactory.getLogger(GamePlay.class);
 
     public Menu() {
         this.mapReader = new MapReader();
@@ -39,8 +41,9 @@ public class Menu {
 
         if (MenuValidator.isValidUsername(username)) {
             System.out.println("Welcome, " + username + "!");
-            dbService.insertPlayerName(username); // Itt mentjük el az adatbázisba
+            dbService.insertPlayerName(username);
             displayMenu();
+            logger.info("Starting game for user: {}", username);
         } else {
             System.out.println("Invalid username. It must be between 3 and 12 characters and not contain spaces.");
         }
@@ -62,9 +65,11 @@ public class Menu {
 
             switch (choice) {
                 case 1:
+                    logger.info("User {} selected MAP EDITOR", username);
                     System.out.println("Currently, map editing is not available. Please use the READ MAP FROM FILE option.");
                     break;
                 case 2:
+                    logger.info("User {} selected READ MAP FROM FILE", username);
                     System.out.println("READ MAP FROM FILE selected.");
                     boolean isMapValid = mapReader.readMapFromFile();
                     if (!isMapValid) {
@@ -73,6 +78,7 @@ public class Menu {
                     displaySubMenu();
                     break;
                 case 3:
+                    logger.info("User {} selected READ FROM DATABASE", username);
                     GameState loadedState = dbService.loadGameState(username);
                     if (loadedState != null) {
                         mapReader.setMapLinesFromString(loadedState.getMapState());
@@ -91,7 +97,7 @@ public class Menu {
                     }
                     break;
                 case 4:
-                    System.out.println("LIST THE LEADERBOARD selected.");
+                    logger.info("User {} selected LIST THE LEADERBOARD", username);
                     System.out.println("LIST THE LEADERBOARD selected.");
                     List<LeaderboardEntry> entries = dbService.getLeaderboard();
                     for (LeaderboardEntry entry : entries) {
@@ -100,9 +106,11 @@ public class Menu {
                     break;
 
                 case 5:
+                    logger.info("User {} selected EXIT", username);
                     System.out.println("Exiting...");
                     return;
                 default:
+                    logger.warn("User {} made an invalid choice: {}", username, choice);
                     System.out.println("Invalid choice. Please enter 1, 2, or 3.");
             }
         }
@@ -111,6 +119,7 @@ public class Menu {
     private void continueGame(GamePlay gamePlay) {
 
         int choice;
+        logger.info("Continuing game for user: {}", username);
         System.out.println("\nContinuing the game.\n");
 
         while (true) {
@@ -147,30 +156,39 @@ public class Menu {
 
             switch (choice) {
                 case 1:
+                    logger.info("User {} changed hero direction to North", username);
                     gamePlay.changeHeroDirection(WayType.NORTH);
                     break;
                 case 2:
+                    logger.info("User {} changed hero direction to East", username);
                     gamePlay.changeHeroDirection(WayType.EAST);
                     break;
                 case 3:
+                    logger.info("User {} changed hero direction to West", username);
                     gamePlay.changeHeroDirection(WayType.WEST);
                     break;
                 case 4:
+                    logger.info("User {} changed hero direction to South", username);
                     gamePlay.changeHeroDirection(WayType.SOUTH);
                     break;
                 case 5:
+                    logger.info("User {} moved the hero", username);
                     gamePlay.moveHero();
                     break;
                 case 6:
+                    logger.info("User {} shot an arrow", username);
                     gamePlay.shootArrow();
                     break;
                 case 7:
+                    logger.info("User {} picked up the gold", username);
                     gamePlay.pickUpGold();
                     break;
                 case 8:
+                    logger.info("User {} dropped the gold", username);
                     gamePlay.dropGold();
                     break;
                 case 9:
+                    logger.info("User {} chose to save the game", username);
                     String mapState = getMapStateAsString();
                     int wumpusCount = gamePlay.getWumpusKilledCount();
                     int heroInitialPosX = gamePlay.getHeroInitialPosition().getHorizontal();
@@ -180,11 +198,13 @@ public class Menu {
 
                 case 11:
                     if (confirmExit()) {
+                        logger.info("User {} chose to give up the game", username);
                         System.out.println("You gave up the game.");
                         return;
                     }
                     break;
                 default:
+                    logger.warn("User {} made an invalid choice: {}", username, choice);
                     System.out.println("Invalid choice. Please enter a number between 1 and 11.");
             }
 
@@ -192,8 +212,6 @@ public class Menu {
 
         }
     }
-
-
 
     private void displaySubMenu() {
         int choice;
@@ -207,14 +225,17 @@ public class Menu {
 
         switch (choice) {
             case 1:
+                logger.info("User {} selected GAME in sub menu", username);
                 System.out.println("GAME selected.");
                 mapReader.readMapFromFile();
                 displayGameMenu();
                 break;
             case 2:
+                logger.info("User {} returned to main menu", username);
                 displayMenu();
                 break;
             default:
+                logger.warn("User {} made an invalid choice in sub menu: {}", username, choice);
                 System.out.println("Invalid choice. Please enter 1, 2, or 3.");
         }
     }
@@ -225,12 +246,15 @@ public class Menu {
             mapReader = new MapReader();
         }
         if (hero == null) {
-            hero = new Hero(); // Inicializáljuk a hőst
+            hero = new Hero();
         }
         boolean isMapValid = mapReader.readMapFromFile();
         if (isMapValid) {
-            int mapSize = mapReader.getMapSize(); // Lekérjük a pálya méretét
-            hero.initializeHero(mapSize); // Inicializáljuk a hőst a pálya méretével
+            int mapSize = mapReader.getMapSize();
+            hero.initializeHero(mapSize);
+            logger.info("Game initialized for user {}", username);
+        } else {
+            logger.warn("Map reading failed for user {}", username);
         }
 
         GamePlay gamePlay = new GamePlay(hero, mapReader, initialStepCount, initialWumpusCount, username);
@@ -253,43 +277,52 @@ public class Menu {
             System.out.println("11. Give up the game");
 
             if (gamePlay.isGameWon()) {
+                logger.info("User {} won the game", username);
                 displayMenu();
                 return;
             }
 
             if (gamePlay.isGameOver()) {
                 System.out.println("\nYou lost! Returning to main menu...\n");
+                logger.info("User {} lost the game", username);
                 displayMenu();
                 break;
             }
 
             System.out.print("\nPlease enter your choice (1-11): ");
-
             choice = scanner.nextInt();
 
             switch (choice) {
                 case 1:
+                    logger.info("User {} changed direction to NORTH", username);
                     gamePlay.changeHeroDirection(WayType.NORTH);
                     break;
                 case 2:
+                    logger.info("User {} changed direction to EAST", username);
                     gamePlay.changeHeroDirection(WayType.EAST);
                     break;
                 case 3:
+                    logger.info("User {} changed direction to WEST", username);
                     gamePlay.changeHeroDirection(WayType.WEST);
                     break;
                 case 4:
+                    logger.info("User {} changed direction to SOUTH", username);
                     gamePlay.changeHeroDirection(WayType.SOUTH);
                     break;
                 case 5:
+                    logger.info("User {} moved hero", username);
                     gamePlay.moveHero();
                     break;
                 case 6:
+                    logger.info("User {} shot an arrow", username);
                     gamePlay.shootArrow();
                     break;
                 case 7:
+                    logger.info("User {} picked up gold", username);
                     gamePlay.pickUpGold();
                     break;
                 case 8:
+                    logger.info("User {} dropped gold", username);
                     gamePlay.dropGold();
                     break;
                 case 9:
@@ -298,16 +331,19 @@ public class Menu {
                     int heroInitialPosX = gamePlay.getHeroInitialPosition().getHorizontal();
                     int heroInitialPosY = gamePlay.getHeroInitialPosition().getVertical();
                     dbService.saveGameState(username, mapState, hero.getMapID().getHorizontal(), hero.getMapID().getVertical(), heroInitialPosX, heroInitialPosY, hero.getArrowCount(), gamePlay.getStepCount(), wumpusCount, hero.isHasGold());
+                    logger.info("Game state saved for user {}", username);
                     System.out.println("Game saved successfully.");
                     break;
 
                 case 11:
                     if (confirmExit()) {
+                        logger.info("User {} gave up the game", username);
                         System.out.println("You gave up the game.");
                         return;
                     }
                     break;
                 default:
+                    logger.warn("User {} made an invalid choice: {}", username, choice);
                     System.out.println("Invalid choice. Please enter a number between 1 and 11.");
             }
 
@@ -323,12 +359,16 @@ public class Menu {
         return sb.toString();
     }
 
-
-
     private boolean confirmExit() {
         System.out.print("Are you sure you want to give up the game? (Y/N): ");
         String response = scanner.next();
-        return response.equalsIgnoreCase("Y");
+        boolean exitConfirmed = response.equalsIgnoreCase("Y");
+        if (exitConfirmed) {
+            logger.info("User {} confirmed to exit the game", username);
+        } else {
+            logger.info("User {} chose not to exit the game", username);
+        }
+        return exitConfirmed;
     }
 }
 

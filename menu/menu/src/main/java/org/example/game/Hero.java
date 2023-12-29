@@ -35,8 +35,8 @@ public class Hero {
     public boolean isHasGold() { return hasGold; }
     public void setHasGold(boolean hasGold) {this.hasGold = hasGold;}
     public void initializeHero(int mapSize) {
-        this.arrowCount = MapValidator.WumpusCount(mapSize); // Nyilak száma a Wumpuszok számával egyezik meg
-        this.way = WayType.NORTH; // Kezdeti irány beállítása Északra
+        this.arrowCount = MapValidator.WumpusCount(mapSize);
+        this.way = WayType.NORTH;
     }
 
 }

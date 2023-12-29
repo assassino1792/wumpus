@@ -5,6 +5,8 @@ import org.example.database.DatabaseService;
 import org.example.map.MapID;
 import org.example.map.MapReader;
 import org.example.map.WayType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class GamePlay {
 
@@ -19,6 +21,7 @@ public class GamePlay {
     private MapID heroInitialPosition;
     private int heroInitialPosX;
     private int heroInitialPosY;
+    private static final Logger logger = LoggerFactory.getLogger(GamePlay.class);
 
 
     public GamePlay(Hero hero, MapReader mapReader, int initialStepCount, int initialWumpusCount, String playerName) {
@@ -33,6 +36,7 @@ public class GamePlay {
             this.mapReader = mapReader;
         }
         this.mapSize = mapReader.getMapSize();
+        logger.info("GamePlay initialized for player: {}", playerName);
 
         // Kezdeti beállítások, pl. a hős kezdeti pozíciója
         MapID heroInitialPosition = mapReader.getHeroInitialPosition();
@@ -60,6 +64,7 @@ public class GamePlay {
             if (currentPos.getHorizontal() == initialPos.getHorizontal() && currentPos.getVertical() == initialPos.getVertical()) {
                 System.out.println("\nCongratulations! You are clever! You have successfully returned the gold to the starting position in " + stepsCount + " steps. YOU WON!\n");
                 gameWon = true;
+                logger.info("Player '{}' has won the game in {} steps", playerName, stepsCount);
 
                 DatabaseService dbService = new DatabaseService(new DatabaseConnection());
                 dbService.insertOrUpdateLeaderboard(this.playerName, stepsCount);
@@ -164,18 +169,21 @@ public class GamePlay {
                 }
                 char targetChar = mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1);
                 if (targetChar == 'W') {
-                    hitWall = true; // A nyíl falba ütközött
+                    hitWall = true;
                 } else if (targetChar == 'U') {
                     hitWumpus = true;
-                    mapReader.updateMapPosition(vertical - 1, horizontal - 1, '_'); // Frissítjük a pályát, eltávolítjuk a Wumpust
+                    mapReader.updateMapPosition(vertical - 1, horizontal - 1, '_');
                 }
             }
-            hero.setArrowCount(hero.getArrowCount() - 1); // Csökkentjük a nyílak számát
+
+            hero.setArrowCount(hero.getArrowCount() - 1);
             if (hitWumpus) {
                 wumpusKilledCount++;
                 System.out.println("SCREEEEEEEEEAM! You hit a Wumpus! Remaining arrows: " + hero.getArrowCount());
+                logger.info("Player '{}' hit a Wumpus at position - Column: {}, Row: {}", playerName, horizontal, vertical);
             } else if (hitWall) {
                 System.out.println("Arrow hit a wall and got destroyed. Remaining arrows: " + hero.getArrowCount());
+                logger.warn("Player '{}' arrow hit a wall at position - Column: {}, Row: {}", playerName, horizontal, vertical);
             } else {
                 System.out.println("Shot an arrow towards " + hero.getWay() + ". Remaining arrows: " + hero.getArrowCount());
             }
@@ -184,8 +192,6 @@ public class GamePlay {
         }
     }
 
-
-
     public void pickUpGold() {
         MapID heroPosition = hero.getMapID();
         int row = heroPosition.getVertical() - 1;
@@ -193,21 +199,23 @@ public class GamePlay {
 
         if (mapReader.getMapLines().get(row).charAt(column) == 'G') {
             hero.setHasGold(true); // A hős felvette az aranyat
-            mapReader.updateMapPosition(row, column, '_'); // Eltávolítjuk az aranyat a pályáról
+            mapReader.updateMapPosition(row, column, '_');
             System.out.println("You picked up the gold!");
+            logger.info("Player '{}' picked up the gold at position - Column: {}, Row: {}", playerName, column + 1, row + 1);
         } else {
             System.out.println("No gold here to pick up.");
         }
     }
     public void dropGold() {
-        if (hero.isHasGold()) { // Itt használjuk az új getter metódust
+        if (hero.isHasGold()) {
             MapID heroPosition = hero.getMapID();
             int row = heroPosition.getVertical() - 1;
             int column = heroPosition.getHorizontal() - 1;
 
-            hero.setHasGold(false); // A hős letette az aranyat
-            mapReader.updateMapPosition(row, column, 'G'); // Helyezzük vissza az aranyat a pályára
+            hero.setHasGold(false);
+            mapReader.updateMapPosition(row, column, 'G');
             System.out.println("You dropped the gold!");
+            logger.info("Player '{}' dropped the gold at position - Column: {}, Row: {}", playerName, column + 1, row + 1);
         } else {
             System.out.println("You don't have any gold to drop.");
         }
@@ -218,6 +226,4 @@ public class GamePlay {
     public MapID getHeroInitialPosition() {
         return heroInitialPosition;
     }
-
-
 }

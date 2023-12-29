@@ -30,32 +30,21 @@ public class DatabaseConnection {
 
     private void initializeDatabase() {
         try (Statement stmt = connection.createStatement()) {
-            // Itt hozhatod létre az adatbázis táblákat, ha szükséges
-            // Például: stmt.execute("CREATE TABLE IF NOT EXISTS ExampleTable (id INT PRIMARY KEY, name VARCHAR(255))");
-            //stmt.execute("CREATE TABLE IF NOT EXISTS ExampleTable (id INT PRIMARY KEY, name VARCHAR(255))");
-          /*  String sql = "CREATE TABLE IF NOT EXISTS PlayerNames (" +
-                    "ID INT AUTO_INCREMENT PRIMARY KEY, " +
-                    "PlayerName VARCHAR(255) NOT NULL, " +
-                    "Timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
-            stmt.execute(sql);
-*/
-
-            // PlayerNames tábla létrehozása
             String createPlayerNamesTable = "CREATE TABLE IF NOT EXISTS PlayerNames (" +
                     "ID INT AUTO_INCREMENT PRIMARY KEY, " +
                     "PlayerName VARCHAR(255) NOT NULL, " +
                     "Timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
             stmt.execute(createPlayerNamesTable);
+            logger.info("PlayerNames table created successfully");
 
-            // Leaderboard tábla létrehozása
             String createLeaderboardTable = "CREATE TABLE IF NOT EXISTS Leaderboard (" +
                     "ID INT AUTO_INCREMENT PRIMARY KEY, " +
                     "PlayerName VARCHAR(255) NOT NULL, " +
                     "Steps INT NOT NULL, " +
                     "Timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
             stmt.execute(createLeaderboardTable);
+            logger.info("Leaderboard table created successfully");
 
-            // GameState tábla létrehozása
             String createGameStateTable = "CREATE TABLE IF NOT EXISTS GameState (" +
                     "ID INT AUTO_INCREMENT PRIMARY KEY, " +
                     "PlayerName VARCHAR(255) NOT NULL, " +
@@ -70,16 +59,14 @@ public class DatabaseConnection {
                     "hasGold BOOLEAN, " +
                     "Timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
             stmt.execute(createGameStateTable);
+            logger.info("GameState table created successfully");
 
         } catch (SQLException e) {
             logger.error("Error initializing the database", e);
         }
     }
 
-    public void insertOrUpdateLeaderboard(String playerName, int steps) {
-        // Itt implementáljuk a ranglista frissítését
-        // Ellenőrizzük, hogy a játékos már szerepel-e a ranglistán, és frissítjük, ha szükséges
-    }
+    public void insertOrUpdateLeaderboard(String playerName, int steps) {}
 
     public List<LeaderboardEntry> getLeaderboard() {
         List<LeaderboardEntry> leaderboard = new ArrayList<>();
@@ -93,12 +80,10 @@ public class DatabaseConnection {
                 leaderboard.add(new LeaderboardEntry(playerName, steps));
             }
         } catch (SQLException e) {
-            // Itt kezeljük a kivételt
-            e.printStackTrace();
+            logger.error("Error retrieving leaderboard", e);
         }
         return leaderboard;
     }
-
 
     public Connection getConnection() {
         try {
@@ -113,8 +98,9 @@ public class DatabaseConnection {
         if (connection != null) {
             try {
                 connection.close();
+                logger.info("Database connection closed");
             } catch (SQLException e) {
-                e.printStackTrace();
+                logger.error("Error closing database connection", e);
             }
         }
     }

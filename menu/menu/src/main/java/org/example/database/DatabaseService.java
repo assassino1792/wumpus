@@ -2,14 +2,15 @@ package org.example.database;
 
 import org.example.game.GameState;
 import org.example.game.LeaderboardEntry;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class DatabaseService {
-
+    private static final Logger logger = LoggerFactory.getLogger(DatabaseService.class);
     private DatabaseConnection dbConnection;
 
     public DatabaseService(DatabaseConnection dbConnection) {
@@ -23,14 +24,13 @@ public class DatabaseService {
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, playerName);
             pstmt.executeUpdate();
-            // Itt lehet naplózni, ha szükséges
+            logger.info("Player name '{}' inserted into PlayerNames table", playerName);
         } catch (SQLException e) {
-            // Itt kezeljük a kivételt, és naplózhatjuk is
-            e.printStackTrace(); // Naplózás helyett egyelőre csak kiírjuk a hibát
+            logger.error("Error inserting player name into PlayerNames table", e);
         }
     }
 
-    public void insertLeaderboardEntry(String playerName, int stepsCount) {
+  /*  public void insertLeaderboardEntry(String playerName, int stepsCount) {
         String sql = "INSERT INTO Leaderboard (PlayerName, StepsCount, CompletionTime) VALUES (?, ?, ?)";
         try (Connection conn = dbConnection.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -38,11 +38,12 @@ public class DatabaseService {
             pstmt.setInt(2, stepsCount);
             pstmt.setTimestamp(3, new Timestamp(System.currentTimeMillis()));
             pstmt.executeUpdate();
+            logger.info("Leaderboard updated or inserted for player '{}'", playerName);
         } catch (SQLException e) {
-            e.printStackTrace(); // Naplózás helyett egyelőre csak kiírjuk a hibát
+            e.printStackTrace();
         }
     }
-
+*/
     public void saveGameState(String playerName, String mapState, int heroPosX, int heroPosY, int heroInitialPosX, int heroInitialPosY, int arrowCount, int stepCount, int WumpusKilledCount, boolean hasGold) {
         String sql = "INSERT INTO GameState (PlayerName, MapState, HeroPositionX, HeroPositionY, HeroInitialPositionX, HeroInitialPositionY, ArrowCount, StepCount, WumpusKilledCount, hasGold, Timestamp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = dbConnection.getConnection();
@@ -59,8 +60,9 @@ public class DatabaseService {
             pstmt.setBoolean(10, hasGold);
             pstmt.setTimestamp(11, new Timestamp(System.currentTimeMillis()));
             pstmt.executeUpdate();
+            logger.info("Game state saved for player '{}'. Step count: {}, Wumpus killed: {}, Has gold: {}", playerName, stepCount, WumpusKilledCount, hasGold);
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("Error saving game state for player '{}'", playerName, e);
         }
     }
 
@@ -81,22 +83,23 @@ public class DatabaseService {
                 int stepCount = rs.getInt("StepCount");
                 int WumpusKilledCount = rs.getInt("WumpusKilledCount");
                 boolean hasGold = rs.getBoolean("hasGold");
-
+                logger.info("Game state loaded successfully for player '{}'", playerName);
                 return new GameState(playerName, mapState, heroPosX, heroPosY, heroInitialPosX, heroInitialPosY, arrowCount, stepCount, WumpusKilledCount, hasGold);
+            } else {
+                logger.info("No game state found for player '{}'", playerName);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("Error loading game state for player '{}'", playerName, e);
         }
         return null;
     }
 
-    // A DatabaseService osztályban
     public void insertOrUpdateLeaderboard(String playerName, int steps) {
         String checkSql = "SELECT Steps FROM Leaderboard WHERE PlayerName = ?";
         String insertSql = "INSERT INTO Leaderboard (PlayerName, Steps) VALUES (?, ?)";
         String updateSql = "UPDATE Leaderboard SET Steps = ? WHERE PlayerName = ?";
 
-        try (Connection conn = dbConnection.getConnection(); // Itt használjuk a dbConnection példányt
+        try (Connection conn = dbConnection.getConnection();
              PreparedStatement checkStmt = conn.prepareStatement(checkSql)) {
 
             checkStmt.setString(1, playerName);
@@ -109,32 +112,37 @@ public class DatabaseService {
                         updateStmt.setInt(1, steps);
                         updateStmt.setString(2, playerName);
                         updateStmt.executeUpdate();
+                        logger.info("Leaderboard updated for player '{}': new steps count is {}", playerName, steps);
                     }
+                } else {
+                    logger.info("No update required for player '{}' on leaderboard: existing steps count is lower", playerName);
                 }
             } else {
                 try (PreparedStatement insertStmt = conn.prepareStatement(insertSql)) {
                     insertStmt.setString(1, playerName);
                     insertStmt.setInt(2, steps);
                     insertStmt.executeUpdate();
+                    logger.info("New leaderboard entry created for player '{}': steps count is {}", playerName, steps);
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("Error updating or inserting leaderboard for player '{}'", playerName, e);
         }
     }
     public List<LeaderboardEntry> getLeaderboard() {
         List<LeaderboardEntry> leaderboard = new ArrayList<>();
         String sql = "SELECT PlayerName, Steps FROM Leaderboard ORDER BY Steps ASC";
         try (Connection conn = dbConnection.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql); // Itt használjuk a pstmt változót
+             PreparedStatement pstmt = conn.prepareStatement(sql);
              ResultSet rs = pstmt.executeQuery()) {
             while (rs.next()) {
                 String playerName = rs.getString("PlayerName");
                 int steps = rs.getInt("Steps");
                 leaderboard.add(new LeaderboardEntry(playerName, steps));
             }
+            logger.info("Leaderboard retrieved successfully");
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("Error retrieving leaderboard", e);
         }
         return leaderboard;
     }

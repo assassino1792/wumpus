@@ -10,22 +10,17 @@ public class LeaderboardEntry {
             this.steps = steps;
         }
 
-        // Getterek és setterek
         public String getPlayerName() {
             return playerName;
         }
 
-        public void setPlayerName(String playerName) {
-            this.playerName = playerName;
-        }
+        //public void setPlayerName(String playerName) {this.playerName = playerName;}
 
         public int getSteps() {
             return steps;
         }
 
-        public void setSteps(int steps) {
-            this.steps = steps;
-        }
+     //   public void setSteps(int steps) {this.steps = steps;}
     }
 
 
