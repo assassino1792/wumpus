@@ -67,10 +67,10 @@ public class GamePlay {
                 logger.info("Player '{}' has won the game in {} steps", playerName, stepsCount);
 
                 DatabaseService dbService = new DatabaseService(new DatabaseConnection());
-                dbService.insertOrUpdateLeaderboard(this.playerName, stepsCount);
+                dbService.insertOrUpdateLeaderboard(this.playerName, stepsCount, true);
 
                 LeaderBoard leaderboard = new LeaderBoard(dbService);
-                leaderboard.updateLeaderboard(this.playerName, stepsCount);
+                leaderboard.updateLeaderboard(this.playerName, stepsCount,true);
 
                 return true;
             }

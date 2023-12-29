@@ -101,7 +101,7 @@ public class Menu {
                     System.out.println("LIST THE LEADERBOARD selected.");
                     List<LeaderboardEntry> entries = dbService.getLeaderboard();
                     for (LeaderboardEntry entry : entries) {
-                        System.out.println(entry.getPlayerName() + " - " + entry.getSteps() + " steps");
+                        System.out.println(entry.getPlayerName() + " - " + entry.getSteps() + " steps " + entry.getWins() + " - " + " wins");
                     }
                     break;
 

@@ -41,6 +41,7 @@ public class DatabaseConnection {
                     "ID INT AUTO_INCREMENT PRIMARY KEY, " +
                     "PlayerName VARCHAR(255) NOT NULL, " +
                     "Steps INT NOT NULL, " +
+                    "Wins INT DEFAULT 0, " +
                     "Timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
             stmt.execute(createLeaderboardTable);
             logger.info("Leaderboard table created successfully");
@@ -77,7 +78,8 @@ public class DatabaseConnection {
             while (rs.next()) {
                 String playerName = rs.getString("PlayerName");
                 int steps = rs.getInt("Steps");
-                leaderboard.add(new LeaderboardEntry(playerName, steps));
+                int wins = rs.getInt("Wins");
+                leaderboard.add(new LeaderboardEntry(playerName, steps, wins));
             }
         } catch (SQLException e) {
             logger.error("Error retrieving leaderboard", e);

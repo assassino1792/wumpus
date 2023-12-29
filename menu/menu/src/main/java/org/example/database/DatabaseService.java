@@ -12,6 +12,7 @@ import java.util.List;
 public class DatabaseService {
     private static final Logger logger = LoggerFactory.getLogger(DatabaseService.class);
     private DatabaseConnection dbConnection;
+    private static final String winUpdateSql = "UPDATE Leaderboard SET Wins = Wins + 1 WHERE PlayerName = ?";
 
     public DatabaseService(DatabaseConnection dbConnection) {
         this.dbConnection = dbConnection;
@@ -30,20 +31,6 @@ public class DatabaseService {
         }
     }
 
-  /*  public void insertLeaderboardEntry(String playerName, int stepsCount) {
-        String sql = "INSERT INTO Leaderboard (PlayerName, StepsCount, CompletionTime) VALUES (?, ?, ?)";
-        try (Connection conn = dbConnection.getConnection();
-            PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, playerName);
-            pstmt.setInt(2, stepsCount);
-            pstmt.setTimestamp(3, new Timestamp(System.currentTimeMillis()));
-            pstmt.executeUpdate();
-            logger.info("Leaderboard updated or inserted for player '{}'", playerName);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-*/
     public void saveGameState(String playerName, String mapState, int heroPosX, int heroPosY, int heroInitialPosX, int heroInitialPosY, int arrowCount, int stepCount, int WumpusKilledCount, boolean hasGold) {
         String sql = "INSERT INTO GameState (PlayerName, MapState, HeroPositionX, HeroPositionY, HeroInitialPositionX, HeroInitialPositionY, ArrowCount, StepCount, WumpusKilledCount, hasGold, Timestamp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = dbConnection.getConnection();
@@ -94,10 +81,11 @@ public class DatabaseService {
         return null;
     }
 
-    public void insertOrUpdateLeaderboard(String playerName, int steps) {
+    public void insertOrUpdateLeaderboard(String playerName, int steps, boolean hasWon) {
         String checkSql = "SELECT Steps FROM Leaderboard WHERE PlayerName = ?";
-        String insertSql = "INSERT INTO Leaderboard (PlayerName, Steps) VALUES (?, ?)";
-        String updateSql = "UPDATE Leaderboard SET Steps = ? WHERE PlayerName = ?";
+        String insertSql = "INSERT INTO Leaderboard (PlayerName, Steps, Wins) VALUES (?, ?, ?)";
+        String updateSql = "UPDATE Leaderboard SET Steps = ? WHERE PlayerName = ? AND ? < Steps";
+        boolean shouldUpdateWins = false;
 
         try (Connection conn = dbConnection.getConnection();
              PreparedStatement checkStmt = conn.prepareStatement(checkSql)) {
@@ -111,8 +99,10 @@ public class DatabaseService {
                     try (PreparedStatement updateStmt = conn.prepareStatement(updateSql)) {
                         updateStmt.setInt(1, steps);
                         updateStmt.setString(2, playerName);
+                        updateStmt.setInt(3, steps);
                         updateStmt.executeUpdate();
                         logger.info("Leaderboard updated for player '{}': new steps count is {}", playerName, steps);
+                        shouldUpdateWins = true;
                     }
                 } else {
                     logger.info("No update required for player '{}' on leaderboard: existing steps count is lower", playerName);
@@ -121,8 +111,16 @@ public class DatabaseService {
                 try (PreparedStatement insertStmt = conn.prepareStatement(insertSql)) {
                     insertStmt.setString(1, playerName);
                     insertStmt.setInt(2, steps);
+                    insertStmt.setInt(3, hasWon ? 1 : 0);
                     insertStmt.executeUpdate();
-                    logger.info("New leaderboard entry created for player '{}': steps count is {}", playerName, steps);
+                    logger.info("New leaderboard entry created for player '{}': steps count is {}, wins: {}", playerName, steps, hasWon ? 1 : 0);
+                }
+            }
+            if (hasWon && shouldUpdateWins) {
+                try (PreparedStatement winUpdateStmt = conn.prepareStatement(winUpdateSql)) {
+                    winUpdateStmt.setString(1, playerName);
+                    winUpdateStmt.executeUpdate();
+                    logger.info("Incremented win count for player '{}'", playerName);
                 }
             }
         } catch (SQLException e) {
@@ -131,14 +129,15 @@ public class DatabaseService {
     }
     public List<LeaderboardEntry> getLeaderboard() {
         List<LeaderboardEntry> leaderboard = new ArrayList<>();
-        String sql = "SELECT PlayerName, Steps FROM Leaderboard ORDER BY Steps ASC";
+        String sql = "SELECT PlayerName, Steps, Wins FROM Leaderboard ORDER BY Steps ASC";
         try (Connection conn = dbConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql);
              ResultSet rs = pstmt.executeQuery()) {
             while (rs.next()) {
                 String playerName = rs.getString("PlayerName");
                 int steps = rs.getInt("Steps");
-                leaderboard.add(new LeaderboardEntry(playerName, steps));
+                int wins = rs.getInt("Wins");
+                leaderboard.add(new LeaderboardEntry(playerName, steps, wins));
             }
             logger.info("Leaderboard retrieved successfully");
         } catch (SQLException e) {

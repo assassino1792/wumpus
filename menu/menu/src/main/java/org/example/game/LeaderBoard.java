@@ -4,14 +4,10 @@ import org.example.database.DatabaseService;
 public class LeaderBoard {
     private DatabaseService dbService;
     public LeaderBoard(DatabaseService dbService) {this.dbService = dbService;}
-    public void updateLeaderboard(String playerName, int steps) {
-        dbService.insertOrUpdateLeaderboard(playerName, steps);
+    public void updateLeaderboard(String playerName, int steps, boolean hasWon ) {
+        dbService.insertOrUpdateLeaderboard(playerName, steps, hasWon);
     }
-/*    public List<LeaderboardEntry> getLeaderboard() {
-        // Itt lekérjük a ranglistát az adatbázisból
-        return dbService.getLeaderboard();
-    }
-*/
+
 }
 
 
