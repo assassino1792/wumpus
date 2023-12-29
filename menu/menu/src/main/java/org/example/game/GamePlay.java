@@ -1,5 +1,7 @@
 package org.example.game;
 
+import org.example.database.DatabaseConnection;
+import org.example.database.DatabaseService;
 import org.example.map.MapID;
 import org.example.map.MapReader;
 import org.example.map.WayType;
@@ -7,6 +9,7 @@ import org.example.map.WayType;
 public class GamePlay {
 
     private Hero hero;
+    private String playerName;
     private int mapSize;
     private MapReader mapReader;
     private boolean gameOver = false;
@@ -18,8 +21,9 @@ public class GamePlay {
     private int heroInitialPosY;
 
 
-    public GamePlay(Hero hero, MapReader mapReader, int initialStepCount, int initialWumpusCount) {
+    public GamePlay(Hero hero, MapReader mapReader, int initialStepCount, int initialWumpusCount, String playerName) {
         this.hero = hero;
+        this.playerName = playerName;
         this.stepsCount = initialStepCount;
         this.wumpusKilledCount = initialWumpusCount;
         if (mapReader == null) {
@@ -56,6 +60,13 @@ public class GamePlay {
             if (currentPos.getHorizontal() == initialPos.getHorizontal() && currentPos.getVertical() == initialPos.getVertical()) {
                 System.out.println("\nCongratulations! You are clever! You have successfully returned the gold to the starting position in " + stepsCount + " steps. YOU WON!\n");
                 gameWon = true;
+
+                DatabaseService dbService = new DatabaseService(new DatabaseConnection());
+                dbService.insertOrUpdateLeaderboard(this.playerName, stepsCount);
+
+                LeaderBoard leaderboard = new LeaderBoard(dbService);
+                leaderboard.updateLeaderboard(this.playerName, stepsCount);
+
                 return true;
             }
         }

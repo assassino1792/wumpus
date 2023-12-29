@@ -5,11 +5,12 @@ import org.example.database.DatabaseService;
 import org.example.game.GamePlay;
 import org.example.game.GameState;
 import org.example.game.Hero;
+import org.example.game.LeaderboardEntry;
+import org.example.map.MapID;
 import org.example.map.MapReader;
 import org.example.map.WayType;
-import org.example.map.MapID;
 
-
+import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
@@ -81,7 +82,7 @@ public class Menu {
                         initialStepCount = loadedState.getStepCount();
                         initialWumpusCount = loadedState.getWumpusCount();
                         hero.setHasGold(loadedState.isHasGold());
-                        GamePlay gamePlay = new GamePlay(hero, mapReader, initialStepCount, initialWumpusCount);
+                        GamePlay gamePlay = new GamePlay(hero, mapReader, initialStepCount, initialWumpusCount, username);
                         gamePlay.setHeroInitialPosition(new MapID(loadedState.getHeroInitialPosX(), loadedState.getHeroInitialPosY()));
                         continueGame(gamePlay);
 
@@ -90,6 +91,12 @@ public class Menu {
                     }
                     break;
                 case 4:
+                    System.out.println("LIST THE LEADERBOARD selected.");
+                    System.out.println("LIST THE LEADERBOARD selected.");
+                    List<LeaderboardEntry> entries = dbService.getLeaderboard();
+                    for (LeaderboardEntry entry : entries) {
+                        System.out.println(entry.getPlayerName() + " - " + entry.getSteps() + " steps");
+                    }
                     break;
 
                 case 5:
@@ -226,7 +233,7 @@ public class Menu {
             hero.initializeHero(mapSize); // Inicializáljuk a hőst a pálya méretével
         }
 
-        GamePlay gamePlay = new GamePlay(hero, mapReader, initialStepCount, initialWumpusCount);
+        GamePlay gamePlay = new GamePlay(hero, mapReader, initialStepCount, initialWumpusCount, username);
 
         System.out.println("\nThe game has started.\n");
 

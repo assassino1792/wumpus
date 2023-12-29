@@ -1,12 +1,12 @@
 package org.example.database;
 
+import org.example.game.LeaderboardEntry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class DatabaseConnection {
@@ -74,6 +74,29 @@ public class DatabaseConnection {
         } catch (SQLException e) {
             logger.error("Error initializing the database", e);
         }
+    }
+
+    public void insertOrUpdateLeaderboard(String playerName, int steps) {
+        // Itt implementáljuk a ranglista frissítését
+        // Ellenőrizzük, hogy a játékos már szerepel-e a ranglistán, és frissítjük, ha szükséges
+    }
+
+    public List<LeaderboardEntry> getLeaderboard() {
+        List<LeaderboardEntry> leaderboard = new ArrayList<>();
+        String sql = "SELECT PlayerName, Steps FROM Leaderboard ORDER BY Steps ASC";
+        try (Connection conn = this.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql);
+             ResultSet rs = pstmt.executeQuery()) {
+            while (rs.next()) {
+                String playerName = rs.getString("PlayerName");
+                int steps = rs.getInt("Steps");
+                leaderboard.add(new LeaderboardEntry(playerName, steps));
+            }
+        } catch (SQLException e) {
+            // Itt kezeljük a kivételt
+            e.printStackTrace();
+        }
+        return leaderboard;
     }
 
 

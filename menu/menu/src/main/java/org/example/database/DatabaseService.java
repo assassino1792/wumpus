@@ -1,11 +1,11 @@
 package org.example.database;
 
 import org.example.game.GameState;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.sql.ResultSet;
+import org.example.game.LeaderboardEntry;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class DatabaseService {
@@ -88,5 +88,54 @@ public class DatabaseService {
             e.printStackTrace();
         }
         return null;
+    }
+
+    // A DatabaseService osztályban
+    public void insertOrUpdateLeaderboard(String playerName, int steps) {
+        String checkSql = "SELECT Steps FROM Leaderboard WHERE PlayerName = ?";
+        String insertSql = "INSERT INTO Leaderboard (PlayerName, Steps) VALUES (?, ?)";
+        String updateSql = "UPDATE Leaderboard SET Steps = ? WHERE PlayerName = ?";
+
+        try (Connection conn = dbConnection.getConnection(); // Itt használjuk a dbConnection példányt
+             PreparedStatement checkStmt = conn.prepareStatement(checkSql)) {
+
+            checkStmt.setString(1, playerName);
+            ResultSet rs = checkStmt.executeQuery();
+
+            if (rs.next()) {
+                int existingSteps = rs.getInt("Steps");
+                if (steps < existingSteps) {
+                    try (PreparedStatement updateStmt = conn.prepareStatement(updateSql)) {
+                        updateStmt.setInt(1, steps);
+                        updateStmt.setString(2, playerName);
+                        updateStmt.executeUpdate();
+                    }
+                }
+            } else {
+                try (PreparedStatement insertStmt = conn.prepareStatement(insertSql)) {
+                    insertStmt.setString(1, playerName);
+                    insertStmt.setInt(2, steps);
+                    insertStmt.executeUpdate();
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    public List<LeaderboardEntry> getLeaderboard() {
+        List<LeaderboardEntry> leaderboard = new ArrayList<>();
+        String sql = "SELECT PlayerName, Steps FROM Leaderboard ORDER BY Steps ASC";
+        try (Connection conn = dbConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql); // Itt használjuk a pstmt változót
+             ResultSet rs = pstmt.executeQuery()) {
+            while (rs.next()) {
+                String playerName = rs.getString("PlayerName");
+                int steps = rs.getInt("Steps");
+                leaderboard.add(new LeaderboardEntry(playerName, steps));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return leaderboard;
     }
 }
