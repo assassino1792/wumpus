@@ -120,7 +120,6 @@ public class MapReader {
                 return false;
             }
 
-
             // Beállítjuk a hős kezdeti pozícióját
             heroInitialPosition = new MapID(heroColumn, heroRow);
 

@@ -4,30 +4,40 @@ import org.example.game.GameState;
 import org.example.game.LeaderboardEntry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class DatabaseService {
-    private static final Logger logger = LoggerFactory.getLogger(DatabaseService.class);
-    private DatabaseConnection dbConnection;
-    private static final String winUpdateSql = "UPDATE Leaderboard SET Wins = Wins + 1 WHERE PlayerName = ?";
+    private static final Logger LOGGER
+    = LoggerFactory.getLogger(DatabaseService.class);
+    private final DatabaseConnection dbConnection;
+    private static final String WIN_UPDATE_SQL
+    = "UPDATE Leaderboard SET Wins = Wins + 1 WHERE PlayerName = ?";
 
-    public DatabaseService(DatabaseConnection dbConnection) {
+    public DatabaseService(DatabaseConnection dbConnection)
+    {
         this.dbConnection = dbConnection;
     }
 
     public void insertPlayerName(String playerName) {
-        String sql = "INSERT INTO PlayerNames (PlayerName) VALUES (?)";
+        String sql
+        = "INSERT INTO PlayerNames (PlayerName) VALUES (?)";
 
         try (Connection conn = dbConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, playerName);
-            pstmt.executeUpdate();
-            logger.info("Player name '{}' inserted into PlayerNames table", playerName);
+             pstmt.setString(1, playerName);
+             pstmt.executeUpdate();
+             LOGGER.info("Player name '{}'" +
+                     " inserted into PlayerNames table", playerName);
         } catch (SQLException e) {
-            logger.error("Error inserting player name into PlayerNames table", e);
+            LOGGER.error("Error inserting player name" +
+                    " into PlayerNames table", e);
         }
     }
 
@@ -35,21 +45,23 @@ public class DatabaseService {
         String sql = "INSERT INTO GameState (PlayerName, MapState, HeroPositionX, HeroPositionY, HeroInitialPositionX, HeroInitialPositionY, ArrowCount, StepCount, WumpusKilledCount, hasGold, Timestamp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = dbConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, playerName);
-            pstmt.setString(2, mapState);
-            pstmt.setInt(3, heroPosX);
-            pstmt.setInt(4, heroPosY);
-            pstmt.setInt(5, heroInitialPosX);
-            pstmt.setInt(6, heroInitialPosY);
-            pstmt.setInt(7, arrowCount);
-            pstmt.setInt(8, stepCount);
-            pstmt.setInt(9, WumpusKilledCount);
-            pstmt.setBoolean(10, hasGold);
-            pstmt.setTimestamp(11, new Timestamp(System.currentTimeMillis()));
-            pstmt.executeUpdate();
-            logger.info("Game state saved for player '{}'. Step count: {}, Wumpus killed: {}, Has gold: {}", playerName, stepCount, WumpusKilledCount, hasGold);
+                pstmt.setString(1, playerName);
+                pstmt.setString(2, mapState);
+                pstmt.setInt(3, heroPosX);
+                pstmt.setInt(4, heroPosY);
+                pstmt.setInt(5, heroInitialPosX);
+                pstmt.setInt(6, heroInitialPosY);
+                pstmt.setInt(7, arrowCount);
+                pstmt.setInt(8, stepCount);
+                pstmt.setInt(9, WumpusKilledCount);
+                pstmt.setBoolean(10, hasGold);
+                pstmt.setTimestamp(11, new Timestamp(System.currentTimeMillis()));
+                pstmt.executeUpdate();
+            LOGGER.info("Game state saved for player '{}'. Step count: {}," +
+                    " Wumpus killed: {}, Has gold: {}",
+                    playerName, stepCount, WumpusKilledCount, hasGold);
         } catch (SQLException e) {
-            logger.error("Error saving game state for player '{}'", playerName, e);
+            LOGGER.error("Error saving game state for player '{}'", playerName, e);
         }
     }
 
@@ -70,13 +82,13 @@ public class DatabaseService {
                 int stepCount = rs.getInt("StepCount");
                 int WumpusKilledCount = rs.getInt("WumpusKilledCount");
                 boolean hasGold = rs.getBoolean("hasGold");
-                logger.info("Game state loaded successfully for player '{}'", playerName);
+                LOGGER.info("Game state loaded successfully for player '{}'", playerName);
                 return new GameState(playerName, mapState, heroPosX, heroPosY, heroInitialPosX, heroInitialPosY, arrowCount, stepCount, WumpusKilledCount, hasGold);
             } else {
-                logger.info("No game state found for player '{}'", playerName);
+                LOGGER.info("No game state found for player '{}'", playerName);
             }
         } catch (SQLException e) {
-            logger.error("Error loading game state for player '{}'", playerName, e);
+            LOGGER.error("Error loading game state for player '{}'", playerName, e);
         }
         return null;
     }
@@ -101,11 +113,11 @@ public class DatabaseService {
                         updateStmt.setString(2, playerName);
                         updateStmt.setInt(3, steps);
                         updateStmt.executeUpdate();
-                        logger.info("Leaderboard updated for player '{}': new steps count is {}", playerName, steps);
+                        LOGGER.info("Leaderboard updated for player '{}': new steps count is {}", playerName, steps);
                         shouldUpdateWins = true;
                     }
                 } else {
-                    logger.info("No update required for player '{}' on leaderboard: existing steps count is lower", playerName);
+                    LOGGER.info("No update required for player '{}' on leaderboard: existing steps count is lower", playerName);
                 }
             } else {
                 try (PreparedStatement insertStmt = conn.prepareStatement(insertSql)) {
@@ -113,18 +125,18 @@ public class DatabaseService {
                     insertStmt.setInt(2, steps);
                     insertStmt.setInt(3, hasWon ? 1 : 0);
                     insertStmt.executeUpdate();
-                    logger.info("New leaderboard entry created for player '{}': steps count is {}, wins: {}", playerName, steps, hasWon ? 1 : 0);
+                    LOGGER.info("New leaderboard entry created for player '{}': steps count is {}, wins: {}", playerName, steps, hasWon ? 1 : 0);
                 }
             }
             if (hasWon && shouldUpdateWins) {
-                try (PreparedStatement winUpdateStmt = conn.prepareStatement(winUpdateSql)) {
+                try (PreparedStatement winUpdateStmt = conn.prepareStatement(WIN_UPDATE_SQL)) {
                     winUpdateStmt.setString(1, playerName);
                     winUpdateStmt.executeUpdate();
-                    logger.info("Incremented win count for player '{}'", playerName);
+                    LOGGER.info("Incremented win count for player '{}'", playerName);
                 }
             }
         } catch (SQLException e) {
-            logger.error("Error updating or inserting leaderboard for player '{}'", playerName, e);
+            LOGGER.error("Error updating or inserting leaderboard for player '{}'", playerName, e);
         }
     }
     public List<LeaderboardEntry> getLeaderboard() {
@@ -139,9 +151,9 @@ public class DatabaseService {
                 int wins = rs.getInt("Wins");
                 leaderboard.add(new LeaderboardEntry(playerName, steps, wins));
             }
-            logger.info("Leaderboard retrieved successfully");
+            LOGGER.info("Leaderboard retrieved successfully");
         } catch (SQLException e) {
-            logger.error("Error retrieving leaderboard", e);
+            LOGGER.error("Error retrieving leaderboard", e);
         }
         return leaderboard;
     }

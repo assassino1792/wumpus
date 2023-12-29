@@ -71,7 +71,6 @@ public class GamePlay {
 
                 LeaderBoard leaderboard = new LeaderBoard(dbService);
                 leaderboard.updateLeaderboard(this.playerName, stepsCount,true);
-
                 return true;
             }
         }
@@ -90,16 +89,24 @@ public class GamePlay {
 
         switch (hero.getWay()) {
             case NORTH:
-                if (vertical > 1) vertical--;
+                if (vertical > 1) {
+                    vertical--;
+                }
                 break;
             case EAST:
-                if (horizontal < mapSize) horizontal++;
+                if (horizontal < mapSize) {
+                    horizontal++;
+                }
                 break;
             case SOUTH:
-                if (vertical < mapSize) vertical++;
+                if (vertical < mapSize) {
+                    vertical++;
+                }
                 break;
             case WEST:
-                if (horizontal > 1) horizontal--;
+                if (horizontal > 1) {
+                    horizontal--;
+                }
                 break;
         }
 
@@ -109,10 +116,10 @@ public class GamePlay {
             System.out.println("\nYou stepped on a Wumpus! GAME OVER.\n");
             gameOver = true;
             return;
-        }else if (targetChar == 'W') {
+        } else if (targetChar == 'W') {
                 System.out.println("\nCannot move onto a wall!\n");
             return;
-        }else {
+        } else {
                 hero.setMapID(new MapID(horizontal, vertical));
                 System.out.println("Hero's new position - Column: " + horizontal + ", Row: " + vertical);
             }
@@ -133,11 +140,8 @@ public class GamePlay {
         if (hero.isHasGold() && hero.getMapID().equals(this.heroInitialPosition)) {
             hasWon();
         }
-
         stepsCount++;
-       // System.out.println("Hero's new position - Column: " + currentMapID.getHorizontal() + ", Row: " + currentMapID.getVertical());
     }
-
     public boolean isGameOver() {
         return gameOver;
     }
@@ -152,16 +156,24 @@ public class GamePlay {
             while (!hitWall && !hitWumpus) {
                 switch (hero.getWay()) {
                     case NORTH:
-                        if (vertical > 1) vertical--;
+                        if (vertical > 1) {
+                            vertical--;
+                        }
                         break;
                     case EAST:
-                        if (horizontal < mapSize) horizontal++;
+                        if (horizontal < mapSize) {
+                            horizontal++;
+                        }
                         break;
                     case SOUTH:
-                        if (vertical < mapSize) vertical++;
+                        if (vertical < mapSize) {
+                            vertical++;
+                        }
                         break;
                     case WEST:
-                        if (horizontal > 1) horizontal--;
+                        if (horizontal > 1) {
+                            horizontal--;
+                        }
                         break;
                 }
                 char targetChar = mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1);
