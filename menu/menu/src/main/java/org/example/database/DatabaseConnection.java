@@ -66,7 +66,7 @@ public class DatabaseConnection {
         }
     }
 
-    public void insertOrUpdateLeaderboard(String playerName, int steps) {}
+  //  public void insertOrUpdateLeaderboard(String playerName, int steps) {}
 
     public List<LeaderboardEntry> getLeaderboard() {
         List<LeaderboardEntry> leaderboard = new ArrayList<>();
