@@ -138,9 +138,6 @@ public class GamePlay {
        // System.out.println("Hero's new position - Column: " + currentMapID.getHorizontal() + ", Row: " + currentMapID.getVertical());
     }
 
-
-
-
     public boolean isGameOver() {
         return gameOver;
     }
