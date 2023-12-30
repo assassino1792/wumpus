@@ -14,6 +14,9 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * The main menu for the game application, responsible for user interactions.
+ */
 public class Menu {
 
     private Scanner scanner = new Scanner(System.in);
@@ -25,14 +28,20 @@ public class Menu {
     private int initialWumpusCount;
 
   //  private boolean hasGold;
-    private static final Logger LOGGER = LoggerFactory.getLogger(GamePlay.class);
+    private static final Logger LOGGER =
+          LoggerFactory.getLogger( GamePlay.class );
 
+    /**
+     * Constructs a Menu object and initializes the database service.
+     */
     public Menu() {
         this.mapReader = new MapReader();
         DatabaseConnection dbConnection = new DatabaseConnection();
         this.dbService = new DatabaseService(dbConnection);
     }
-
+    /**
+     * Starts the game by prompting the user for their username.
+     */
     public void startGame() {
 
         //   MapReader mapReader = new MapReader();
@@ -45,10 +54,14 @@ public class Menu {
             displayMenu();
             LOGGER.info("Starting game for user: {}", username);
         } else {
-            System.out.println("Invalid username. It must be between 3 and 12 characters and not contain spaces.");
+            System.out.println("Invalid username. It must be between"
+                    +
+                    " 3 and 12 characters and not contain spaces.");
         }
     }
-
+    /**
+     * Displays the main menu and handles user choices.
+     */
     public void displayMenu() {
         int choice;
 
@@ -65,11 +78,14 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                    LOGGER.info("User {} selected MAP EDITOR", username);
-                    System.out.println("Currently, map editing is not available. Please use the READ MAP FROM FILE option.");
+                  LOGGER.info("User {} selected MAP EDITOR", username);
+                  System.out.println("Currently, map editing is not available."
+                            +
+                            " Please use the READ MAP FROM FILE option.");
                     break;
                 case 2:
-                    LOGGER.info("User {} selected READ MAP FROM FILE", username);
+                    LOGGER.info("User {} selected READ MAP FROM FILE",
+                            username);
                     System.out.println("READ MAP FROM FILE selected.");
                     boolean isMapValid = mapReader.readMapFromFile();
                     if (!isMapValid) {
@@ -78,30 +94,49 @@ public class Menu {
                     displaySubMenu();
                     break;
                 case 3:
-                    LOGGER.info("User {} selected READ FROM DATABASE", username);
+                    LOGGER.info("User {} selected READ FROM DATABASE",
+                            username);
                     GameState loadedState = dbService.loadGameState(username);
                     if (loadedState != null) {
-                        mapReader.setMapLinesFromString(loadedState.getMapState());
+                        mapReader.setMapLinesFromString(
+                                loadedState.getMapState()
+                        );
                         hero = new Hero();
-                        hero.setMapID(new MapID(loadedState.getHeroPosX(), loadedState.getHeroPosY()));
+                        hero.setMapID(new MapID(loadedState.getHeroPosX(),
+                                loadedState.getHeroPosY()));
                         hero.setArrowCount(loadedState.getarrowCount());
                         initialStepCount = loadedState.getStepCount();
                         initialWumpusCount = loadedState.getWumpusCount();
                         hero.setHasGold(loadedState.isHasGold());
-                        GamePlay gamePlay = new GamePlay(hero, mapReader, initialStepCount, initialWumpusCount, username);
-                        gamePlay.setHeroInitialPosition(new MapID(loadedState.getHeroInitialPosX(), loadedState.getHeroInitialPosY()));
+                        GamePlay gamePlay = new GamePlay(
+                                hero,
+                                mapReader,
+                                initialStepCount,
+                                initialWumpusCount,
+                                username
+                        );
+                        gamePlay.setHeroInitialPosition(
+                                new MapID(loadedState.getHeroInitialPosX(),
+                                        loadedState.getHeroInitialPosY())
+                        );
                         continueGame(gamePlay);
 
                     } else {
-                        System.out.println("No saved game found for " + username);
+                        System.out.println("No saved game found for "
+                                +
+                                username);
                     }
                     break;
                 case 4:
-                    LOGGER.info("User {} selected LIST THE LEADERBOARD", username);
+                    LOGGER.info("User {} selected LIST THE LEADERBOARD",
+                            username);
                     System.out.println("LIST THE LEADERBOARD selected.");
-                    List<LeaderboardEntry> entries = dbService.getLeaderboard();
+                    List<LeaderboardEntry> entries =
+                            dbService.getLeaderboard();
                     for (LeaderboardEntry entry : entries) {
-                        System.out.println(entry.getPlayerName() + " - " + entry.getSteps() + " steps " + entry.getWins() + " - " + " wins");
+                        System.out.println(entry.getPlayerName()
+                                + " - " + entry.getSteps() + " steps "
+                                + entry.getWins() + " - " + " wins");
                     }
                     break;
 
@@ -110,8 +145,11 @@ public class Menu {
                     System.out.println("Exiting...");
                     return;
                 default:
-                    LOGGER.warn("User {} made an invalid choice: {}", username, choice);
-                    System.out.println("Invalid choice. Please enter 1, 2, or 3.");
+                    LOGGER.warn("User {} made an invalid choice: {}",
+                            username, choice);
+                    System.out.println("Invalid choice."
+                            +
+                            " Please enter 1, 2, or 3.");
             }
         }
     }
