@@ -12,20 +12,32 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Provides services for interacting with the database.
+ */
 public class DatabaseService {
+    /** Logger for this class. */
     private static final Logger LOGGER
     = LoggerFactory.getLogger(DatabaseService.class);
+    /** Database connection instance. */
     private final DatabaseConnection dbConnection;
+    /** SQL query for updating win count in the leaderboard. */
     private static final String WIN_UPDATE_SQL
     = "UPDATE Leaderboard SET Wins = Wins + 1 WHERE PlayerName = ?";
 
-    public DatabaseService(DatabaseConnection dbConnection)
-    {
-        this.dbConnection = dbConnection;
+    /**
+     * Constructs a new DatabaseService
+     * with the given database connection.
+     *@param connection The database connection to use.
+     */
+    public DatabaseService(final DatabaseConnection connection) {
+        this.dbConnection = connection;
     }
-
-    public void insertPlayerName(String playerName) {
+    /**
+    * Inserts a player's name into the PlayerNames table.
+    * @param playerName The name of the player to insert.
+    */
+    public void insertPlayerName(final String playerName) {
         String sql
         = "INSERT INTO PlayerNames (PlayerName) VALUES (?)";
 
@@ -33,16 +45,52 @@ public class DatabaseService {
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
              pstmt.setString(1, playerName);
              pstmt.executeUpdate();
-             LOGGER.info("Player name '{}'" +
+             LOGGER.info("Player name '{}'"
+                     +
                      " inserted into PlayerNames table", playerName);
         } catch (SQLException e) {
-            LOGGER.error("Error inserting player name" +
+            LOGGER.error("Error inserting player name"
+                    +
                     " into PlayerNames table", e);
         }
     }
+    /**
+    * Saves the current game state for a player.
+     * Saves the current game state for a player.
+     * @param playerName The name of the player.
+     * @param mapState The current state of the map.
+     * @param heroPosX The hero's current X position.
+     * @param heroPosY The hero's current Y position.
+     * @param heroInitialPosX The hero's initial X position.
+     * @param heroInitialPosY The hero's initial Y position.
+     * @param arrowCount The number of arrows the hero has.
+     * @param stepCount The number of steps taken by the hero.
+     * @param wumpusKilledCount The number of Wumpuses killed by the hero.
+     * @param hasGold Whether the hero has the gold.
+     */
+    public void saveGameState(final String playerName,
+                              final String mapState,
+                              final int heroPosX,
+                              final int heroPosY,
+                              final int heroInitialPosX,
+                              final int heroInitialPosY,
+                              final int arrowCount,
+                              final int stepCount,
+                              final int wumpusKilledCount,
+                              final boolean hasGold) {
 
-    public void saveGameState(String playerName, String mapState, int heroPosX, int heroPosY, int heroInitialPosX, int heroInitialPosY, int arrowCount, int stepCount, int WumpusKilledCount, boolean hasGold) {
-        String sql = "INSERT INTO GameState (PlayerName, MapState, HeroPositionX, HeroPositionY, HeroInitialPositionX, HeroInitialPositionY, ArrowCount, StepCount, WumpusKilledCount, hasGold, Timestamp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO GameState (PlayerName,"
+                     +
+                     " MapState, HeroPositionX,"
+                     +
+                     "HeroPositionY, HeroInitialPositionX, "
+                     +
+                     "HeroInitialPositionY, ArrowCount,"
+                     +
+                     "StepCount, wumpusKilledCount, hasGold, Timestamp) VALUES"
+                     +
+                     " (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
         try (Connection conn = dbConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setString(1, playerName);
@@ -53,19 +101,25 @@ public class DatabaseService {
                 pstmt.setInt(6, heroInitialPosY);
                 pstmt.setInt(7, arrowCount);
                 pstmt.setInt(8, stepCount);
-                pstmt.setInt(9, WumpusKilledCount);
+                pstmt.setInt(9, wumpusKilledCount);
                 pstmt.setBoolean(10, hasGold);
-                pstmt.setTimestamp(11, new Timestamp(System.currentTimeMillis()));
+                pstmt.setTimestamp(11,
+                        new Timestamp(System.currentTimeMillis()));
                 pstmt.executeUpdate();
-            LOGGER.info("Game state saved for player '{}'. Step count: {}," +
+            LOGGER.info("Game state saved for player '{}'. Step count: {},"
+                    +
                     " Wumpus killed: {}, Has gold: {}",
-                    playerName, stepCount, WumpusKilledCount, hasGold);
+                    playerName, stepCount, wumpusKilledCount, hasGold);
         } catch (SQLException e) {
-            LOGGER.error("Error saving game state for player '{}'", playerName, e);
+            LOGGER.error("Error saving game state for player '{}'"
+                    , playerName, e);
         }
     }
 
-
+    /**
+     * Loads the game state for a given player.
+     * @return The loaded game state, or null if no state is found.
+     */
     public GameState loadGameState(String playerName) {
         String sql = "SELECT * FROM GameState WHERE PlayerName = ?";
         try (Connection conn = dbConnection.getConnection();
@@ -83,7 +137,9 @@ public class DatabaseService {
                 int WumpusKilledCount = rs.getInt("WumpusKilledCount");
                 boolean hasGold = rs.getBoolean("hasGold");
                 LOGGER.info("Game state loaded successfully for player '{}'", playerName);
-                return new GameState(playerName, mapState, heroPosX, heroPosY, heroInitialPosX, heroInitialPosY, arrowCount, stepCount, WumpusKilledCount, hasGold);
+                return new GameState(playerName, mapState, heroPosX, heroPosY,
+                heroInitialPosX, heroInitialPosY, arrowCount, stepCount,
+                WumpusKilledCount, hasGold);
             } else {
                 LOGGER.info("No game state found for player '{}'", playerName);
             }
@@ -92,7 +148,12 @@ public class DatabaseService {
         }
         return null;
     }
-
+    /**
+     * Inserts or updates a player's entry in the leaderboard.
+     * @param playerName The name of the player.
+     * @param steps The number of steps taken by the player.
+     * @param hasWon Whether the player has won the game.
+     */
     public void insertOrUpdateLeaderboard(String playerName, int steps, boolean hasWon) {
         String checkSql = "SELECT Steps FROM Leaderboard WHERE PlayerName = ?";
         String insertSql = "INSERT INTO Leaderboard (PlayerName, Steps, Wins) VALUES (?, ?, ?)";
@@ -139,6 +200,10 @@ public class DatabaseService {
             LOGGER.error("Error updating or inserting leaderboard for player '{}'", playerName, e);
         }
     }
+    /**
+     * Retrieves the leaderboard from the database.
+     * @return A list of LeaderboardEntry objects representing the leaderboard.
+     */
     public List<LeaderboardEntry> getLeaderboard() {
         List<LeaderboardEntry> leaderboard = new ArrayList<>();
         String sql = "SELECT PlayerName, Steps, Wins FROM Leaderboard ORDER BY Steps ASC";
