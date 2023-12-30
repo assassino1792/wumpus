@@ -64,24 +64,25 @@ public class GamePlay {
         LOGGER.info("GamePlay initialized for player: {}",
                 playername);
 
-        MapID heroInitialPosition = mapLoader.getHeroInitialPosition();
+        MapID heroinitialposition = mapLoader.getHeroInitialPosition();
         this.heroInitialPosition = mapLoader.getHeroInitialPosition();
-        if (heroInitialPosition != null) {
-            this.hero.setMapID(heroInitialPosition);
+        if (heroinitialposition != null) {
+            this.hero.setMapID(heroinitialposition);
         }
     }
     /**
      * Sets the initial position of the hero on the map.
-     * @param heroInitialPosition The new initial position to be set for the hero.
+     * @param newheroInitialPosition The new initial position
+     * to be set for the hero.
      */
-    public void setHeroInitialPosition(MapID heroInitialPosition) {
-        this.heroInitialPosition = heroInitialPosition;
+    public void setHeroInitialPosition(final MapID newheroInitialPosition) {
+        this.heroInitialPosition = newheroInitialPosition;
     }
     /**
      * Changes the direction in which the hero is facing.
      * @param newDirection The new direction for the hero to face.
      */
-    public void changeHeroDirection(WayType newDirection) {
+    public void changeHeroDirection(final WayType newDirection) {
         hero.setWay(newDirection);
         System.out.println("You are now looking " + newDirection);
     }
@@ -96,7 +97,8 @@ public class GamePlay {
 
     /**
      * Checks if the player has won the game.
-     * A player wins the game if they have collected the gold and returned it to the starting position.
+     * A player wins the game if they have collected
+     * the gold and returned it to the starting position.
      * @return true if the player has won the game, false otherwise.
      */
     public boolean hasWon() {
@@ -107,7 +109,9 @@ public class GamePlay {
                     && currentPos.getVertical() == initialPos.getVertical()) {
                 System.out.println("\nCongratulations! You are clever!"
                         +
-                        " You have successfully returned the gold to the starting"
+                        " You have successfully returned the gold"
+                        +
+                        " to the starting"
                         +
                         " position in " + stepsCount + " steps. YOU WON!\n");
                 gameWon = true;
@@ -116,12 +120,12 @@ public class GamePlay {
 
                 DatabaseService dbService =
                         new DatabaseService(new DatabaseConnection());
-                dbService.insertOrUpdateLeaderboard (this.playerName,
+                dbService.insertOrUpdateLeaderboard(this.playerName,
                         stepsCount, true);
 
                 LeaderBoard leaderboard = new LeaderBoard(dbService);
-                leaderboard.updateLeaderboard (this.playerName,
-                        stepsCount ,true);
+                leaderboard.updateLeaderboard(this.playerName,
+                        stepsCount, true);
                 return true;
             }
         }
@@ -138,9 +142,12 @@ public class GamePlay {
 
     /**
      * Moves the hero based on their current direction.
-     * This method updates the hero's position on the map. If the hero encounters a Wumpus or a wall,
-     * the game ends or the move is blocked, respectively. If the hero steps on a Pit, they lose an arrow.
-     * The method also checks if the hero has won the game by returning the gold to the starting position.
+     * This method updates the hero's position on the map
+     * .If the hero encounters a Wumpus or a wall,
+     * the game ends or the move is blocked, respectively.
+     * If the hero steps on a Pit, they lose an arrow.
+     * The method also checks if the hero has won the game
+     * by returning the gold to the starting position.
      */
     public void moveHero() {
         MapID currentMapID = hero.getMapID();
@@ -169,9 +176,12 @@ public class GamePlay {
                     horizontal--;
                 }
                 break;
+            default:
+                break;
         }
 
-        char targetChar = mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1);
+        char targetChar = mapReader.getMapLines().get(vertical - 1)
+                .charAt(horizontal - 1);
         if (targetChar == 'U') {
             System.out.println("\nYou stepped on a Wumpus! GAME OVER.\n");
             gameOver = true;
@@ -181,24 +191,25 @@ public class GamePlay {
             return;
         } else {
                 hero.setMapID(new MapID(horizontal, vertical));
-                System.out.println("Hero's new position - Column:" +
+                System.out.println("Hero's new position - Column:"
+                        +
                         " " + horizontal + ", Row: " + vertical);
             }
 
-        if (mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1) == 'P') {
+        if (mapReader.getMapLines().get(vertical - 1)
+                .charAt(horizontal - 1) == 'P') {
             if (hero.getArrowCount() > 0) {
                 hero.setArrowCount(hero.getArrowCount() - 1);
-                System.out.println("You stepped on a Pit!"
+                System.out.println("You stepped on a Pit! Lost an arrow."
                         +
-                        " Lost an arrow. Remaining arrows: "
-                        +
-                        hero.getArrowCount()+"\n");
+                        "Remaining arrows: " + hero.getArrowCount());
             }
         }
         hero.setMapID(new MapID(horizontal, vertical));
 
 
-        if (hero.isHasGold() && hero.getMapID().equals(this.heroInitialPosition)) {
+        if (hero.isHasGold() && hero.getMapID().equals(
+                this.heroInitialPosition)) {
             hasWon();
         }
         stepsCount++;
@@ -214,8 +225,11 @@ public class GamePlay {
 
     /**
      * Shoots an arrow in the current direction.
-     * This method allows the hero to shoot an arrow in their current direction. It checks if the arrow hits a Wumpus,
-     * a wall, or if it is destroyed. It updates the game state accordingly, including the remaining arrow count and
+     * This method allows the hero to shoot an arrow
+     * in their current direction. It checks if the arrow hits a Wumpus,
+     * a wall, or if it is destroyed.
+     * It updates the game state accordingly,
+     * including the remaining arrow count and
      * the Wumpus kill count.
      */
     public void shootArrow() {
@@ -248,26 +262,42 @@ public class GamePlay {
                             horizontal--;
                         }
                         break;
+                    default:
+                        break;
                 }
-                char targetChar = mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1);
+                char targetChar = mapReader.getMapLines().get(vertical - 1)
+                        .charAt(horizontal - 1);
                 if (targetChar == 'W') {
                     hitWall = true;
                 } else if (targetChar == 'U') {
                     hitWumpus = true;
-                    mapReader.updateMapPosition(vertical - 1, horizontal - 1, '_');
+                    mapReader.updateMapPosition(vertical - 1,
+                            horizontal - 1, '_');
                 }
             }
 
             hero.setArrowCount(hero.getArrowCount() - 1);
             if (hitWumpus) {
                 wumpusKilledCount++;
-                System.out.println("SCREEEEEEEEEAM! You hit a Wumpus! Remaining arrows: " + hero.getArrowCount());
-                LOGGER.info("Player '{}' hit a Wumpus at position - Column: {}, Row: {}", playerName, horizontal, vertical);
+                System.out.println("SCREEEEEEEEEAM! You hit a Wumpus!"
+                        +
+                        " Remaining arrows: " + hero.getArrowCount());
+                LOGGER.info("Player '{}' hit a Wumpus at position - "
+                        +
+                        "Column: {}, Row: {}",
+                        playerName, horizontal, vertical);
             } else if (hitWall) {
-                System.out.println("Arrow hit a wall and got destroyed. Remaining arrows: " + hero.getArrowCount());
-                LOGGER.warn("Player '{}' arrow hit a wall at position - Column: {}, Row: {}", playerName, horizontal, vertical);
+                System.out.println("Arrow hit a wall and got destroyed."
+                        +
+                        " Remaining arrows: " + hero.getArrowCount());
+                LOGGER.warn("Player '{}' arrow hit a wall at position"
+                        +
+                        " - Column: {}, Row: {}",
+                        playerName, horizontal, vertical);
             } else {
-                System.out.println("Shot an arrow towards " + hero.getWay() + ". Remaining arrows: " + hero.getArrowCount());
+                System.out.println("Shot an arrow towards " + hero.getWay()
+                        +
+                        ". Remaining arrows: " + hero.getArrowCount());
             }
         } else {
             System.out.println("No more arrows left.");
@@ -275,9 +305,12 @@ public class GamePlay {
     }
 
     /**
-     * Allows the hero to pick up gold from their current position on the map.
-     * This method allows the hero to pick up gold if it is present at their current position on the map. It updates
-     * the game state, setting the hero's gold status to true and updating the map to indicate the absence of gold
+     * Allows the hero to pick up gold from their
+     * current position on the map.
+     * This method allows the hero to pick up gold if
+     * it is present at their current position on the map. It updates
+     * the game state, setting the hero's gold status to
+     * true and updating the map to indicate the absence of gold
      * at that location.
      */
     public void pickUpGold() {
@@ -289,16 +322,21 @@ public class GamePlay {
             hero.setHasGold(true); // A hős felvette az aranyat
             mapReader.updateMapPosition(row, column, '_');
             System.out.println("You picked up the gold!");
-            LOGGER.info("Player '{}' picked up the gold at position - Column: {}, Row: {}", playerName, column + 1, row + 1);
+            LOGGER.info("Player '{}' picked up the gold at position"
+                    +
+                    " - Column: {}, Row: {}", playerName, column + 1, row + 1);
         } else {
             System.out.println("No gold here to pick up.");
         }
     }
 
     /**
-     * Allows the hero to drop the gold they are carrying at their current position on the map.
-     * This method allows the hero to drop the gold they are carrying at their current position on the map.
-     * It updates the game state, setting the hero's gold status to false and updating the map to indicate the
+     * Allows the hero to drop the gold they are
+     * carrying at their current position on the map.
+     * This method allows the hero to drop the gold
+     * they are carrying at their current position on the map.
+     * It updates the game state, setting the hero's
+     * gold status to false and updating the map to indicate the
      * presence of gold at that location.
      */
     public void dropGold() {
@@ -310,7 +348,9 @@ public class GamePlay {
             hero.setHasGold(false);
             mapReader.updateMapPosition(row, column, 'G');
             System.out.println("You dropped the gold!");
-            LOGGER.info("Player '{}' dropped the gold at position - Column: {}, Row: {}", playerName, column + 1, row + 1);
+            LOGGER.info("Player '{}' dropped the gold at position"
+                    +
+                    " - Column: {}, Row: {}", playerName, column + 1, row + 1);
         } else {
             System.out.println("You don't have any gold to drop.");
         }
