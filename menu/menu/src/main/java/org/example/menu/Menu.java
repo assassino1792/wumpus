@@ -312,8 +312,7 @@ public class Menu {
                 break;
             case 2:
                 LOGGER.info("User {} returned to main menu", username);
-                displayMenu();
-                break;
+                return;
             default:
                 LOGGER.warn("User {} made an invalid choice in sub menu: {}",
                         username, choice);

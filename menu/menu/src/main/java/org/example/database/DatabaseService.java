@@ -255,7 +255,7 @@ public class DatabaseService {
     /**
      * Retrieves the leaderboard from the database.
      * @return A list of LeaderboardEntry
-     * objects representing the leaderboard.
+     * objects representing the leaderboard in the menu.
      */
     public List<LeaderboardEntry> getLeaderboard() {
         List<LeaderboardEntry> leaderboard = new ArrayList<>();
