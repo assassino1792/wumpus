@@ -195,7 +195,6 @@ public class Menu {
             System.out.println("7. Pick up the gold");
             System.out.println("8. Drop the gold");
             System.out.println("9. Save");
-            System.out.println("10. Suspend");
             System.out.println("11. Give up the game");
 
 
@@ -273,7 +272,7 @@ public class Menu {
                     System.out.println("Game saved successfully.");
                     break;
 
-                case 11:
+                case 10:
                     if (confirmExit()) {
                         LOGGER.info("User {} chose to give up the game",
                                 username);
@@ -359,8 +358,7 @@ public class Menu {
             System.out.println("7. Pick up the gold");
             System.out.println("8. Drop the gold");
             System.out.println("9. Save");
-            System.out.println("10. Suspend");
-            System.out.println("11. Give up the game");
+            System.out.println("10. Give up the game");
 
             if (gamePlay.isGameWon()) {
                 LOGGER.info("User {} won the game", username);
@@ -440,7 +438,7 @@ public class Menu {
                     System.out.println("Game saved successfully.");
                     break;
 
-                case 11:
+                case 10:
                     if (confirmExit()) {
                         LOGGER.info("User {} gave up the game", username);
                         System.out.println("You gave up the game.");

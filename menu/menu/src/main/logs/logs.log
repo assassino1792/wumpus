@@ -1,0 +1,22 @@
+12:29:53.209 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 10828 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+12:29:53.213 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+12:29:53.709 [main] INFO  org.example.Main - Started Main in 0.791 seconds (process running for 1.346)
+12:29:53.868 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+12:29:53.873 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+12:29:53.874 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+12:29:53.874 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+12:29:57.940 [main] INFO  o.example.database.DatabaseService - Player name 'sdaasd' inserted into PlayerNames table
+12:30:02.638 [main] INFO  org.example.game.GamePlay - User sdaasd selected MAP EDITOR
+12:30:03.639 [main] INFO  org.example.game.GamePlay - User sdaasd selected READ MAP FROM FILE
+12:30:05.149 [main] INFO  org.example.game.GamePlay - User sdaasd selected GAME in sub menu
+12:30:05.152 [main] INFO  org.example.game.GamePlay - Game initialized for user sdaasd
+12:30:05.152 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sdaasd
+12:30:07.479 [main] INFO  org.example.game.GamePlay - User sdaasd confirmed to exit the game
+12:30:07.479 [main] INFO  org.example.game.GamePlay - User sdaasd gave up the game
+12:30:08.929 [main] INFO  org.example.game.GamePlay - User sdaasd selected EXIT
+12:30:08.929 [main] INFO  org.example.game.GamePlay - Starting game for user: sdaasd
+12:30:08.932 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+12:30:08.932 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+12:30:08.933 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+12:30:08.933 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+12:30:08.933 [main] INFO  o.e.database.DatabaseConnection - Database connection closed

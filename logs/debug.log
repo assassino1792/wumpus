@@ -1,0 +1,21 @@
+12:23:48.866 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 16424 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+12:23:48.869 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+12:23:49.397 [main] INFO  org.example.Main - Started Main in 0.814 seconds (process running for 1.368)
+12:23:49.560 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+12:23:49.566 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+12:23:49.567 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+12:23:49.567 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+12:23:54.304 [main] INFO  o.example.database.DatabaseService - Player name 'dsa' inserted into PlayerNames table
+12:23:58.438 [main] INFO  org.example.game.GamePlay - User dsa selected READ MAP FROM FILE
+12:24:00.599 [main] INFO  org.example.game.GamePlay - User dsa selected GAME in sub menu
+12:24:00.601 [main] INFO  org.example.game.GamePlay - Game initialized for user dsa
+12:24:00.601 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsa
+12:24:06.169 [main] INFO  org.example.game.GamePlay - User dsa confirmed to exit the game
+12:24:06.169 [main] INFO  org.example.game.GamePlay - User dsa gave up the game
+12:24:13.360 [main] INFO  org.example.game.GamePlay - User dsa selected EXIT
+12:24:13.360 [main] INFO  org.example.game.GamePlay - Starting game for user: dsa
+12:24:13.363 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+12:24:13.363 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+12:24:13.364 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+12:24:13.364 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+12:24:13.364 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
