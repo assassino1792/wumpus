@@ -211,7 +211,7 @@ public class DatabaseService {
                                  conn.prepareStatement(updateSql)) {
                         updateStmt.setInt(1, steps);
                         updateStmt.setString(2, playerName);
-                      //  updateStmt.setInt(3, steps);
+                        updateStmt.setInt(3, steps);
                         updateStmt.executeUpdate();
                         LOGGER.info("Leaderboard updated for player '{}':"
                                 +

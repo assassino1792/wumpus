@@ -112,7 +112,7 @@ public class DatabaseConnection {
         List<LeaderboardEntry> leaderboard = new ArrayList<>();
         String sql = "SELECT PlayerName, "
                 +
-                "Steps FROM Leaderboard ORDER BY Steps ASC";
+                "Steps, Wins FROM Leaderboard ORDER BY Wins DESC, Steps ASC";
         try (Connection conn = this.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql);
              ResultSet rs = pstmt.executeQuery()) {
