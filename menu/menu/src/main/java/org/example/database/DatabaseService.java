@@ -261,7 +261,7 @@ public class DatabaseService {
         List<LeaderboardEntry> leaderboard = new ArrayList<>();
         String sql = "SELECT PlayerName, Steps, Wins"
                 +
-                " FROM Leaderboard ORDER BY Steps ASC";
+                " FROM Leaderboard ORDER BY Wins DESC, Steps ASC";
         try (Connection conn = dbConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql);
              ResultSet rs = pstmt.executeQuery()) {
