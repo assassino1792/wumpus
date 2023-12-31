@@ -10,7 +10,7 @@ public class MenuValidator {
      * @param username The username to validate.
      * @return `true` if the username is valid; otherwise, `false`.
      */
-    public static boolean isValidUsername(String username) {
+    public static boolean isValidUsername(final String username) {
         if (username == null) {
             return false;
         }

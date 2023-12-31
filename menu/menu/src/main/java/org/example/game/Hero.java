@@ -85,7 +85,7 @@ public class Hero {
      * determine the initial number of arrows.
      */
     public void initializeHero(final int mapSize) {
-        this.arrowCount = MapValidator.WumpusCount(mapSize);
+        this.arrowCount = MapValidator.wumpusCount(mapSize);
         this.way = WayType.NORTH;
     }
 

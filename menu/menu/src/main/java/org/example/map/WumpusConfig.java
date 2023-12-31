@@ -5,17 +5,32 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConfigurationProperties("wumpus")
 
-/**
- * Configuration class for Wumpus game properties.
- */
+
 public class WumpusConfig {
 
-
+    /**
+     * Minimum valid map size.
+     */
     private int minSize;
+    /**
+     * Maximum valid map size.
+     */
     private int maxSize;
+    /**
+     * Variable to store the count of gold pieces.
+     */
     private int goldCount;
+    /**
+     * Variable to store the number of Wumpus creatures in stage 1.
+     */
     private int wumpusStage1;
+    /**
+     * Variable to store the number of Wumpus creatures in stage 2.
+     */
     private int wumpusStage2;
+    /**
+     * Variable to store the number of Wumpus creatures in stage 3.
+     */
     private int wumpusStage3;
 
     /**
@@ -29,7 +44,7 @@ public class WumpusConfig {
      * Sets the minimum map size allowed.
      * @param minSize The minimum map size to set.
      */
-    public void setMinSize(int minSize) {
+    public void setMinSize(final int minSize) {
         this.minSize = minSize;
     }
     /**
@@ -43,7 +58,7 @@ public class WumpusConfig {
      * Sets the maximum map size allowed.
      * @param maxSize The maximum map size to set.
      */
-    public void setMaxSize(int maxSize) {
+    public void setMaxSize(final int maxSize) {
         this.maxSize = maxSize;
     }
     /**
@@ -57,7 +72,7 @@ public class WumpusConfig {
      * Sets the number of gold pieces in the game.
      * @param goldCount The number of gold pieces to set.
      */
-    public void setGoldCount(int goldCount) {
+    public void setGoldCount(final int goldCount) {
         this.goldCount = goldCount;
     }
     /**
@@ -72,7 +87,7 @@ public class WumpusConfig {
      * Sets the number of Wumpus creatures in stage 1.
      * @param wumpusStage1 The number of Wumpus creatures in stage 1 to set.
      */
-    public void setWumpusStage1(int wumpusStage1) {
+    public void setWumpusStage1(final int wumpusStage1) {
         this.wumpusStage1 = wumpusStage1;
     }
     /**
@@ -86,7 +101,7 @@ public class WumpusConfig {
      * Sets the number of Wumpus creatures in stage 2.
      * @param wumpusStage2 The number of Wumpus creatures in stage 2 to set.
      */
-    public void setWumpusStage2(int wumpusStage2) {
+    public void setWumpusStage2(final int wumpusStage2) {
         this.wumpusStage2 = wumpusStage2;
     }
     /**
@@ -100,7 +115,7 @@ public class WumpusConfig {
      * Sets the number of Wumpus creatures in stage 3.
      * @param wumpusStage3 The number of Wumpus creatures in stage 3 to set.
      */
-    public void setWumpusStage3(int wumpusStage3) {
+    public void setWumpusStage3(final int wumpusStage3) {
         this.wumpusStage3 = wumpusStage3;
     }
 }

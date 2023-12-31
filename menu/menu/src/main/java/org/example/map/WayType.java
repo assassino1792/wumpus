@@ -26,18 +26,25 @@ public enum WayType {
 
     /**
      * Initializes a new instance of the WayType enum.
-     * @param key The character key representing the direction.
-     * @param left The character key representing the left direction when turning.
-     * @param right The character key representing the right direction when turning.
-     * @param horizontal Indicates whether the direction is horizontal.
-     * @param add Indicates whether adding the direction is allowed.
+     * @param wayKey The character wayKey representing the direction.
+     * @param toLeft The character wayKey
+     * representing the toLeft direction when turning.
+     * @param toRight The character wayKey
+     * representing the toRight direction when turning.
+     * @param horizontalX Indicates whether the direction is horizontalX.
+     * @param toAdd Indicates whether adding the direction is allowed.
      */
-    WayType(char key, char left, char right, boolean horizontal, boolean add) {
-        this.key = key;
-        this.left = left;
-        this.right = right;
-        this.horizontal = horizontal;
-        this.add = add;
+    WayType(
+            final char wayKey,
+            final char toLeft,
+            final char toRight,
+            final boolean horizontalX,
+            final boolean toAdd) {
+        this.key = wayKey;
+        this.left = toLeft;
+        this.right = toRight;
+        this.horizontal = horizontalX;
+        this.add = toAdd;
     }
 
     /**
@@ -79,9 +86,10 @@ public enum WayType {
      * Retrieves a WayType enum value based on its character key.
      * @param key The character key to look up.
      * @return The corresponding WayType value.
-     * @throws IllegalArgumentException if the key does not match any WayType.
+     * @throws IllegalArgumentException if the key
+     * does not match any WayType.
      */
-    public static WayType byKey(char key) {
+    public static WayType byKey(final char key) {
         for (WayType way : WayType.values()) {
             if (way.key == key) {
                 return way;

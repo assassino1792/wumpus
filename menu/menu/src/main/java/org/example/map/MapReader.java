@@ -49,7 +49,7 @@ public class MapReader {
         int actualWumpusCount = countWumpusOnMap();
         System.out.println("Found Wumpus number: " + actualWumpusCount);
         int mapSize = mapLines.size();
-        int expectedWumpusCount = MapValidator.WumpusCount(mapSize);
+        int expectedWumpusCount = MapValidator.wumpusCount(mapSize);
         if (actualWumpusCount != expectedWumpusCount) {
             System.out.println("Error: Invalid Wumpus number."
                     +
@@ -85,7 +85,7 @@ public class MapReader {
             System.out.println("  " + header);
             MapValidator.checkAndPrintHeaderDetails(header);
         }
-        int wumpusCount = MapValidator.WumpusCount(mapSize);
+        int wumpusCount = MapValidator.wumpusCount(mapSize);
 
 
         System.out.print(" ");
@@ -95,7 +95,7 @@ public class MapReader {
             System.out.print("  ");
         }
         for (int i = 0; i < mapLines.get(0).length(); i++) {
-            System.out.print((char)('a' + i));
+            System.out.print((char) ('a' + i));
         }
         System.out.println();
 
@@ -143,7 +143,8 @@ public class MapReader {
             System.out.println("Hero's row: " + heroRow);
 
 
-            char heroInitialChar = mapLines.get(heroRow - 1).charAt(heroColumn - 1);
+            char heroInitialChar = mapLines.get(heroRow - 1)
+                    .charAt(heroColumn - 1);
             if (heroInitialChar == 'W' || heroInitialChar == 'U') {
                 System.out.println("Error: Hero's initial position cannot"
                         +
@@ -201,10 +202,10 @@ public class MapReader {
      * Redraws the map with the current hero position.
      * @param heroPosition The current position of the hero on the map.
      */
-    public void redrawMap(MapID heroPosition) {
+    public void redrawMap(final MapID heroPosition) {
         System.out.print("   ");
         for (int i = 0; i < mapLines.get(0).length(); i++) {
-            System.out.print((char)('a' + i));
+            System.out.print((char) ('a' + i));
         }
         System.out.println();
         // A pálya sorainak kiírása
@@ -225,7 +226,10 @@ public class MapReader {
      * @param column The column where the update will occur.
      * @param newChar The new character to set at the specified position.
      */
-    public void updateMapPosition(int row, int column, char newChar) {
+    public void updateMapPosition(
+            final int row,
+            final int column,
+            final char newChar) {
         if (row >= 0 && row < mapLines.size() && column >= 0
                 && column < mapLines.get(row).length()) {
             StringBuilder updatedLine = new StringBuilder(mapLines.get(row));
@@ -238,7 +242,7 @@ public class MapReader {
      * Sets the map lines from a string representation.
      * @param mapState The string representation of the map state.
      */
-    public void setMapLinesFromString(String mapState) {
+    public void setMapLinesFromString(final String mapState) {
         this.mapLines = new ArrayList<>(
                 Arrays.asList(mapState.split("\n")));
     }

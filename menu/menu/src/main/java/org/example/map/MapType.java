@@ -27,7 +27,7 @@ public enum MapType {
      * @param key The character key representing the map element.
      * @param name The human-readable name of the map element.
      */
-    MapType(char key, String name) {
+    MapType(final char key, final String name) {
         this.key = key;
         this.name = name;
     }
@@ -51,7 +51,7 @@ public enum MapType {
      * @return The corresponding MapType value.
      * @throws IllegalArgumentException if the key does not match any MapType.
      */
-    public static MapType byKey(char key) {
+    public static MapType byKey(final char key) {
         for (MapType maptype : MapType.values()) {
             if (maptype.key == key) {
                 return maptype;

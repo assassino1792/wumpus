@@ -16,149 +16,56 @@
 </file>
 <file name="C:\GitRepository\wumpus\menu\menu\src\main\java\org\example\map\MapReader.java">
 <error line="92" column="31" severity="error" message="&apos;10&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="98" column="35" severity="error" message="&apos;typecast&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
 <error line="103" column="21" severity="error" message="&apos;9&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 <error line="117" column="50" severity="error" message="&apos;5&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="146" severity="error" message="Line is longer than 80 characters (found 84)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="204" column="27" severity="error" message="Parameter heroPosition should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="207" column="35" severity="error" message="&apos;typecast&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
-<error line="212" column="21" severity="error" message="&apos;9&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="228" column="35" severity="error" message="Parameter row should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="228" column="44" severity="error" message="Parameter column should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="228" column="56" severity="error" message="Parameter newChar should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="241" column="39" severity="error" message="Parameter mapState should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="213" column="21" severity="error" message="&apos;9&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 </file>
 <file name="C:\GitRepository\wumpus\menu\menu\src\main\java\org\example\map\MapType.java">
-<error line="30" column="13" severity="error" message="Parameter key should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="30" column="18" severity="error" message="&apos;key&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="30" column="23" severity="error" message="Parameter name should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="30" column="30" severity="error" message="&apos;name&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="54" column="33" severity="error" message="Parameter key should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="30" column="24" severity="error" message="&apos;key&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="30" column="42" severity="error" message="&apos;name&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
 </file>
 <file name="C:\GitRepository\wumpus\menu\menu\src\main\java\org\example\map\MapValidator.java">
-<error line="7" column="1" severity="error" message="Utility classes should not have a public or default constructor." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
-<error line="14" column="42" severity="error" message="Parameter size should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="15" column="24" severity="error" message="&apos;6&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="15" column="37" severity="error" message="&apos;20&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="22" column="51" severity="error" message="Parameter header should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="23" column="50" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="24" column="30" severity="error" message="&apos;=&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="26" column="44" severity="error" message="&apos;4&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="32" column="16" severity="error" message="Must have at least one statement." source="com.puppycrawl.tools.checkstyle.checks.blocks.EmptyBlockCheck"/>
-<error line="43" column="13" severity="error" message="Parameter mapLines should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="44" column="13" severity="error" message="Parameter header should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="45" column="52" severity="error" message="&apos;||&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
-<error line="51" column="53" severity="error" message="&apos;&amp;&amp;&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
-<error line="72" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
-<error line="72" column="47" severity="error" message="Parameter mapLines should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="79" column="48" severity="error" message="&apos;||&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
-<error line="99" column="45" severity="error" message="Parameter row should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="112" column="23" severity="error" message="Name &apos;WumpusCount&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
-<error line="112" column="35" severity="error" message="Parameter mapSize should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="116" column="23" severity="error" message="&apos;6&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="119" column="24" severity="error" message="&apos;8&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="121" column="31" severity="error" message="&apos;14&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="124" column="20" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="133" column="45" severity="error" message="Parameter mapLines should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="10" column="1" severity="error" message="Utility classes should not have a public or default constructor." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+<error line="29" column="50" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="32" column="44" severity="error" message="&apos;4&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 </file>
 <file name="C:\GitRepository\wumpus\menu\menu\src\main\java\org\example\map\package-info.java">
 <error line="1" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
-<file name="C:\GitRepository\wumpus\menu\menu\src\main\java\org\example\map\WayType.java">
-<error line="30" severity="error" message="Line is longer than 80 characters (found 82)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="31" severity="error" message="Line is longer than 80 characters (found 84)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="35" column="13" severity="error" message="Parameter key should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="35" column="18" severity="error" message="&apos;key&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="35" column="23" severity="error" message="Parameter left should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="35" column="28" severity="error" message="&apos;left&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="35" column="34" severity="error" message="Parameter right should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="35" column="39" severity="error" message="&apos;right&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="35" column="46" severity="error" message="Parameter horizontal should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="35" column="54" severity="error" message="&apos;horizontal&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="35" column="66" severity="error" message="Parameter add should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="35" column="74" severity="error" message="&apos;add&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="84" column="33" severity="error" message="Parameter key should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-</file>
 <file name="C:\GitRepository\wumpus\menu\menu\src\main\java\org\example\map\WumpusConfig.java">
-<error line="8" column="1" severity="error" message="Javadoc comment is placed in the wrong location." source="com.puppycrawl.tools.checkstyle.checks.javadoc.InvalidJavadocPositionCheck"/>
-<error line="14" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="15" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="16" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="17" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="18" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="19" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="32" column="28" severity="error" message="Parameter minSize should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="32" column="32" severity="error" message="&apos;minSize&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="46" column="28" severity="error" message="Parameter maxSize should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="46" column="32" severity="error" message="&apos;maxSize&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="60" column="30" severity="error" message="Parameter goldCount should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="60" column="34" severity="error" message="&apos;goldCount&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="75" column="33" severity="error" message="Parameter wumpusStage1 should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="75" column="37" severity="error" message="&apos;wumpusStage1&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="89" column="33" severity="error" message="Parameter wumpusStage2 should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="89" column="37" severity="error" message="&apos;wumpusStage2&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="103" column="33" severity="error" message="Parameter wumpusStage3 should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="103" column="37" severity="error" message="&apos;wumpusStage3&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="47" column="38" severity="error" message="&apos;minSize&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="61" column="38" severity="error" message="&apos;maxSize&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="75" column="40" severity="error" message="&apos;goldCount&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="90" column="43" severity="error" message="&apos;wumpusStage1&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="104" column="43" severity="error" message="&apos;wumpusStage2&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="118" column="43" severity="error" message="&apos;wumpusStage3&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
 </file>
 <file name="C:\GitRepository\wumpus\menu\menu\src\main\java\org\example\menu\Menu.java">
-<error line="22" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="23" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="24" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="25" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="26" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="27" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="28" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="31" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="32" column="34" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="32" column="51" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="96" column="22" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="130" column="22" severity="error" message="&apos;4&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="143" column="22" severity="error" message="&apos;5&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="157" column="31" severity="error" message="Parameter gamePlay should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="197" severity="error" message="Line is longer than 80 characters (found 85)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="201" severity="error" message="Line is longer than 80 characters (found 84)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="204" column="22" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="205" severity="error" message="Line is longer than 80 characters (found 84)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="208" column="22" severity="error" message="&apos;4&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="209" severity="error" message="Line is longer than 80 characters (found 85)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="212" column="22" severity="error" message="&apos;5&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="216" column="22" severity="error" message="&apos;6&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="220" column="22" severity="error" message="&apos;7&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="224" column="22" severity="error" message="&apos;8&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="228" column="22" severity="error" message="&apos;9&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="232" severity="error" message="Line is longer than 80 characters (found 92)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="233" severity="error" message="Line is longer than 80 characters (found 90)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="234" severity="error" message="Line is longer than 80 characters (found 307)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="237" column="22" severity="error" message="&apos;11&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="239" severity="error" message="Line is longer than 80 characters (found 83)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="245" severity="error" message="Line is longer than 80 characters (found 88)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="246" severity="error" message="Line is longer than 80 characters (found 98)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="276" severity="error" message="Line is longer than 80 characters (found 96)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="298" severity="error" message="Line is longer than 80 characters (found 106)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="342" column="22" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="346" column="22" severity="error" message="&apos;4&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="350" column="22" severity="error" message="&apos;5&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="354" column="22" severity="error" message="&apos;6&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="358" column="22" severity="error" message="&apos;7&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="362" column="22" severity="error" message="&apos;8&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="366" column="22" severity="error" message="&apos;9&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="369" severity="error" message="Line is longer than 80 characters (found 92)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="370" severity="error" message="Line is longer than 80 characters (found 90)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="371" severity="error" message="Line is longer than 80 characters (found 240)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="376" column="22" severity="error" message="&apos;11&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="384" severity="error" message="Line is longer than 80 characters (found 88)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="385" severity="error" message="Line is longer than 80 characters (found 98)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="118" column="22" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="152" column="22" severity="error" message="&apos;4&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="165" column="22" severity="error" message="&apos;5&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="228" column="22" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="233" column="22" severity="error" message="&apos;4&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="238" column="22" severity="error" message="&apos;5&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="242" column="22" severity="error" message="&apos;6&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="246" column="22" severity="error" message="&apos;7&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="250" column="22" severity="error" message="&apos;8&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="254" column="22" severity="error" message="&apos;9&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="276" column="22" severity="error" message="&apos;11&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="392" column="22" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="397" column="22" severity="error" message="&apos;4&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="402" column="22" severity="error" message="&apos;5&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="407" column="22" severity="error" message="&apos;6&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="412" column="22" severity="error" message="&apos;7&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="417" column="22" severity="error" message="&apos;8&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="422" column="22" severity="error" message="&apos;9&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="443" column="22" severity="error" message="&apos;11&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 </file>
 <file name="C:\GitRepository\wumpus\menu\menu\src\main\java\org\example\menu\MenuValidator.java">
 <error line="6" column="1" severity="error" message="Utility classes should not have a public or default constructor." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
-<error line="13" column="43" severity="error" message="Parameter username should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 <error line="18" column="26" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 <error line="18" column="41" severity="error" message="&apos;12&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 </file>
 <file name="C:\GitRepository\wumpus\menu\menu\src\main\java\org\example\menu\package-info.java">
-<error line="1" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
-</file>
-<file name="C:\GitRepository\wumpus\menu\menu\src\main\java\org\example\package-info.java">
-<error line="1" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 </checkstyle>

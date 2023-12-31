@@ -18,18 +18,40 @@ import java.util.Scanner;
  * The main menu for the game application, responsible for user interactions.
  */
 public class Menu {
-
+    /**
+     * Scanner object for user input.
+     */
     private Scanner scanner = new Scanner(System.in);
+    /**
+     * MapReader object for reading game maps.
+     */
     private MapReader mapReader = new MapReader();
+    /**
+     * Reference to the Hero object.
+     */
     private Hero hero;
+    /**
+     * DatabaseService object for database interactions.
+     */
     private DatabaseService dbService;
+    /**
+     * The username associated with the player.
+     */
     private String username;
+    /**
+     * Initial step count for the player.
+     */
     private int initialStepCount;
+    /**
+     * Initial count of Wumpus creatures.
+     */
     private int initialWumpusCount;
 
-  //  private boolean hasGold;
+    /**
+     * Logger instance for logging menu-related messages and events.
+     */
     private static final Logger LOGGER =
-          LoggerFactory.getLogger( GamePlay.class );
+          LoggerFactory.getLogger(GamePlay.class);
 
     /**
      * Constructs a Menu object and initializes the database service.
@@ -154,7 +176,7 @@ public class Menu {
         }
     }
 
-    private void continueGame(GamePlay gamePlay) {
+    private void continueGame(final GamePlay gamePlay) {
 
         int choice;
         LOGGER.info("Continuing game for user: {}", username);
@@ -194,19 +216,23 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                    LOGGER.info("User {} changed hero direction to North", username);
+                    LOGGER.info("User {} changed hero direction to North",
+                            username);
                     gamePlay.changeHeroDirection(WayType.NORTH);
                     break;
                 case 2:
-                    LOGGER.info("User {} changed hero direction to East", username);
+                    LOGGER.info("User {} changed hero direction to East",
+                            username);
                     gamePlay.changeHeroDirection(WayType.EAST);
                     break;
                 case 3:
-                    LOGGER.info("User {} changed hero direction to West", username);
+                    LOGGER.info("User {} changed hero direction to West",
+                            username);
                     gamePlay.changeHeroDirection(WayType.WEST);
                     break;
                 case 4:
-                    LOGGER.info("User {} changed hero direction to South", username);
+                    LOGGER.info("User {} changed hero direction to South",
+                            username);
                     gamePlay.changeHeroDirection(WayType.SOUTH);
                     break;
                 case 5:
@@ -229,21 +255,38 @@ public class Menu {
                     LOGGER.info("User {} chose to save the game", username);
                     String mapState = getMapStateAsString();
                     int wumpusCount = gamePlay.getWumpusKilledCount();
-                    int heroInitialPosX = gamePlay.getHeroInitialPosition().getHorizontal();
-                    int heroInitialPosY = gamePlay.getHeroInitialPosition().getVertical();
-                    dbService.saveGameState(username, mapState, hero.getMapID().getHorizontal(), hero.getMapID().getVertical(), heroInitialPosX, heroInitialPosY, hero.getArrowCount(), gamePlay.getStepCount(), wumpusCount, hero.isHasGold());                    System.out.println("Game saved successfully.");
+                    int heroInitialPosX = gamePlay.getHeroInitialPosition()
+                            .getHorizontal();
+                    int heroInitialPosY = gamePlay.getHeroInitialPosition()
+                            .getVertical();
+                    dbService.saveGameState(
+                            username,
+                            mapState,
+                            hero.getMapID().getHorizontal(),
+                            hero.getMapID().getVertical(),
+                            heroInitialPosX,
+                            heroInitialPosY,
+                            hero.getArrowCount(),
+                            gamePlay.getStepCount(),
+                            wumpusCount,
+                            hero.isHasGold());
+                    System.out.println("Game saved successfully.");
                     break;
 
                 case 11:
                     if (confirmExit()) {
-                        LOGGER.info("User {} chose to give up the game", username);
+                        LOGGER.info("User {} chose to give up the game",
+                                username);
                         System.out.println("You gave up the game.");
                         return;
                     }
                     break;
                 default:
-                    LOGGER.warn("User {} made an invalid choice: {}", username, choice);
-                    System.out.println("Invalid choice. Please enter a number between 1 and 11.");
+                    LOGGER.warn("User {} made an invalid choice: {}",
+                            username, choice);
+                    System.out.println("Invalid choice. Please enter"
+                            +
+                            " a number between 1 and 11.");
             }
 
             mapReader.redrawMap(hero.getMapID());
@@ -273,7 +316,8 @@ public class Menu {
                 displayMenu();
                 break;
             default:
-                LOGGER.warn("User {} made an invalid choice in sub menu: {}", username, choice);
+                LOGGER.warn("User {} made an invalid choice in sub menu: {}",
+                        username, choice);
                 System.out.println("Invalid choice. Please enter 1, 2, or 3.");
         }
     }
@@ -295,7 +339,11 @@ public class Menu {
             LOGGER.warn("Map reading failed for user {}", username);
         }
 
-        GamePlay gamePlay = new GamePlay(hero, mapReader, initialStepCount, initialWumpusCount, username);
+        GamePlay gamePlay = new GamePlay(hero,
+                mapReader,
+                initialStepCount,
+                initialWumpusCount,
+                username);
 
         System.out.println("\nThe game has started.\n");
 
@@ -332,43 +380,62 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                    LOGGER.info("User {} changed direction to NORTH", username);
+                    LOGGER.info("User {} changed direction to NORTH",
+                            username);
                     gamePlay.changeHeroDirection(WayType.NORTH);
                     break;
                 case 2:
-                    LOGGER.info("User {} changed direction to EAST", username);
+                    LOGGER.info("User {} changed direction to EAST",
+                            username);
                     gamePlay.changeHeroDirection(WayType.EAST);
                     break;
                 case 3:
-                    LOGGER.info("User {} changed direction to WEST", username);
+                    LOGGER.info("User {} changed direction to WEST",
+                            username);
                     gamePlay.changeHeroDirection(WayType.WEST);
                     break;
                 case 4:
-                    LOGGER.info("User {} changed direction to SOUTH", username);
+                    LOGGER.info("User {} changed direction to SOUTH",
+                            username);
                     gamePlay.changeHeroDirection(WayType.SOUTH);
                     break;
                 case 5:
-                    LOGGER.info("User {} moved hero", username);
+                    LOGGER.info("User {} moved hero",
+                            username);
                     gamePlay.moveHero();
                     break;
                 case 6:
-                    LOGGER.info("User {} shot an arrow", username);
+                    LOGGER.info("User {} shot an arrow",
+                            username);
                     gamePlay.shootArrow();
                     break;
                 case 7:
-                    LOGGER.info("User {} picked up gold", username);
+                    LOGGER.info("User {} picked up gold",
+                            username);
                     gamePlay.pickUpGold();
                     break;
                 case 8:
-                    LOGGER.info("User {} dropped gold", username);
+                    LOGGER.info("User {} dropped gold",
+                            username);
                     gamePlay.dropGold();
                     break;
                 case 9:
                     String mapState = getMapStateAsString();
                     int wumpusCount = gamePlay.getWumpusKilledCount();
-                    int heroInitialPosX = gamePlay.getHeroInitialPosition().getHorizontal();
-                    int heroInitialPosY = gamePlay.getHeroInitialPosition().getVertical();
-                    dbService.saveGameState(username, mapState, hero.getMapID().getHorizontal(), hero.getMapID().getVertical(), heroInitialPosX, heroInitialPosY, hero.getArrowCount(), gamePlay.getStepCount(), wumpusCount, hero.isHasGold());
+                    int heroInitialPosX = gamePlay.getHeroInitialPosition()
+                            .getHorizontal();
+                    int heroInitialPosY = gamePlay.getHeroInitialPosition()
+                            .getVertical();
+                    dbService.saveGameState(username,
+                            mapState,
+                            hero.getMapID().getHorizontal(),
+                            hero.getMapID().getVertical(),
+                            heroInitialPosX,
+                            heroInitialPosY,
+                            hero.getArrowCount(),
+                            gamePlay.getStepCount(),
+                            wumpusCount,
+                            hero.isHasGold());
                     LOGGER.info("Game state saved for user {}", username);
                     System.out.println("Game saved successfully.");
                     break;
@@ -381,8 +448,11 @@ public class Menu {
                     }
                     break;
                 default:
-                    LOGGER.warn("User {} made an invalid choice: {}", username, choice);
-                    System.out.println("Invalid choice. Please enter a number between 1 and 11.");
+                    LOGGER.warn("User {} made an invalid choice: {}",
+                            username, choice);
+                    System.out.println("Invalid choice. Please enter"
+                            +
+                            " a number between 1 and 11.");
             }
 
             mapReader.redrawMap(hero.getMapID());

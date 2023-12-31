@@ -1,27 +1,33 @@
+/**
+ * Provides utility methods for validating game maps.
+ */
 package org.example.map;
 import java.util.List;
 
 /**
- * Provides utility methods for validating game maps.
+ * Checks if the map size is valid (between 6x6 and 20x20).
  */
 public class MapValidator {
-
+    /** Minimum valid map size. */
+    private static final int MIN_MAP_SIZE = 6;
+    /** Maximum valid map size. */
+    private static final int MAX_MAP_SIZE = 20;
     /**
      * Checks if the map size is valid (between 6x6 and 20x20).
      * @param size The size of the map.
      * @return true if the map size is valid, false otherwise.
      */
-    public static boolean isValidMapSize(int size) {
-        return size >= 6 && size <= 20;
+    public static boolean isValidMapSize(final int size) {
+        return size >= MIN_MAP_SIZE && size <= MAX_MAP_SIZE;
     }
 
     /**
      * Checks and prints details from the map header.
      * @param header The map header string.
      */
-    public static void checkAndPrintHeaderDetails(String header) {
+    public static void checkAndPrintHeaderDetails(final String header) {
         if (header != null && header.length() >= 3) {
-            char firstnumber =header.charAt(0);
+            char firstnumber = header.charAt(0);
             char secondChar = header.charAt(2);
             char thirdChar = header.charAt(4);
             char lastChar = header.charAt(header.length() - 1);
@@ -29,8 +35,6 @@ public class MapValidator {
           //  System.out.println("A fejléc második karaktere: " + secondChar);
           //  System.out.println("A fejléc harmadik karaktere: " + thirdChar);
           //  System.out.println("A fejléc negyedik karaktere: " + lastChar);
-        } else {
-          //  System.out.println("A fejléc túl rövid vagy null.");
         }
     }
     /**
@@ -40,15 +44,16 @@ public class MapValidator {
      * @return true if map dimensions are valid, false otherwise.
      */
     public static boolean isValidMapDimensions(
-            List<String> mapLines,
-            String header) {
-        if (mapLines == null || mapLines.isEmpty() ||
-                header == null || header.isEmpty()) {
+            final List<String> mapLines,
+            final String header) {
+        if (mapLines == null || mapLines.isEmpty()
+                || header == null || header.isEmpty()) {
             return false;
         }
         // Keresd meg az első nem számjegy karakter pozícióját a fejlécben
         int firstNonDigitIndex = 0;
-        while (firstNonDigitIndex < header.length() &&
+        while (firstNonDigitIndex < header.length()
+                &&
                 Character.isDigit(header.charAt(firstNonDigitIndex))) {
             firstNonDigitIndex++;
         }
@@ -69,14 +74,21 @@ public class MapValidator {
         int colCount = mapLines.get(0).length();
         return rowCount == expectedSize && colCount == expectedSize;
     }
-    public static boolean isSurroundedByWalls(List<String> mapLines) {
+
+    /**
+     * Checks if the map is surrounded by walls.
+     * @param mapLines The list of strings representing the map.
+     * @return True if the map is surrounded by walls, false otherwise.
+     */
+    public static boolean isSurroundedByWalls(final List<String> mapLines) {
         if (mapLines == null || mapLines.isEmpty()) {
             return false;
         }
         int rowCount = mapLines.size();
         int colCount = mapLines.get(0).length();
         // Ellenőrizzük az első és utolsó sort
-        if (!isRowFullOfWalls(mapLines.get(0)) ||
+        if (!isRowFullOfWalls(mapLines.get(0))
+                ||
                 !isRowFullOfWalls(mapLines.get(rowCount - 1))) {
             return false;
         }
@@ -96,7 +108,7 @@ public class MapValidator {
      * @param row The row to check.
      * @return true if the row is full of walls, false otherwise.
      */
-    private static boolean isRowFullOfWalls(String row) {
+    private static boolean isRowFullOfWalls(final String row) {
         for (char c : row.toCharArray()) {
             if (c != 'W') {
                 return false;
@@ -109,19 +121,23 @@ public class MapValidator {
      * @param mapSize The size of the map.
      * @return The number of Wumpus creatures.
      */
-    public static int WumpusCount(int mapSize) {
+    public static int wumpusCount(final int mapSize) {
+        final int wumpusZero = 6;
+        final int wumpusOne = 8;
+        final int wumpusTwo = 14;
+        final int wumpusThree = 3;
         if (!isValidMapSize(mapSize)) {
             System.out.println("Invalid map size: " + mapSize);
         }
-        if (mapSize < 6) {
+        if (mapSize < wumpusZero) {
             return 0;
         }
-        if (mapSize <= 8) {
+        if (mapSize <= wumpusOne) {
             return 1;
-        } else if (mapSize <= 14) {
+        } else if (mapSize <= wumpusTwo) {
             return 2;
         } else {
-            return 3;
+            return wumpusThree;
         }
     }
     /**
@@ -130,7 +146,7 @@ public class MapValidator {
      * @return true if the map contains
      * exactly one gold piece, false otherwise.
      */
-    public static boolean hasExactlyOneGold(List<String> mapLines) {
+    public static boolean hasExactlyOneGold(final List<String> mapLines) {
         int goldCount = 0;
         for (String line : mapLines) {
             for (char c : line.toCharArray()) {
@@ -142,4 +158,3 @@ public class MapValidator {
         return goldCount == 1;
     }
 }
-
