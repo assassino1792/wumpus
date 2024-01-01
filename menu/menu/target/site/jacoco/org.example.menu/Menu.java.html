@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Menu.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">menu</a> &gt; <a href="index.source.html" class="el_package">org.example.menu</a> &gt; <span class="el_source">Menu.java</span></div><h1>Menu.java</h1><pre class="source lang-java linenums">package org.example.menu;
+
+import org.example.database.DatabaseConnection;
+import org.example.database.DatabaseService;
+import org.example.game.GamePlay;
+import org.example.game.GameState;
+import org.example.game.Hero;
+import org.example.game.LeaderboardEntry;
+import org.example.map.MapID;
+import org.example.map.MapReader;
+import org.example.map.WayType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import java.util.List;
+import java.util.Scanner;
+
+/**
+ * The main menu for the game application, responsible for user interactions.
+ */
+public class Menu {
+    /**
+     * Scanner object for user input.
+     */
+<span class="nc" id="L24">    private Scanner scanner = new Scanner(System.in);</span>
+    /**
+     * MapReader object for reading game maps.
+     */
+<span class="nc" id="L28">    private MapReader mapReader = new MapReader();</span>
+    /**
+     * Reference to the Hero object.
+     */
+    private Hero hero;
+    /**
+     * DatabaseService object for database interactions.
+     */
+    private DatabaseService dbService;
+    /**
+     * The username associated with the player.
+     */
+    private String username;
+    /**
+     * Initial step count for the player.
+     */
+    private int initialStepCount;
+    /**
+     * Initial count of Wumpus creatures.
+     */
+    private int initialWumpusCount;
+
+    /**
+     * Logger instance for logging menu-related messages and events.
+     */
+<span class="nc" id="L53">    private static final Logger LOGGER =</span>
+<span class="nc" id="L54">          LoggerFactory.getLogger(GamePlay.class);</span>
+
+    /**
+     * Constructs a Menu object and initializes the database service.
+     */
+<span class="nc" id="L59">    public Menu() {</span>
+<span class="nc" id="L60">        this.mapReader = new MapReader();</span>
+<span class="nc" id="L61">        DatabaseConnection dbConnection = new DatabaseConnection();</span>
+<span class="nc" id="L62">        this.dbService = new DatabaseService(dbConnection);</span>
+<span class="nc" id="L63">    }</span>
+    /**
+     * Starts the game by prompting the user for their username.
+     */
+    public void startGame() {
+
+        //   MapReader mapReader = new MapReader();
+<span class="nc" id="L70">        System.out.print(&quot;Please enter your username: &quot;);</span>
+<span class="nc" id="L71">        this.username = scanner.nextLine();</span>
+
+<span class="nc bnc" id="L73" title="All 2 branches missed.">        if (MenuValidator.isValidUsername(username)) {</span>
+<span class="nc" id="L74">            System.out.println(&quot;Welcome, &quot; + username + &quot;!&quot;);</span>
+<span class="nc" id="L75">            dbService.insertPlayerName(username);</span>
+<span class="nc" id="L76">            displayMenu();</span>
+<span class="nc" id="L77">            LOGGER.info(&quot;Starting game for user: {}&quot;, username);</span>
+        } else {
+<span class="nc" id="L79">            System.out.println(&quot;Invalid username. It must be between&quot;</span>
+                    +
+                    &quot; 3 and 12 characters and not contain spaces.&quot;);
+        }
+<span class="nc" id="L83">    }</span>
+    /**
+     * Displays the main menu and handles user choices.
+     */
+    public void displayMenu() {
+        int choice;
+
+        while (true) {
+<span class="nc" id="L91">            System.out.println(&quot;\nMenu:&quot;);</span>
+<span class="nc" id="L92">            System.out.println(&quot;1. MAP EDITOR&quot;);</span>
+<span class="nc" id="L93">            System.out.println(&quot;2. READ MAP FROM FILE&quot;);</span>
+<span class="nc" id="L94">            System.out.println(&quot;3. READ FROM DATABASE&quot;);</span>
+<span class="nc" id="L95">            System.out.println(&quot;4. LIST THE LEADERBOARD&quot;);</span>
+<span class="nc" id="L96">            System.out.println(&quot;5. EXIT&quot;);</span>
+<span class="nc" id="L97">            System.out.print(&quot;Please enter your choice (1-3): &quot;);</span>
+
+<span class="nc" id="L99">            choice = scanner.nextInt();</span>
+
+<span class="nc bnc" id="L101" title="All 6 branches missed.">            switch (choice) {</span>
+                case 1:
+<span class="nc" id="L103">                  LOGGER.info(&quot;User {} selected MAP EDITOR&quot;, username);</span>
+<span class="nc" id="L104">                  System.out.println(&quot;Currently, map editing is not available.&quot;</span>
+                            +
+                            &quot; Please use the READ MAP FROM FILE option.&quot;);
+<span class="nc" id="L107">                    break;</span>
+                case 2:
+<span class="nc" id="L109">                    LOGGER.info(&quot;User {} selected READ MAP FROM FILE&quot;,</span>
+                            username);
+<span class="nc" id="L111">                    System.out.println(&quot;READ MAP FROM FILE selected.&quot;);</span>
+<span class="nc" id="L112">                    boolean isMapValid = mapReader.readMapFromFile();</span>
+<span class="nc bnc" id="L113" title="All 2 branches missed.">                    if (!isMapValid) {</span>
+<span class="nc" id="L114">                        displayMenu();</span>
+                    }
+<span class="nc" id="L116">                    displaySubMenu();</span>
+<span class="nc" id="L117">                    break;</span>
+                case 3:
+<span class="nc" id="L119">                    LOGGER.info(&quot;User {} selected READ FROM DATABASE&quot;,</span>
+                            username);
+<span class="nc" id="L121">                    GameState loadedState = dbService.loadGameState(username);</span>
+<span class="nc bnc" id="L122" title="All 2 branches missed.">                    if (loadedState != null) {</span>
+<span class="nc" id="L123">                        mapReader.setMapLinesFromString(</span>
+<span class="nc" id="L124">                                loadedState.getMapState()</span>
+                        );
+<span class="nc" id="L126">                        hero = new Hero();</span>
+<span class="nc" id="L127">                        hero.setMapID(new MapID(loadedState.getHeroPosX(),</span>
+<span class="nc" id="L128">                                loadedState.getHeroPosY()));</span>
+<span class="nc" id="L129">                        hero.setArrowCount(loadedState.getarrowCount());</span>
+<span class="nc" id="L130">                        initialStepCount = loadedState.getStepCount();</span>
+<span class="nc" id="L131">                        initialWumpusCount = loadedState.getWumpusCount();</span>
+<span class="nc" id="L132">                        hero.setHasGold(loadedState.isHasGold());</span>
+<span class="nc" id="L133">                        GamePlay gamePlay = new GamePlay(</span>
+                                hero,
+                                mapReader,
+                                initialStepCount,
+                                initialWumpusCount,
+                                username
+                        );
+<span class="nc" id="L140">                        gamePlay.setHeroInitialPosition(</span>
+<span class="nc" id="L141">                                new MapID(loadedState.getHeroInitialPosX(),</span>
+<span class="nc" id="L142">                                        loadedState.getHeroInitialPosY())</span>
+                        );
+<span class="nc" id="L144">                        continueGame(gamePlay);</span>
+
+<span class="nc" id="L146">                    } else {</span>
+<span class="nc" id="L147">                        System.out.println(&quot;No saved game found for &quot;</span>
+                                +
+                                username);
+                    }
+<span class="nc" id="L151">                    break;</span>
+                case 4:
+<span class="nc" id="L153">                    LOGGER.info(&quot;User {} selected LIST THE LEADERBOARD&quot;,</span>
+                            username);
+<span class="nc" id="L155">                    System.out.println(&quot;LIST THE LEADERBOARD selected.&quot;);</span>
+<span class="nc" id="L156">                    List&lt;LeaderboardEntry&gt; entries =</span>
+<span class="nc" id="L157">                            dbService.getLeaderboard();</span>
+<span class="nc bnc" id="L158" title="All 2 branches missed.">                    for (LeaderboardEntry entry : entries) {</span>
+<span class="nc" id="L159">                        System.out.println(entry.getPlayerName()</span>
+<span class="nc" id="L160">                                + &quot; - &quot; + entry.getSteps() + &quot; steps &quot;</span>
+<span class="nc" id="L161">                                + entry.getWins() + &quot; - &quot; + &quot; wins&quot;);</span>
+<span class="nc" id="L162">                    }</span>
+<span class="nc" id="L163">                    break;</span>
+
+                case 5:
+<span class="nc" id="L166">                    LOGGER.info(&quot;User {} selected EXIT&quot;, username);</span>
+<span class="nc" id="L167">                    System.out.println(&quot;Exiting...&quot;);</span>
+<span class="nc" id="L168">                    return;</span>
+                default:
+<span class="nc" id="L170">                    LOGGER.warn(&quot;User {} made an invalid choice: {}&quot;,</span>
+<span class="nc" id="L171">                            username, choice);</span>
+<span class="nc" id="L172">                    System.out.println(&quot;Invalid choice.&quot;</span>
+                            +
+                            &quot; Please enter 1, 2, or 3.&quot;);
+            }
+        }
+    }
+
+    private void continueGame(final GamePlay gamePlay) {
+
+        int choice;
+<span class="nc" id="L182">        LOGGER.info(&quot;Continuing game for user: {}&quot;, username);</span>
+<span class="nc" id="L183">        System.out.println(&quot;\nContinuing the game.\n&quot;);</span>
+
+        while (true) {
+
+<span class="nc" id="L187">            System.out.println(&quot;\nRemaining arrows: &quot; + hero.getArrowCount());</span>
+<span class="nc" id="L188">            System.out.println(&quot;\nGame Menu:\n&quot;);</span>
+<span class="nc" id="L189">            System.out.println(&quot;1. Look North&quot;);</span>
+<span class="nc" id="L190">            System.out.println(&quot;2. Look East&quot;);</span>
+<span class="nc" id="L191">            System.out.println(&quot;3. Look West&quot;);</span>
+<span class="nc" id="L192">            System.out.println(&quot;4. Look South&quot;);</span>
+<span class="nc" id="L193">            System.out.println(&quot;5. Move&quot;);</span>
+<span class="nc" id="L194">            System.out.println(&quot;6. Shoot&quot;);</span>
+<span class="nc" id="L195">            System.out.println(&quot;7. Pick up the gold&quot;);</span>
+<span class="nc" id="L196">            System.out.println(&quot;8. Drop the gold&quot;);</span>
+<span class="nc" id="L197">            System.out.println(&quot;9. Save&quot;);</span>
+<span class="nc" id="L198">            System.out.println(&quot;11. Give up the game&quot;);</span>
+
+
+<span class="nc bnc" id="L201" title="All 2 branches missed.">            if (gamePlay.isGameWon()) {</span>
+<span class="nc" id="L202">                displayMenu();</span>
+<span class="nc" id="L203">                return;</span>
+            }
+
+<span class="nc bnc" id="L206" title="All 2 branches missed.">            if (gamePlay.isGameOver()) {</span>
+<span class="nc" id="L207">                System.out.println(&quot;\nYou lost! Returning to main menu...\n&quot;);</span>
+<span class="nc" id="L208">                displayMenu();</span>
+<span class="nc" id="L209">                break;</span>
+            }
+
+<span class="nc" id="L212">            System.out.print(&quot;\nPlease enter your choice (1-11): &quot;);</span>
+
+<span class="nc" id="L214">            choice = scanner.nextInt();</span>
+
+<span class="nc bnc" id="L216" title="All 11 branches missed.">            switch (choice) {</span>
+                case 1:
+<span class="nc" id="L218">                    LOGGER.info(&quot;User {} changed hero direction to North&quot;,</span>
+                            username);
+<span class="nc" id="L220">                    gamePlay.changeHeroDirection(WayType.NORTH);</span>
+<span class="nc" id="L221">                    break;</span>
+                case 2:
+<span class="nc" id="L223">                    LOGGER.info(&quot;User {} changed hero direction to East&quot;,</span>
+                            username);
+<span class="nc" id="L225">                    gamePlay.changeHeroDirection(WayType.EAST);</span>
+<span class="nc" id="L226">                    break;</span>
+                case 3:
+<span class="nc" id="L228">                    LOGGER.info(&quot;User {} changed hero direction to West&quot;,</span>
+                            username);
+<span class="nc" id="L230">                    gamePlay.changeHeroDirection(WayType.WEST);</span>
+<span class="nc" id="L231">                    break;</span>
+                case 4:
+<span class="nc" id="L233">                    LOGGER.info(&quot;User {} changed hero direction to South&quot;,</span>
+                            username);
+<span class="nc" id="L235">                    gamePlay.changeHeroDirection(WayType.SOUTH);</span>
+<span class="nc" id="L236">                    break;</span>
+                case 5:
+<span class="nc" id="L238">                    LOGGER.info(&quot;User {} moved the hero&quot;, username);</span>
+<span class="nc" id="L239">                    gamePlay.moveHero();</span>
+<span class="nc" id="L240">                    break;</span>
+                case 6:
+<span class="nc" id="L242">                    LOGGER.info(&quot;User {} shot an arrow&quot;, username);</span>
+<span class="nc" id="L243">                    gamePlay.shootArrow();</span>
+<span class="nc" id="L244">                    break;</span>
+                case 7:
+<span class="nc" id="L246">                    LOGGER.info(&quot;User {} picked up the gold&quot;, username);</span>
+<span class="nc" id="L247">                    gamePlay.pickUpGold();</span>
+<span class="nc" id="L248">                    break;</span>
+                case 8:
+<span class="nc" id="L250">                    LOGGER.info(&quot;User {} dropped the gold&quot;, username);</span>
+<span class="nc" id="L251">                    gamePlay.dropGold();</span>
+<span class="nc" id="L252">                    break;</span>
+                case 9:
+<span class="nc" id="L254">                    LOGGER.info(&quot;User {} chose to save the game&quot;, username);</span>
+<span class="nc" id="L255">                    String mapState = getMapStateAsString();</span>
+<span class="nc" id="L256">                    int wumpusCount = gamePlay.getWumpusKilledCount();</span>
+<span class="nc" id="L257">                    int heroInitialPosX = gamePlay.getHeroInitialPosition()</span>
+<span class="nc" id="L258">                            .getHorizontal();</span>
+<span class="nc" id="L259">                    int heroInitialPosY = gamePlay.getHeroInitialPosition()</span>
+<span class="nc" id="L260">                            .getVertical();</span>
+<span class="nc" id="L261">                    dbService.saveGameState(</span>
+                            username,
+                            mapState,
+<span class="nc" id="L264">                            hero.getMapID().getHorizontal(),</span>
+<span class="nc" id="L265">                            hero.getMapID().getVertical(),</span>
+                            heroInitialPosX,
+                            heroInitialPosY,
+<span class="nc" id="L268">                            hero.getArrowCount(),</span>
+<span class="nc" id="L269">                            gamePlay.getStepCount(),</span>
+                            wumpusCount,
+<span class="nc" id="L271">                            hero.isHasGold());</span>
+<span class="nc" id="L272">                    System.out.println(&quot;Game saved successfully.&quot;);</span>
+<span class="nc" id="L273">                    break;</span>
+
+                case 10:
+<span class="nc bnc" id="L276" title="All 2 branches missed.">                    if (confirmExit()) {</span>
+<span class="nc" id="L277">                        LOGGER.info(&quot;User {} chose to give up the game&quot;,</span>
+                                username);
+<span class="nc" id="L279">                        System.out.println(&quot;You gave up the game.&quot;);</span>
+<span class="nc" id="L280">                        return;</span>
+                    }
+                    break;
+                default:
+<span class="nc" id="L284">                    LOGGER.warn(&quot;User {} made an invalid choice: {}&quot;,</span>
+<span class="nc" id="L285">                            username, choice);</span>
+<span class="nc" id="L286">                    System.out.println(&quot;Invalid choice. Please enter&quot;</span>
+                            +
+                            &quot; a number between 1 and 11.&quot;);
+            }
+
+<span class="nc" id="L291">            mapReader.redrawMap(hero.getMapID());</span>
+
+        }
+<span class="nc" id="L294">    }</span>
+
+    private void displaySubMenu() {
+        int choice;
+
+<span class="nc" id="L299">        System.out.println(&quot;\nSub Menu:&quot;);</span>
+<span class="nc" id="L300">        System.out.println(&quot;1. GAME&quot;);</span>
+<span class="nc" id="L301">        System.out.println(&quot;2. RETURN TO MAIN MENU&quot;);</span>
+<span class="nc" id="L302">        System.out.print(&quot;Please enter your choice (1-3): &quot;);</span>
+
+<span class="nc" id="L304">        choice = scanner.nextInt();</span>
+
+<span class="nc bnc" id="L306" title="All 3 branches missed.">        switch (choice) {</span>
+            case 1:
+<span class="nc" id="L308">                LOGGER.info(&quot;User {} selected GAME in sub menu&quot;, username);</span>
+<span class="nc" id="L309">                System.out.println(&quot;GAME selected.&quot;);</span>
+<span class="nc" id="L310">                mapReader.readMapFromFile();</span>
+<span class="nc" id="L311">                displayGameMenu();</span>
+<span class="nc" id="L312">                break;</span>
+            case 2:
+<span class="nc" id="L314">                LOGGER.info(&quot;User {} returned to main menu&quot;, username);</span>
+<span class="nc" id="L315">                return;</span>
+            default:
+<span class="nc" id="L317">                LOGGER.warn(&quot;User {} made an invalid choice in sub menu: {}&quot;,</span>
+<span class="nc" id="L318">                        username, choice);</span>
+<span class="nc" id="L319">                System.out.println(&quot;Invalid choice. Please enter 1, 2, or 3.&quot;);</span>
+        }
+<span class="nc" id="L321">    }</span>
+
+    private void displayGameMenu() {
+        int choice;
+<span class="nc bnc" id="L325" title="All 2 branches missed.">        if (mapReader == null) {</span>
+<span class="nc" id="L326">            mapReader = new MapReader();</span>
+        }
+<span class="nc bnc" id="L328" title="All 2 branches missed.">        if (hero == null) {</span>
+<span class="nc" id="L329">            hero = new Hero();</span>
+        }
+<span class="nc" id="L331">        boolean isMapValid = mapReader.readMapFromFile();</span>
+<span class="nc bnc" id="L332" title="All 2 branches missed.">        if (isMapValid) {</span>
+<span class="nc" id="L333">            int mapSize = mapReader.getMapSize();</span>
+<span class="nc" id="L334">            hero.initializeHero(mapSize);</span>
+<span class="nc" id="L335">            LOGGER.info(&quot;Game initialized for user {}&quot;, username);</span>
+<span class="nc" id="L336">        } else {</span>
+<span class="nc" id="L337">            LOGGER.warn(&quot;Map reading failed for user {}&quot;, username);</span>
+        }
+
+<span class="nc" id="L340">        GamePlay gamePlay = new GamePlay(hero,</span>
+                mapReader,
+                initialStepCount,
+                initialWumpusCount,
+                username);
+
+<span class="nc" id="L346">        System.out.println(&quot;\nThe game has started.\n&quot;);</span>
+
+        while (true) {
+<span class="nc" id="L349">            System.out.println(&quot;\nRemaining arrows: &quot; + hero.getArrowCount());</span>
+<span class="nc" id="L350">            System.out.println(&quot;\nGame Menu:\n&quot;);</span>
+<span class="nc" id="L351">            System.out.println(&quot;1. Look North&quot;);</span>
+<span class="nc" id="L352">            System.out.println(&quot;2. Look East&quot;);</span>
+<span class="nc" id="L353">            System.out.println(&quot;3. Look West&quot;);</span>
+<span class="nc" id="L354">            System.out.println(&quot;4. Look South&quot;);</span>
+<span class="nc" id="L355">            System.out.println(&quot;5. Move&quot;);</span>
+<span class="nc" id="L356">            System.out.println(&quot;6. Shoot&quot;);</span>
+<span class="nc" id="L357">            System.out.println(&quot;7. Pick up the gold&quot;);</span>
+<span class="nc" id="L358">            System.out.println(&quot;8. Drop the gold&quot;);</span>
+<span class="nc" id="L359">            System.out.println(&quot;9. Save&quot;);</span>
+<span class="nc" id="L360">            System.out.println(&quot;10. Give up the game&quot;);</span>
+
+<span class="nc bnc" id="L362" title="All 2 branches missed.">            if (gamePlay.isGameWon()) {</span>
+<span class="nc" id="L363">                LOGGER.info(&quot;User {} won the game&quot;, username);</span>
+<span class="nc" id="L364">                displayMenu();</span>
+<span class="nc" id="L365">                return;</span>
+            }
+
+<span class="nc bnc" id="L368" title="All 2 branches missed.">            if (gamePlay.isGameOver()) {</span>
+<span class="nc" id="L369">                System.out.println(&quot;\nYou lost! Returning to main menu...\n&quot;);</span>
+<span class="nc" id="L370">                LOGGER.info(&quot;User {} lost the game&quot;, username);</span>
+<span class="nc" id="L371">                displayMenu();</span>
+<span class="nc" id="L372">                break;</span>
+            }
+
+<span class="nc" id="L375">            System.out.print(&quot;\nPlease enter your choice (1-11): &quot;);</span>
+<span class="nc" id="L376">            choice = scanner.nextInt();</span>
+
+<span class="nc bnc" id="L378" title="All 11 branches missed.">            switch (choice) {</span>
+                case 1:
+<span class="nc" id="L380">                    LOGGER.info(&quot;User {} changed direction to NORTH&quot;,</span>
+                            username);
+<span class="nc" id="L382">                    gamePlay.changeHeroDirection(WayType.NORTH);</span>
+<span class="nc" id="L383">                    break;</span>
+                case 2:
+<span class="nc" id="L385">                    LOGGER.info(&quot;User {} changed direction to EAST&quot;,</span>
+                            username);
+<span class="nc" id="L387">                    gamePlay.changeHeroDirection(WayType.EAST);</span>
+<span class="nc" id="L388">                    break;</span>
+                case 3:
+<span class="nc" id="L390">                    LOGGER.info(&quot;User {} changed direction to WEST&quot;,</span>
+                            username);
+<span class="nc" id="L392">                    gamePlay.changeHeroDirection(WayType.WEST);</span>
+<span class="nc" id="L393">                    break;</span>
+                case 4:
+<span class="nc" id="L395">                    LOGGER.info(&quot;User {} changed direction to SOUTH&quot;,</span>
+                            username);
+<span class="nc" id="L397">                    gamePlay.changeHeroDirection(WayType.SOUTH);</span>
+<span class="nc" id="L398">                    break;</span>
+                case 5:
+<span class="nc" id="L400">                    LOGGER.info(&quot;User {} moved hero&quot;,</span>
+                            username);
+<span class="nc" id="L402">                    gamePlay.moveHero();</span>
+<span class="nc" id="L403">                    break;</span>
+                case 6:
+<span class="nc" id="L405">                    LOGGER.info(&quot;User {} shot an arrow&quot;,</span>
+                            username);
+<span class="nc" id="L407">                    gamePlay.shootArrow();</span>
+<span class="nc" id="L408">                    break;</span>
+                case 7:
+<span class="nc" id="L410">                    LOGGER.info(&quot;User {} picked up gold&quot;,</span>
+                            username);
+<span class="nc" id="L412">                    gamePlay.pickUpGold();</span>
+<span class="nc" id="L413">                    break;</span>
+                case 8:
+<span class="nc" id="L415">                    LOGGER.info(&quot;User {} dropped gold&quot;,</span>
+                            username);
+<span class="nc" id="L417">                    gamePlay.dropGold();</span>
+<span class="nc" id="L418">                    break;</span>
+                case 9:
+<span class="nc" id="L420">                    String mapState = getMapStateAsString();</span>
+<span class="nc" id="L421">                    int wumpusCount = gamePlay.getWumpusKilledCount();</span>
+<span class="nc" id="L422">                    int heroInitialPosX = gamePlay.getHeroInitialPosition()</span>
+<span class="nc" id="L423">                            .getHorizontal();</span>
+<span class="nc" id="L424">                    int heroInitialPosY = gamePlay.getHeroInitialPosition()</span>
+<span class="nc" id="L425">                            .getVertical();</span>
+<span class="nc" id="L426">                    dbService.saveGameState(username,</span>
+                            mapState,
+<span class="nc" id="L428">                            hero.getMapID().getHorizontal(),</span>
+<span class="nc" id="L429">                            hero.getMapID().getVertical(),</span>
+                            heroInitialPosX,
+                            heroInitialPosY,
+<span class="nc" id="L432">                            hero.getArrowCount(),</span>
+<span class="nc" id="L433">                            gamePlay.getStepCount(),</span>
+                            wumpusCount,
+<span class="nc" id="L435">                            hero.isHasGold());</span>
+<span class="nc" id="L436">                    LOGGER.info(&quot;Game state saved for user {}&quot;, username);</span>
+<span class="nc" id="L437">                    System.out.println(&quot;Game saved successfully.&quot;);</span>
+<span class="nc" id="L438">                    break;</span>
+
+                case 10:
+<span class="nc bnc" id="L441" title="All 2 branches missed.">                    if (confirmExit()) {</span>
+<span class="nc" id="L442">                        LOGGER.info(&quot;User {} gave up the game&quot;, username);</span>
+<span class="nc" id="L443">                        System.out.println(&quot;You gave up the game.&quot;);</span>
+<span class="nc" id="L444">                        return;</span>
+                    }
+                    break;
+                default:
+<span class="nc" id="L448">                    LOGGER.warn(&quot;User {} made an invalid choice: {}&quot;,</span>
+<span class="nc" id="L449">                            username, choice);</span>
+<span class="nc" id="L450">                    System.out.println(&quot;Invalid choice. Please enter&quot;</span>
+                            +
+                            &quot; a number between 1 and 11.&quot;);
+            }
+
+<span class="nc" id="L455">            mapReader.redrawMap(hero.getMapID());</span>
+        }
+<span class="nc" id="L457">    }</span>
+
+    private String getMapStateAsString() {
+<span class="nc" id="L460">        StringBuilder sb = new StringBuilder();</span>
+<span class="nc bnc" id="L461" title="All 2 branches missed.">        for (String line : mapReader.getMapLines()) {</span>
+<span class="nc" id="L462">            sb.append(line).append(&quot;\n&quot;);</span>
+<span class="nc" id="L463">        }</span>
+<span class="nc" id="L464">        return sb.toString();</span>
+    }
+
+    private boolean confirmExit() {
+<span class="nc" id="L468">        System.out.print(&quot;Are you sure you want to give up the game? (Y/N): &quot;);</span>
+<span class="nc" id="L469">        String response = scanner.next();</span>
+<span class="nc" id="L470">        boolean exitConfirmed = response.equalsIgnoreCase(&quot;Y&quot;);</span>
+<span class="nc bnc" id="L471" title="All 2 branches missed.">        if (exitConfirmed) {</span>
+<span class="nc" id="L472">            LOGGER.info(&quot;User {} confirmed to exit the game&quot;, username);</span>
+        } else {
+<span class="nc" id="L474">            LOGGER.info(&quot;User {} chose not to exit the game&quot;, username);</span>
+        }
+<span class="nc" id="L476">        return exitConfirmed;</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

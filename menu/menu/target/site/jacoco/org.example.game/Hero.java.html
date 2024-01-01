@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Hero.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">menu</a> &gt; <a href="index.source.html" class="el_package">org.example.game</a> &gt; <span class="el_source">Hero.java</span></div><h1>Hero.java</h1><pre class="source lang-java linenums">package org.example.game;
+
+import org.example.map.MapID;
+import org.example.map.WayType;
+import org.example.map.MapValidator;
+
+public class Hero {
+
+    /** The current map ID of the hero. */
+    private MapID mapID;
+    /** The current way or direction the hero is facing. */
+    private WayType way;
+    /** The number of arrows the hero has. */
+    private int arrowCount;
+
+    /**
+     * Initializes a new instance of the Hero class.
+     */
+<span class="fc" id="L19">    public Hero() {</span>
+<span class="fc" id="L20">    }</span>
+
+    /**
+     * Gets the current way or direction the hero is facing.
+     * @return The current way of the hero.
+     */
+    public WayType getWay() {
+<span class="fc" id="L27">        return way;</span>
+    }
+
+    /**
+     * Sets the current newWay or direction the hero is facing.
+     * @param newWay The new newWay to set for the hero.
+     */
+    public void setWay(final WayType newWay) {
+<span class="fc" id="L35">        this.way = newWay;</span>
+<span class="fc" id="L36">    }</span>
+    /**
+     * Gets the number of arrows the hero has.
+     * @return The number of arrows the hero has.
+     */
+    public int getArrowCount() {
+<span class="nc" id="L42">        return arrowCount;</span>
+    }
+    /**
+     * Sets the number of arrows the hero has.
+     * @param newArrowCount The new number of arrows to set for the hero.
+     */
+    public void setArrowCount(final int newArrowCount) {
+<span class="nc" id="L49">        this.arrowCount = newArrowCount;</span>
+<span class="nc" id="L50">    }</span>
+    /**
+     * Gets the current map ID of the hero.
+     * @return The current map ID of the hero.
+     */
+    public MapID getMapID() {
+<span class="fc" id="L56">        return mapID;</span>
+    }
+    /**
+     * Sets the current map ID of the hero.
+     * @param newMapID The new map ID to set for the hero.
+     */
+    public void setMapID(final MapID newMapID) {
+<span class="fc" id="L63">        this.mapID = newMapID;</span>
+<span class="fc" id="L64">    }</span>
+    /** Indicates whether the hero has gold. */
+<span class="fc" id="L66">    private boolean hasGold = false;</span>
+    /**
+     * Checks if the hero has gold.
+     * @return true if the hero has gold, false otherwise.
+     */
+    public boolean isHasGold() {
+<span class="fc" id="L72">        return hasGold;</span>
+    }
+    /**
+     * Sets whether the hero has gold.
+     * @param newHasGold true if the hero has gold, false otherwise.
+     */
+    public void setHasGold(final boolean newHasGold) {
+<span class="fc" id="L79">        this.hasGold = newHasGold;</span>
+<span class="fc" id="L80">    }</span>
+    /**
+     * Initializes the hero with the specified
+     * number of arrows and facing north.
+     * @param mapSize The size of the map to
+     * determine the initial number of arrows.
+     */
+    public void initializeHero(final int mapSize) {
+<span class="nc" id="L88">        this.arrowCount = MapValidator.wumpusCount(mapSize);</span>
+<span class="nc" id="L89">        this.way = WayType.NORTH;</span>
+<span class="nc" id="L90">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

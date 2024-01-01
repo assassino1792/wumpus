@@ -1,6 +1,5 @@
-package test;
+package org.example.database;
 
-import org.example.database.DatabaseConnection;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,7 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DatabaseConnectionTest {
 
@@ -54,7 +54,8 @@ public class DatabaseConnectionTest {
 
     // Segédfüggvény az adott tábla létezésének ellenőrzéséhez
     private boolean checkTableExists(String tableName) {
-        // Implementáld a tábla létezés ellenőrzését a konkrét adatbázisodhoz megfelelően
+        // Implementáld a tábla létezés ellenőrzését
+        // a konkrét adatbázisodhoz megfelelően
         // Példa: SQL lekérdezés az adott tábla létezésének ellenőrzéséhez
         String sql = "SHOW TABLES LIKE ?";
         try (Connection connection = databaseConnection.getConnection();

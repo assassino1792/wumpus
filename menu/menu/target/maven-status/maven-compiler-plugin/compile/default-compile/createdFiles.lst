@@ -12,7 +12,6 @@ org\example\menu\MenuValidator.class
 org\example\menu\package-info.class
 org\example\game\package-info.class
 org\example\map\Map.class
-test\DatabaseConnectionTest.class
 org\example\database\DatabaseService.class
 org\example\game\Hero.class
 org\example\database\DatabaseConnection.class

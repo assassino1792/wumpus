@@ -1,4 +1,4 @@
-package test;
+package org.example.game;
 
 import org.example.game.GamePlay;
 import org.example.game.Hero;

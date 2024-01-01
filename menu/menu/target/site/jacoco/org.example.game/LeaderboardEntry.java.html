@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LeaderboardEntry.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">menu</a> &gt; <a href="index.source.html" class="el_package">org.example.game</a> &gt; <span class="el_source">LeaderboardEntry.java</span></div><h1>LeaderboardEntry.java</h1><pre class="source lang-java linenums">package org.example.game;
+
+
+/**
+ * Represents an entry in the leaderboard with player information.
+ */
+public class LeaderboardEntry {
+        /** The name of the player. */
+        private String playerName;
+        /** The number of steps taken by the player. */
+        private int steps;
+        /** The number of wins achieved by the player. */
+        private int wins;
+
+        /**
+         * Initializes a new instance of the LeaderboardEntry class.
+         * @param playername The name of the player.
+         * @param newSteps The number of newSteps taken by the player.
+         * @param win The number of win achieved by the player.
+         */
+        public LeaderboardEntry(final String playername,
+<span class="nc" id="L22">                                final int newSteps, final int win) {</span>
+<span class="nc" id="L23">            this.playerName = playername;</span>
+<span class="nc" id="L24">            this.steps = newSteps;</span>
+<span class="nc" id="L25">            this.wins = win;</span>
+<span class="nc" id="L26">        }</span>
+        /**
+         * Gets the name of the player.
+         * @return The name of the player.
+         */
+        public String getPlayerName() {
+<span class="nc" id="L32">            return playerName;</span>
+        }
+        /**
+         * Gets the number of steps taken by the player.
+         * @return The number of steps taken by the player.
+         */
+        public int getSteps() {
+<span class="nc" id="L39">            return steps;</span>
+        }
+        /**
+         * Gets the number of wins achieved by the player.
+         * @return The number of wins achieved by the player.
+         */
+        public int getWins() {
+<span class="nc" id="L46">            return wins;</span>
+        }
+        /**
+         * Sets the number of step taken by the player.
+         * @param step The new number of step to set for the player.
+         */
+        public void setSteps(final int step) {
+<span class="nc" id="L53">            this.steps = step;</span>
+<span class="nc" id="L54">        }</span>
+    }
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
