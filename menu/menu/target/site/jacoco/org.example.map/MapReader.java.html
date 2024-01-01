@@ -230,13 +230,13 @@ import java.util.List;
             final int row,
             final int column,
             final char newChar) {
-<span class="nc bnc" id="L233" title="All 6 branches missed.">        if (row &gt;= 0 &amp;&amp; row &lt; mapLines.size() &amp;&amp; column &gt;= 0</span>
-<span class="nc bnc" id="L234" title="All 2 branches missed.">                &amp;&amp; column &lt; mapLines.get(row).length()) {</span>
-<span class="nc" id="L235">            StringBuilder updatedLine = new StringBuilder(mapLines.get(row));</span>
-<span class="nc" id="L236">            updatedLine.setCharAt(column, newChar);</span>
-<span class="nc" id="L237">            mapLines.set(row, updatedLine.toString());</span>
+<span class="pc bpc" id="L233" title="3 of 6 branches missed.">        if (row &gt;= 0 &amp;&amp; row &lt; mapLines.size() &amp;&amp; column &gt;= 0</span>
+<span class="pc bpc" id="L234" title="1 of 2 branches missed.">                &amp;&amp; column &lt; mapLines.get(row).length()) {</span>
+<span class="fc" id="L235">            StringBuilder updatedLine = new StringBuilder(mapLines.get(row));</span>
+<span class="fc" id="L236">            updatedLine.setCharAt(column, newChar);</span>
+<span class="fc" id="L237">            mapLines.set(row, updatedLine.toString());</span>
         }
-<span class="nc" id="L239">    }</span>
+<span class="fc" id="L239">    }</span>
 
     /**
      * Sets the map lines from a string representation.

@@ -11,11 +11,11 @@
      * @return `true` if the username is valid; otherwise, `false`.
      */
     public static boolean isValidUsername(final String username) {
-<span class="nc bnc" id="L14" title="All 2 branches missed.">        if (username == null) {</span>
+<span class="pc bpc" id="L14" title="1 of 2 branches missed.">        if (username == null) {</span>
 <span class="nc" id="L15">            return false;</span>
         }
-<span class="nc" id="L17">        int length = username.length();</span>
-<span class="nc bnc" id="L18" title="All 6 branches missed.">        return length &gt;= 3 &amp;&amp; length &lt;= 12 &amp;&amp; !username.contains(&quot; &quot;);</span>
+<span class="fc" id="L17">        int length = username.length();</span>
+<span class="pc bpc" id="L18" title="1 of 6 branches missed.">        return length &gt;= 3 &amp;&amp; length &lt;= 12 &amp;&amp; !username.contains(&quot; &quot;);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

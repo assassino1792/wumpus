@@ -810,3 +810,851 @@ Caused by: java.net.ConnectException: Connection refused: connect
 09:20:17.718 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
 09:20:17.719 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
 09:20:17.719 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+09:26:36.381 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:26:36.397 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:26:36.397 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:26:36.398 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:26:36.418 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+09:26:36.433 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:26:36.434 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:26:36.434 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:26:36.435 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:26:36.478 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+09:26:36.514 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:26:36.526 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:26:36.530 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+09:26:36.536 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:26:36.537 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:26:36.537 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:26:36.538 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:26:36.542 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:26:36.548 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:26:36.553 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:26:36.559 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:29:25.857 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 8944 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:29:25.860 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:29:26.376 [main] INFO  org.example.Main - Started Main in 0.801 seconds (process running for 1.342)
+09:29:26.551 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:29:26.556 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:29:26.557 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:29:26.557 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:32:10.489 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 20840 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:32:10.492 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:32:11.001 [main] INFO  org.example.Main - Started Main in 0.777 seconds (process running for 1.363)
+09:32:11.161 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:32:11.166 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:32:11.167 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:32:11.167 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:32:18.665 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:18.684 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:18.685 [main] WARN  org.example.game.GamePlay - Player 'TestPlayer' arrow hit a wall at position - Column: 3, Row: 1
+09:32:18.687 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:18.691 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:18.692 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+09:32:18.843 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:32:18.848 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:32:18.848 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:32:18.849 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:32:18.882 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:32:18.890 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:32:18.892 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:18.893 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+09:32:18.896 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:18.898 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:18.898 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+09:32:18.901 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:32:18.901 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:32:18.901 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:32:18.902 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:32:18.912 [main] INFO  o.example.database.DatabaseService - Leaderboard updated for player 'TestPlayer': new steps count is 0
+09:32:18.914 [main] INFO  o.example.database.DatabaseService - Incremented win count for player 'TestPlayer'
+09:32:18.917 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:32:18.919 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:18.922 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:36.322 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:32:36.337 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:32:36.337 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:32:36.338 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:32:36.360 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+09:32:36.376 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:32:36.377 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:32:36.377 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:32:36.378 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:32:36.426 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+09:32:36.455 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:36.467 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:36.468 [main] WARN  org.example.game.GamePlay - Player 'TestPlayer' arrow hit a wall at position - Column: 3, Row: 1
+09:32:36.474 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:36.481 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:36.482 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+09:32:36.489 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:32:36.489 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:32:36.490 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:32:36.490 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:32:36.494 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:32:36.499 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:32:36.503 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:36.503 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+09:32:36.508 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:36.512 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:36.513 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+09:32:36.516 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:32:36.517 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:32:36.518 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:32:36.518 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:32:36.522 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:32:36.527 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:32:36.531 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:32:36.535 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:35:57.368 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:35:57.387 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:35:57.388 [main] WARN  org.example.game.GamePlay - Player 'TestPlayer' arrow hit a wall at position - Column: 3, Row: 1
+09:35:57.391 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:35:57.394 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:35:57.395 [main] WARN  org.example.game.GamePlay - Player 'TestPlayer' arrow hit a wall at position - Column: 3, Row: 1
+09:35:57.405 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:35:57.407 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:35:57.410 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:35:57.411 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+09:35:57.566 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:35:57.571 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:35:57.572 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:35:57.572 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:35:57.605 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:35:57.613 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:35:57.615 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:35:57.616 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+09:35:57.618 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:35:57.620 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:35:57.622 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:35:57.622 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+09:35:57.625 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:35:57.626 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:35:57.626 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:35:57.626 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:35:57.629 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:35:57.632 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:35:57.635 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:35:57.637 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:37:41.953 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:37:41.976 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:37:41.977 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 7
+09:37:41.979 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:37:41.983 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:37:41.983 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 7
+09:37:41.986 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:37:41.988 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:37:41.992 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:37:41.992 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+09:37:42.155 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:37:42.161 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:37:42.161 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:37:42.161 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:37:42.196 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:37:42.205 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:37:42.208 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:37:42.209 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+09:37:42.211 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:37:42.216 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:37:42.219 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:37:42.219 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+09:37:42.223 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:37:42.223 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:37:42.223 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:37:42.223 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:37:42.227 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:37:42.231 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:37:42.233 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:37:42.236 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:38:11.688 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:38:11.706 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:38:11.707 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 6
+09:38:11.710 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:38:11.714 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:38:11.714 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 6
+09:38:11.717 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:38:11.719 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:38:11.729 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:38:11.729 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+09:38:11.882 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:38:11.888 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:38:11.888 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:38:11.889 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:38:11.922 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:38:11.930 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:38:11.932 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:38:11.932 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+09:38:11.935 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:38:11.937 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:38:11.939 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:38:11.940 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+09:38:11.942 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:38:11.943 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:38:11.943 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:38:11.943 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:38:11.946 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:38:11.949 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:38:11.951 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:38:11.953 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:39:23.613 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:39:23.640 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:39:23.641 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 6
+09:39:23.644 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:39:23.649 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:39:23.650 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 6
+09:39:23.653 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:39:23.656 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:19.299 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:19.300 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+09:41:19.483 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:41:19.489 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:41:19.489 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:41:19.490 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:41:19.527 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:41:19.537 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:41:19.539 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:19.540 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+09:41:19.542 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:19.544 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:19.547 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:19.547 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+09:41:19.550 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:41:19.550 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:41:19.550 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:41:19.551 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:41:19.554 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:41:19.557 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:41:19.559 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:19.561 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:21.101 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:21.123 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:21.124 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 6
+09:41:21.127 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:21.132 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:21.133 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 6
+09:41:21.136 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:21.138 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:21.150 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:21.150 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+09:41:21.311 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:41:21.317 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:41:21.317 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:41:21.317 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:41:21.346 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:41:21.355 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:41:21.357 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:21.358 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+09:41:21.360 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:21.362 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:21.365 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:21.365 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+09:41:21.367 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:41:21.368 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:41:21.368 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:41:21.368 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:41:21.371 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:41:21.375 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:41:21.377 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:41:21.379 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:08.012 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:08.031 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:08.031 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 6
+09:42:08.034 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:08.038 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:08.038 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 6
+09:42:08.041 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:08.043 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:08.044 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+09:42:08.194 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:42:08.200 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:42:08.200 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:42:08.201 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:42:08.242 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:42:08.252 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:42:08.254 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:08.255 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+09:42:08.258 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:42:08.259 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:42:08.259 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:42:08.259 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:42:08.263 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:42:08.267 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:42:08.270 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:08.270 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+09:42:08.273 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:08.276 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:08.278 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:08.278 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+09:42:08.282 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:42:08.282 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:42:08.283 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:42:08.283 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:42:08.287 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:42:08.292 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:42:08.295 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:08.297 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:22.196 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:42:22.210 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:42:22.211 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:42:22.212 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:42:22.231 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+09:42:22.250 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:42:22.252 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:42:22.253 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:42:22.253 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:42:22.298 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+09:42:22.327 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:22.341 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:22.342 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 6
+09:42:22.346 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:22.355 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:22.356 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 6
+09:42:22.360 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:22.365 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:22.366 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+09:42:22.372 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:42:22.373 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:42:22.374 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:42:22.374 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:42:22.378 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:42:22.383 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:42:22.387 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:22.388 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+09:42:22.392 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:42:22.393 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:42:22.393 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:42:22.394 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:42:22.397 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:42:22.402 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:42:22.405 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:22.406 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+09:42:22.409 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:22.412 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:22.415 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:22.415 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+09:42:22.418 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:42:22.419 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:42:22.419 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:42:22.419 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:42:22.423 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:42:22.427 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+09:42:22.429 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:42:22.432 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+09:53:02.432 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 5060 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:53:02.436 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:53:03.041 [main] INFO  org.example.Main - Started Main in 0.905 seconds (process running for 1.618)
+09:53:03.241 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:53:03.247 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:53:03.247 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:53:03.248 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:53:07.561 [main] INFO  o.example.database.DatabaseService - Player name 'dsada' inserted into PlayerNames table
+09:53:08.685 [main] INFO  org.example.game.GamePlay - User dsada selected READ MAP FROM FILE
+09:53:23.655 [main] INFO  org.example.game.GamePlay - User dsada selected GAME in sub menu
+09:53:23.658 [main] INFO  org.example.game.GamePlay - Game initialized for user dsada
+09:53:23.658 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsada
+09:53:25.214 [main] INFO  org.example.game.GamePlay - User dsada changed direction to EAST
+09:53:31.275 [main] INFO  org.example.game.GamePlay - User dsada changed direction to EAST
+09:53:34.375 [main] INFO  org.example.game.GamePlay - User dsada moved hero
+09:53:35.534 [main] INFO  org.example.game.GamePlay - User dsada moved hero
+09:53:36.114 [main] INFO  org.example.game.GamePlay - User dsada moved hero
+09:53:36.564 [main] INFO  org.example.game.GamePlay - User dsada moved hero
+09:53:36.565 [main] INFO  org.example.game.GamePlay - User dsada lost the game
+09:54:34.464 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 2792 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:54:34.469 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:54:35.056 [main] INFO  org.example.Main - Started Main in 0.883 seconds (process running for 1.507)
+09:54:35.245 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:54:35.252 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:54:35.252 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:54:35.252 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:54:37.901 [main] INFO  o.example.database.DatabaseService - Player name 'sdaasd' inserted into PlayerNames table
+09:54:39.035 [main] INFO  org.example.game.GamePlay - User sdaasd selected READ MAP FROM FILE
+09:54:40.853 [main] INFO  org.example.game.GamePlay - User sdaasd selected GAME in sub menu
+09:54:40.856 [main] INFO  org.example.game.GamePlay - Game initialized for user sdaasd
+09:54:40.857 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sdaasd
+09:58:33.144 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 18240 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:58:33.147 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:58:33.625 [main] INFO  org.example.Main - Started Main in 0.748 seconds (process running for 1.288)
+09:58:33.780 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:58:33.785 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:58:33.786 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:58:33.786 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:58:35.825 [main] INFO  o.example.database.DatabaseService - Player name 'sdasd' inserted into PlayerNames table
+09:58:36.984 [main] INFO  org.example.game.GamePlay - User sdasd selected READ MAP FROM FILE
+10:15:42.773 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:15:42.788 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:15:42.788 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:15:42.789 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:15:42.809 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+10:15:42.824 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:15:42.825 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:15:42.826 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:15:42.826 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:15:42.873 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+10:15:42.915 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:15:42.927 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:15:42.928 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+10:15:42.933 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:15:42.940 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:15:42.941 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+10:15:42.946 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:15:42.951 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:15:42.952 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+10:15:42.959 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:15:42.960 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:15:42.961 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:15:42.961 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:15:42.967 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:15:42.973 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:15:42.977 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:15:42.979 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+10:15:42.992 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:15:42.993 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:15:42.993 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:15:42.994 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:15:42.999 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:15:43.005 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:15:43.009 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:15:43.010 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+10:15:43.017 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:15:43.021 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:15:43.027 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:15:43.028 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+10:15:43.032 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:15:43.033 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:15:43.034 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:15:43.034 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:15:43.039 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:15:43.045 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:15:43.049 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:15:43.056 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:18:55.392 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:18:55.406 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:18:55.407 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:18:55.407 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:18:55.426 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+10:18:55.441 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:18:55.442 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:18:55.442 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:18:55.442 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:18:55.484 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+10:18:55.524 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:18:55.535 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:18:55.536 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+10:18:55.540 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:18:55.547 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:18:55.547 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+10:18:55.552 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:18:55.556 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:18:55.558 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+10:18:55.563 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:18:55.564 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:18:55.564 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:18:55.565 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:18:55.569 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:18:55.575 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:18:55.578 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:18:55.578 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+10:18:55.582 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:18:55.582 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:18:55.583 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:18:55.583 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:18:55.587 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:18:55.591 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:18:55.593 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:18:55.594 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+10:18:55.597 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:18:55.599 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:18:55.602 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:18:55.602 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+10:18:55.605 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:18:55.606 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:18:55.606 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:18:55.607 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:18:55.610 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:18:55.615 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:18:55.618 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:18:55.620 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:35:05.829 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:35:05.837 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:35:05.837 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:35:05.837 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:35:35.845 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:35:35.853 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:35:35.854 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:35:35.854 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:35:35.863 [main] INFO  org.example.game.GamePlay - Game initialized for user null
+10:35:35.864 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: null
+10:38:24.240 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:38:24.248 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:38:24.248 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:38:24.248 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:38:24.257 [main] INFO  org.example.game.GamePlay - Game initialized for user null
+10:38:24.258 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: null
+10:39:27.018 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:39:27.025 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:39:27.026 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:39:27.026 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:39:27.034 [main] INFO  org.example.game.GamePlay - Game initialized for user null
+10:39:27.036 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: null
+10:39:44.970 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:39:44.977 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:39:44.977 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:39:44.977 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:39:44.986 [main] INFO  org.example.game.GamePlay - Game initialized for user null
+10:39:44.987 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: null
+10:40:30.898 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:40:30.905 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:40:30.906 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:40:30.906 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:40:53.915 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:40:53.932 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:40:53.933 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:40:53.933 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:40:53.955 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+10:40:53.970 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:40:53.970 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:40:53.971 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:40:53.971 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:40:54.015 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+10:40:54.060 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:40:54.071 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:40:54.071 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+10:40:54.080 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:40:54.088 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:40:54.088 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+10:40:54.092 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:40:54.096 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:40:54.097 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+10:40:54.104 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:40:54.105 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:40:54.105 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:40:54.106 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:40:54.111 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:40:54.116 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:40:54.120 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:40:54.120 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+10:40:54.124 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:40:54.124 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:40:54.125 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:40:54.125 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:40:54.129 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:40:54.134 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:40:54.138 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:40:54.139 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+10:40:54.143 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:40:54.146 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:40:54.149 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:40:54.149 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+10:40:54.153 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:40:54.154 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:40:54.155 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:40:54.155 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:40:54.159 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:40:54.164 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+10:40:54.167 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:40:54.172 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+10:43:47.705 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:43:47.712 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:43:47.713 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:43:47.713 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:43:47.721 [main] INFO  org.example.game.GamePlay - Game initialized for user null
+10:43:47.723 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: null
+10:44:04.225 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 16040 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:44:04.228 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:44:04.765 [main] INFO  org.example.Main - Started Main in 0.809 seconds (process running for 1.393)
+10:44:04.932 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:44:04.938 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:44:04.938 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:44:04.939 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:44:09.051 [main] INFO  o.example.database.DatabaseService - Player name 'dsadsa' inserted into PlayerNames table
+10:45:50.237 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:45:50.244 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:45:50.245 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:45:50.245 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:46:56.346 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:46:56.353 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:46:56.353 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:46:56.354 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:46:56.362 [main] INFO  org.example.game.GamePlay - Game initialized for user null
+10:46:56.363 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: null
+10:47:31.822 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:47:31.830 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:47:31.830 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:47:31.831 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:48:41.430 [main] INFO  org.example.game.GamePlay - Game initialized for user null
+10:48:41.432 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: null
+10:50:49.076 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:50:49.083 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:50:49.084 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:50:49.084 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:51:08.587 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:51:08.594 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:51:08.595 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:51:08.595 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:51:26.474 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:51:26.481 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:51:26.482 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:51:26.482 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:53:32.305 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:53:32.312 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:53:32.312 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:53:32.313 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:53:32.327 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:53:32.328 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:53:32.328 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:53:32.328 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:53:32.333 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:53:32.333 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:53:32.333 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:53:32.334 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:53:32.338 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:53:32.338 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:53:32.339 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:53:32.339 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:53:32.343 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:53:32.343 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:53:32.344 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:53:32.344 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:53:32.348 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:53:32.348 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:53:32.349 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:53:32.349 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:53:32.353 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:53:32.353 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:53:32.353 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:53:32.354 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:53:32.361 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:53:32.361 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:53:32.361 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:53:32.361 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:53:32.373 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:53:32.373 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:53:32.373 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:53:32.373 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:53:32.377 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:53:32.378 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:53:32.378 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:53:32.378 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:54:15.959 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:54:15.967 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:54:15.967 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:54:15.967 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:54:15.982 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:54:15.983 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:54:15.983 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:54:15.984 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:54:15.989 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:54:15.989 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:54:15.990 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:54:15.990 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:54:15.995 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:54:15.995 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:54:15.996 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:54:15.996 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:54:16.001 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:54:16.001 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:54:16.002 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:54:16.002 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:54:16.007 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:54:16.008 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:54:16.008 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:54:16.008 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:54:16.013 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:54:16.013 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:54:16.013 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:54:16.014 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:54:16.023 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:54:16.023 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:54:16.023 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:54:16.024 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:54:16.029 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:54:16.030 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:54:16.031 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:54:16.031 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:54:16.036 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:54:16.036 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:54:16.037 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:54:16.037 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:00:00.858 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:00:00.866 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:00:00.866 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:00:00.866 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:00:25.615 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:00:25.623 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:00:25.623 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:00:25.624 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:00:46.318 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:00:46.326 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:00:46.326 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:00:46.327 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:01:04.241 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:01:04.249 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:01:04.249 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:01:04.249 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:01:57.343 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:01:57.351 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:01:57.351 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:01:57.352 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:03:54.672 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:03:54.681 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:03:54.681 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:03:54.681 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:10:58.951 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:10:58.958 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:10:58.959 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:10:58.959 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:11:43.190 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:11:43.197 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:11:43.197 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:11:43.198 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:11:48.181 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:11:48.189 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:11:48.189 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:11:48.190 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:12:53.622 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:12:53.629 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:12:53.630 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:12:53.630 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:15:04.587 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:15:04.595 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:15:04.595 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:15:04.596 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:15:42.178 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:15:42.195 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:15:42.196 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:15:42.196 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:15:42.218 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+11:15:42.234 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:15:42.234 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:15:42.235 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:15:42.235 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:15:42.278 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+11:15:42.317 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:15:42.327 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:15:42.328 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+11:15:42.332 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:15:42.339 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:15:42.340 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+11:15:42.344 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:15:42.350 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:15:42.351 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+11:15:42.358 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:15:42.358 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:15:42.359 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:15:42.359 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:15:42.364 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:15:42.369 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:15:42.373 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:15:42.373 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+11:15:42.377 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:15:42.378 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:15:42.379 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:15:42.380 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:15:42.384 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:15:42.389 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:15:42.392 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:15:42.393 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+11:15:42.397 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:15:42.401 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:15:42.404 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:15:42.404 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+11:15:42.408 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:15:42.408 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:15:42.409 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:15:42.409 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:15:42.413 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:15:42.417 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:15:42.420 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:15:42.423 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:15:42.451 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:15:42.452 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:15:42.452 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:15:42.453 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:20:40.922 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:20:40.930 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:20:40.930 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:20:40.930 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:20:54.944 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 18952 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+11:20:54.947 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+11:20:55.481 [main] INFO  org.example.Main - Started Main in 0.805 seconds (process running for 1.39)
+11:20:55.632 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:20:55.637 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:20:55.637 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:20:55.637 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:20:57.819 [main] INFO  o.example.database.DatabaseService - Player name 'dsadsa' inserted into PlayerNames table
+11:21:01.614 [main] INFO  org.example.game.GamePlay - User dsadsa selected READ MAP FROM FILE
+11:24:11.246 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 21116 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+11:24:11.250 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+11:27:51.178 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 16948 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+11:27:51.182 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+11:27:51.669 [main] INFO  org.example.Main - Started Main in 0.755 seconds (process running for 1.293)
+11:27:51.823 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:27:51.828 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:27:51.829 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:27:51.829 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:27:55.224 [main] INFO  o.example.database.DatabaseService - Player name 'asdasd' inserted into PlayerNames table
+11:27:56.263 [main] INFO  org.example.game.GamePlay - User asdasd selected READ MAP FROM FILE
+11:27:57.143 [main] INFO  org.example.game.GamePlay - User asdasd selected GAME in sub menu
+11:27:57.146 [main] INFO  org.example.game.GamePlay - Game initialized for user asdasd
+11:27:57.147 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: asdasd
+11:27:59.783 [main] INFO  org.example.game.GamePlay - User asdasd changed direction to EAST
+11:28:00.323 [main] INFO  org.example.game.GamePlay - User asdasd moved hero
+11:28:00.893 [main] INFO  org.example.game.GamePlay - User asdasd moved hero
+11:28:01.303 [main] INFO  org.example.game.GamePlay - User asdasd moved hero
+11:28:01.673 [main] INFO  org.example.game.GamePlay - User asdasd moved hero
+11:28:01.673 [main] INFO  org.example.game.GamePlay - User asdasd lost the game
+11:28:02.013 [main] INFO  org.example.game.GamePlay - User asdasd selected EXIT
+11:28:02.334 [main] INFO  org.example.game.GamePlay - User asdasd selected EXIT
+11:28:02.334 [main] INFO  org.example.game.GamePlay - Starting game for user: asdasd
+11:28:02.337 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:28:02.337 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:28:02.337 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:28:02.338 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:28:02.338 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+11:28:18.603 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:28:18.620 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:28:18.620 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:28:18.621 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:28:18.645 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+11:28:18.662 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:28:18.663 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:28:18.664 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:28:18.664 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:28:18.713 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+11:28:18.759 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:28:18.774 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:28:18.775 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+11:28:18.779 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:28:18.787 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:28:18.788 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+11:28:18.794 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:28:18.799 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:28:18.801 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+11:28:18.810 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:28:18.811 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:28:18.811 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:28:18.812 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:28:18.817 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:28:18.823 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:28:18.827 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:28:18.828 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+11:28:18.832 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:28:18.833 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:28:18.833 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:28:18.834 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:28:18.839 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:28:18.843 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:28:18.846 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:28:18.847 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+11:28:18.850 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:28:18.853 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:28:18.856 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:28:18.857 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+11:28:18.860 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:28:18.861 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:28:18.861 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:28:18.862 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:28:18.865 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:28:18.870 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:28:18.874 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:28:18.877 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer

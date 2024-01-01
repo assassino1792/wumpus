@@ -60,7 +60,7 @@ public class GameState {
         this.heroPosY = heroPosYParam;
         this.arrowCount = arrowCountParam;
         this.stepCount = stepCountParam;
-        this.wumpusCount = wumpusCount;
+        this.wumpusCount = wumpusKilledCountParam;
         this.hasGold = hasGoldParam;
         this.heroInitialPosX = heroInitialPosXParam;
         this.heroInitialPosY = heroInitialPosYParam;
@@ -72,6 +72,7 @@ public class GameState {
      */
 
     public int getWumpusCount() {
+        System.out.println("Wumpus count: " + wumpusCount);
         return wumpusCount;
     }
     /**

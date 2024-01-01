@@ -176,7 +176,7 @@ public class Menu {
         }
     }
 
-    private void continueGame(final GamePlay gamePlay) {
+    public void continueGame(final GamePlay gamePlay) {
 
         int choice;
         LOGGER.info("Continuing game for user: {}", username);
@@ -320,7 +320,7 @@ public class Menu {
         }
     }
 
-    private void displayGameMenu() {
+    public void displayGameMenu() {
         int choice;
         if (mapReader == null) {
             mapReader = new MapReader();
