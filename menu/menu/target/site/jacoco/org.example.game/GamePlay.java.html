@@ -240,7 +240,7 @@ public class GamePlay {
 
 <span class="fc" id="L241">            boolean hitWall = false;</span>
 <span class="fc" id="L242">            boolean hitWumpus = false;</span>
-<span class="fc bfc" id="L243" title="All 4 branches covered.">            while (!hitWall &amp;&amp; !hitWumpus) {</span>
+<span class="pc bpc" id="L243" title="1 of 4 branches missed.">            while (!hitWall &amp;&amp; !hitWumpus) {</span>
 <span class="pc bpc" id="L244" title="4 of 5 branches missed.">                switch (hero.getWay()) {</span>
                     case NORTH:
 <span class="pc bpc" id="L246" title="1 of 2 branches missed.">                        if (vertical &gt; 1) {</span>
@@ -267,8 +267,8 @@ public class GamePlay {
                 }
 <span class="fc" id="L268">                char targetChar = mapReader.getMapLines().get(vertical - 1)</span>
 <span class="fc" id="L269">                        .charAt(horizontal - 1);</span>
-<span class="fc bfc" id="L270" title="All 2 branches covered.">                if (targetChar == 'W') {</span>
-<span class="fc" id="L271">                    hitWall = true;</span>
+<span class="pc bpc" id="L270" title="1 of 2 branches missed.">                if (targetChar == 'W') {</span>
+<span class="nc" id="L271">                    hitWall = true;</span>
 <span class="fc bfc" id="L272" title="All 2 branches covered.">                } else if (targetChar == 'U') {</span>
 <span class="fc" id="L273">                    hitWumpus = true;</span>
 <span class="fc" id="L274">                    mapReader.updateMapPosition(vertical - 1,</span>
@@ -277,7 +277,7 @@ public class GamePlay {
 <span class="fc" id="L277">            }</span>
 
 <span class="fc" id="L279">            hero.setArrowCount(hero.getArrowCount() - 1);</span>
-<span class="fc bfc" id="L280" title="All 2 branches covered.">            if (hitWumpus) {</span>
+<span class="pc bpc" id="L280" title="1 of 2 branches missed.">            if (hitWumpus) {</span>
 <span class="fc" id="L281">                wumpusKilledCount++;</span>
 <span class="fc" id="L282">                System.out.println(&quot;SCREEEEEEEEEAM! You hit a Wumpus!&quot;</span>
                         +
@@ -286,14 +286,14 @@ public class GamePlay {
                         +
                         &quot;Column: {}, Row: {}&quot;,
 <span class="fc" id="L288">                        playerName, horizontal, vertical);</span>
-<span class="pc bpc" id="L289" title="1 of 2 branches missed.">            } else if (hitWall) {</span>
-<span class="fc" id="L290">                System.out.println(&quot;Arrow hit a wall and got destroyed.&quot;</span>
+<span class="nc bnc" id="L289" title="All 2 branches missed.">            } else if (hitWall) {</span>
+<span class="nc" id="L290">                System.out.println(&quot;Arrow hit a wall and got destroyed.&quot;</span>
                         +
-<span class="fc" id="L292">                        &quot; Remaining arrows: &quot; + hero.getArrowCount());</span>
-<span class="fc" id="L293">                LOGGER.warn(&quot;Player '{}' arrow hit a wall at position&quot;</span>
+<span class="nc" id="L292">                        &quot; Remaining arrows: &quot; + hero.getArrowCount());</span>
+<span class="nc" id="L293">                LOGGER.warn(&quot;Player '{}' arrow hit a wall at position&quot;</span>
                         +
                         &quot; - Column: {}, Row: {}&quot;,
-<span class="fc" id="L296">                        playerName, horizontal, vertical);</span>
+<span class="nc" id="L296">                        playerName, horizontal, vertical);</span>
             } else {
 <span class="nc" id="L298">                System.out.println(&quot;Shot an arrow towards &quot; + hero.getWay()</span>
                         +

@@ -3,8 +3,10 @@ org\example\game\LeaderBoard.class
 org\example\database\package-info.class
 org\example\map\package-info.class
 org\example\game\GamePlay$1.class
+org\example\Main.class
 org\example\map\MapValidator.class
 org\example\map\MapReader.class
+org\example\menu\Menu.class
 org\example\game\LeaderboardEntry.class
 org\example\menu\MenuValidator.class
 org\example\menu\package-info.class
