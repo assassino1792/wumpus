@@ -15,14 +15,15 @@ public class Main {
      * @param args The program's arguments.
      */
     public static void main(String[] args) {
+
         SpringApplication.run(Main.class, args);
         Menu menu = new Menu();
         menu.startGame();
 
         DatabaseConnection dbConnection = new DatabaseConnection();
         dbConnection.close();
-    }
 
+        }
 }
 
 

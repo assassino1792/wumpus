@@ -26,7 +26,7 @@ public class GameTest {
 
     @Test
     void testInitialHeroPosition() {
-        // Ellenőrizze, hogy a hős kezdeti pozíciója helyes-e
+        // Ellenőrzi, hogy a hős kezdeti pozíciója helyes-e
         assertEquals(mapReader.getHeroInitialPosition(), hero.getMapID());
     }
 
@@ -74,7 +74,7 @@ public class GameTest {
 
     @Test
     void testGetStepCount() {
-        // Ellenőrizze, hogy a lépésszámláló helyesen működik-e
+        // Ellenőrzi, hogy a lépésszámláló helyesen működik-e
         gamePlay.moveHero();
         assertEquals(1, gamePlay.getStepCount());
     }
@@ -89,7 +89,7 @@ public class GameTest {
 
     @Test
     void testChangeHeroDirection() {
-        // Ellenőrizze, hogy a hős irányváltoztatása helyesen működik-e
+        // Ellenőrzi, hogy a hős irányváltoztatása helyesen működik-e
         gamePlay.changeHeroDirection(WayType.EAST);
         assertEquals(WayType.EAST, hero.getWay());
     }
@@ -111,7 +111,7 @@ public class GameTest {
         gamePlay.changeHeroDirection(WayType.SOUTH);
         gamePlay.moveHero();
 
-        // Ellenőrizze, hogy a játék megnyerése helyesen állapítható meg
+        // Ellenőrzi, hogy a játék megnyerése helyesen állapítható meg
         assertTrue(gamePlay.isGameWon());
     }
 
@@ -119,12 +119,12 @@ public class GameTest {
     void testIsGameOver() {
         // Feltételezve, hogy a játék még nem ért véget
         assertFalse(gamePlay.isGameOver());
-        // További logika szükséges lehet a játék végét tesztelni, pl. hős halála vagy győzelme
+
     }
 
     @Test
     void testGetWumpusKilledCount() {
-        // Ellenőrizze, hogy a megölt Wumpusok száma helyesen van-e nyilvántartva
+        // Ellenőrzi, hogy a megölt Wumpusok száma helyesen van-e nyilvántartva
         // Ez a teszt feltételezi, hogy a hős már megölt egy Wumpust
         hero.setArrowCount(1);
         gamePlay.shootArrow(); // Feltételezve, hogy ez megöli a Wumpust

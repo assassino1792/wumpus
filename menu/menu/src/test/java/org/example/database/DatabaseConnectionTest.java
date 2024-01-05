@@ -46,7 +46,7 @@ public class DatabaseConnectionTest {
         Connection connection = databaseConnection.getConnection();
 
         assertNotNull(connection);
-        // Ellenőrizd, hogy a kapcsolat létezik és nyitott
+        // Ellenőrzi, hogy a kapcsolat létezik és nyitott
         assertTrue(connectionIsValid(connection));
     }
 
@@ -54,7 +54,7 @@ public class DatabaseConnectionTest {
 
     // Segédfüggvény az adott tábla létezésének ellenőrzéséhez
     private boolean checkTableExists(String tableName) {
-        // Implementáld a tábla létezés ellenőrzését
+        // Implementálja a tábla létezés ellenőrzését
         // a konkrét adatbázisodhoz megfelelően
         // Példa: SQL lekérdezés az adott tábla létezésének ellenőrzéséhez
         String sql = "SHOW TABLES LIKE ?";
@@ -96,8 +96,8 @@ public class DatabaseConnectionTest {
 
     // Segédfüggvény az adatbázis kapcsolat ellenőrzéséhez
     private boolean connectionIsValid(Connection connection) {
-        // Implementáld a kapcsolat ellenőrzését a konkrét adatbázisodhoz megfelelően
-        // Példa: Ellenőrizd, hogy a kapcsolat létezik és nyitott-e
+        // Implementálja a kapcsolat ellenőrzését a konkrét adatbázisodhoz megfelelően
+        // Példa: Ellenőrzi, hogy a kapcsolat létezik és nyitott-e
         try {
             return connection != null && !connection.isClosed();
         } catch (SQLException e) {

@@ -319,7 +319,7 @@ public class GamePlay {
         int column = heroPosition.getHorizontal() - 1;
 
         if (mapReader.getMapLines().get(row).charAt(column) == 'G') {
-            hero.setHasGold(true); // A hős felvette az aranyat
+            hero.setHasGold(true);
             mapReader.updateMapPosition(row, column, '_');
             System.out.println("You picked up the gold!");
             LOGGER.info("Player '{}' picked up the gold at position"

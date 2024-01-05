@@ -13,47 +13,50 @@ public class GameStateTest {
     @BeforeEach
     void setUp() {
         // Inicializálja a GameState objektumot teszteléshez
-        gameState = new GameState("Player1", "Map1", 5, 5, 3, 10, 2, 0, 0, false);
+        gameState = new GameState("Player1",
+                "Map1",
+                5,
+                5,
+                3,
+                10,
+                2,
+                0,
+                0,
+                false);
     }
-
-
-
 
     @Test
     void testSetHasGold() {
-        // Tesztelje a setHasGold metódust
+        // Teszteli a setHasGold metódust
         gameState.setHasGold(true);
         assertTrue(gameState.isHasGold());
     }
 
     @Test
     void testSetHeroInitialPosition() {
-        // Tesztelje a hős kezdeti pozíciójának beállítását
+        // Teszteli a hős kezdeti pozíciójának beállítását
         gameState.setHeroInitialPosX(7);
         gameState.setHeroInitialPosY(8);
         assertEquals(7, gameState.getHeroInitialPosX());
         assertEquals(8, gameState.getHeroInitialPosY());
     }
 
-
     @Test
     void testGetMapState() {
-        // Ellenőrizze a térkép állapotát
+        // Ellenőrzi a térkép állapotát
         assertNotNull(gameState.getMapState());
     }
 
     @Test
     void testGetHeroPosition() {
-        // Ellenőrizze a hős pozícióját
+        // Ellenőrzi a hős pozícióját
         assertEquals(5, gameState.getHeroPosX());
         assertEquals(5, gameState.getHeroPosY());
     }
 
     @Test
     void testGetArrowCount() {
-        // Ellenőrizze a nyilak számát
+        // Ellenőrzi a nyilak számát
         assertEquals(2, gameState.getarrowCount());
     }
-
-
 }

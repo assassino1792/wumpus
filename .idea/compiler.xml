@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="menu" />
+        <module name="wumpus" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="wumpus" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

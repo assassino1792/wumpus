@@ -319,7 +319,7 @@ public class GamePlay {
 <span class="fc" id="L319">        int column = heroPosition.getHorizontal() - 1;</span>
 
 <span class="pc bpc" id="L321" title="1 of 2 branches missed.">        if (mapReader.getMapLines().get(row).charAt(column) == 'G') {</span>
-<span class="nc" id="L322">            hero.setHasGold(true); // A hős felvette az aranyat</span>
+<span class="nc" id="L322">            hero.setHasGold(true);</span>
 <span class="nc" id="L323">            mapReader.updateMapPosition(row, column, '_');</span>
 <span class="nc" id="L324">            System.out.println(&quot;You picked up the gold!&quot;);</span>
 <span class="nc" id="L325">            LOGGER.info(&quot;Player '{}' picked up the gold at position&quot;</span>
