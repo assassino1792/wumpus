@@ -5,28 +5,32 @@ package org.example;
 
 import org.example.database.DatabaseConnection;
 import org.example.menu.Menu;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-<span class="nc" id="L12">public class Main {</span>
+<span class="nc" id="L14">public class Main {</span>
+<span class="nc" id="L15">    private static final Logger logger = LoggerFactory.getLogger(Main.class);</span>
     /**
      * The entry point of the program.
      * @param args The program's arguments.
      */
     public static void main(String[] args) {
         try {
-<span class="nc" id="L19">        SpringApplication.run(Main.class, args);</span>
-<span class="nc" id="L20">        Menu menu = new Menu();</span>
-<span class="nc" id="L21">        menu.startGame();</span>
+<span class="nc" id="L22">        SpringApplication.run(Main.class, args);</span>
+<span class="nc" id="L23">        logger.info(&quot;Application started&quot;);</span>
+<span class="nc" id="L24">        Menu menu = new Menu();</span>
+<span class="nc" id="L25">        menu.startGame();</span>
 
-<span class="nc" id="L23">        DatabaseConnection dbConnection = new DatabaseConnection();</span>
-<span class="nc" id="L24">        dbConnection.close();</span>
+<span class="nc" id="L27">        DatabaseConnection dbConnection = new DatabaseConnection();</span>
+<span class="nc" id="L28">        dbConnection.close();</span>
 
-<span class="nc" id="L26">    } catch (Exception e) {</span>
-<span class="nc" id="L27">        e.printStackTrace();</span>
-<span class="nc" id="L28">        }</span>
-<span class="nc" id="L29">    }</span>
+<span class="nc" id="L30">        } catch (Exception e) {</span>
+<span class="nc" id="L31">            logger.error(&quot;Error during application execution&quot;, e);</span>
+<span class="nc" id="L32">        }</span>
+<span class="nc" id="L33">    }</span>
 }
 
 

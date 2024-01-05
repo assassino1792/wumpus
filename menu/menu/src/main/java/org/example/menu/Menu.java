@@ -361,15 +361,13 @@ public class Menu {
 
             if (gamePlay.isGameWon()) {
                 LOGGER.info("User {} won the game", username);
-                displayMenu();
                 return;
             }
 
             if (gamePlay.isGameOver()) {
                 System.out.println("\nYou lost! Returning to main menu...\n");
                 LOGGER.info("User {} lost the game", username);
-                displayMenu();
-                break;
+                return;
             }
 
             System.out.print("\nPlease enter your choice (1-11): ");

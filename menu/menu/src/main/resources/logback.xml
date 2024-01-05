@@ -7,7 +7,7 @@
     </appender>
 
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>C:\GitRepository\wumpus\menu\menu\src\main\logs\logs.log</file>
+        <file>C:\GitRepository\wumpus\menu\menu\logs\logs.log</file>
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>

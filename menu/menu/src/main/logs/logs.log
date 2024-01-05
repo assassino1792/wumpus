@@ -3278,3 +3278,263 @@ Caused by: java.net.ConnectException: Connection refused: connect
 18:29:13.191 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
 18:29:13.191 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
 18:29:13.191 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+18:59:23.253 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 8224 (C:\GitRepository\wumpus\menu\menu\target\menu-1.0-SNAPSHOT.jar started by lisoc in C:\Users\lisoc)
+18:59:23.257 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+18:59:23.773 [main] INFO  org.example.Main - Started Main in 0.822 seconds (process running for 1.455)
+18:59:23.965 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+18:59:23.971 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+18:59:23.971 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+18:59:23.971 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+18:59:26.241 [main] INFO  o.example.database.DatabaseService - Player name 'sdasdsad' inserted into PlayerNames table
+18:59:27.745 [main] INFO  org.example.game.GamePlay - User sdasdsad selected EXIT
+18:59:27.745 [main] INFO  org.example.game.GamePlay - Starting game for user: sdasdsad
+18:59:27.748 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+18:59:27.748 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+18:59:27.749 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+18:59:27.749 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+18:59:27.749 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+18:59:33.346 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 18268 (C:\GitRepository\wumpus\menu\menu\target\menu-1.0-SNAPSHOT.jar started by lisoc in C:\Users\lisoc)
+18:59:33.349 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+18:59:33.868 [main] INFO  org.example.Main - Started Main in 0.824 seconds (process running for 1.443)
+18:59:34.071 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+18:59:34.076 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+18:59:34.076 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+18:59:34.077 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:02:33.395 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 17124 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+19:02:33.398 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+19:02:33.935 [main] INFO  org.example.Main - Started Main in 0.814 seconds (process running for 1.376)
+19:02:33.938 [main] INFO  org.example.Main - Application started
+19:02:34.091 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:02:34.096 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:02:34.096 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:02:34.097 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:02:37.728 [main] INFO  o.example.database.DatabaseService - Player name 'sdad' inserted into PlayerNames table
+19:02:39.577 [main] INFO  org.example.game.GamePlay - User sdad selected EXIT
+19:02:39.577 [main] INFO  org.example.game.GamePlay - Starting game for user: sdad
+19:02:39.580 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:02:39.580 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:02:39.581 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:02:39.581 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:02:39.581 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+19:02:57.398 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:02:57.417 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:02:57.418 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:02:57.418 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:02:57.441 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+19:02:57.457 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:02:57.458 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:02:57.458 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:02:57.459 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:02:57.510 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+19:02:57.555 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+19:02:57.568 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+19:02:57.569 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+19:02:57.573 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+19:02:57.580 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+19:02:57.581 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+19:02:57.585 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+19:02:57.591 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+19:02:57.592 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+19:02:57.602 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:02:57.603 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:02:57.604 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:02:57.604 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:02:57.609 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+19:02:57.616 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+19:02:57.619 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+19:02:57.620 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+19:02:57.625 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:02:57.626 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:02:57.627 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:02:57.627 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:02:57.632 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+19:02:57.637 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+19:02:57.640 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+19:02:57.641 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+19:02:57.645 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+19:02:57.649 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+19:02:57.652 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+19:02:57.653 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+19:02:57.656 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:02:57.657 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:02:57.658 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:02:57.658 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:02:57.662 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+19:02:57.667 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+19:02:57.671 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+19:02:57.675 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+19:09:47.410 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 13188 (C:\GitRepository\wumpus\menu\menu\target\menu-1.0-SNAPSHOT.jar started by lisoc in C:\Users\lisoc)
+19:09:47.414 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+19:09:47.961 [main] INFO  org.example.Main - Started Main in 0.893 seconds (process running for 1.524)
+19:09:47.964 [main] INFO  org.example.Main - Application started
+19:09:48.162 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:09:48.167 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:09:48.168 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:09:48.168 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:09:51.869 [main] INFO  o.example.database.DatabaseService - Player name 'asda' inserted into PlayerNames table
+19:09:54.295 [main] INFO  org.example.game.GamePlay - User asda selected READ MAP FROM FILE
+19:09:56.475 [main] INFO  org.example.game.GamePlay - User asda selected GAME in sub menu
+19:09:56.480 [main] INFO  org.example.game.GamePlay - Game initialized for user asda
+19:09:56.481 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: asda
+19:10:06.285 [main] INFO  org.example.game.GamePlay - User asda changed direction to EAST
+19:10:12.345 [main] INFO  org.example.game.GamePlay - User asda moved hero
+19:10:13.775 [main] INFO  org.example.game.GamePlay - User asda moved hero
+19:10:14.385 [main] INFO  org.example.game.GamePlay - User asda moved hero
+19:10:14.865 [main] INFO  org.example.game.GamePlay - User asda moved hero
+19:10:14.867 [main] INFO  org.example.game.GamePlay - User asda lost the game
+19:10:18.685 [main] INFO  org.example.game.GamePlay - User asda selected EXIT
+19:26:06.825 [main] INFO  org.example.game.GamePlay - User asda selected READ MAP FROM FILE
+19:26:10.785 [main] INFO  org.example.game.GamePlay - User asda selected GAME in sub menu
+19:26:10.788 [main] INFO  org.example.game.GamePlay - Game initialized for user asda
+19:26:10.788 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: asda
+19:26:13.765 [main] INFO  org.example.game.GamePlay - User asda changed direction to EAST
+19:26:15.705 [main] INFO  org.example.game.GamePlay - User asda moved hero
+19:26:22.381 [main] INFO  o.example.database.DatabaseService - Game state saved for player 'asda'. Step count: 1, Wumpus killed: 0, Has gold: false
+19:26:22.381 [main] INFO  org.example.game.GamePlay - Game state saved for user asda
+19:26:28.044 [main] INFO  org.example.game.GamePlay - User asda confirmed to exit the game
+19:26:28.045 [main] INFO  org.example.game.GamePlay - User asda gave up the game
+19:26:29.775 [main] INFO  org.example.game.GamePlay - User asda selected EXIT
+19:26:29.775 [main] INFO  org.example.game.GamePlay - Starting game for user: asda
+19:26:29.778 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:26:29.779 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:26:29.779 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:26:29.780 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:26:29.780 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+19:40:27.508 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 17380 (C:\GitRepository\wumpus\menu\menu\target\menu-1.0-SNAPSHOT.jar started by lisoc in C:\Users\lisoc)
+19:40:27.511 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+19:40:28.073 [main] INFO  org.example.Main - Started Main in 0.868 seconds (process running for 1.527)
+19:40:28.076 [main] INFO  org.example.Main - Application started
+19:40:28.298 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:40:28.304 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:40:28.304 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:40:28.305 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:40:32.220 [main] INFO  o.example.database.DatabaseService - Player name 'sdadsa' inserted into PlayerNames table
+19:40:34.035 [main] INFO  org.example.game.GamePlay - User sdadsa selected READ MAP FROM FILE
+19:40:36.014 [main] INFO  org.example.game.GamePlay - User sdadsa returned to main menu
+19:40:37.436 [main] INFO  org.example.game.GamePlay - User sdadsa selected EXIT
+19:40:37.436 [main] INFO  org.example.game.GamePlay - Starting game for user: sdadsa
+19:40:37.438 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:40:37.439 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:40:37.439 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:40:37.440 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:40:37.440 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+19:42:04.923 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 11952 (C:\GitRepository\wumpus\menu\menu\target\menu-1.0-SNAPSHOT.jar started by lisoc in C:\GitRepository\wumpus\menu\menu\target)
+19:42:04.926 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+19:42:05.443 [main] INFO  org.example.Main - Started Main in 0.847 seconds (process running for 1.493)
+19:42:05.446 [main] INFO  org.example.Main - Application started
+19:42:05.643 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:42:05.649 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:42:05.649 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:42:05.649 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:42:10.780 [main] INFO  o.example.database.DatabaseService - Player name 'dsad' inserted into PlayerNames table
+19:42:12.086 [main] INFO  org.example.game.GamePlay - User dsad selected EXIT
+19:42:12.086 [main] INFO  org.example.game.GamePlay - Starting game for user: dsad
+19:42:12.088 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:42:12.089 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:42:12.089 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:42:12.089 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:42:12.090 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+19:43:21.148 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 1316 (C:\GitRepository\wumpus\menu\menu\target\menu-1.0-SNAPSHOT.jar started by lisoc in C:\GitRepository\wumpus\menu\menu\target)
+19:43:21.151 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+19:43:21.655 [main] INFO  org.example.Main - Started Main in 0.817 seconds (process running for 1.491)
+19:43:21.659 [main] INFO  org.example.Main - Application started
+19:43:21.847 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:43:21.852 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:43:21.853 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:43:21.853 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:43:26.141 [main] INFO  o.example.database.DatabaseService - Player name 'dssad' inserted into PlayerNames table
+19:43:27.566 [main] INFO  org.example.game.GamePlay - User dssad selected READ MAP FROM FILE
+19:43:28.845 [main] INFO  org.example.game.GamePlay - User dssad selected GAME in sub menu
+19:43:28.850 [main] INFO  org.example.game.GamePlay - Game initialized for user dssad
+19:43:28.851 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dssad
+19:43:32.365 [main] INFO  org.example.game.GamePlay - User dssad changed direction to EAST
+19:43:33.345 [main] INFO  org.example.game.GamePlay - User dssad moved hero
+19:43:33.708 [main] INFO  org.example.game.GamePlay - User dssad moved hero
+19:43:33.897 [main] INFO  org.example.game.GamePlay - User dssad moved hero
+19:43:34.076 [main] INFO  org.example.game.GamePlay - User dssad moved hero
+19:43:34.078 [main] INFO  org.example.game.GamePlay - User dssad lost the game
+19:43:34.254 [main] INFO  org.example.game.GamePlay - User dssad selected EXIT
+19:43:34.405 [main] INFO  org.example.game.GamePlay - User dssad selected EXIT
+19:43:34.407 [main] INFO  org.example.game.GamePlay - Starting game for user: dssad
+19:43:34.409 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:43:34.410 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:43:34.410 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:43:34.410 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:43:34.411 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+19:46:44.134 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 16016 (C:\GitRepository\wumpus\menu\menu\target\menu-1.0-SNAPSHOT.jar started by lisoc in C:\GitRepository\wumpus\menu\menu\target)
+19:46:44.139 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+19:46:44.750 [main] INFO  org.example.Main - Started Main in 0.971 seconds (process running for 1.662)
+19:46:44.754 [main] INFO  org.example.Main - Application started
+19:46:44.970 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:46:44.975 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:46:44.975 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:46:44.975 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:46:56.724 [main] INFO  o.example.database.DatabaseService - Player name 'dsad' inserted into PlayerNames table
+19:47:45.715 [main] INFO  org.example.game.GamePlay - User dsad selected EXIT
+19:47:45.716 [main] INFO  org.example.game.GamePlay - Starting game for user: dsad
+19:47:45.719 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+19:47:45.720 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+19:47:45.720 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+19:47:45.720 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+19:47:45.721 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+20:15:38.989 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 18884 (C:\GitRepository\wumpus\menu\menu\target\menu-1.0-SNAPSHOT.jar started by lisoc in C:\Users\lisoc)
+20:15:38.992 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+20:15:39.474 [main] INFO  org.example.Main - Started Main in 0.794 seconds (process running for 1.423)
+20:15:39.477 [main] INFO  org.example.Main - Application started
+20:15:39.658 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+20:15:39.663 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+20:15:39.663 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+20:15:39.664 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+20:15:41.644 [main] INFO  o.example.database.DatabaseService - Player name 'asdas' inserted into PlayerNames table
+20:15:45.714 [main] INFO  org.example.game.GamePlay - User asdas selected EXIT
+20:15:45.715 [main] INFO  org.example.game.GamePlay - Starting game for user: asdas
+20:15:45.717 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+20:15:45.718 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+20:15:45.718 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+20:15:45.718 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+20:15:45.719 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+20:15:56.616 [main] INFO  org.example.Main - Starting Main using Java 17 with PID 1792 (C:\GitRepository\wumpus\menu\menu\target\menu-1.0-SNAPSHOT.jar started by lisoc in C:\Users\lisoc)
+20:15:56.620 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+20:15:57.183 [main] INFO  org.example.Main - Started Main in 0.902 seconds (process running for 1.528)
+20:15:57.186 [main] INFO  org.example.Main - Application started
+20:15:57.381 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+20:15:57.387 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+20:15:57.387 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+20:15:57.387 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+20:16:00.441 [main] INFO  o.example.database.DatabaseService - Player name 'sda' inserted into PlayerNames table
+20:16:01.894 [main] INFO  org.example.game.GamePlay - User sda selected READ MAP FROM FILE
+20:16:02.826 [main] INFO  org.example.game.GamePlay - User sda selected GAME in sub menu
+20:16:02.830 [main] INFO  org.example.game.GamePlay - Game initialized for user sda
+20:16:02.831 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sda
+20:16:08.225 [main] INFO  org.example.game.GamePlay - User sda confirmed to exit the game
+20:16:08.225 [main] INFO  org.example.game.GamePlay - User sda gave up the game
+20:16:12.615 [main] INFO  org.example.game.GamePlay - User sda selected EXIT
+20:16:12.615 [main] INFO  org.example.game.GamePlay - Starting game for user: sda
+20:16:12.618 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+20:16:12.619 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+20:16:12.619 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+20:16:12.619 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+20:16:12.620 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+20:44:09.229 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 10544 (C:\GitRepository\wumpus\menu\menu\target\menu-1.0-SNAPSHOT.jar started by lisoc in C:\Users\lisoc)
+20:44:09.232 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+20:44:09.758 [main] INFO  org.example.Main - Started Main in 0.956 seconds (process running for 1.605)
+20:44:09.761 [main] INFO  org.example.Main - Application started
+20:44:09.952 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+20:44:09.957 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+20:44:09.957 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+20:44:09.957 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+20:44:11.605 [main] INFO  o.example.database.DatabaseService - Player name 'sdas' inserted into PlayerNames table
+20:44:13.015 [main] ERROR org.example.Main - Error during application execution
+java.util.InputMismatchException: null
+	at java.base/java.util.Scanner.throwFor(Scanner.java:943)
+	at java.base/java.util.Scanner.next(Scanner.java:1598)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2263)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2217)
+	at org.example.menu.Menu.displayMenu(Menu.java:99)
+	at org.example.menu.Menu.startGame(Menu.java:76)
+	at org.example.Main.main(Main.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:91)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:53)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:58)
