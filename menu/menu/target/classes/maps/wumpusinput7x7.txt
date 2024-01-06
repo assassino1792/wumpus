@@ -1,9 +1,0 @@
-7 B 2 N
-WWWWWWWW
-W___P__W
-W___WG_W
-W______W
-WP_P_P_W
-W______W
-WP_U_P_W
-WWWWWWWW

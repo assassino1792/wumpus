@@ -190,7 +190,10 @@ public class GamePlay {
                 .charAt(horizontal - 1);
 
         char newChar = mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1);
-
+        if (targetChar == 'W') {
+            System.out.println("\nCannot move onto a wall!\n");
+            return;
+        }
 
         // Ha az előző mező nem 'P' vagy 'G', állítsuk vissza '_' karakterre
         if (currentChar != 'P' && currentChar != 'G') {
@@ -208,10 +211,8 @@ public class GamePlay {
             System.out.println("\nYou stepped on a Wumpus! GAME OVER.\n");
             gameOver = true;
             return;
-        } else if (targetChar == 'W') {
-                System.out.println("\nCannot move onto a wall!\n");
-            return;
-        } else {
+        }
+        else {
                 hero.setMapID(new MapID(horizontal, vertical));
                 System.out.println("Hero's new position - Column:"
                         +
@@ -348,6 +349,7 @@ public class GamePlay {
             LOGGER.info("Player '{}' picked up the gold at position"
                     +
                     " - Column: {}, Row: {}", playerName, column + 1, row + 1);
+            stepsCount++;
         } else {
             System.out.println("No gold here to pick up.");
         }
@@ -374,6 +376,7 @@ public class GamePlay {
             LOGGER.info("Player '{}' dropped the gold at position"
                     +
                     " - Column: {}, Row: {}", playerName, column + 1, row + 1);
+            stepsCount++;
         } else {
             System.out.println("You don't have any gold to drop.");
         }
