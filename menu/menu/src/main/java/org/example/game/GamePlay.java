@@ -30,7 +30,9 @@ public class GamePlay {
     private boolean gameWon = false;
     /** Initial position of the hero on the map. */
     private MapID heroInitialPosition;
+    private char heroUnderneathChar = '_';
     /** Logger for logging game events and information. */
+
     private static final Logger LOGGER =
             LoggerFactory.getLogger(GamePlay.class);
 
@@ -85,6 +87,7 @@ public class GamePlay {
     public void changeHeroDirection(final WayType newDirection) {
         hero.setWay(newDirection);
         System.out.println("You are now looking " + newDirection);
+        stepsCount++;
     }
 
     /**
@@ -154,6 +157,9 @@ public class GamePlay {
         int horizontal = currentMapID.getHorizontal();
         int vertical = currentMapID.getVertical();
 
+        char currentChar = mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1);
+     //   mapReader.updateMapPosition(currentMapID.getVertical() - 1, currentMapID.getHorizontal() - 1, '_');
+
 
         switch (hero.getWay()) {
             case NORTH:
@@ -182,6 +188,22 @@ public class GamePlay {
 
         char targetChar = mapReader.getMapLines().get(vertical - 1)
                 .charAt(horizontal - 1);
+
+        char newChar = mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1);
+
+
+        // Ha az előző mező nem 'P' vagy 'G', állítsuk vissza '_' karakterre
+        if (currentChar != 'P' && currentChar != 'G') {
+            mapReader.updateMapPosition(currentMapID.getVertical() - 1,
+                    currentMapID.getHorizontal() - 1, '_');
+        }
+
+        // Ha a célmező nem 'P' vagy 'G',vagy 'U',vagy 'W' írjuk át 'H'-ra
+        if (newChar != 'P' && newChar != 'G' && newChar != 'U' && newChar != 'W') {
+            mapReader.updateMapPosition(vertical - 1, horizontal - 1, 'H');
+        }
+
+
         if (targetChar == 'U') {
             System.out.println("\nYou stepped on a Wumpus! GAME OVER.\n");
             gameOver = true;
@@ -234,6 +256,7 @@ public class GamePlay {
      */
     public void shootArrow() {
         if (hero.getArrowCount() > 0) {
+            stepsCount++;
             MapID currentMapID = hero.getMapID();
             int horizontal = currentMapID.getHorizontal();
             int vertical = currentMapID.getVertical();
@@ -267,7 +290,7 @@ public class GamePlay {
                 }
                 char targetChar = mapReader.getMapLines().get(vertical - 1)
                         .charAt(horizontal - 1);
-                if (targetChar == 'W') {
+                               if (targetChar == 'W') {
                     hitWall = true;
                 } else if (targetChar == 'U') {
                     hitWumpus = true;
@@ -320,7 +343,7 @@ public class GamePlay {
 
         if (mapReader.getMapLines().get(row).charAt(column) == 'G') {
             hero.setHasGold(true);
-            mapReader.updateMapPosition(row, column, '_');
+            mapReader.updateMapPosition(row, column, 'H');
             System.out.println("You picked up the gold!");
             LOGGER.info("Player '{}' picked up the gold at position"
                     +

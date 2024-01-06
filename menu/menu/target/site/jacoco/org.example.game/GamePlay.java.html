@@ -30,9 +30,11 @@ public class GamePlay {
 <span class="fc" id="L30">    private boolean gameWon = false;</span>
     /** Initial position of the hero on the map. */
     private MapID heroInitialPosition;
+<span class="fc" id="L33">    private char heroUnderneathChar = '_';</span>
     /** Logger for logging game events and information. */
-<span class="fc" id="L34">    private static final Logger LOGGER =</span>
-<span class="fc" id="L35">            LoggerFactory.getLogger(GamePlay.class);</span>
+
+<span class="fc" id="L36">    private static final Logger LOGGER =</span>
+<span class="fc" id="L37">            LoggerFactory.getLogger(GamePlay.class);</span>
 
     /**
      * Initializes the gameplay with the specified parameters.
@@ -47,52 +49,53 @@ public class GamePlay {
            final MapReader mapLoader,
            final int initialStepCount,
            final int initialWumpusCount,
-<span class="fc" id="L50">           final String playername) {</span>
+<span class="fc" id="L52">           final String playername) {</span>
 
-<span class="fc" id="L52">        this.hero = knight;</span>
-<span class="fc" id="L53">        this.playerName = playername;</span>
-<span class="fc" id="L54">        this.stepsCount = initialStepCount;</span>
-<span class="fc" id="L55">        this.wumpusKilledCount = initialWumpusCount;</span>
+<span class="fc" id="L54">        this.hero = knight;</span>
+<span class="fc" id="L55">        this.playerName = playername;</span>
+<span class="fc" id="L56">        this.stepsCount = initialStepCount;</span>
+<span class="fc" id="L57">        this.wumpusKilledCount = initialWumpusCount;</span>
 
-<span class="pc bpc" id="L57" title="1 of 2 branches missed.">        if (mapLoader == null) {</span>
-<span class="nc" id="L58">            this.mapReader = new MapReader();</span>
-<span class="nc" id="L59">            this.mapReader.readMapFromFile();</span>
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">        if (mapLoader == null) {</span>
+<span class="nc" id="L60">            this.mapReader = new MapReader();</span>
+<span class="nc" id="L61">            this.mapReader.readMapFromFile();</span>
         } else {
-<span class="fc" id="L61">            this.mapReader = mapLoader;</span>
+<span class="fc" id="L63">            this.mapReader = mapLoader;</span>
         }
-<span class="fc" id="L63">        this.mapSize = mapLoader.getMapSize();</span>
-<span class="fc" id="L64">        LOGGER.info(&quot;GamePlay initialized for player: {}&quot;,</span>
+<span class="fc" id="L65">        this.mapSize = mapLoader.getMapSize();</span>
+<span class="fc" id="L66">        LOGGER.info(&quot;GamePlay initialized for player: {}&quot;,</span>
                 playername);
 
-<span class="fc" id="L67">        MapID heroinitialposition = mapLoader.getHeroInitialPosition();</span>
-<span class="fc" id="L68">        this.heroInitialPosition = mapLoader.getHeroInitialPosition();</span>
-<span class="pc bpc" id="L69" title="1 of 2 branches missed.">        if (heroinitialposition != null) {</span>
-<span class="fc" id="L70">            this.hero.setMapID(heroinitialposition);</span>
+<span class="fc" id="L69">        MapID heroinitialposition = mapLoader.getHeroInitialPosition();</span>
+<span class="fc" id="L70">        this.heroInitialPosition = mapLoader.getHeroInitialPosition();</span>
+<span class="pc bpc" id="L71" title="1 of 2 branches missed.">        if (heroinitialposition != null) {</span>
+<span class="fc" id="L72">            this.hero.setMapID(heroinitialposition);</span>
         }
-<span class="fc" id="L72">    }</span>
+<span class="fc" id="L74">    }</span>
     /**
      * Sets the initial position of the hero on the map.
      * @param newheroInitialPosition The new initial position
      * to be set for the hero.
      */
     public void setHeroInitialPosition(final MapID newheroInitialPosition) {
-<span class="fc" id="L79">        this.heroInitialPosition = newheroInitialPosition;</span>
-<span class="fc" id="L80">    }</span>
+<span class="fc" id="L81">        this.heroInitialPosition = newheroInitialPosition;</span>
+<span class="fc" id="L82">    }</span>
     /**
      * Changes the direction in which the hero is facing.
      * @param newDirection The new direction for the hero to face.
      */
     public void changeHeroDirection(final WayType newDirection) {
-<span class="fc" id="L86">        hero.setWay(newDirection);</span>
-<span class="fc" id="L87">        System.out.println(&quot;You are now looking &quot; + newDirection);</span>
-<span class="fc" id="L88">    }</span>
+<span class="fc" id="L88">        hero.setWay(newDirection);</span>
+<span class="fc" id="L89">        System.out.println(&quot;You are now looking &quot; + newDirection);</span>
+<span class="fc" id="L90">        stepsCount++;</span>
+<span class="fc" id="L91">    }</span>
 
     /**
      * Retrieves the current step count of the game.
      * @return The number of steps taken by the player so far.
      */
     public int getStepCount() {
-<span class="fc" id="L95">        return stepsCount;</span>
+<span class="fc" id="L98">        return stepsCount;</span>
     }
 
     /**
@@ -102,34 +105,34 @@ public class GamePlay {
      * @return true if the player has won the game, false otherwise.
      */
     public boolean hasWon() {
-<span class="pc bpc" id="L105" title="1 of 2 branches missed.">        if (hero.isHasGold()) {</span>
-<span class="fc" id="L106">            MapID currentPos = hero.getMapID();</span>
-<span class="fc" id="L107">            MapID initialPos = this.heroInitialPosition;</span>
-<span class="pc bpc" id="L108" title="1 of 2 branches missed.">            if (currentPos.getHorizontal() == initialPos.getHorizontal()</span>
-<span class="pc bpc" id="L109" title="1 of 2 branches missed.">                    &amp;&amp; currentPos.getVertical() == initialPos.getVertical()) {</span>
-<span class="fc" id="L110">                System.out.println(&quot;\nCongratulations! You are clever!&quot;</span>
+<span class="pc bpc" id="L108" title="1 of 2 branches missed.">        if (hero.isHasGold()) {</span>
+<span class="fc" id="L109">            MapID currentPos = hero.getMapID();</span>
+<span class="fc" id="L110">            MapID initialPos = this.heroInitialPosition;</span>
+<span class="pc bpc" id="L111" title="1 of 2 branches missed.">            if (currentPos.getHorizontal() == initialPos.getHorizontal()</span>
+<span class="pc bpc" id="L112" title="1 of 2 branches missed.">                    &amp;&amp; currentPos.getVertical() == initialPos.getVertical()) {</span>
+<span class="fc" id="L113">                System.out.println(&quot;\nCongratulations! You are clever!&quot;</span>
                         +
                         &quot; You have successfully returned the gold&quot;
                         +
                         &quot; to the starting&quot;
                         +
                         &quot; position in &quot; + stepsCount + &quot; steps. YOU WON!\n&quot;);
-<span class="fc" id="L117">                gameWon = true;</span>
-<span class="fc" id="L118">                LOGGER.info(&quot;Player '{}' has won the game in {} steps&quot;,</span>
-<span class="fc" id="L119">                        playerName, stepsCount);</span>
+<span class="fc" id="L120">                gameWon = true;</span>
+<span class="fc" id="L121">                LOGGER.info(&quot;Player '{}' has won the game in {} steps&quot;,</span>
+<span class="fc" id="L122">                        playerName, stepsCount);</span>
 
-<span class="fc" id="L121">                DatabaseService dbService =</span>
+<span class="fc" id="L124">                DatabaseService dbService =</span>
                         new DatabaseService(new DatabaseConnection());
-<span class="fc" id="L123">                dbService.insertOrUpdateLeaderboard(this.playerName,</span>
+<span class="fc" id="L126">                dbService.insertOrUpdateLeaderboard(this.playerName,</span>
                         stepsCount, true);
 
-<span class="fc" id="L126">                LeaderBoard leaderboard = new LeaderBoard(dbService);</span>
-<span class="fc" id="L127">                leaderboard.updateLeaderboard(this.playerName,</span>
+<span class="fc" id="L129">                LeaderBoard leaderboard = new LeaderBoard(dbService);</span>
+<span class="fc" id="L130">                leaderboard.updateLeaderboard(this.playerName,</span>
                         stepsCount, true);
-<span class="fc" id="L129">                return true;</span>
+<span class="fc" id="L132">                return true;</span>
             }
         }
-<span class="nc" id="L132">        return false;</span>
+<span class="nc" id="L135">        return false;</span>
     }
 
     /**
@@ -137,7 +140,7 @@ public class GamePlay {
      * @return true if the game is won, false otherwise.
      */
     public boolean isGameWon() {
-<span class="fc" id="L140">        return gameWon;</span>
+<span class="fc" id="L143">        return gameWon;</span>
     }
 
     /**
@@ -150,77 +153,96 @@ public class GamePlay {
      * by returning the gold to the starting position.
      */
     public void moveHero() {
-<span class="fc" id="L153">        MapID currentMapID = hero.getMapID();</span>
-<span class="fc" id="L154">        int horizontal = currentMapID.getHorizontal();</span>
-<span class="fc" id="L155">        int vertical = currentMapID.getVertical();</span>
+<span class="fc" id="L156">        MapID currentMapID = hero.getMapID();</span>
+<span class="fc" id="L157">        int horizontal = currentMapID.getHorizontal();</span>
+<span class="fc" id="L158">        int vertical = currentMapID.getVertical();</span>
+
+<span class="fc" id="L160">        char currentChar = mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1);</span>
+     //   mapReader.updateMapPosition(currentMapID.getVertical() - 1, currentMapID.getHorizontal() - 1, '_');
 
 
-<span class="pc bpc" id="L158" title="3 of 5 branches missed.">        switch (hero.getWay()) {</span>
+<span class="pc bpc" id="L164" title="3 of 5 branches missed.">        switch (hero.getWay()) {</span>
             case NORTH:
-<span class="pc bpc" id="L160" title="1 of 2 branches missed.">                if (vertical &gt; 1) {</span>
-<span class="fc" id="L161">                    vertical--;</span>
+<span class="pc bpc" id="L166" title="1 of 2 branches missed.">                if (vertical &gt; 1) {</span>
+<span class="fc" id="L167">                    vertical--;</span>
                 }
                 break;
             case EAST:
-<span class="nc bnc" id="L165" title="All 2 branches missed.">                if (horizontal &lt; mapSize) {</span>
-<span class="nc" id="L166">                    horizontal++;</span>
+<span class="nc bnc" id="L171" title="All 2 branches missed.">                if (horizontal &lt; mapSize) {</span>
+<span class="nc" id="L172">                    horizontal++;</span>
                 }
                 break;
             case SOUTH:
-<span class="pc bpc" id="L170" title="1 of 2 branches missed.">                if (vertical &lt; mapSize) {</span>
-<span class="fc" id="L171">                    vertical++;</span>
+<span class="pc bpc" id="L176" title="1 of 2 branches missed.">                if (vertical &lt; mapSize) {</span>
+<span class="fc" id="L177">                    vertical++;</span>
                 }
                 break;
             case WEST:
-<span class="nc bnc" id="L175" title="All 2 branches missed.">                if (horizontal &gt; 1) {</span>
-<span class="nc" id="L176">                    horizontal--;</span>
+<span class="nc bnc" id="L181" title="All 2 branches missed.">                if (horizontal &gt; 1) {</span>
+<span class="nc" id="L182">                    horizontal--;</span>
                 }
                 break;
             default:
                 break;
         }
 
-<span class="fc" id="L183">        char targetChar = mapReader.getMapLines().get(vertical - 1)</span>
-<span class="fc" id="L184">                .charAt(horizontal - 1);</span>
-<span class="pc bpc" id="L185" title="1 of 2 branches missed.">        if (targetChar == 'U') {</span>
-<span class="nc" id="L186">            System.out.println(&quot;\nYou stepped on a Wumpus! GAME OVER.\n&quot;);</span>
-<span class="nc" id="L187">            gameOver = true;</span>
-<span class="nc" id="L188">            return;</span>
-<span class="pc bpc" id="L189" title="1 of 2 branches missed.">        } else if (targetChar == 'W') {</span>
-<span class="nc" id="L190">                System.out.println(&quot;\nCannot move onto a wall!\n&quot;);</span>
-<span class="nc" id="L191">            return;</span>
+<span class="fc" id="L189">        char targetChar = mapReader.getMapLines().get(vertical - 1)</span>
+<span class="fc" id="L190">                .charAt(horizontal - 1);</span>
+
+<span class="fc" id="L192">        char newChar = mapReader.getMapLines().get(vertical - 1).charAt(horizontal - 1);</span>
+
+
+        // Ha az előző mező nem 'P' vagy 'G', állítsuk vissza '_' karakterre
+<span class="pc bpc" id="L196" title="2 of 4 branches missed.">        if (currentChar != 'P' &amp;&amp; currentChar != 'G') {</span>
+<span class="fc" id="L197">            mapReader.updateMapPosition(currentMapID.getVertical() - 1,</span>
+<span class="fc" id="L198">                    currentMapID.getHorizontal() - 1, '_');</span>
+        }
+
+        // Ha a célmező nem 'P' vagy 'G',vagy 'U',vagy 'W' írjuk át 'H'-ra
+<span class="pc bpc" id="L202" title="4 of 8 branches missed.">        if (newChar != 'P' &amp;&amp; newChar != 'G' &amp;&amp; newChar != 'U' &amp;&amp; newChar != 'W') {</span>
+<span class="fc" id="L203">            mapReader.updateMapPosition(vertical - 1, horizontal - 1, 'H');</span>
+        }
+
+
+<span class="pc bpc" id="L207" title="1 of 2 branches missed.">        if (targetChar == 'U') {</span>
+<span class="nc" id="L208">            System.out.println(&quot;\nYou stepped on a Wumpus! GAME OVER.\n&quot;);</span>
+<span class="nc" id="L209">            gameOver = true;</span>
+<span class="nc" id="L210">            return;</span>
+<span class="pc bpc" id="L211" title="1 of 2 branches missed.">        } else if (targetChar == 'W') {</span>
+<span class="nc" id="L212">                System.out.println(&quot;\nCannot move onto a wall!\n&quot;);</span>
+<span class="nc" id="L213">            return;</span>
         } else {
-<span class="fc" id="L193">                hero.setMapID(new MapID(horizontal, vertical));</span>
-<span class="fc" id="L194">                System.out.println(&quot;Hero's new position - Column:&quot;</span>
+<span class="fc" id="L215">                hero.setMapID(new MapID(horizontal, vertical));</span>
+<span class="fc" id="L216">                System.out.println(&quot;Hero's new position - Column:&quot;</span>
                         +
                         &quot; &quot; + horizontal + &quot;, Row: &quot; + vertical);
             }
 
-<span class="fc" id="L199">        if (mapReader.getMapLines().get(vertical - 1)</span>
-<span class="pc bpc" id="L200" title="1 of 2 branches missed.">                .charAt(horizontal - 1) == 'P') {</span>
-<span class="nc bnc" id="L201" title="All 2 branches missed.">            if (hero.getArrowCount() &gt; 0) {</span>
-<span class="nc" id="L202">                hero.setArrowCount(hero.getArrowCount() - 1);</span>
-<span class="nc" id="L203">                System.out.println(&quot;You stepped on a Pit! Lost an arrow.&quot;</span>
+<span class="fc" id="L221">        if (mapReader.getMapLines().get(vertical - 1)</span>
+<span class="pc bpc" id="L222" title="1 of 2 branches missed.">                .charAt(horizontal - 1) == 'P') {</span>
+<span class="nc bnc" id="L223" title="All 2 branches missed.">            if (hero.getArrowCount() &gt; 0) {</span>
+<span class="nc" id="L224">                hero.setArrowCount(hero.getArrowCount() - 1);</span>
+<span class="nc" id="L225">                System.out.println(&quot;You stepped on a Pit! Lost an arrow.&quot;</span>
                         +
-<span class="nc" id="L205">                        &quot;Remaining arrows: &quot; + hero.getArrowCount());</span>
+<span class="nc" id="L227">                        &quot;Remaining arrows: &quot; + hero.getArrowCount());</span>
             }
         }
-<span class="fc" id="L208">        hero.setMapID(new MapID(horizontal, vertical));</span>
+<span class="fc" id="L230">        hero.setMapID(new MapID(horizontal, vertical));</span>
 
 
-<span class="fc bfc" id="L211" title="All 4 branches covered.">        if (hero.isHasGold() &amp;&amp; hero.getMapID().equals(</span>
+<span class="fc bfc" id="L233" title="All 4 branches covered.">        if (hero.isHasGold() &amp;&amp; hero.getMapID().equals(</span>
                 this.heroInitialPosition)) {
-<span class="fc" id="L213">            hasWon();</span>
+<span class="fc" id="L235">            hasWon();</span>
         }
-<span class="fc" id="L215">        stepsCount++;</span>
-<span class="fc" id="L216">    }</span>
+<span class="fc" id="L237">        stepsCount++;</span>
+<span class="fc" id="L238">    }</span>
 
     /**
      * Checks if the game is over.
      * @return true if the game is over, false otherwise.
      */
     public boolean isGameOver() {
-<span class="fc" id="L223">        return gameOver;</span>
+<span class="fc" id="L245">        return gameOver;</span>
     }
 
     /**
@@ -233,76 +255,77 @@ public class GamePlay {
      * the Wumpus kill count.
      */
     public void shootArrow() {
-<span class="pc bpc" id="L236" title="1 of 2 branches missed.">        if (hero.getArrowCount() &gt; 0) {</span>
-<span class="fc" id="L237">            MapID currentMapID = hero.getMapID();</span>
-<span class="fc" id="L238">            int horizontal = currentMapID.getHorizontal();</span>
-<span class="fc" id="L239">            int vertical = currentMapID.getVertical();</span>
+<span class="pc bpc" id="L258" title="1 of 2 branches missed.">        if (hero.getArrowCount() &gt; 0) {</span>
+<span class="fc" id="L259">            stepsCount++;</span>
+<span class="fc" id="L260">            MapID currentMapID = hero.getMapID();</span>
+<span class="fc" id="L261">            int horizontal = currentMapID.getHorizontal();</span>
+<span class="fc" id="L262">            int vertical = currentMapID.getVertical();</span>
 
-<span class="fc" id="L241">            boolean hitWall = false;</span>
-<span class="fc" id="L242">            boolean hitWumpus = false;</span>
-<span class="pc bpc" id="L243" title="1 of 4 branches missed.">            while (!hitWall &amp;&amp; !hitWumpus) {</span>
-<span class="pc bpc" id="L244" title="4 of 5 branches missed.">                switch (hero.getWay()) {</span>
+<span class="fc" id="L264">            boolean hitWall = false;</span>
+<span class="fc" id="L265">            boolean hitWumpus = false;</span>
+<span class="pc bpc" id="L266" title="1 of 4 branches missed.">            while (!hitWall &amp;&amp; !hitWumpus) {</span>
+<span class="pc bpc" id="L267" title="4 of 5 branches missed.">                switch (hero.getWay()) {</span>
                     case NORTH:
-<span class="pc bpc" id="L246" title="1 of 2 branches missed.">                        if (vertical &gt; 1) {</span>
-<span class="fc" id="L247">                            vertical--;</span>
+<span class="pc bpc" id="L269" title="1 of 2 branches missed.">                        if (vertical &gt; 1) {</span>
+<span class="fc" id="L270">                            vertical--;</span>
                         }
                         break;
                     case EAST:
-<span class="nc bnc" id="L251" title="All 2 branches missed.">                        if (horizontal &lt; mapSize) {</span>
-<span class="nc" id="L252">                            horizontal++;</span>
+<span class="nc bnc" id="L274" title="All 2 branches missed.">                        if (horizontal &lt; mapSize) {</span>
+<span class="nc" id="L275">                            horizontal++;</span>
                         }
                         break;
                     case SOUTH:
-<span class="nc bnc" id="L256" title="All 2 branches missed.">                        if (vertical &lt; mapSize) {</span>
-<span class="nc" id="L257">                            vertical++;</span>
+<span class="nc bnc" id="L279" title="All 2 branches missed.">                        if (vertical &lt; mapSize) {</span>
+<span class="nc" id="L280">                            vertical++;</span>
                         }
                         break;
                     case WEST:
-<span class="nc bnc" id="L261" title="All 2 branches missed.">                        if (horizontal &gt; 1) {</span>
-<span class="nc" id="L262">                            horizontal--;</span>
+<span class="nc bnc" id="L284" title="All 2 branches missed.">                        if (horizontal &gt; 1) {</span>
+<span class="nc" id="L285">                            horizontal--;</span>
                         }
                         break;
                     default:
                         break;
                 }
-<span class="fc" id="L268">                char targetChar = mapReader.getMapLines().get(vertical - 1)</span>
-<span class="fc" id="L269">                        .charAt(horizontal - 1);</span>
-<span class="pc bpc" id="L270" title="1 of 2 branches missed.">                if (targetChar == 'W') {</span>
-<span class="nc" id="L271">                    hitWall = true;</span>
-<span class="fc bfc" id="L272" title="All 2 branches covered.">                } else if (targetChar == 'U') {</span>
-<span class="fc" id="L273">                    hitWumpus = true;</span>
-<span class="fc" id="L274">                    mapReader.updateMapPosition(vertical - 1,</span>
+<span class="fc" id="L291">                char targetChar = mapReader.getMapLines().get(vertical - 1)</span>
+<span class="fc" id="L292">                        .charAt(horizontal - 1);</span>
+<span class="pc bpc" id="L293" title="1 of 2 branches missed.">                               if (targetChar == 'W') {</span>
+<span class="nc" id="L294">                    hitWall = true;</span>
+<span class="fc bfc" id="L295" title="All 2 branches covered.">                } else if (targetChar == 'U') {</span>
+<span class="fc" id="L296">                    hitWumpus = true;</span>
+<span class="fc" id="L297">                    mapReader.updateMapPosition(vertical - 1,</span>
                             horizontal - 1, '_');
                 }
-<span class="fc" id="L277">            }</span>
+<span class="fc" id="L300">            }</span>
 
-<span class="fc" id="L279">            hero.setArrowCount(hero.getArrowCount() - 1);</span>
-<span class="pc bpc" id="L280" title="1 of 2 branches missed.">            if (hitWumpus) {</span>
-<span class="fc" id="L281">                wumpusKilledCount++;</span>
-<span class="fc" id="L282">                System.out.println(&quot;SCREEEEEEEEEAM! You hit a Wumpus!&quot;</span>
+<span class="fc" id="L302">            hero.setArrowCount(hero.getArrowCount() - 1);</span>
+<span class="pc bpc" id="L303" title="1 of 2 branches missed.">            if (hitWumpus) {</span>
+<span class="fc" id="L304">                wumpusKilledCount++;</span>
+<span class="fc" id="L305">                System.out.println(&quot;SCREEEEEEEEEAM! You hit a Wumpus!&quot;</span>
                         +
-<span class="fc" id="L284">                        &quot; Remaining arrows: &quot; + hero.getArrowCount());</span>
-<span class="fc" id="L285">                LOGGER.info(&quot;Player '{}' hit a Wumpus at position - &quot;</span>
+<span class="fc" id="L307">                        &quot; Remaining arrows: &quot; + hero.getArrowCount());</span>
+<span class="fc" id="L308">                LOGGER.info(&quot;Player '{}' hit a Wumpus at position - &quot;</span>
                         +
                         &quot;Column: {}, Row: {}&quot;,
-<span class="fc" id="L288">                        playerName, horizontal, vertical);</span>
-<span class="nc bnc" id="L289" title="All 2 branches missed.">            } else if (hitWall) {</span>
-<span class="nc" id="L290">                System.out.println(&quot;Arrow hit a wall and got destroyed.&quot;</span>
+<span class="fc" id="L311">                        playerName, horizontal, vertical);</span>
+<span class="nc bnc" id="L312" title="All 2 branches missed.">            } else if (hitWall) {</span>
+<span class="nc" id="L313">                System.out.println(&quot;Arrow hit a wall and got destroyed.&quot;</span>
                         +
-<span class="nc" id="L292">                        &quot; Remaining arrows: &quot; + hero.getArrowCount());</span>
-<span class="nc" id="L293">                LOGGER.warn(&quot;Player '{}' arrow hit a wall at position&quot;</span>
+<span class="nc" id="L315">                        &quot; Remaining arrows: &quot; + hero.getArrowCount());</span>
+<span class="nc" id="L316">                LOGGER.warn(&quot;Player '{}' arrow hit a wall at position&quot;</span>
                         +
                         &quot; - Column: {}, Row: {}&quot;,
-<span class="nc" id="L296">                        playerName, horizontal, vertical);</span>
+<span class="nc" id="L319">                        playerName, horizontal, vertical);</span>
             } else {
-<span class="nc" id="L298">                System.out.println(&quot;Shot an arrow towards &quot; + hero.getWay()</span>
+<span class="nc" id="L321">                System.out.println(&quot;Shot an arrow towards &quot; + hero.getWay()</span>
                         +
-<span class="nc" id="L300">                        &quot;. Remaining arrows: &quot; + hero.getArrowCount());</span>
+<span class="nc" id="L323">                        &quot;. Remaining arrows: &quot; + hero.getArrowCount());</span>
             }
-<span class="fc" id="L302">        } else {</span>
-<span class="nc" id="L303">            System.out.println(&quot;No more arrows left.&quot;);</span>
+<span class="fc" id="L325">        } else {</span>
+<span class="nc" id="L326">            System.out.println(&quot;No more arrows left.&quot;);</span>
         }
-<span class="fc" id="L305">    }</span>
+<span class="fc" id="L328">    }</span>
 
     /**
      * Allows the hero to pick up gold from their
@@ -314,21 +337,21 @@ public class GamePlay {
      * at that location.
      */
     public void pickUpGold() {
-<span class="fc" id="L317">        MapID heroPosition = hero.getMapID();</span>
-<span class="fc" id="L318">        int row = heroPosition.getVertical() - 1;</span>
-<span class="fc" id="L319">        int column = heroPosition.getHorizontal() - 1;</span>
+<span class="fc" id="L340">        MapID heroPosition = hero.getMapID();</span>
+<span class="fc" id="L341">        int row = heroPosition.getVertical() - 1;</span>
+<span class="fc" id="L342">        int column = heroPosition.getHorizontal() - 1;</span>
 
-<span class="pc bpc" id="L321" title="1 of 2 branches missed.">        if (mapReader.getMapLines().get(row).charAt(column) == 'G') {</span>
-<span class="nc" id="L322">            hero.setHasGold(true);</span>
-<span class="nc" id="L323">            mapReader.updateMapPosition(row, column, '_');</span>
-<span class="nc" id="L324">            System.out.println(&quot;You picked up the gold!&quot;);</span>
-<span class="nc" id="L325">            LOGGER.info(&quot;Player '{}' picked up the gold at position&quot;</span>
+<span class="pc bpc" id="L344" title="1 of 2 branches missed.">        if (mapReader.getMapLines().get(row).charAt(column) == 'G') {</span>
+<span class="nc" id="L345">            hero.setHasGold(true);</span>
+<span class="nc" id="L346">            mapReader.updateMapPosition(row, column, 'H');</span>
+<span class="nc" id="L347">            System.out.println(&quot;You picked up the gold!&quot;);</span>
+<span class="nc" id="L348">            LOGGER.info(&quot;Player '{}' picked up the gold at position&quot;</span>
                     +
-<span class="nc" id="L327">                    &quot; - Column: {}, Row: {}&quot;, playerName, column + 1, row + 1);</span>
+<span class="nc" id="L350">                    &quot; - Column: {}, Row: {}&quot;, playerName, column + 1, row + 1);</span>
         } else {
-<span class="fc" id="L329">            System.out.println(&quot;No gold here to pick up.&quot;);</span>
+<span class="fc" id="L352">            System.out.println(&quot;No gold here to pick up.&quot;);</span>
         }
-<span class="fc" id="L331">    }</span>
+<span class="fc" id="L354">    }</span>
 
     /**
      * Allows the hero to drop the gold they are
@@ -340,28 +363,28 @@ public class GamePlay {
      * presence of gold at that location.
      */
     public void dropGold() {
-<span class="pc bpc" id="L343" title="1 of 2 branches missed.">        if (hero.isHasGold()) {</span>
-<span class="fc" id="L344">            MapID heroPosition = hero.getMapID();</span>
-<span class="fc" id="L345">            int row = heroPosition.getVertical() - 1;</span>
-<span class="fc" id="L346">            int column = heroPosition.getHorizontal() - 1;</span>
+<span class="pc bpc" id="L366" title="1 of 2 branches missed.">        if (hero.isHasGold()) {</span>
+<span class="fc" id="L367">            MapID heroPosition = hero.getMapID();</span>
+<span class="fc" id="L368">            int row = heroPosition.getVertical() - 1;</span>
+<span class="fc" id="L369">            int column = heroPosition.getHorizontal() - 1;</span>
 
-<span class="fc" id="L348">            hero.setHasGold(false);</span>
-<span class="fc" id="L349">            mapReader.updateMapPosition(row, column, 'G');</span>
-<span class="fc" id="L350">            System.out.println(&quot;You dropped the gold!&quot;);</span>
-<span class="fc" id="L351">            LOGGER.info(&quot;Player '{}' dropped the gold at position&quot;</span>
+<span class="fc" id="L371">            hero.setHasGold(false);</span>
+<span class="fc" id="L372">            mapReader.updateMapPosition(row, column, 'G');</span>
+<span class="fc" id="L373">            System.out.println(&quot;You dropped the gold!&quot;);</span>
+<span class="fc" id="L374">            LOGGER.info(&quot;Player '{}' dropped the gold at position&quot;</span>
                     +
-<span class="fc" id="L353">                    &quot; - Column: {}, Row: {}&quot;, playerName, column + 1, row + 1);</span>
-<span class="fc" id="L354">        } else {</span>
-<span class="nc" id="L355">            System.out.println(&quot;You don't have any gold to drop.&quot;);</span>
+<span class="fc" id="L376">                    &quot; - Column: {}, Row: {}&quot;, playerName, column + 1, row + 1);</span>
+<span class="fc" id="L377">        } else {</span>
+<span class="nc" id="L378">            System.out.println(&quot;You don't have any gold to drop.&quot;);</span>
         }
-<span class="fc" id="L357">    }</span>
+<span class="fc" id="L380">    }</span>
 
     /**
      * Returns the count of Wumpuses killed by the player.
      * @return The count of Wumpuses killed.
      */
     public int getWumpusKilledCount() {
-<span class="fc" id="L364">        return wumpusKilledCount;</span>
+<span class="fc" id="L387">        return wumpusKilledCount;</span>
     }
 
     /**
@@ -369,7 +392,7 @@ public class GamePlay {
      * @return The initial position of the hero as a MapID object.
      */
     public MapID getHeroInitialPosition() {
-<span class="fc" id="L372">        return heroInitialPosition;</span>
+<span class="fc" id="L395">        return heroInitialPosition;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

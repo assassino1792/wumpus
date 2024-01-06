@@ -978,3 +978,1639 @@ Unconditional classes:
 20:50:14.610 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
 20:50:14.611 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
 20:50:14.611 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+07:41:12.625 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 12032 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+07:41:12.628 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+07:41:13.205 [main] INFO  org.example.Main - Started Main in 0.885 seconds (process running for 1.69)
+07:41:13.208 [main] INFO  org.example.Main - Application started
+07:41:13.383 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+07:41:13.389 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+07:41:13.390 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+07:41:13.391 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+07:41:33.807 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+07:41:33.828 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+07:41:33.830 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+07:41:33.832 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+07:41:33.863 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+07:41:33.884 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+07:41:33.884 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+07:41:33.885 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+07:41:33.887 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+07:41:33.941 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+07:41:34.008 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:34.025 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:34.028 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+07:41:34.033 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:34.040 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:34.040 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+07:41:34.043 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:34.048 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:34.049 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+07:41:34.058 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+07:41:34.058 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+07:41:34.060 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+07:41:34.061 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+07:41:34.067 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+07:41:34.074 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+07:41:34.079 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:34.079 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+07:41:34.084 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+07:41:34.085 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+07:41:34.086 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+07:41:34.088 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+07:41:34.093 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+07:41:34.099 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+07:41:34.104 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:34.104 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+07:41:34.112 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:34.116 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:34.122 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:34.122 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+07:41:34.127 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+07:41:34.128 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+07:41:34.128 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+07:41:34.129 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+07:41:34.135 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+07:41:34.140 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+07:41:34.144 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:34.149 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:53.809 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+07:41:53.825 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+07:41:53.826 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+07:41:53.827 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+07:41:53.847 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+07:41:53.862 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+07:41:53.873 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+07:41:53.874 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+07:41:53.875 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+07:41:53.922 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+07:41:53.968 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:53.979 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:53.979 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+07:41:53.983 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:53.991 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:53.992 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+07:41:53.996 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:54.001 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:54.002 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+07:41:54.009 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+07:41:54.010 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+07:41:54.011 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+07:41:54.012 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+07:41:54.018 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+07:41:54.024 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+07:41:54.028 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:54.029 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+07:41:54.032 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+07:41:54.032 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+07:41:54.033 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+07:41:54.034 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+07:41:54.038 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+07:41:54.042 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+07:41:54.045 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:54.046 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+07:41:54.049 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:54.053 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:54.056 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:54.056 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+07:41:54.060 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+07:41:54.060 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+07:41:54.061 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+07:41:54.062 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+07:41:54.066 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+07:41:54.071 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+07:41:54.075 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+07:41:54.079 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+08:02:36.461 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 18188 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+08:02:36.464 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+08:02:36.965 [main] INFO  org.example.Main - Started Main in 0.777 seconds (process running for 1.335)
+08:02:36.968 [main] INFO  org.example.Main - Application started
+08:02:37.112 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:02:37.117 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:02:37.117 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:02:37.118 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:02:45.179 [main] INFO  o.example.database.DatabaseService - Player name 'fgsadas' inserted into PlayerNames table
+08:02:47.200 [main] INFO  org.example.game.GamePlay - User fgsadas selected READ MAP FROM FILE
+08:02:48.321 [main] INFO  org.example.game.GamePlay - User fgsadas selected GAME in sub menu
+08:02:48.324 [main] INFO  org.example.game.GamePlay - Game initialized for user fgsadas
+08:02:48.324 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: fgsadas
+08:02:50.591 [main] INFO  org.example.game.GamePlay - User fgsadas confirmed to exit the game
+08:02:50.591 [main] INFO  org.example.game.GamePlay - User fgsadas gave up the game
+08:02:52.181 [main] INFO  org.example.game.GamePlay - User fgsadas selected EXIT
+08:02:52.181 [main] INFO  org.example.game.GamePlay - Starting game for user: fgsadas
+08:02:52.184 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:02:52.184 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:02:52.184 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:02:52.185 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:02:52.185 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+08:27:32.053 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 8392 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+08:27:32.058 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+08:27:32.655 [main] INFO  org.example.Main - Started Main in 0.918 seconds (process running for 1.996)
+08:27:32.659 [main] INFO  org.example.Main - Application started
+08:27:32.883 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:27:32.888 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:27:32.888 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:27:32.889 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:27:37.059 [main] INFO  o.example.database.DatabaseService - Player name 'sdadas' inserted into PlayerNames table
+08:27:38.821 [main] INFO  org.example.game.GamePlay - User sdadas selected READ MAP FROM FILE
+08:27:39.951 [main] INFO  org.example.game.GamePlay - User sdadas selected GAME in sub menu
+08:27:39.954 [main] INFO  org.example.game.GamePlay - Game initialized for user sdadas
+08:27:39.971 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sdadas
+08:27:46.291 [main] INFO  org.example.game.GamePlay - User sdadas changed direction to SOUTH
+08:27:47.860 [main] INFO  org.example.game.GamePlay - User sdadas moved hero
+08:31:15.120 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 8504 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+08:31:15.124 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+08:31:15.737 [main] INFO  org.example.Main - Started Main in 0.952 seconds (process running for 1.889)
+08:31:15.741 [main] INFO  org.example.Main - Application started
+08:31:15.930 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:31:15.936 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:31:15.936 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:31:15.937 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:31:18.638 [main] INFO  o.example.database.DatabaseService - Player name 'ASA' inserted into PlayerNames table
+08:31:20.281 [main] INFO  org.example.game.GamePlay - User ASA selected READ MAP FROM FILE
+08:31:21.151 [main] INFO  org.example.game.GamePlay - User ASA selected GAME in sub menu
+08:31:21.153 [main] INFO  org.example.game.GamePlay - Game initialized for user ASA
+08:31:21.162 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: ASA
+08:31:24.851 [main] INFO  org.example.game.GamePlay - User ASA changed direction to SOUTH
+08:31:26.110 [main] INFO  org.example.game.GamePlay - User ASA moved hero
+08:40:07.169 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 20140 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+08:40:07.173 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+08:40:07.785 [main] INFO  org.example.Main - Started Main in 0.942 seconds (process running for 1.525)
+08:40:07.788 [main] INFO  org.example.Main - Application started
+08:40:07.938 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:40:07.943 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:40:07.943 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:40:07.944 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:40:10.338 [main] INFO  o.example.database.DatabaseService - Player name 'dsadsa' inserted into PlayerNames table
+08:40:11.811 [main] INFO  org.example.game.GamePlay - User dsadsa selected READ MAP FROM FILE
+08:40:15.701 [main] INFO  org.example.game.GamePlay - User dsadsa selected GAME in sub menu
+08:40:15.703 [main] INFO  org.example.game.GamePlay - Game initialized for user dsadsa
+08:40:15.704 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsadsa
+08:40:23.081 [main] INFO  org.example.game.GamePlay - User dsadsa changed direction to EAST
+08:40:24.941 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+08:40:34.381 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+08:40:37.351 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+08:40:39.800 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+08:40:39.801 [main] INFO  org.example.game.GamePlay - User dsadsa lost the game
+08:42:52.435 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 2840 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+08:42:52.439 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+08:42:52.964 [main] INFO  org.example.Main - Started Main in 0.831 seconds (process running for 1.443)
+08:42:52.967 [main] INFO  org.example.Main - Application started
+08:42:53.123 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:42:53.128 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:42:53.128 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:42:53.129 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:42:54.987 [main] INFO  o.example.database.DatabaseService - Player name 'dsada' inserted into PlayerNames table
+08:42:56.160 [main] INFO  org.example.game.GamePlay - User dsada selected READ MAP FROM FILE
+08:42:59.580 [main] INFO  org.example.game.GamePlay - User dsada selected GAME in sub menu
+08:42:59.583 [main] INFO  org.example.game.GamePlay - Game initialized for user dsada
+08:42:59.583 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsada
+08:43:04.951 [main] INFO  org.example.game.GamePlay - User dsada changed direction to EAST
+08:43:07.300 [main] INFO  org.example.game.GamePlay - User dsada moved hero
+08:43:17.660 [main] INFO  org.example.game.GamePlay - User dsada shot an arrow
+08:43:17.661 [main] INFO  org.example.game.GamePlay - Player 'dsada' hit a Wumpus at position - Column: 7, Row: 8
+08:43:19.920 [main] INFO  org.example.game.GamePlay - User dsada moved hero
+08:43:21.471 [main] INFO  org.example.game.GamePlay - User dsada moved hero
+08:43:22.711 [main] INFO  org.example.game.GamePlay - User dsada moved hero
+08:43:23.861 [main] INFO  org.example.game.GamePlay - User dsada moved hero
+08:43:24.880 [main] INFO  org.example.game.GamePlay - User dsada moved hero
+08:43:27.221 [main] INFO  org.example.game.GamePlay - User dsada picked up gold
+08:43:43.000 [main] INFO  org.example.game.GamePlay - User dsada changed direction to WEST
+08:43:43.671 [main] INFO  org.example.game.GamePlay - User dsada moved hero
+08:43:45.801 [main] INFO  org.example.game.GamePlay - User dsada moved hero
+08:45:04.466 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 17116 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+08:45:04.469 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+08:45:05.007 [main] INFO  org.example.Main - Started Main in 0.831 seconds (process running for 1.467)
+08:45:05.010 [main] INFO  org.example.Main - Application started
+08:45:05.172 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:45:05.177 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:45:05.178 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:45:05.178 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:45:07.675 [main] INFO  o.example.database.DatabaseService - Player name 'dsad' inserted into PlayerNames table
+08:45:08.991 [main] INFO  org.example.game.GamePlay - User dsad selected READ MAP FROM FILE
+08:45:11.070 [main] INFO  org.example.game.GamePlay - User dsad selected GAME in sub menu
+08:45:11.073 [main] INFO  org.example.game.GamePlay - Game initialized for user dsad
+08:45:11.073 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsad
+08:45:12.580 [main] INFO  org.example.game.GamePlay - User dsad changed direction to EAST
+08:45:13.441 [main] INFO  org.example.game.GamePlay - User dsad moved hero
+08:45:20.841 [main] INFO  org.example.game.GamePlay - User dsad moved hero
+08:45:22.070 [main] INFO  org.example.game.GamePlay - User dsad shot an arrow
+08:45:22.071 [main] INFO  org.example.game.GamePlay - Player 'dsad' hit a Wumpus at position - Column: 7, Row: 8
+08:46:38.579 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 12260 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+08:46:38.582 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+08:46:39.107 [main] INFO  org.example.Main - Started Main in 0.833 seconds (process running for 1.414)
+08:46:39.110 [main] INFO  org.example.Main - Application started
+08:46:39.255 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:46:39.260 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:46:39.261 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:46:39.262 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:46:42.310 [main] INFO  o.example.database.DatabaseService - Player name 'dsadsa' inserted into PlayerNames table
+08:46:43.280 [main] INFO  org.example.game.GamePlay - User dsadsa selected READ MAP FROM FILE
+08:46:44.380 [main] INFO  org.example.game.GamePlay - User dsadsa selected GAME in sub menu
+08:46:44.382 [main] INFO  org.example.game.GamePlay - Game initialized for user dsadsa
+08:46:44.383 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsadsa
+08:46:46.329 [main] INFO  org.example.game.GamePlay - User dsadsa changed direction to EAST
+08:46:47.510 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+08:46:48.800 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+08:46:49.900 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+08:49:03.182 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 4024 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+08:49:03.185 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+08:49:03.729 [main] INFO  org.example.Main - Started Main in 0.893 seconds (process running for 1.477)
+08:49:03.732 [main] INFO  org.example.Main - Application started
+08:49:03.893 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:49:03.898 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:49:03.898 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:49:03.899 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:49:05.045 [main] INFO  o.example.database.DatabaseService - Player name 'sdaasd' inserted into PlayerNames table
+08:49:06.471 [main] INFO  org.example.game.GamePlay - User sdaasd selected READ MAP FROM FILE
+08:49:07.320 [main] INFO  org.example.game.GamePlay - User sdaasd selected GAME in sub menu
+08:49:07.323 [main] INFO  org.example.game.GamePlay - Game initialized for user sdaasd
+08:49:07.323 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sdaasd
+08:49:09.060 [main] INFO  org.example.game.GamePlay - User sdaasd changed direction to EAST
+08:49:10.130 [main] INFO  org.example.game.GamePlay - User sdaasd moved hero
+08:49:11.331 [main] INFO  org.example.game.GamePlay - User sdaasd moved hero
+08:49:12.280 [main] INFO  org.example.game.GamePlay - User sdaasd moved hero
+08:52:34.821 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 8060 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+08:52:34.824 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+08:52:35.340 [main] INFO  org.example.Main - Started Main in 0.82 seconds (process running for 1.441)
+08:52:35.342 [main] INFO  org.example.Main - Application started
+08:52:35.496 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:52:35.501 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:52:35.502 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:52:35.503 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:52:37.100 [main] INFO  o.example.database.DatabaseService - Player name 'sdasd' inserted into PlayerNames table
+08:52:37.840 [main] INFO  org.example.game.GamePlay - User sdasd selected READ MAP FROM FILE
+08:52:38.940 [main] INFO  org.example.game.GamePlay - User sdasd selected GAME in sub menu
+08:52:38.943 [main] INFO  org.example.game.GamePlay - Game initialized for user sdasd
+08:52:38.943 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sdasd
+08:52:41.010 [main] INFO  org.example.game.GamePlay - User sdasd changed direction to EAST
+08:52:42.090 [main] INFO  org.example.game.GamePlay - User sdasd moved hero
+08:52:43.460 [main] INFO  org.example.game.GamePlay - User sdasd moved hero
+08:52:46.120 [main] INFO  org.example.game.GamePlay - User sdasd moved hero
+08:52:47.310 [main] INFO  org.example.game.GamePlay - User sdasd moved hero
+08:52:47.310 [main] INFO  org.example.game.GamePlay - User sdasd lost the game
+08:52:52.740 [main] INFO  org.example.game.GamePlay - User sdasd selected READ MAP FROM FILE
+08:52:54.080 [main] INFO  org.example.game.GamePlay - User sdasd selected GAME in sub menu
+08:52:54.082 [main] INFO  org.example.game.GamePlay - Game initialized for user sdasd
+08:52:54.082 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sdasd
+08:52:58.700 [main] INFO  org.example.game.GamePlay - User sdasd moved hero
+08:53:01.379 [main] INFO  org.example.game.GamePlay - User sdasd moved hero
+08:53:07.939 [main] INFO  org.example.game.GamePlay - User sdasd changed direction to WEST
+08:53:09.190 [main] INFO  org.example.game.GamePlay - User sdasd moved hero
+08:53:10.320 [main] INFO  org.example.game.GamePlay - User sdasd moved hero
+08:53:18.910 [main] INFO  org.example.game.GamePlay - User sdasd moved hero
+08:53:21.410 [main] INFO  org.example.game.GamePlay - User sdasd changed direction to EAST
+08:53:22.570 [main] INFO  org.example.game.GamePlay - User sdasd moved hero
+08:55:27.289 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 8160 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+08:55:27.293 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+08:55:27.816 [main] INFO  org.example.Main - Started Main in 0.81 seconds (process running for 1.383)
+08:55:27.819 [main] INFO  org.example.Main - Application started
+08:55:27.966 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:55:27.970 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:55:27.971 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:55:27.972 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:55:30.040 [main] INFO  o.example.database.DatabaseService - Player name 'dsadas' inserted into PlayerNames table
+08:55:31.071 [main] INFO  org.example.game.GamePlay - User dsadas selected READ MAP FROM FILE
+08:55:32.330 [main] INFO  org.example.game.GamePlay - User dsadas selected GAME in sub menu
+08:55:32.333 [main] INFO  org.example.game.GamePlay - Game initialized for user dsadas
+08:55:32.333 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsadas
+08:55:35.110 [main] INFO  org.example.game.GamePlay - User dsadas changed direction to EAST
+08:55:37.039 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+08:55:41.090 [main] INFO  org.example.game.GamePlay - User dsadas shot an arrow
+08:55:41.091 [main] INFO  org.example.game.GamePlay - Player 'dsadas' hit a Wumpus at position - Column: 7, Row: 8
+08:55:43.810 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+08:55:44.890 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+08:55:45.740 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+08:55:46.570 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+08:55:47.271 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+08:55:48.950 [main] INFO  org.example.game.GamePlay - User dsadas picked up gold
+08:55:48.950 [main] INFO  org.example.game.GamePlay - Player 'dsadas' picked up the gold at position - Column: 9, Row: 8
+08:55:52.640 [main] INFO  org.example.game.GamePlay - User dsadas changed direction to WEST
+08:55:53.460 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+08:55:54.390 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+08:55:55.030 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+08:55:56.000 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+08:55:56.779 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+08:55:58.411 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+08:55:58.411 [main] INFO  org.example.game.GamePlay - Player 'dsadas' has won the game in 11 steps
+08:55:58.415 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:55:58.415 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:55:58.415 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:55:58.416 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:55:58.451 [main] INFO  o.example.database.DatabaseService - New leaderboard entry created for player 'dsadas': steps count is 11, wins: 1
+08:55:58.456 [main] INFO  o.example.database.DatabaseService - No update required for player 'dsadas' on leaderboard: existing steps count is lower
+08:55:58.456 [main] INFO  org.example.game.GamePlay - User dsadas won the game
+08:56:07.860 [main] INFO  org.example.game.GamePlay - User dsadas selected READ MAP FROM FILE
+08:56:11.100 [main] INFO  org.example.game.GamePlay - User dsadas selected GAME in sub menu
+08:56:11.102 [main] INFO  org.example.game.GamePlay - Game initialized for user dsadas
+08:56:11.102 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsadas
+08:56:17.550 [main] INFO  org.example.game.GamePlay - User dsadas changed direction to WEST
+08:56:20.470 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+08:56:21.590 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+08:56:30.220 [main] INFO  org.example.game.GamePlay - User dsadas changed direction to EAST
+08:56:31.160 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+08:56:31.160 [main] INFO  org.example.game.GamePlay - Player 'dsadas' has won the game in 1 steps
+08:56:31.164 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:56:31.164 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:56:31.164 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:56:31.165 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:56:31.170 [main] INFO  o.example.database.DatabaseService - Leaderboard updated for player 'dsadas': new steps count is 1
+08:56:31.172 [main] INFO  o.example.database.DatabaseService - Incremented win count for player 'dsadas'
+08:56:31.177 [main] INFO  o.example.database.DatabaseService - No update required for player 'dsadas' on leaderboard: existing steps count is lower
+08:56:31.177 [main] INFO  org.example.game.GamePlay - User dsadas won the game
+08:56:39.499 [main] INFO  org.example.game.GamePlay - User dsadas selected LIST THE LEADERBOARD
+08:56:39.503 [main] INFO  o.example.database.DatabaseService - Leaderboard retrieved successfully
+08:56:45.430 [main] INFO  org.example.game.GamePlay - User dsadas selected READ MAP FROM FILE
+08:56:48.500 [main] WARN  org.example.game.GamePlay - User dsadas made an invalid choice in sub menu: 4
+08:56:49.310 [main] INFO  org.example.game.GamePlay - User dsadas selected EXIT
+08:56:49.310 [main] INFO  org.example.game.GamePlay - Starting game for user: dsadas
+08:56:49.313 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:56:49.314 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:56:49.314 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:56:49.315 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:56:49.315 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+08:56:57.560 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 4136 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+08:56:57.563 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+08:56:58.065 [main] INFO  org.example.Main - Started Main in 0.779 seconds (process running for 1.384)
+08:56:58.067 [main] INFO  org.example.Main - Application started
+08:56:58.214 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:56:58.219 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:56:58.220 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:56:58.220 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:56:59.890 [main] INFO  o.example.database.DatabaseService - Player name 'dsasd' inserted into PlayerNames table
+08:57:01.360 [main] INFO  org.example.game.GamePlay - User dsasd selected READ MAP FROM FILE
+08:57:02.680 [main] INFO  org.example.game.GamePlay - User dsasd selected GAME in sub menu
+08:57:02.683 [main] INFO  org.example.game.GamePlay - Game initialized for user dsasd
+08:57:02.683 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsasd
+08:57:08.080 [main] INFO  org.example.game.GamePlay - User dsasd changed direction to SOUTH
+08:57:09.670 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+08:57:15.330 [main] INFO  org.example.game.GamePlay - User dsasd changed direction to NORTH
+08:57:16.600 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+08:57:18.170 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+08:57:20.390 [main] INFO  org.example.game.GamePlay - User dsasd changed direction to WEST
+08:57:22.600 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+08:57:30.220 [main] INFO  org.example.game.GamePlay - User dsasd changed direction to WEST
+08:57:39.100 [main] INFO  org.example.game.GamePlay - User dsasd changed direction to EAST
+08:57:40.291 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+08:57:44.629 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+08:57:53.439 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+08:57:54.390 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+08:57:55.040 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+08:57:55.880 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+08:58:55.630 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 20388 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+08:58:55.634 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+08:58:56.185 [main] INFO  org.example.Main - Started Main in 0.826 seconds (process running for 1.411)
+08:58:56.188 [main] INFO  org.example.Main - Application started
+08:58:56.351 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:58:56.357 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:58:56.357 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:58:56.358 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:58:59.009 [main] INFO  o.example.database.DatabaseService - Player name 'sdsaasd' inserted into PlayerNames table
+08:59:00.090 [main] INFO  org.example.game.GamePlay - User sdsaasd selected READ MAP FROM FILE
+08:59:04.200 [main] WARN  org.example.game.GamePlay - User sdsaasd made an invalid choice in sub menu: 4
+08:59:04.730 [main] INFO  org.example.game.GamePlay - User sdsaasd selected EXIT
+08:59:04.730 [main] INFO  org.example.game.GamePlay - Starting game for user: sdsaasd
+08:59:04.733 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:59:04.733 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:59:04.733 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:59:04.734 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:59:04.735 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+08:59:09.313 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 18192 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+08:59:09.316 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+08:59:09.887 [main] INFO  org.example.Main - Started Main in 0.86 seconds (process running for 1.478)
+08:59:09.890 [main] INFO  org.example.Main - Application started
+08:59:10.043 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+08:59:10.048 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+08:59:10.049 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+08:59:10.049 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+08:59:11.836 [main] INFO  o.example.database.DatabaseService - Player name 'asdsaasd' inserted into PlayerNames table
+08:59:13.060 [main] INFO  org.example.game.GamePlay - User asdsaasd selected READ MAP FROM FILE
+08:59:14.100 [main] INFO  org.example.game.GamePlay - User asdsaasd selected GAME in sub menu
+08:59:14.103 [main] INFO  org.example.game.GamePlay - Game initialized for user asdsaasd
+08:59:14.103 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: asdsaasd
+08:59:15.840 [main] INFO  org.example.game.GamePlay - User asdsaasd changed direction to SOUTH
+08:59:16.330 [main] INFO  org.example.game.GamePlay - User asdsaasd moved hero
+08:59:20.770 [main] INFO  org.example.game.GamePlay - User asdsaasd changed direction to WEST
+08:59:22.800 [main] INFO  org.example.game.GamePlay - User asdsaasd moved hero
+08:59:23.860 [main] INFO  org.example.game.GamePlay - User asdsaasd moved hero
+08:59:28.210 [main] INFO  org.example.game.GamePlay - User asdsaasd changed direction to EAST
+08:59:28.670 [main] INFO  org.example.game.GamePlay - User asdsaasd moved hero
+08:59:32.359 [main] INFO  org.example.game.GamePlay - User asdsaasd moved hero
+08:59:32.940 [main] INFO  org.example.game.GamePlay - User asdsaasd moved hero
+08:59:33.490 [main] INFO  org.example.game.GamePlay - User asdsaasd moved hero
+08:59:39.830 [main] INFO  org.example.game.GamePlay - User asdsaasd changed direction to NORTH
+08:59:40.600 [main] INFO  org.example.game.GamePlay - User asdsaasd moved hero
+08:59:40.991 [main] INFO  org.example.game.GamePlay - User asdsaasd moved hero
+08:59:41.871 [main] INFO  org.example.game.GamePlay - User asdsaasd moved hero
+08:59:45.221 [main] INFO  org.example.game.GamePlay - User asdsaasd changed direction to WEST
+08:59:46.250 [main] INFO  org.example.game.GamePlay - User asdsaasd moved hero
+08:59:49.020 [main] INFO  org.example.game.GamePlay - User asdsaasd changed direction to NORTH
+08:59:49.610 [main] INFO  org.example.game.GamePlay - User asdsaasd moved hero
+08:59:51.240 [main] INFO  org.example.game.GamePlay - User asdsaasd changed direction to EAST
+08:59:52.089 [main] INFO  org.example.game.GamePlay - User asdsaasd moved hero
+08:59:54.829 [main] INFO  org.example.game.GamePlay - User asdsaasd moved hero
+08:59:56.640 [main] INFO  org.example.game.GamePlay - User asdsaasd moved hero
+09:01:15.427 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 9340 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:01:15.431 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:01:15.994 [main] INFO  org.example.Main - Started Main in 0.851 seconds (process running for 1.408)
+09:01:15.996 [main] INFO  org.example.Main - Application started
+09:01:16.152 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:01:16.157 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:01:16.157 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:01:16.158 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:01:18.136 [main] INFO  o.example.database.DatabaseService - Player name 'asasd' inserted into PlayerNames table
+09:01:19.240 [main] INFO  org.example.game.GamePlay - User asasd selected READ MAP FROM FILE
+09:01:21.710 [main] INFO  org.example.game.GamePlay - User asasd selected GAME in sub menu
+09:01:21.713 [main] INFO  org.example.game.GamePlay - Game initialized for user asasd
+09:01:21.713 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: asasd
+09:01:24.000 [main] INFO  org.example.game.GamePlay - User asasd changed direction to EAST
+09:01:25.360 [main] INFO  org.example.game.GamePlay - User asasd moved hero
+09:01:30.249 [main] INFO  org.example.game.GamePlay - User asasd changed direction to NORTH
+09:01:32.490 [main] INFO  org.example.game.GamePlay - User asasd moved hero
+09:01:34.630 [main] INFO  org.example.game.GamePlay - User asasd changed direction to WEST
+09:01:36.270 [main] INFO  org.example.game.GamePlay - User asasd moved hero
+09:01:37.270 [main] INFO  org.example.game.GamePlay - User asasd moved hero
+09:01:39.549 [main] INFO  org.example.game.GamePlay - User asasd changed direction to EAST
+09:01:40.350 [main] INFO  org.example.game.GamePlay - User asasd moved hero
+09:03:01.887 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 10528 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:03:01.891 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:03:02.391 [main] INFO  org.example.Main - Started Main in 0.793 seconds (process running for 1.35)
+09:03:02.394 [main] INFO  org.example.Main - Application started
+09:03:02.559 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:03:02.564 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:03:02.565 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:03:02.565 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:03:06.561 [main] INFO  o.example.database.DatabaseService - Player name 'sadads' inserted into PlayerNames table
+09:03:08.131 [main] INFO  org.example.game.GamePlay - User sadads selected READ MAP FROM FILE
+09:03:09.390 [main] INFO  org.example.game.GamePlay - User sadads selected GAME in sub menu
+09:03:09.393 [main] INFO  org.example.game.GamePlay - Game initialized for user sadads
+09:03:09.393 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sadads
+09:03:11.210 [main] INFO  org.example.game.GamePlay - User sadads changed direction to NORTH
+09:03:11.720 [main] INFO  org.example.game.GamePlay - User sadads moved hero
+09:03:15.810 [main] INFO  org.example.game.GamePlay - User sadads changed direction to WEST
+09:03:18.139 [main] INFO  org.example.game.GamePlay - User sadads moved hero
+09:03:21.029 [main] INFO  org.example.game.GamePlay - User sadads changed direction to EAST
+09:03:21.950 [main] INFO  org.example.game.GamePlay - User sadads moved hero
+09:05:22.491 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 18872 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:05:22.494 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:05:22.983 [main] INFO  org.example.Main - Started Main in 0.806 seconds (process running for 1.47)
+09:05:22.985 [main] INFO  org.example.Main - Application started
+09:05:23.138 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:05:23.144 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:05:23.144 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:05:23.145 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:05:24.175 [main] INFO  o.example.database.DatabaseService - Player name 'dsasd' inserted into PlayerNames table
+09:05:25.039 [main] INFO  org.example.game.GamePlay - User dsasd selected READ MAP FROM FILE
+09:05:26.229 [main] INFO  org.example.game.GamePlay - User dsasd selected GAME in sub menu
+09:05:26.232 [main] INFO  org.example.game.GamePlay - Game initialized for user dsasd
+09:05:26.232 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsasd
+09:05:28.620 [main] INFO  org.example.game.GamePlay - User dsasd changed direction to EAST
+09:05:29.700 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:05:30.950 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:05:34.500 [main] INFO  org.example.game.GamePlay - User dsasd shot an arrow
+09:05:34.500 [main] INFO  org.example.game.GamePlay - Player 'dsasd' hit a Wumpus at position - Column: 7, Row: 8
+09:05:38.430 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:05:39.310 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:05:40.900 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:05:41.689 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:05:43.790 [main] INFO  org.example.game.GamePlay - User dsasd changed direction to WEST
+09:05:46.470 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:05:52.300 [main] INFO  org.example.game.GamePlay - User dsasd dropped gold
+09:05:58.670 [main] INFO  org.example.game.GamePlay - User dsasd changed direction to NORTH
+09:06:00.849 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:06:02.879 [main] INFO  org.example.game.GamePlay - User dsasd changed direction to WEST
+09:06:04.470 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:06:07.719 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:07:40.583 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 9852 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:07:40.586 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:07:41.110 [main] INFO  org.example.Main - Started Main in 0.81 seconds (process running for 1.381)
+09:07:41.113 [main] INFO  org.example.Main - Application started
+09:07:41.270 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:07:41.275 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:07:41.275 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:07:41.276 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:07:43.361 [main] INFO  o.example.database.DatabaseService - Player name 'sdadsa' inserted into PlayerNames table
+09:07:44.490 [main] INFO  org.example.game.GamePlay - User sdadsa selected READ MAP FROM FILE
+09:07:45.619 [main] INFO  org.example.game.GamePlay - User sdadsa selected GAME in sub menu
+09:07:45.622 [main] INFO  org.example.game.GamePlay - Game initialized for user sdadsa
+09:07:45.622 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sdadsa
+09:07:56.740 [main] INFO  org.example.game.GamePlay - User sdadsa changed direction to NORTH
+09:07:58.040 [main] INFO  org.example.game.GamePlay - User sdadsa moved hero
+09:08:00.759 [main] INFO  org.example.game.GamePlay - User sdadsa changed direction to WEST
+09:08:02.789 [main] INFO  org.example.game.GamePlay - User sdadsa moved hero
+09:08:06.140 [main] INFO  org.example.game.GamePlay - User sdadsa changed direction to EAST
+09:08:07.220 [main] INFO  org.example.game.GamePlay - User sdadsa moved hero
+09:08:09.129 [main] INFO  org.example.game.GamePlay - User sdadsa moved hero
+09:08:10.200 [main] INFO  org.example.game.GamePlay - User sdadsa moved hero
+09:09:33.665 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 14268 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:09:33.668 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:09:34.195 [main] INFO  org.example.Main - Started Main in 0.817 seconds (process running for 1.393)
+09:09:34.198 [main] INFO  org.example.Main - Application started
+09:09:34.381 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:09:34.386 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:09:34.387 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:09:34.388 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:09:37.394 [main] INFO  o.example.database.DatabaseService - Player name 'dsaas' inserted into PlayerNames table
+09:09:38.160 [main] INFO  org.example.game.GamePlay - User dsaas selected READ MAP FROM FILE
+09:09:39.100 [main] INFO  org.example.game.GamePlay - User dsaas selected GAME in sub menu
+09:09:39.103 [main] INFO  org.example.game.GamePlay - Game initialized for user dsaas
+09:09:39.103 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsaas
+09:09:43.950 [main] INFO  org.example.game.GamePlay - User dsaas changed direction to EAST
+09:09:45.230 [main] INFO  org.example.game.GamePlay - User dsaas moved hero
+09:09:50.440 [main] INFO  org.example.game.GamePlay - User dsaas moved hero
+09:09:51.870 [main] INFO  org.example.game.GamePlay - User dsaas moved hero
+09:10:53.749 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 16156 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:10:53.752 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:10:54.278 [main] INFO  org.example.Main - Started Main in 0.805 seconds (process running for 1.408)
+09:10:54.280 [main] INFO  org.example.Main - Application started
+09:10:54.439 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:10:54.444 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:10:54.445 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:10:54.446 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:10:56.815 [main] INFO  o.example.database.DatabaseService - Player name 'dsadsa' inserted into PlayerNames table
+09:10:57.600 [main] INFO  org.example.game.GamePlay - User dsadsa selected READ MAP FROM FILE
+09:10:58.709 [main] INFO  org.example.game.GamePlay - User dsadsa selected GAME in sub menu
+09:10:58.712 [main] INFO  org.example.game.GamePlay - Game initialized for user dsadsa
+09:10:58.712 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsadsa
+09:11:02.869 [main] INFO  org.example.game.GamePlay - User dsadsa changed direction to NORTH
+09:11:06.170 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:11:08.209 [main] INFO  org.example.game.GamePlay - User dsadsa changed direction to WEST
+09:11:09.271 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:11:19.630 [main] INFO  org.example.game.GamePlay - User dsadsa changed direction to EAST
+09:11:20.620 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:11:21.579 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:21:58.408 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 17916 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:21:58.413 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:21:59.042 [main] INFO  org.example.Main - Started Main in 1.012 seconds (process running for 1.681)
+09:21:59.045 [main] INFO  org.example.Main - Application started
+09:21:59.237 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:21:59.242 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:21:59.243 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:21:59.244 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:22:01.173 [main] INFO  o.example.database.DatabaseService - Player name 'sadsad' inserted into PlayerNames table
+09:22:01.940 [main] INFO  org.example.game.GamePlay - User sadsad selected READ MAP FROM FILE
+09:22:03.379 [main] INFO  org.example.game.GamePlay - User sadsad selected GAME in sub menu
+09:22:03.382 [main] INFO  org.example.game.GamePlay - Game initialized for user sadsad
+09:22:03.387 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sadsad
+09:22:08.949 [main] INFO  org.example.game.GamePlay - User sadsad changed direction to NORTH
+09:22:10.200 [main] INFO  org.example.game.GamePlay - User sadsad moved hero
+09:22:56.776 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 1660 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:22:56.780 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:22:57.348 [main] INFO  org.example.Main - Started Main in 0.897 seconds (process running for 1.841)
+09:22:57.351 [main] INFO  org.example.Main - Application started
+09:22:57.524 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:22:57.529 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:22:57.530 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:22:57.531 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:23:02.852 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 1696 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:23:02.856 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:23:03.453 [main] INFO  org.example.Main - Started Main in 0.898 seconds (process running for 1.585)
+09:23:03.456 [main] INFO  org.example.Main - Application started
+09:23:03.638 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:23:03.643 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:23:03.644 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:23:03.644 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:23:04.639 [main] INFO  o.example.database.DatabaseService - Player name 'sdasd' inserted into PlayerNames table
+09:23:05.629 [main] INFO  org.example.game.GamePlay - User sdasd selected READ MAP FROM FILE
+09:23:06.490 [main] INFO  org.example.game.GamePlay - User sdasd selected GAME in sub menu
+09:23:06.493 [main] INFO  org.example.game.GamePlay - Game initialized for user sdasd
+09:23:06.496 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sdasd
+09:23:09.370 [main] INFO  org.example.game.GamePlay - User sdasd moved hero
+09:23:13.639 [main] INFO  org.example.game.GamePlay - User sdasd changed direction to WEST
+09:23:14.280 [main] INFO  org.example.game.GamePlay - User sdasd moved hero
+09:24:57.040 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 15660 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:24:57.043 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:24:57.594 [main] INFO  org.example.Main - Started Main in 0.845 seconds (process running for 1.414)
+09:24:57.597 [main] INFO  org.example.Main - Application started
+09:24:57.771 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:24:57.777 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:24:57.777 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:24:57.778 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:25:01.082 [main] INFO  o.example.database.DatabaseService - Player name 'dsadsa' inserted into PlayerNames table
+09:25:02.190 [main] INFO  org.example.game.GamePlay - User dsadsa selected READ MAP FROM FILE
+09:25:04.429 [main] INFO  org.example.game.GamePlay - User dsadsa selected GAME in sub menu
+09:25:04.432 [main] INFO  org.example.game.GamePlay - Game initialized for user dsadsa
+09:25:04.432 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsadsa
+09:25:06.310 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:25:08.239 [main] INFO  org.example.game.GamePlay - User dsadsa changed direction to WEST
+09:25:09.260 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:25:16.770 [main] INFO  org.example.game.GamePlay - User dsadsa changed direction to EAST
+09:25:17.450 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:25:18.200 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:25:19.520 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:27:46.402 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 19960 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:27:46.406 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:27:46.907 [main] INFO  org.example.Main - Started Main in 0.819 seconds (process running for 1.404)
+09:27:46.909 [main] INFO  org.example.Main - Application started
+09:27:47.081 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:27:47.087 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:27:47.088 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:27:47.089 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:27:48.410 [main] INFO  o.example.database.DatabaseService - Player name 'dsadsa' inserted into PlayerNames table
+09:27:49.629 [main] INFO  org.example.game.GamePlay - User dsadsa selected READ MAP FROM FILE
+09:27:52.210 [main] INFO  org.example.game.GamePlay - User dsadsa selected GAME in sub menu
+09:27:52.213 [main] INFO  org.example.game.GamePlay - Game initialized for user dsadsa
+09:27:52.213 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsadsa
+09:27:57.190 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:27:58.980 [main] INFO  org.example.game.GamePlay - User dsadsa changed direction to WEST
+09:27:59.790 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:28:05.620 [main] INFO  org.example.game.GamePlay - User dsadsa changed direction to EAST
+09:28:07.230 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:29:33.477 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 12472 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:29:33.481 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:29:34.029 [main] INFO  org.example.Main - Started Main in 0.839 seconds (process running for 1.416)
+09:29:34.031 [main] INFO  org.example.Main - Application started
+09:29:34.182 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:29:34.187 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:29:34.188 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:29:34.189 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:29:36.640 [main] INFO  o.example.database.DatabaseService - Player name 'dsads' inserted into PlayerNames table
+09:29:39.320 [main] INFO  org.example.game.GamePlay - User dsads selected READ MAP FROM FILE
+09:29:42.459 [main] INFO  org.example.game.GamePlay - User dsads selected GAME in sub menu
+09:29:42.462 [main] INFO  org.example.game.GamePlay - Game initialized for user dsads
+09:29:42.463 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsads
+09:29:43.600 [main] INFO  org.example.game.GamePlay - User dsads moved hero
+09:29:47.490 [main] INFO  org.example.game.GamePlay - User dsads changed direction to WEST
+09:29:48.630 [main] INFO  org.example.game.GamePlay - User dsads moved hero
+09:30:20.740 [main] INFO  org.example.game.GamePlay - User dsads changed direction to EAST
+09:30:21.149 [main] INFO  org.example.game.GamePlay - User dsads moved hero
+09:30:21.971 [main] INFO  org.example.game.GamePlay - User dsads moved hero
+09:31:13.445 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 17152 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:31:13.448 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:31:13.967 [main] INFO  org.example.Main - Started Main in 0.8 seconds (process running for 1.351)
+09:31:13.970 [main] INFO  org.example.Main - Application started
+09:31:14.118 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:31:14.123 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:31:14.124 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:31:14.125 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:31:15.431 [main] INFO  o.example.database.DatabaseService - Player name 'sdadsad' inserted into PlayerNames table
+09:31:16.390 [main] INFO  org.example.game.GamePlay - User sdadsad selected READ MAP FROM FILE
+09:31:19.160 [main] INFO  org.example.game.GamePlay - User sdadsad selected GAME in sub menu
+09:31:19.162 [main] INFO  org.example.game.GamePlay - Game initialized for user sdadsad
+09:31:19.163 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sdadsad
+09:31:23.320 [main] INFO  org.example.game.GamePlay - User sdadsad changed direction to NORTH
+09:31:24.579 [main] INFO  org.example.game.GamePlay - User sdadsad moved hero
+09:31:26.409 [main] INFO  org.example.game.GamePlay - User sdadsad changed direction to WEST
+09:31:27.310 [main] INFO  org.example.game.GamePlay - User sdadsad moved hero
+09:31:38.800 [main] INFO  org.example.game.GamePlay - User sdadsad changed direction to EAST
+09:31:40.120 [main] INFO  org.example.game.GamePlay - User sdadsad moved hero
+09:31:41.800 [main] INFO  org.example.game.GamePlay - User sdadsad moved hero
+09:33:33.462 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 19036 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:33:33.465 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:33:33.996 [main] INFO  org.example.Main - Started Main in 0.814 seconds (process running for 1.426)
+09:33:33.999 [main] INFO  org.example.Main - Application started
+09:33:34.174 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:33:34.179 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:33:34.179 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:33:34.180 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:33:35.445 [main] INFO  o.example.database.DatabaseService - Player name 'dsad' inserted into PlayerNames table
+09:33:36.530 [main] INFO  org.example.game.GamePlay - User dsad selected READ MAP FROM FILE
+09:33:40.550 [main] INFO  org.example.game.GamePlay - User dsad selected GAME in sub menu
+09:33:40.553 [main] INFO  org.example.game.GamePlay - Game initialized for user dsad
+09:33:40.553 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsad
+09:33:44.560 [main] INFO  org.example.game.GamePlay - User dsad changed direction to NORTH
+09:33:46.189 [main] INFO  org.example.game.GamePlay - User dsad moved hero
+09:33:48.309 [main] INFO  org.example.game.GamePlay - User dsad changed direction to WEST
+09:33:49.350 [main] INFO  org.example.game.GamePlay - User dsad moved hero
+09:33:54.908 [main] INFO  org.example.game.GamePlay - User dsad changed direction to EAST
+09:33:55.920 [main] INFO  org.example.game.GamePlay - User dsad moved hero
+09:33:58.809 [main] INFO  org.example.game.GamePlay - User dsad moved hero
+09:34:01.709 [main] INFO  org.example.game.GamePlay - User dsad moved hero
+09:34:02.380 [main] INFO  org.example.game.GamePlay - User dsad moved hero
+09:34:02.870 [main] INFO  org.example.game.GamePlay - User dsad moved hero
+09:34:03.599 [main] INFO  org.example.game.GamePlay - User dsad moved hero
+09:34:04.529 [main] INFO  org.example.game.GamePlay - User dsad moved hero
+09:34:53.303 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 15108 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:34:53.307 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:34:53.812 [main] INFO  org.example.Main - Started Main in 0.784 seconds (process running for 1.325)
+09:34:53.815 [main] INFO  org.example.Main - Application started
+09:34:53.959 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:34:53.964 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:34:53.965 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:34:53.966 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:34:56.410 [main] INFO  o.example.database.DatabaseService - Player name 'dsasd' inserted into PlayerNames table
+09:34:57.310 [main] INFO  org.example.game.GamePlay - User dsasd selected READ MAP FROM FILE
+09:34:58.370 [main] INFO  org.example.game.GamePlay - User dsasd selected GAME in sub menu
+09:34:58.373 [main] INFO  org.example.game.GamePlay - Game initialized for user dsasd
+09:34:58.373 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsasd
+09:35:01.798 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:35:03.580 [main] INFO  org.example.game.GamePlay - User dsasd changed direction to WEST
+09:35:04.309 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:35:06.280 [main] INFO  org.example.game.GamePlay - User dsasd changed direction to EAST
+09:35:06.939 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:35:08.389 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:35:08.880 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:35:09.230 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:35:09.570 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:35:10.000 [main] INFO  org.example.game.GamePlay - User dsasd moved hero
+09:36:31.776 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 5832 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:36:31.779 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:36:32.280 [main] INFO  org.example.Main - Started Main in 0.792 seconds (process running for 1.395)
+09:36:32.283 [main] INFO  org.example.Main - Application started
+09:36:32.425 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:36:32.430 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:36:32.431 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:36:32.431 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:36:34.205 [main] INFO  o.example.database.DatabaseService - Player name 'sdasda' inserted into PlayerNames table
+09:36:35.430 [main] INFO  org.example.game.GamePlay - User sdasda selected READ MAP FROM FILE
+09:36:36.509 [main] INFO  org.example.game.GamePlay - User sdasda selected GAME in sub menu
+09:36:36.511 [main] INFO  org.example.game.GamePlay - Game initialized for user sdasda
+09:36:36.512 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sdasda
+09:36:41.430 [main] INFO  org.example.game.GamePlay - User sdasda moved hero
+09:36:49.649 [main] INFO  org.example.game.GamePlay - User sdasda changed direction to EAST
+09:36:51.432 [main] INFO  org.example.game.GamePlay - User sdasda moved hero
+09:38:46.735 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 10596 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:38:46.738 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:38:47.261 [main] INFO  org.example.Main - Started Main in 0.827 seconds (process running for 1.394)
+09:38:47.264 [main] INFO  org.example.Main - Application started
+09:38:47.430 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:38:47.434 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:38:47.435 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:38:47.436 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:38:49.139 [main] INFO  o.example.database.DatabaseService - Player name 'sadsa' inserted into PlayerNames table
+09:38:50.050 [main] INFO  org.example.game.GamePlay - User sadsa selected READ MAP FROM FILE
+09:38:51.609 [main] INFO  org.example.game.GamePlay - User sadsa selected GAME in sub menu
+09:38:51.612 [main] INFO  org.example.game.GamePlay - Game initialized for user sadsa
+09:38:51.612 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sadsa
+09:38:53.510 [main] INFO  org.example.game.GamePlay - User sadsa moved hero
+09:38:56.149 [main] INFO  org.example.game.GamePlay - User sadsa changed direction to EAST
+09:38:56.940 [main] INFO  org.example.game.GamePlay - User sadsa moved hero
+09:38:58.030 [main] INFO  org.example.game.GamePlay - User sadsa moved hero
+09:38:59.240 [main] INFO  org.example.game.GamePlay - User sadsa moved hero
+09:39:01.088 [main] INFO  org.example.game.GamePlay - User sadsa moved hero
+09:39:04.609 [main] INFO  org.example.game.GamePlay - User sadsa moved hero
+09:41:24.747 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 16120 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:41:24.750 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:41:25.239 [main] INFO  org.example.Main - Started Main in 0.768 seconds (process running for 1.322)
+09:41:25.242 [main] INFO  org.example.Main - Application started
+09:41:25.393 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:41:25.398 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:41:25.398 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:41:25.399 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:41:27.650 [main] INFO  o.example.database.DatabaseService - Player name 'sdas' inserted into PlayerNames table
+09:41:29.490 [main] INFO  org.example.game.GamePlay - User sdas selected READ MAP FROM FILE
+09:41:31.608 [main] INFO  org.example.game.GamePlay - User sdas selected GAME in sub menu
+09:41:31.611 [main] INFO  org.example.game.GamePlay - Game initialized for user sdas
+09:41:31.611 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sdas
+09:41:33.269 [main] INFO  org.example.game.GamePlay - User sdas changed direction to EAST
+09:41:34.509 [main] INFO  org.example.game.GamePlay - User sdas shot an arrow
+09:41:34.510 [main] INFO  org.example.game.GamePlay - Player 'sdas' hit a Wumpus at position - Column: 7, Row: 8
+09:41:36.469 [main] INFO  org.example.game.GamePlay - User sdas moved hero
+09:41:38.430 [main] INFO  org.example.game.GamePlay - User sdas moved hero
+09:41:40.710 [main] INFO  org.example.game.GamePlay - User sdas moved hero
+09:41:41.180 [main] INFO  org.example.game.GamePlay - User sdas moved hero
+09:41:41.671 [main] INFO  org.example.game.GamePlay - User sdas moved hero
+09:41:42.189 [main] INFO  org.example.game.GamePlay - User sdas moved hero
+09:42:24.099 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 8296 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:42:24.103 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:42:24.675 [main] INFO  org.example.Main - Started Main in 0.861 seconds (process running for 1.475)
+09:42:24.678 [main] INFO  org.example.Main - Application started
+09:42:24.852 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:42:24.857 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:42:24.857 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:42:24.858 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:42:25.795 [main] INFO  o.example.database.DatabaseService - Player name 'sddasdsa' inserted into PlayerNames table
+09:42:26.679 [main] INFO  org.example.game.GamePlay - User sddasdsa selected READ MAP FROM FILE
+09:42:27.748 [main] INFO  org.example.game.GamePlay - User sddasdsa selected GAME in sub menu
+09:42:27.751 [main] INFO  org.example.game.GamePlay - Game initialized for user sddasdsa
+09:42:27.751 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sddasdsa
+09:42:30.210 [main] INFO  org.example.game.GamePlay - User sddasdsa changed direction to EAST
+09:42:30.878 [main] INFO  org.example.game.GamePlay - User sddasdsa shot an arrow
+09:42:30.879 [main] INFO  org.example.game.GamePlay - Player 'sddasdsa' hit a Wumpus at position - Column: 7, Row: 8
+09:42:32.139 [main] INFO  org.example.game.GamePlay - User sddasdsa moved hero
+09:42:32.839 [main] INFO  org.example.game.GamePlay - User sddasdsa moved hero
+09:42:33.689 [main] INFO  org.example.game.GamePlay - User sddasdsa moved hero
+09:42:34.360 [main] INFO  org.example.game.GamePlay - User sddasdsa moved hero
+09:42:34.890 [main] INFO  org.example.game.GamePlay - User sddasdsa moved hero
+09:42:35.389 [main] INFO  org.example.game.GamePlay - User sddasdsa moved hero
+09:42:38.540 [main] INFO  org.example.game.GamePlay - User sddasdsa changed direction to WEST
+09:42:39.439 [main] INFO  org.example.game.GamePlay - User sddasdsa moved hero
+09:42:40.580 [main] INFO  org.example.game.GamePlay - User sddasdsa moved hero
+09:43:27.408 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 17492 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:43:27.412 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:43:27.938 [main] INFO  org.example.Main - Started Main in 0.819 seconds (process running for 1.415)
+09:43:27.941 [main] INFO  org.example.Main - Application started
+09:43:28.101 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:43:28.107 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:43:28.107 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:43:28.108 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:43:29.470 [main] INFO  o.example.database.DatabaseService - Player name 'sdasdads' inserted into PlayerNames table
+09:43:30.620 [main] INFO  org.example.game.GamePlay - User sdasdads selected READ MAP FROM FILE
+09:43:31.799 [main] INFO  org.example.game.GamePlay - User sdasdads selected GAME in sub menu
+09:43:31.804 [main] INFO  org.example.game.GamePlay - Game initialized for user sdasdads
+09:43:31.804 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sdasdads
+09:43:33.959 [main] INFO  org.example.game.GamePlay - User sdasdads changed direction to EAST
+09:43:35.519 [main] INFO  org.example.game.GamePlay - User sdasdads shot an arrow
+09:43:35.520 [main] INFO  org.example.game.GamePlay - Player 'sdasdads' hit a Wumpus at position - Column: 7, Row: 8
+09:43:37.759 [main] INFO  org.example.game.GamePlay - User sdasdads moved hero
+09:43:38.830 [main] INFO  org.example.game.GamePlay - User sdasdads moved hero
+09:43:39.480 [main] INFO  org.example.game.GamePlay - User sdasdads moved hero
+09:43:39.980 [main] INFO  org.example.game.GamePlay - User sdasdads moved hero
+09:43:40.820 [main] INFO  org.example.game.GamePlay - User sdasdads moved hero
+09:43:41.430 [main] INFO  org.example.game.GamePlay - User sdasdads moved hero
+09:44:10.037 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 8640 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:44:10.041 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:44:10.545 [main] INFO  org.example.Main - Started Main in 0.807 seconds (process running for 1.389)
+09:44:10.547 [main] INFO  org.example.Main - Application started
+09:44:10.697 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:44:10.702 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:44:10.702 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:44:10.703 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:44:12.200 [main] INFO  o.example.database.DatabaseService - Player name 'dsadsa' inserted into PlayerNames table
+09:44:13.170 [main] INFO  org.example.game.GamePlay - User dsadsa selected READ MAP FROM FILE
+09:44:14.290 [main] INFO  org.example.game.GamePlay - User dsadsa selected GAME in sub menu
+09:44:14.293 [main] INFO  org.example.game.GamePlay - Game initialized for user dsadsa
+09:44:14.293 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsadsa
+09:44:20.639 [main] INFO  org.example.game.GamePlay - User dsadsa changed direction to EAST
+09:44:21.739 [main] INFO  org.example.game.GamePlay - User dsadsa shot an arrow
+09:44:21.740 [main] INFO  org.example.game.GamePlay - Player 'dsadsa' hit a Wumpus at position - Column: 7, Row: 8
+09:44:22.920 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:44:23.709 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:44:24.439 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:44:25.609 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:44:27.409 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:44:29.299 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:44:33.789 [main] INFO  org.example.game.GamePlay - User dsadsa changed direction to WEST
+09:44:35.058 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:44:36.449 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:44:37.021 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:44:38.580 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:44:39.479 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:44:40.450 [main] INFO  org.example.game.GamePlay - User dsadsa moved hero
+09:44:59.551 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 10980 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:44:59.554 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:45:00.098 [main] INFO  org.example.Main - Started Main in 0.83 seconds (process running for 1.393)
+09:45:00.101 [main] INFO  org.example.Main - Application started
+09:45:00.258 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:45:00.263 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:45:00.264 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:45:00.264 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:45:02.804 [main] INFO  o.example.database.DatabaseService - Player name 'sasdds' inserted into PlayerNames table
+09:46:25.609 [main] INFO  org.example.game.GamePlay - User sasdds selected READ MAP FROM FILE
+09:46:28.371 [main] INFO  org.example.game.GamePlay - User sasdds selected GAME in sub menu
+09:46:28.373 [main] INFO  org.example.game.GamePlay - Game initialized for user sasdds
+09:46:28.374 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sasdds
+09:46:31.969 [main] INFO  org.example.game.GamePlay - User sasdds shot an arrow
+09:46:31.970 [main] INFO  org.example.game.GamePlay - Player 'sasdds' hit a Wumpus at position - Column: 3, Row: 4
+09:46:34.799 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:46:35.659 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:46:36.750 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:46:39.570 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:46:49.920 [main] INFO  org.example.game.GamePlay - User sasdds changed direction to SOUTH
+09:46:50.481 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:46:50.979 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:46:51.409 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:46:52.070 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:46:54.110 [main] INFO  org.example.game.GamePlay - User sasdds changed direction to EAST
+09:46:54.789 [main] INFO  org.example.game.GamePlay - User sasdds shot an arrow
+09:46:54.790 [main] INFO  org.example.game.GamePlay - Player 'sasdds' hit a Wumpus at position - Column: 7, Row: 8
+09:46:55.819 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:46:56.469 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:46:57.559 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:46:58.449 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:46:59.059 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:46:59.871 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:47:01.219 [main] INFO  org.example.game.GamePlay - User sasdds picked up gold
+09:47:01.219 [main] INFO  org.example.game.GamePlay - Player 'sasdds' picked up the gold at position - Column: 9, Row: 8
+09:47:03.119 [main] INFO  org.example.game.GamePlay - User sasdds changed direction to WEST
+09:47:03.989 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:47:04.589 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:47:05.171 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:47:05.699 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:47:06.390 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:47:07.171 [main] INFO  org.example.game.GamePlay - User sasdds moved hero
+09:47:07.171 [main] INFO  org.example.game.GamePlay - Player 'sasdds' has won the game in 19 steps
+09:47:07.175 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:47:07.175 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:47:07.175 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:47:07.176 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:47:07.207 [main] INFO  o.example.database.DatabaseService - New leaderboard entry created for player 'sasdds': steps count is 19, wins: 1
+09:47:07.210 [main] INFO  o.example.database.DatabaseService - No update required for player 'sasdds' on leaderboard: existing steps count is lower
+09:47:07.211 [main] INFO  org.example.game.GamePlay - User sasdds won the game
+09:49:17.703 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 10984 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:49:17.706 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:49:18.208 [main] INFO  org.example.Main - Started Main in 0.78 seconds (process running for 1.338)
+09:49:18.211 [main] INFO  org.example.Main - Application started
+09:49:18.360 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:49:18.365 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:49:18.365 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:49:18.366 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:49:21.719 [main] INFO  o.example.database.DatabaseService - Player name 'DSADS' inserted into PlayerNames table
+09:49:22.730 [main] INFO  org.example.game.GamePlay - User DSADS selected READ MAP FROM FILE
+09:49:24.419 [main] INFO  org.example.game.GamePlay - User DSADS selected GAME in sub menu
+09:49:24.422 [main] INFO  org.example.game.GamePlay - Game initialized for user DSADS
+09:49:24.422 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: DSADS
+09:49:30.179 [main] INFO  org.example.game.GamePlay - User DSADS moved hero
+09:49:31.889 [main] INFO  org.example.game.GamePlay - User DSADS changed direction to WEST
+09:49:33.489 [main] INFO  org.example.game.GamePlay - User DSADS moved hero
+09:49:35.390 [main] INFO  org.example.game.GamePlay - User DSADS changed direction to EAST
+09:49:36.170 [main] INFO  org.example.game.GamePlay - User DSADS moved hero
+09:52:19.888 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 11108 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:52:19.892 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:52:20.434 [main] INFO  org.example.Main - Started Main in 0.843 seconds (process running for 1.441)
+09:52:20.436 [main] INFO  org.example.Main - Application started
+09:52:20.588 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:52:20.593 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:52:20.594 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:52:20.594 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:52:22.430 [main] INFO  o.example.database.DatabaseService - Player name 'SSADFAS' inserted into PlayerNames table
+09:52:23.349 [main] INFO  org.example.game.GamePlay - User SSADFAS selected READ MAP FROM FILE
+09:52:25.970 [main] WARN  org.example.game.GamePlay - User SSADFAS made an invalid choice in sub menu: 5
+09:52:30.008 [main] INFO  org.example.game.GamePlay - User SSADFAS selected READ MAP FROM FILE
+09:52:31.079 [main] INFO  org.example.game.GamePlay - User SSADFAS selected GAME in sub menu
+09:52:31.082 [main] INFO  org.example.game.GamePlay - Game initialized for user SSADFAS
+09:52:31.082 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: SSADFAS
+09:52:32.330 [main] INFO  org.example.game.GamePlay - User SSADFAS moved hero
+09:52:36.238 [main] INFO  org.example.game.GamePlay - User SSADFAS changed direction to WEST
+09:52:38.310 [main] INFO  org.example.game.GamePlay - User SSADFAS moved hero
+09:52:44.939 [main] INFO  org.example.game.GamePlay - User SSADFAS changed direction to EAST
+09:52:45.879 [main] INFO  org.example.game.GamePlay - User SSADFAS moved hero
+09:52:46.739 [main] INFO  org.example.game.GamePlay - User SSADFAS moved hero
+09:57:11.104 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 1812 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:57:11.107 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:57:11.597 [main] INFO  org.example.Main - Started Main in 0.768 seconds (process running for 1.312)
+09:57:11.600 [main] INFO  org.example.Main - Application started
+09:57:11.748 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:57:11.753 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:57:11.754 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:57:11.754 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:57:14.781 [main] INFO  o.example.database.DatabaseService - Player name 'asddas' inserted into PlayerNames table
+09:57:20.950 [main] INFO  org.example.game.GamePlay - User asddas selected READ MAP FROM FILE
+09:57:22.519 [main] INFO  org.example.game.GamePlay - User asddas selected GAME in sub menu
+09:57:22.522 [main] INFO  org.example.game.GamePlay - Game initialized for user asddas
+09:57:22.522 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: asddas
+09:57:25.390 [main] INFO  org.example.game.GamePlay - User asddas moved hero
+09:57:27.059 [main] INFO  org.example.game.GamePlay - User asddas changed direction to WEST
+09:57:31.519 [main] INFO  org.example.game.GamePlay - User asddas moved hero
+09:57:35.729 [main] INFO  org.example.game.GamePlay - User asddas changed direction to EAST
+09:57:37.230 [main] INFO  org.example.game.GamePlay - User asddas moved hero
+09:57:38.479 [main] INFO  org.example.game.GamePlay - User asddas moved hero
+09:57:39.619 [main] INFO  org.example.game.GamePlay - User asddas moved hero
+09:58:25.711 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 10592 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+09:58:25.714 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+09:58:26.265 [main] INFO  org.example.Main - Started Main in 0.854 seconds (process running for 1.413)
+09:58:26.269 [main] INFO  org.example.Main - Application started
+09:58:26.437 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+09:58:26.442 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+09:58:26.443 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+09:58:26.443 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+09:58:27.599 [main] INFO  o.example.database.DatabaseService - Player name 'sdasdd' inserted into PlayerNames table
+09:58:28.320 [main] INFO  org.example.game.GamePlay - User sdasdd selected READ MAP FROM FILE
+09:58:29.339 [main] INFO  org.example.game.GamePlay - User sdasdd selected GAME in sub menu
+09:58:29.342 [main] INFO  org.example.game.GamePlay - Game initialized for user sdasdd
+09:58:29.342 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sdasdd
+09:58:32.329 [main] INFO  org.example.game.GamePlay - User sdasdd moved hero
+09:58:34.190 [main] INFO  org.example.game.GamePlay - User sdasdd changed direction to WEST
+09:58:35.419 [main] INFO  org.example.game.GamePlay - User sdasdd moved hero
+09:58:40.059 [main] INFO  org.example.game.GamePlay - User sdasdd changed direction to EAST
+09:58:41.220 [main] INFO  org.example.game.GamePlay - User sdasdd moved hero
+09:58:42.459 [main] INFO  org.example.game.GamePlay - User sdasdd moved hero
+09:58:42.949 [main] INFO  org.example.game.GamePlay - User sdasdd moved hero
+10:00:02.290 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 8652 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:00:02.293 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:00:02.796 [main] INFO  org.example.Main - Started Main in 0.781 seconds (process running for 1.34)
+10:00:02.799 [main] INFO  org.example.Main - Application started
+10:00:02.954 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:00:02.959 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:00:02.959 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:00:02.960 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:00:12.439 [main] INFO  o.example.database.DatabaseService - Player name 'sdsadsa' inserted into PlayerNames table
+10:00:15.638 [main] INFO  org.example.game.GamePlay - User sdsadsa selected READ MAP FROM FILE
+10:00:16.379 [main] INFO  org.example.game.GamePlay - User sdsadsa selected GAME in sub menu
+10:00:16.383 [main] INFO  org.example.game.GamePlay - Game initialized for user sdsadsa
+10:00:16.383 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sdsadsa
+10:00:19.740 [main] INFO  org.example.game.GamePlay - User sdsadsa moved hero
+10:00:21.280 [main] INFO  org.example.game.GamePlay - User sdsadsa changed direction to WEST
+10:00:22.649 [main] INFO  org.example.game.GamePlay - User sdsadsa moved hero
+10:00:24.278 [main] INFO  org.example.game.GamePlay - User sdsadsa changed direction to EAST
+10:00:25.279 [main] INFO  org.example.game.GamePlay - User sdsadsa moved hero
+10:03:26.151 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 6376 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:03:26.154 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:03:26.652 [main] INFO  org.example.Main - Started Main in 0.776 seconds (process running for 1.329)
+10:03:26.655 [main] INFO  org.example.Main - Application started
+10:03:26.821 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:03:26.827 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:03:26.827 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:03:26.828 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:03:29.614 [main] INFO  o.example.database.DatabaseService - Player name 'asdsada' inserted into PlayerNames table
+10:03:30.639 [main] INFO  org.example.game.GamePlay - User asdsada selected READ MAP FROM FILE
+10:03:31.779 [main] INFO  org.example.game.GamePlay - User asdsada selected GAME in sub menu
+10:03:31.783 [main] INFO  org.example.game.GamePlay - Game initialized for user asdsada
+10:03:31.783 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: asdsada
+10:03:35.589 [main] INFO  org.example.game.GamePlay - User asdsada moved hero
+10:03:37.448 [main] INFO  org.example.game.GamePlay - User asdsada changed direction to WEST
+10:03:38.979 [main] INFO  org.example.game.GamePlay - User asdsada moved hero
+10:03:40.629 [main] INFO  org.example.game.GamePlay - User asdsada changed direction to EAST
+10:03:41.299 [main] INFO  org.example.game.GamePlay - User asdsada moved hero
+10:03:42.669 [main] INFO  org.example.game.GamePlay - User asdsada moved hero
+10:05:38.012 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 18396 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:05:38.016 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:05:38.568 [main] INFO  org.example.Main - Started Main in 0.848 seconds (process running for 1.428)
+10:05:38.570 [main] INFO  org.example.Main - Application started
+10:05:38.716 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:05:38.721 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:05:38.721 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:05:38.722 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:05:40.526 [main] INFO  o.example.database.DatabaseService - Player name 'asda' inserted into PlayerNames table
+10:05:41.410 [main] INFO  org.example.game.GamePlay - User asda selected READ MAP FROM FILE
+10:05:42.329 [main] INFO  org.example.game.GamePlay - User asda selected GAME in sub menu
+10:05:42.333 [main] INFO  org.example.game.GamePlay - Game initialized for user asda
+10:05:42.333 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: asda
+10:05:45.249 [main] INFO  org.example.game.GamePlay - User asda moved hero
+10:05:49.479 [main] INFO  org.example.game.GamePlay - User asda changed direction to WEST
+10:05:50.969 [main] INFO  org.example.game.GamePlay - User asda moved hero
+10:05:53.438 [main] INFO  org.example.game.GamePlay - User asda changed direction to EAST
+10:05:54.470 [main] INFO  org.example.game.GamePlay - User asda moved hero
+10:05:55.839 [main] INFO  org.example.game.GamePlay - User asda moved hero
+10:13:20.749 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 11308 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:13:20.752 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:13:21.254 [main] INFO  org.example.Main - Started Main in 0.78 seconds (process running for 1.458)
+10:13:21.257 [main] INFO  org.example.Main - Application started
+10:13:21.443 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:13:21.449 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:13:21.449 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:13:21.450 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:13:23.099 [main] INFO  o.example.database.DatabaseService - Player name 'sadsa' inserted into PlayerNames table
+10:13:24.109 [main] INFO  org.example.game.GamePlay - User sadsa selected READ MAP FROM FILE
+10:13:25.500 [main] INFO  org.example.game.GamePlay - User sadsa selected GAME in sub menu
+10:13:25.503 [main] INFO  org.example.game.GamePlay - Game initialized for user sadsa
+10:13:25.503 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sadsa
+10:13:30.548 [main] INFO  org.example.game.GamePlay - User sadsa moved hero
+10:13:32.338 [main] INFO  org.example.game.GamePlay - User sadsa changed direction to WEST
+10:13:34.429 [main] INFO  org.example.game.GamePlay - User sadsa moved hero
+10:13:43.798 [main] INFO  org.example.game.GamePlay - User sadsa changed direction to EAST
+10:13:44.750 [main] INFO  org.example.game.GamePlay - User sadsa moved hero
+10:13:45.839 [main] INFO  org.example.game.GamePlay - User sadsa moved hero
+10:22:42.411 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 18880 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:22:42.414 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:22:42.921 [main] INFO  org.example.Main - Started Main in 0.786 seconds (process running for 1.341)
+10:22:42.924 [main] INFO  org.example.Main - Application started
+10:22:43.071 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:22:43.077 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:22:43.077 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:22:43.078 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:22:45.286 [main] INFO  o.example.database.DatabaseService - Player name 'dsadas' inserted into PlayerNames table
+10:22:47.789 [main] INFO  org.example.game.GamePlay - User dsadas selected READ MAP FROM FILE
+10:22:49.360 [main] INFO  org.example.game.GamePlay - User dsadas selected GAME in sub menu
+10:22:49.363 [main] INFO  org.example.game.GamePlay - Game initialized for user dsadas
+10:22:49.363 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsadas
+10:22:51.329 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+10:22:53.369 [main] INFO  org.example.game.GamePlay - User dsadas changed direction to WEST
+10:22:56.789 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+10:23:00.869 [main] INFO  org.example.game.GamePlay - User dsadas changed direction to EAST
+10:23:03.149 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+10:23:04.059 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+10:23:05.189 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+10:24:59.782 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 11504 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:24:59.785 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:25:00.316 [main] INFO  org.example.Main - Started Main in 0.837 seconds (process running for 1.445)
+10:25:00.319 [main] INFO  org.example.Main - Application started
+10:25:00.468 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:25:00.473 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:25:00.473 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:25:00.474 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:25:03.375 [main] INFO  o.example.database.DatabaseService - Player name 'sdasdasd' inserted into PlayerNames table
+10:25:04.120 [main] INFO  org.example.game.GamePlay - User sdasdasd selected READ MAP FROM FILE
+10:25:05.219 [main] INFO  org.example.game.GamePlay - User sdasdasd selected GAME in sub menu
+10:25:05.222 [main] INFO  org.example.game.GamePlay - Game initialized for user sdasdasd
+10:25:05.222 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: sdasdasd
+10:25:06.659 [main] INFO  org.example.game.GamePlay - User sdasdasd moved hero
+10:25:08.509 [main] INFO  org.example.game.GamePlay - User sdasdasd changed direction to WEST
+10:25:09.909 [main] INFO  org.example.game.GamePlay - User sdasdasd moved hero
+10:25:13.719 [main] INFO  org.example.game.GamePlay - User sdasdasd changed direction to EAST
+10:25:15.459 [main] INFO  org.example.game.GamePlay - User sdasdasd moved hero
+10:25:16.429 [main] INFO  org.example.game.GamePlay - User sdasdasd moved hero
+10:25:17.219 [main] INFO  org.example.game.GamePlay - User sdasdasd moved hero
+10:27:00.727 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 18396 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:27:00.731 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:27:01.240 [main] INFO  org.example.Main - Started Main in 0.804 seconds (process running for 1.396)
+10:27:01.244 [main] INFO  org.example.Main - Application started
+10:27:01.422 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:27:01.428 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:27:01.429 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:27:01.429 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:27:02.839 [main] INFO  o.example.database.DatabaseService - Player name 'dasdasd' inserted into PlayerNames table
+10:27:03.529 [main] INFO  org.example.game.GamePlay - User dasdasd selected READ MAP FROM FILE
+10:27:04.538 [main] INFO  org.example.game.GamePlay - User dasdasd selected GAME in sub menu
+10:27:04.540 [main] INFO  org.example.game.GamePlay - Game initialized for user dasdasd
+10:27:04.541 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dasdasd
+10:27:06.389 [main] INFO  org.example.game.GamePlay - User dasdasd moved hero
+10:27:08.069 [main] INFO  org.example.game.GamePlay - User dasdasd changed direction to WEST
+10:27:09.329 [main] INFO  org.example.game.GamePlay - User dasdasd moved hero
+10:27:12.029 [main] INFO  org.example.game.GamePlay - User dasdasd changed direction to EAST
+10:27:13.009 [main] INFO  org.example.game.GamePlay - User dasdasd moved hero
+10:27:13.879 [main] INFO  org.example.game.GamePlay - User dasdasd moved hero
+10:27:41.979 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 15184 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:27:41.983 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:27:42.539 [main] INFO  org.example.Main - Started Main in 0.887 seconds (process running for 1.44)
+10:27:42.542 [main] INFO  org.example.Main - Application started
+10:27:42.698 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:27:42.703 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:27:42.703 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:27:42.704 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:27:44.180 [main] INFO  o.example.database.DatabaseService - Player name 'dsadasdas' inserted into PlayerNames table
+10:27:45.079 [main] INFO  org.example.game.GamePlay - User dsadasdas selected READ MAP FROM FILE
+10:27:47.609 [main] INFO  org.example.game.GamePlay - User dsadasdas selected GAME in sub menu
+10:27:47.611 [main] INFO  org.example.game.GamePlay - Game initialized for user dsadasdas
+10:27:47.612 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsadasdas
+10:27:48.499 [main] INFO  org.example.game.GamePlay - User dsadasdas moved hero
+10:27:49.959 [main] INFO  org.example.game.GamePlay - User dsadasdas changed direction to WEST
+10:27:50.639 [main] INFO  org.example.game.GamePlay - User dsadasdas moved hero
+10:27:52.358 [main] INFO  org.example.game.GamePlay - User dsadasdas changed direction to EAST
+10:27:53.378 [main] INFO  org.example.game.GamePlay - User dsadasdas moved hero
+10:27:54.329 [main] INFO  org.example.game.GamePlay - User dsadasdas moved hero
+10:30:18.661 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 8608 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:30:18.664 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:30:19.164 [main] INFO  org.example.Main - Started Main in 0.808 seconds (process running for 1.372)
+10:30:19.167 [main] INFO  org.example.Main - Application started
+10:30:19.324 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:30:19.330 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:30:19.330 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:30:19.331 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:30:21.114 [main] INFO  o.example.database.DatabaseService - Player name 'dsadas' inserted into PlayerNames table
+10:30:21.949 [main] INFO  org.example.game.GamePlay - User dsadas selected READ MAP FROM FILE
+10:30:22.919 [main] INFO  org.example.game.GamePlay - User dsadas selected GAME in sub menu
+10:30:22.922 [main] INFO  org.example.game.GamePlay - Game initialized for user dsadas
+10:30:22.922 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsadas
+10:30:24.749 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+10:30:26.459 [main] INFO  org.example.game.GamePlay - User dsadas changed direction to WEST
+10:30:27.769 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+10:30:29.669 [main] INFO  org.example.game.GamePlay - User dsadas changed direction to EAST
+10:30:30.749 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+10:30:31.799 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+10:30:32.989 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+10:36:46.475 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 13036 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:36:46.478 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:36:47.033 [main] INFO  org.example.Main - Started Main in 0.852 seconds (process running for 1.501)
+10:36:47.035 [main] INFO  org.example.Main - Application started
+10:36:47.198 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:36:47.203 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:36:47.203 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:36:47.204 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:36:51.399 [main] INFO  o.example.database.DatabaseService - Player name 'mlnojo' inserted into PlayerNames table
+10:36:53.640 [main] INFO  org.example.game.GamePlay - User mlnojo selected READ MAP FROM FILE
+10:36:58.319 [main] WARN  org.example.game.GamePlay - User mlnojo made an invalid choice in sub menu: 5
+10:37:02.889 [main] INFO  org.example.game.GamePlay - User mlnojo selected READ MAP FROM FILE
+10:37:04.749 [main] INFO  org.example.game.GamePlay - User mlnojo selected GAME in sub menu
+10:37:04.751 [main] INFO  org.example.game.GamePlay - Game initialized for user mlnojo
+10:37:04.753 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: mlnojo
+10:37:07.279 [main] INFO  org.example.game.GamePlay - User mlnojo moved hero
+10:37:09.939 [main] INFO  org.example.game.GamePlay - User mlnojo changed direction to WEST
+10:37:11.419 [main] INFO  org.example.game.GamePlay - User mlnojo moved hero
+10:37:20.159 [main] INFO  org.example.game.GamePlay - User mlnojo changed direction to EAST
+10:37:21.589 [main] INFO  org.example.game.GamePlay - User mlnojo moved hero
+10:37:24.349 [main] INFO  org.example.game.GamePlay - User mlnojo moved hero
+10:40:18.618 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 2408 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:40:18.622 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:40:19.126 [main] INFO  org.example.Main - Started Main in 0.8 seconds (process running for 1.398)
+10:40:19.129 [main] INFO  org.example.Main - Application started
+10:40:19.290 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:40:19.295 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:40:19.295 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:40:19.297 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:40:22.390 [main] INFO  o.example.database.DatabaseService - Player name 'dsadas' inserted into PlayerNames table
+10:40:25.799 [main] INFO  org.example.game.GamePlay - User dsadas selected READ MAP FROM FILE
+10:40:26.979 [main] INFO  org.example.game.GamePlay - User dsadas selected GAME in sub menu
+10:40:26.982 [main] INFO  org.example.game.GamePlay - Game initialized for user dsadas
+10:40:26.982 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsadas
+10:40:34.729 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+10:40:36.379 [main] INFO  org.example.game.GamePlay - User dsadas changed direction to WEST
+10:40:37.239 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+10:40:39.399 [main] INFO  org.example.game.GamePlay - User dsadas changed direction to EAST
+10:40:40.109 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+10:40:41.269 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+10:42:31.417 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 13280 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:42:31.421 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:42:31.995 [main] INFO  org.example.Main - Started Main in 0.855 seconds (process running for 1.416)
+10:42:31.998 [main] INFO  org.example.Main - Application started
+10:42:32.168 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:42:32.173 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:42:32.174 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:42:32.174 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:42:34.120 [main] INFO  o.example.database.DatabaseService - Player name 'dasdas' inserted into PlayerNames table
+10:42:35.169 [main] INFO  org.example.game.GamePlay - User dasdas selected READ MAP FROM FILE
+10:42:36.099 [main] INFO  org.example.game.GamePlay - User dasdas selected GAME in sub menu
+10:42:36.102 [main] INFO  org.example.game.GamePlay - Game initialized for user dasdas
+10:42:36.103 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dasdas
+10:42:37.769 [main] INFO  org.example.game.GamePlay - User dasdas moved hero
+10:42:39.209 [main] INFO  org.example.game.GamePlay - User dasdas changed direction to WEST
+10:42:40.099 [main] INFO  org.example.game.GamePlay - User dasdas moved hero
+10:42:41.889 [main] INFO  org.example.game.GamePlay - User dasdas changed direction to EAST
+10:42:42.670 [main] INFO  org.example.game.GamePlay - User dasdas moved hero
+10:42:44.069 [main] INFO  org.example.game.GamePlay - User dasdas moved hero
+10:46:46.458 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 15852 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:46:46.461 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:46:46.972 [main] INFO  org.example.Main - Started Main in 0.818 seconds (process running for 1.438)
+10:46:46.975 [main] INFO  org.example.Main - Application started
+10:46:47.139 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:46:47.145 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:46:47.145 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:46:47.146 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:46:48.650 [main] INFO  o.example.database.DatabaseService - Player name 'dsaasd' inserted into PlayerNames table
+10:46:49.449 [main] INFO  org.example.game.GamePlay - User dsaasd selected READ MAP FROM FILE
+10:46:50.439 [main] INFO  org.example.game.GamePlay - User dsaasd selected GAME in sub menu
+10:46:50.441 [main] INFO  org.example.game.GamePlay - Game initialized for user dsaasd
+10:46:50.442 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsaasd
+10:46:52.030 [main] INFO  org.example.game.GamePlay - User dsaasd moved hero
+10:46:54.829 [main] INFO  org.example.game.GamePlay - User dsaasd changed direction to WEST
+10:46:55.589 [main] INFO  org.example.game.GamePlay - User dsaasd moved hero
+10:47:04.739 [main] INFO  org.example.game.GamePlay - User dsaasd changed direction to EAST
+10:47:05.499 [main] INFO  org.example.game.GamePlay - User dsaasd moved hero
+10:47:06.339 [main] INFO  org.example.game.GamePlay - User dsaasd moved hero
+10:47:07.019 [main] INFO  org.example.game.GamePlay - User dsaasd moved hero
+10:50:07.105 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 10728 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:50:07.108 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:50:07.646 [main] INFO  org.example.Main - Started Main in 0.822 seconds (process running for 1.394)
+10:50:07.648 [main] INFO  org.example.Main - Application started
+10:50:07.807 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:50:07.812 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:50:07.812 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:50:07.813 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:50:12.319 [main] INFO  o.example.database.DatabaseService - Player name 'gsfhafas' inserted into PlayerNames table
+10:50:13.471 [main] INFO  org.example.game.GamePlay - User gsfhafas selected READ MAP FROM FILE
+10:50:14.480 [main] INFO  org.example.game.GamePlay - User gsfhafas selected GAME in sub menu
+10:50:14.482 [main] INFO  org.example.game.GamePlay - Game initialized for user gsfhafas
+10:50:14.482 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: gsfhafas
+10:50:16.790 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:50:23.039 [main] INFO  org.example.game.GamePlay - User gsfhafas changed direction to WEST
+10:50:24.379 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:50:27.230 [main] INFO  org.example.game.GamePlay - User gsfhafas changed direction to EAST
+10:50:28.270 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:50:29.370 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:50:31.679 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:50:32.699 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:50:33.869 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:50:36.849 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:50:37.729 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:50:39.029 [main] INFO  org.example.game.GamePlay - User gsfhafas changed direction to SOUTH
+10:50:39.779 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:50:42.369 [main] INFO  org.example.game.GamePlay - User gsfhafas picked up gold
+10:50:42.369 [main] INFO  org.example.game.GamePlay - Player 'gsfhafas' picked up the gold at position - Column: 9, Row: 8
+10:50:51.290 [main] INFO  org.example.game.GamePlay - User gsfhafas changed direction to SOUTH
+10:50:51.839 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:50:54.888 [main] INFO  org.example.game.GamePlay - User gsfhafas changed direction to WEST
+10:50:55.509 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:50:56.039 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:50:56.521 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:50:58.289 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:50:59.279 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:51:02.839 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:51:03.529 [main] INFO  org.example.game.GamePlay - User gsfhafas changed direction to NORTH
+10:51:04.449 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:51:04.449 [main] INFO  org.example.game.GamePlay - Player 'gsfhafas' has won the game in 17 steps
+10:51:04.452 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:51:04.453 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:51:04.453 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:51:04.454 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:51:04.486 [main] INFO  o.example.database.DatabaseService - New leaderboard entry created for player 'gsfhafas': steps count is 17, wins: 1
+10:51:04.490 [main] INFO  o.example.database.DatabaseService - No update required for player 'gsfhafas' on leaderboard: existing steps count is lower
+10:51:04.491 [main] INFO  org.example.game.GamePlay - User gsfhafas won the game
+10:51:37.149 [main] INFO  org.example.game.GamePlay - User gsfhafas selected READ MAP FROM FILE
+10:51:39.469 [main] INFO  org.example.game.GamePlay - User gsfhafas selected GAME in sub menu
+10:51:39.470 [main] INFO  org.example.game.GamePlay - Game initialized for user gsfhafas
+10:51:39.470 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: gsfhafas
+10:51:50.759 [main] INFO  org.example.game.GamePlay - User gsfhafas changed direction to EAST
+10:51:53.029 [main] INFO  org.example.game.GamePlay - User gsfhafas shot an arrow
+10:51:53.030 [main] INFO  org.example.game.GamePlay - Player 'gsfhafas' hit a Wumpus at position - Column: 7, Row: 8
+10:51:57.239 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:51:58.809 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:51:59.599 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:52:00.329 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:52:00.979 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:52:01.830 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:52:06.649 [main] INFO  org.example.game.GamePlay - User gsfhafas picked up gold
+10:52:06.649 [main] INFO  org.example.game.GamePlay - Player 'gsfhafas' picked up the gold at position - Column: 9, Row: 8
+10:52:12.189 [main] INFO  org.example.game.GamePlay - User gsfhafas changed direction to WEST
+10:52:14.889 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:52:15.949 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:52:16.760 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:52:17.760 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:52:18.549 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:52:19.349 [main] INFO  org.example.game.GamePlay - User gsfhafas moved hero
+10:52:19.349 [main] INFO  org.example.game.GamePlay - Player 'gsfhafas' has won the game in 11 steps
+10:52:19.352 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:52:19.352 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:52:19.352 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:52:19.354 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:52:19.363 [main] INFO  o.example.database.DatabaseService - Leaderboard updated for player 'gsfhafas': new steps count is 11
+10:52:19.365 [main] INFO  o.example.database.DatabaseService - Incremented win count for player 'gsfhafas'
+10:52:19.369 [main] INFO  o.example.database.DatabaseService - No update required for player 'gsfhafas' on leaderboard: existing steps count is lower
+10:52:19.369 [main] INFO  org.example.game.GamePlay - User gsfhafas won the game
+10:53:33.992 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 18520 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:53:33.995 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:53:34.498 [main] INFO  org.example.Main - Started Main in 0.782 seconds (process running for 1.343)
+10:53:34.502 [main] INFO  org.example.Main - Application started
+10:53:34.665 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:53:34.671 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:53:34.671 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:53:34.671 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:53:38.205 [main] INFO  o.example.database.DatabaseService - Player name 'fasdfasd' inserted into PlayerNames table
+10:53:39.910 [main] INFO  org.example.game.GamePlay - User fasdfasd selected READ MAP FROM FILE
+10:53:41.469 [main] INFO  org.example.game.GamePlay - User fasdfasd selected GAME in sub menu
+10:53:41.472 [main] INFO  org.example.game.GamePlay - Game initialized for user fasdfasd
+10:53:41.472 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: fasdfasd
+10:53:45.278 [main] INFO  org.example.game.GamePlay - User fasdfasd changed direction to EAST
+10:53:46.259 [main] INFO  org.example.game.GamePlay - User fasdfasd moved hero
+10:53:47.519 [main] INFO  org.example.game.GamePlay - User fasdfasd moved hero
+10:53:48.999 [main] INFO  org.example.game.GamePlay - User fasdfasd shot an arrow
+10:53:48.999 [main] INFO  org.example.game.GamePlay - Player 'fasdfasd' hit a Wumpus at position - Column: 7, Row: 8
+10:53:55.139 [main] INFO  org.example.game.GamePlay - User fasdfasd moved hero
+10:53:56.019 [main] INFO  org.example.game.GamePlay - User fasdfasd moved hero
+10:53:57.059 [main] INFO  org.example.game.GamePlay - User fasdfasd moved hero
+10:53:57.670 [main] INFO  org.example.game.GamePlay - User fasdfasd moved hero
+10:53:59.019 [main] INFO  org.example.game.GamePlay - User fasdfasd picked up gold
+10:53:59.019 [main] INFO  org.example.game.GamePlay - Player 'fasdfasd' picked up the gold at position - Column: 9, Row: 8
+10:54:05.559 [main] INFO  org.example.game.GamePlay - User fasdfasd changed direction to EAST
+10:54:07.390 [main] INFO  org.example.game.GamePlay - User fasdfasd changed direction to WEST
+10:54:07.959 [main] INFO  org.example.game.GamePlay - User fasdfasd moved hero
+10:54:09.959 [main] INFO  org.example.game.GamePlay - User fasdfasd dropped gold
+10:54:09.959 [main] INFO  org.example.game.GamePlay - Player 'fasdfasd' dropped the gold at position - Column: 8, Row: 8
+10:54:13.350 [main] INFO  org.example.game.GamePlay - User fasdfasd picked up gold
+10:54:13.350 [main] INFO  org.example.game.GamePlay - Player 'fasdfasd' picked up the gold at position - Column: 8, Row: 8
+10:54:20.599 [main] INFO  org.example.game.GamePlay - User fasdfasd changed direction to EAST
+10:54:21.509 [main] INFO  org.example.game.GamePlay - User fasdfasd moved hero
+10:54:22.349 [main] INFO  org.example.game.GamePlay - User fasdfasd moved hero
+10:54:23.649 [main] INFO  org.example.game.GamePlay - User fasdfasd moved hero
+10:54:24.779 [main] INFO  org.example.game.GamePlay - User fasdfasd moved hero
+10:54:27.129 [main] INFO  org.example.game.GamePlay - User fasdfasd moved hero
+10:58:11.211 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 13220 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+10:58:11.214 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+10:58:11.747 [main] INFO  org.example.Main - Started Main in 0.829 seconds (process running for 1.388)
+10:58:11.750 [main] INFO  org.example.Main - Application started
+10:58:11.904 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:58:11.909 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:58:11.910 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:58:11.911 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:58:14.014 [main] INFO  o.example.database.DatabaseService - Player name 'gasfasd' inserted into PlayerNames table
+10:58:14.830 [main] INFO  org.example.game.GamePlay - User gasfasd selected READ MAP FROM FILE
+10:58:15.919 [main] INFO  org.example.game.GamePlay - User gasfasd selected GAME in sub menu
+10:58:15.921 [main] INFO  org.example.game.GamePlay - Game initialized for user gasfasd
+10:58:15.922 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: gasfasd
+10:58:17.819 [main] INFO  org.example.game.GamePlay - User gasfasd changed direction to EAST
+10:58:18.710 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:58:19.560 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:58:20.099 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:58:21.439 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:58:21.440 [main] INFO  org.example.game.GamePlay - User gasfasd lost the game
+10:58:27.858 [main] INFO  org.example.game.GamePlay - User gasfasd selected READ MAP FROM FILE
+10:58:28.999 [main] INFO  org.example.game.GamePlay - User gasfasd selected GAME in sub menu
+10:58:29.000 [main] INFO  org.example.game.GamePlay - Game initialized for user gasfasd
+10:58:29.000 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: gasfasd
+10:58:32.899 [main] INFO  org.example.game.GamePlay - User gasfasd changed direction to EAST
+10:58:33.189 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:58:34.320 [main] INFO  org.example.game.GamePlay - User gasfasd shot an arrow
+10:58:34.320 [main] INFO  org.example.game.GamePlay - Player 'gasfasd' hit a Wumpus at position - Column: 7, Row: 8
+10:58:39.049 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:58:47.428 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:58:48.209 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:58:48.869 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:58:49.549 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:58:50.520 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:58:54.248 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:58:56.579 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:59:00.469 [main] INFO  org.example.game.GamePlay - User gasfasd picked up gold
+10:59:00.469 [main] INFO  org.example.game.GamePlay - Player 'gasfasd' picked up the gold at position - Column: 9, Row: 8
+10:59:09.229 [main] INFO  org.example.game.GamePlay - User gasfasd changed direction to WEST
+10:59:09.690 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:59:17.958 [main] INFO  org.example.game.GamePlay - User gasfasd dropped gold
+10:59:17.958 [main] INFO  org.example.game.GamePlay - Player 'gasfasd' dropped the gold at position - Column: 8, Row: 8
+10:59:19.789 [main] INFO  org.example.game.GamePlay - User gasfasd picked up gold
+10:59:19.789 [main] INFO  org.example.game.GamePlay - Player 'gasfasd' picked up the gold at position - Column: 8, Row: 8
+10:59:24.949 [main] INFO  org.example.game.GamePlay - User gasfasd changed direction to WEST
+10:59:25.629 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:59:26.169 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:59:26.629 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:59:27.159 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:59:28.170 [main] INFO  org.example.game.GamePlay - User gasfasd moved hero
+10:59:28.170 [main] INFO  org.example.game.GamePlay - Player 'gasfasd' has won the game in 11 steps
+10:59:28.173 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+10:59:28.175 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+10:59:28.175 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+10:59:28.176 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+10:59:28.203 [main] INFO  o.example.database.DatabaseService - New leaderboard entry created for player 'gasfasd': steps count is 11, wins: 1
+10:59:28.207 [main] INFO  o.example.database.DatabaseService - No update required for player 'gasfasd' on leaderboard: existing steps count is lower
+10:59:28.208 [main] INFO  org.example.game.GamePlay - User gasfasd won the game
+11:04:22.332 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 3788 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+11:04:22.335 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+11:04:22.844 [main] INFO  org.example.Main - Started Main in 0.825 seconds (process running for 1.417)
+11:04:22.847 [main] INFO  org.example.Main - Application started
+11:04:23.021 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:04:23.026 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:04:23.026 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:04:23.027 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:04:25.174 [main] INFO  o.example.database.DatabaseService - Player name 'dsada' inserted into PlayerNames table
+11:04:26.369 [main] INFO  org.example.game.GamePlay - User dsada selected READ MAP FROM FILE
+11:04:27.829 [main] INFO  org.example.game.GamePlay - User dsada selected GAME in sub menu
+11:04:27.831 [main] INFO  org.example.game.GamePlay - Game initialized for user dsada
+11:04:27.832 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsada
+11:04:30.669 [main] INFO  org.example.game.GamePlay - User dsada changed direction to EAST
+11:04:32.189 [main] INFO  org.example.game.GamePlay - User dsada changed direction to WEST
+11:04:36.000 [main] INFO  org.example.game.GamePlay - User dsada changed direction to NORTH
+11:04:37.499 [main] INFO  org.example.game.GamePlay - User dsada moved hero
+11:04:47.088 [main] INFO  org.example.game.GamePlay - User dsada changed direction to NORTH
+11:04:48.299 [main] INFO  org.example.game.GamePlay - User dsada shot an arrow
+11:04:48.300 [main] INFO  org.example.game.GamePlay - Player 'dsada' hit a Wumpus at position - Column: 3, Row: 4
+11:04:52.486 [main] INFO  o.example.database.DatabaseService - Game state saved for player 'dsada'. Step count: 6, Wumpus killed: 1, Has gold: false
+11:04:52.486 [main] INFO  org.example.game.GamePlay - Game state saved for user dsada
+11:05:41.819 [main] INFO  org.example.game.GamePlay - User dsada confirmed to exit the game
+11:05:41.819 [main] INFO  org.example.game.GamePlay - User dsada gave up the game
+11:05:44.420 [main] INFO  org.example.game.GamePlay - User dsada selected READ FROM DATABASE
+11:05:44.431 [main] INFO  o.example.database.DatabaseService - Game state loaded successfully for player 'dsada'
+11:05:44.432 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsada
+11:05:44.432 [main] INFO  org.example.game.GamePlay - Continuing game for user: dsada
+11:05:52.648 [main] INFO  org.example.game.GamePlay - User dsada changed hero direction to South
+11:05:53.899 [main] INFO  org.example.game.GamePlay - User dsada moved the hero
+11:05:57.439 [main] INFO  org.example.game.GamePlay - User dsada changed hero direction to North
+11:05:58.991 [main] INFO  org.example.game.GamePlay - User dsada moved the hero
+11:06:03.419 [main] INFO  org.example.game.GamePlay - User dsada changed hero direction to East
+11:06:04.379 [main] INFO  org.example.game.GamePlay - User dsada shot an arrow
+11:06:04.379 [main] INFO  org.example.game.GamePlay - Player 'dsada' hit a Wumpus at position - Column: 7, Row: 8
+11:06:06.939 [main] INFO  org.example.game.GamePlay - User dsada moved the hero
+11:06:07.459 [main] INFO  org.example.game.GamePlay - User dsada moved the hero
+11:06:07.949 [main] INFO  org.example.game.GamePlay - User dsada moved the hero
+11:06:08.420 [main] INFO  org.example.game.GamePlay - User dsada moved the hero
+11:06:08.938 [main] INFO  org.example.game.GamePlay - User dsada moved the hero
+11:06:09.759 [main] INFO  org.example.game.GamePlay - User dsada moved the hero
+11:06:11.239 [main] INFO  org.example.game.GamePlay - User dsada picked up the gold
+11:06:11.239 [main] INFO  org.example.game.GamePlay - Player 'dsada' picked up the gold at position - Column: 9, Row: 8
+11:06:13.389 [main] INFO  org.example.game.GamePlay - User dsada changed hero direction to West
+11:06:14.009 [main] INFO  org.example.game.GamePlay - User dsada moved the hero
+11:06:14.520 [main] INFO  org.example.game.GamePlay - User dsada moved the hero
+11:06:15.009 [main] INFO  org.example.game.GamePlay - User dsada moved the hero
+11:06:15.569 [main] INFO  org.example.game.GamePlay - User dsada moved the hero
+11:06:16.519 [main] INFO  org.example.game.GamePlay - User dsada moved the hero
+11:06:17.259 [main] INFO  org.example.game.GamePlay - User dsada moved the hero
+11:06:17.259 [main] INFO  org.example.game.GamePlay - Player 'dsada' has won the game in 24 steps
+11:06:17.263 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:06:17.263 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:06:17.263 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:06:17.263 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:06:17.269 [main] INFO  o.example.database.DatabaseService - New leaderboard entry created for player 'dsada': steps count is 24, wins: 1
+11:06:17.272 [main] INFO  o.example.database.DatabaseService - No update required for player 'dsada' on leaderboard: existing steps count is lower
+11:07:44.239 [main] INFO  org.example.game.GamePlay - User dsada selected EXIT
+11:07:53.469 [main] INFO  org.example.game.GamePlay - User dsada selected EXIT
+11:07:53.469 [main] INFO  org.example.game.GamePlay - Starting game for user: dsada
+11:07:53.472 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:07:53.472 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:07:53.472 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:07:53.472 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:07:53.473 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+11:08:49.676 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 10840 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+11:08:49.680 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+11:08:50.229 [main] INFO  org.example.Main - Started Main in 0.851 seconds (process running for 1.445)
+11:08:50.232 [main] INFO  org.example.Main - Application started
+11:08:50.404 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:08:50.409 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:08:50.410 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:08:50.410 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:08:52.244 [main] INFO  o.example.database.DatabaseService - Player name 'gfasas' inserted into PlayerNames table
+11:08:53.919 [main] INFO  org.example.game.GamePlay - User gfasas selected READ MAP FROM FILE
+11:08:56.549 [main] INFO  org.example.game.GamePlay - User gfasas selected GAME in sub menu
+11:08:56.552 [main] INFO  org.example.game.GamePlay - Game initialized for user gfasas
+11:08:56.552 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: gfasas
+11:09:01.839 [main] INFO  org.example.game.GamePlay - User gfasas changed direction to EAST
+11:09:02.407 [main] INFO  org.example.game.GamePlay - User gfasas moved hero
+11:09:06.027 [main] INFO  o.example.database.DatabaseService - Game state saved for player 'gfasas'. Step count: 2, Wumpus killed: 0, Has gold: false
+11:09:06.028 [main] INFO  org.example.game.GamePlay - Game state saved for user gfasas
+11:09:23.009 [main] INFO  org.example.game.GamePlay - User gfasas confirmed to exit the game
+11:09:23.009 [main] INFO  org.example.game.GamePlay - User gfasas gave up the game
+11:09:27.279 [main] INFO  org.example.game.GamePlay - User gfasas selected EXIT
+11:09:27.279 [main] INFO  org.example.game.GamePlay - Starting game for user: gfasas
+11:09:27.283 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:09:27.283 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:09:27.283 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:09:27.284 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:09:27.284 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+11:09:31.429 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 7672 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+11:09:31.433 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+11:09:31.966 [main] INFO  org.example.Main - Started Main in 0.847 seconds (process running for 1.466)
+11:09:31.968 [main] INFO  org.example.Main - Application started
+11:09:32.132 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:09:32.137 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:09:32.138 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:09:32.138 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:09:42.590 [main] INFO  o.example.database.DatabaseService - Player name 'gfasas' inserted into PlayerNames table
+11:09:50.589 [main] INFO  org.example.game.GamePlay - User gfasas selected READ FROM DATABASE
+11:09:50.613 [main] INFO  o.example.database.DatabaseService - Game state loaded successfully for player 'gfasas'
+11:09:50.616 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: gfasas
+11:09:50.616 [main] INFO  org.example.game.GamePlay - Continuing game for user: gfasas
+11:09:55.239 [main] INFO  org.example.game.GamePlay - User gfasas moved the hero
+11:09:55.241 [main] ERROR org.example.Main - Error during application execution
+java.lang.NullPointerException: Cannot invoke "org.example.map.WayType.ordinal()" because the return value of "org.example.game.Hero.getWay()" is null
+	at org.example.game.GamePlay.moveHero(GamePlay.java:164)
+	at org.example.menu.Menu.continueGame(Menu.java:237)
+	at org.example.menu.Menu.displayMenu(Menu.java:144)
+	at org.example.menu.Menu.startGame(Menu.java:76)
+	at org.example.Main.main(Main.java:25)
+11:10:08.818 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 18424 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+11:10:08.821 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+11:10:09.326 [main] INFO  org.example.Main - Started Main in 0.792 seconds (process running for 1.416)
+11:10:09.329 [main] INFO  org.example.Main - Application started
+11:10:09.490 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:10:09.496 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:10:09.496 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:10:09.496 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:10:10.825 [main] INFO  o.example.database.DatabaseService - Player name 'gfasas' inserted into PlayerNames table
+11:10:12.688 [main] INFO  org.example.game.GamePlay - User gfasas selected READ FROM DATABASE
+11:10:12.714 [main] INFO  o.example.database.DatabaseService - Game state loaded successfully for player 'gfasas'
+11:10:12.716 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: gfasas
+11:10:12.716 [main] INFO  org.example.game.GamePlay - Continuing game for user: gfasas
+11:10:16.509 [main] INFO  org.example.game.GamePlay - User gfasas changed hero direction to East
+11:10:21.719 [main] INFO  org.example.game.GamePlay - User gfasas moved the hero
+11:10:29.529 [main] INFO  org.example.game.GamePlay - User gfasas shot an arrow
+11:10:29.529 [main] INFO  org.example.game.GamePlay - Player 'gfasas' hit a Wumpus at position - Column: 7, Row: 8
+11:10:35.279 [main] INFO  org.example.game.GamePlay - User gfasas moved the hero
+11:10:36.369 [main] INFO  org.example.game.GamePlay - User gfasas moved the hero
+11:10:37.699 [main] INFO  org.example.game.GamePlay - User gfasas moved the hero
+11:10:38.699 [main] INFO  org.example.game.GamePlay - User gfasas moved the hero
+11:10:39.909 [main] INFO  org.example.game.GamePlay - User gfasas picked up the gold
+11:10:39.909 [main] INFO  org.example.game.GamePlay - Player 'gfasas' picked up the gold at position - Column: 9, Row: 8
+11:10:41.149 [main] INFO  org.example.game.GamePlay - User gfasas changed hero direction to West
+11:10:41.989 [main] INFO  org.example.game.GamePlay - User gfasas moved the hero
+11:10:42.749 [main] INFO  org.example.game.GamePlay - User gfasas moved the hero
+11:10:43.339 [main] INFO  org.example.game.GamePlay - User gfasas moved the hero
+11:10:43.989 [main] INFO  org.example.game.GamePlay - User gfasas moved the hero
+11:10:44.629 [main] INFO  org.example.game.GamePlay - User gfasas moved the hero
+11:10:45.609 [main] INFO  org.example.game.GamePlay - User gfasas moved the hero
+11:10:45.609 [main] INFO  org.example.game.GamePlay - Player 'gfasas' has won the game in 15 steps
+11:10:45.612 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:10:45.613 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:10:45.613 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:10:45.613 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:10:45.622 [main] INFO  o.example.database.DatabaseService - New leaderboard entry created for player 'gfasas': steps count is 15, wins: 1
+11:10:45.626 [main] INFO  o.example.database.DatabaseService - No update required for player 'gfasas' on leaderboard: existing steps count is lower
+11:11:17.654 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:11:17.673 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:11:17.674 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:11:17.675 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:11:17.696 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+11:11:17.715 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:11:17.716 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:11:17.717 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:11:17.717 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:11:17.764 [main] INFO  o.e.database.DatabaseConnection - Database connection closed
+11:11:17.821 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:11:17.835 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:11:17.837 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+11:11:17.841 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:11:17.849 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:11:17.850 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' hit a Wumpus at position - Column: 3, Row: 4
+11:11:17.856 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:11:17.860 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:11:17.861 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 3 steps
+11:11:17.870 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:11:17.871 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:11:17.871 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:11:17.871 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:11:17.878 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:11:17.883 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:11:17.887 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:11:17.888 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 1 steps
+11:11:17.892 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:11:17.893 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:11:17.893 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:11:17.894 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:11:17.898 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:11:17.902 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:11:17.906 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:11:17.906 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' dropped the gold at position - Column: 3, Row: 8
+11:11:17.910 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:11:17.913 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:11:17.915 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:11:17.916 [main] INFO  org.example.game.GamePlay - Player 'TestPlayer' has won the game in 0 steps
+11:11:17.920 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:11:17.921 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:11:17.921 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:11:17.921 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:11:17.927 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:11:17.931 [main] INFO  o.example.database.DatabaseService - No update required for player 'TestPlayer' on leaderboard: existing steps count is lower
+11:11:17.933 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:11:17.938 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: TestPlayer
+11:11:47.617 [main] INFO  org.example.Main - Starting Main using Java 18.0.1.1 with PID 1080 (C:\GitRepository\wumpus\menu\menu\target\classes started by lisoc in C:\GitRepository\wumpus)
+11:11:47.621 [main] INFO  org.example.Main - No active profile set, falling back to 1 default profile: "default"
+11:11:48.132 [main] INFO  org.example.Main - Started Main in 0.812 seconds (process running for 1.426)
+11:11:48.135 [main] INFO  org.example.Main - Application started
+11:11:48.293 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:11:48.298 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:11:48.298 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:11:48.299 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:11:55.194 [main] INFO  o.example.database.DatabaseService - Player name 'dsadas' inserted into PlayerNames table
+11:11:56.709 [main] INFO  org.example.game.GamePlay - User dsadas selected READ MAP FROM FILE
+11:11:59.909 [main] INFO  org.example.game.GamePlay - User dsadas returned to main menu
+11:12:05.299 [main] INFO  org.example.game.GamePlay - User dsadas selected MAP EDITOR
+11:12:09.859 [main] INFO  org.example.game.GamePlay - User dsadas selected READ MAP FROM FILE
+11:12:11.359 [main] INFO  org.example.game.GamePlay - User dsadas selected GAME in sub menu
+11:12:11.363 [main] INFO  org.example.game.GamePlay - Game initialized for user dsadas
+11:12:11.363 [main] INFO  org.example.game.GamePlay - GamePlay initialized for player: dsadas
+11:12:21.999 [main] INFO  org.example.game.GamePlay - User dsadas changed direction to EAST
+11:12:23.229 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+11:12:24.379 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+11:12:25.159 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+11:12:25.879 [main] INFO  org.example.game.GamePlay - User dsadas moved hero
+11:12:25.880 [main] INFO  org.example.game.GamePlay - User dsadas lost the game
+11:12:28.079 [main] INFO  org.example.game.GamePlay - User dsadas selected EXIT
+11:12:28.079 [main] INFO  org.example.game.GamePlay - Starting game for user: dsadas
+11:12:28.083 [main] INFO  o.e.database.DatabaseConnection - Database connection established
+11:12:28.083 [main] INFO  o.e.database.DatabaseConnection - PlayerNames table created successfully
+11:12:28.083 [main] INFO  o.e.database.DatabaseConnection - Leaderboard table created successfully
+11:12:28.084 [main] INFO  o.e.database.DatabaseConnection - GameState table created successfully
+11:12:28.084 [main] INFO  o.e.database.DatabaseConnection - Database connection closed

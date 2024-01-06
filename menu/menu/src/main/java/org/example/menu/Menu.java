@@ -199,13 +199,11 @@ public class Menu {
 
 
             if (gamePlay.isGameWon()) {
-                displayMenu();
                 return;
             }
 
             if (gamePlay.isGameOver()) {
                 System.out.println("\nYou lost! Returning to main menu...\n");
-                displayMenu();
                 break;
             }
 
