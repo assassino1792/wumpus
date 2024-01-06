@@ -138,6 +138,7 @@ public class MapReader {
                 return false;
             }
             heroInitialPosition = new MapID(heroColumn, heroRow);
+
             // Kiírjuk a hős oszlopát és sorát
             System.out.println("Hero's column: " + heroColumn);
             System.out.println("Hero's row: " + heroRow);
@@ -153,7 +154,7 @@ public class MapReader {
             }
 
             heroInitialPosition = new MapID(heroColumn, heroRow);
-
+            updateMapPosition(heroRow - 1, heroColumn - 1, 'H');
         }
         return true;
     }
